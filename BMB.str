@@ -1,0 +1,7 @@
+[TABLEALIAS UnitDesignWnd]
+
+[WeaponUpgradeType_LightningStaff] Lightning Staves
+[WeaponUpgradeType_PoisonStaff] Poison Staves
+[WeaponUpgradeType_Wand] Wands
+
+[TABLEEND]

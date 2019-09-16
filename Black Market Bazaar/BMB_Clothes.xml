@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Black Market Bazaar by Hellions -->
+<GameItemTypes>
+	<GameItemType InternalName="Hair_Arielle_BlueTiara_Head">
+        <DisplayName>Arielle Hair Blue Tiara</DisplayName>
+        <Type>Head</Type>
+        <Subtype>Hair</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Hair_Arielle_BlueTiara_Head_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Hair_Arielle_BlueTiara_Head_ArtDef">
+            <GameItemTypeModelPack InternalName="Hair_Arielle_BlueTiara_Head_Default">
+                <IconFile>ArielleHair.png</IconFile>
+                <SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>				
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+                <GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Hair\K_Female_Hair_Royal_Mesh_01.hkb</ModelFile>
+                    <AttachmentType>Skinned</AttachmentType>
+                    <Texture_Hair>BMB_K_Female_Hair_Texture_Blue_Tiara_03.png</Texture_Hair>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Hair_Seerna_PurpleTiara_Head">
+        <DisplayName>Seerna Hair Purple Tiara</DisplayName>
+        <Type>Head</Type>
+        <Subtype>Hair</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Hair_Seerna_PurpleTiara_Head_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Hair_Seerna_PurpleTiara_Head_ArtDef">
+            <GameItemTypeModelPack InternalName="Hair_Seerna_PurpleTiara_Head_Default">
+                <IconFile>SeernaHair.png</IconFile>
+                <SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>				
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+                <GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Hair\F_Female_Hair_Mesh_02.hkb</ModelFile>
+                    <AttachmentType>Skinned</AttachmentType>
+                    <Texture_Hair>Gfx\HKB\Hair\F_Female_Hair_Texture_01.png</Texture_Hair>
+                    <Texture_Trans>BMB_Custom_F_Accessories_Texture_01.png</Texture_Trans>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Hood_Head_Dark">
+        <DisplayName>Hood (Dark)</DisplayName>
+        <Type>Head</Type>
+        <Subtype>Hair</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Hood_Head_Dark_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Hood_Head_Dark_ArtDef">
+            <GameItemTypeModelPack InternalName="Hood_Head_Dark_Default">
+                <IconFile>BMB_MaraudersHood.png</IconFile>
+                <SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>				
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+                <GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Clothes\K_Male_Hood_Mesh_01.hkb</ModelFile>
+                    <Texture_All>Gfx\HKB\Clothes\K_Male_Hood_texture_01.png</Texture_All>
+                    <AttachmentType>Skinned</AttachmentType>
+                    <Color_Clothing1>Color_Clothing2</Color_Clothing1>
+                    <Color_Clothing2>Color_Clothing1</Color_Clothing2>
+                </GameItemTypeModel>
+			</GameItemTypeModelPack>	
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Hood_Head_Light">
+        <DisplayName>Hood (Light)</DisplayName>
+        <Type>Head</Type>
+        <Subtype>Hair</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Hood_Head_Light_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Hood_Head_Light_ArtDef">
+            <GameItemTypeModelPack InternalName="Hood_Head_Light_Default">
+                <IconFile>BMB_Clothes_Hood_Light.png</IconFile>
+                <SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>				
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+                <GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Clothes\K_Male_Hood_Mesh_01.hkb</ModelFile>
+                    <Texture_All>Gfx\HKB\Clothes\K_Male_Hood_texture_01.png</Texture_All>
+                    <AttachmentType>Skinned</AttachmentType>
+                    <Color_Clothing1>Color_Clothing1</Color_Clothing1>
+                    <Color_Clothing2>Color_Clothing2</Color_Clothing2>
+                </GameItemTypeModel>
+			</GameItemTypeModelPack>	
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Shirt_K_Male_Arming_Doublet_Leather">
+        <DisplayName>Leather Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_K_Male_Arming_Doublet_Leather_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_K_Male_Arming_Doublet_Leather_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_K_Male_Arming_Doublet_Leather_Default">
+                <IconFile>LeatherShirt.png</IconFile>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\K_Arming_Doublet_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Armor\K_Arming_Doublet_Leather_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Shirt_K_Male_Arming_Doublet_Chain">
+        <DisplayName>Chain Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_K_Male_Arming_Doublet_Chain_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_K_Male_Arming_Doublet_Chain_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_K_Male_Arming_Doublet_Chain_Default">
+                <IconFile>ChainmailShirt.png</IconFile>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\K_Arming_Doublet_01.hkb</ModelFile>
+					<Texture_All>K_Arming_Doublet_Chain_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>					
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Shirt_K_Male_Arming_Doublet_Scale">
+        <DisplayName>Scale Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_K_Male_Arming_Doublet_Scale_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_K_Male_Arming_Doublet_Scale_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_K_Male_Arming_Doublet_Scale_Default">
+                <IconFile>ScalemailShirt.png</IconFile>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
+                <GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/K_Arming_Doublet_01.hkb</ModelFile>
+					<Texture_All>K_Arming_Doublet_Scale_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Shirt_K_Male_Arming_Doublet_Cloth">
+        <DisplayName>Cloth Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_K_Male_Arming_Doublet_Cloth_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_K_Male_Arming_Doublet_Cloth_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_K_Male_Arming_Doublet_Cloth_Default">
+                <IconFile>ScalemailShirt.png</IconFile>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\K_Arming_Doublet_01.hkb</ModelFile>
+					<Texture_All>K_Arming_Doublet_Cloth_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>					
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Shirt_F_Male_Arming_Doublet_Leather">
+        <DisplayName>Leather Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_F_Male_Arming_Doublet_Leather_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_F_Male_Arming_Doublet_Leather_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_F_Male_Arming_Doublet_Leather_Default">
+                <IconFile>LeatherShirt.png</IconFile>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>                				
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\F_Arming_Doublet_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Armor\F_Arming_Doublet_Leather_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Shirt_F_Male_Arming_Doublet_Chain">
+        <DisplayName>Chain Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_F_Male_Arming_Doublet_Chain_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_F_Male_Arming_Doublet_Chain_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_F_Male_Arming_Doublet_Chain_Default">
+                <IconFile>ChainmailShirt.png</IconFile>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>				
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\F_Arming_Doublet_Mesh_01.hkb</ModelFile>
+					<Texture_All>F_Arming_Doublet_Chain_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>					
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Shirt_F_Male_Arming_Doublet_Scale">
+        <DisplayName>Scale Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_F_Male_Arming_Doublet_Scale_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_F_Male_Arming_Doublet_Scale_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_F_Male_Arming_Doublet_Scale_Default">
+                <IconFile>ScalemailShirt.png</IconFile>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>				
+                <GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/F_Arming_Doublet_Mesh_01.hkb</ModelFile>
+					<Texture_All>F_Arming_Doublet_Scale_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+	<GameItemType InternalName="Shirt_Female_Arming_Doublet">
+        <DisplayName>Standard Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_Female_Arming_Doublet_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_Female_Arming_Doublet_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_Female_Arming_Doublet_Default">
+                <IconFile>WarriorShirtLeather_Dark.png</IconFile>
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>				
+                <SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>	
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\K_Female_Arming_Doublet_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Armor\K_Female_Arming_Doublet_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Shirt_K_Male_Sovereign_Arming_Doublet">
+        <DisplayName>Sovereign Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_K_Male_Sovereign_Arming_Doublet_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_K_Male_Sovereign_Arming_Doublet_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_K_Male_Sovereign_Arming_Doublet_Default">
+                <IconFile>WarriorShirtLeather_Dark.png</IconFile>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\K_Arming_Doublet_01.hkb</ModelFile>
+					<Texture_All>Sovereign_Arming_Doublet.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>					
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+	<GameItemType InternalName="Shirt_Female_Sovereign_Archers_Doublet">
+        <DisplayName>Sovereign Archers Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_Female_Sovereign_Archers_Doublet_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_Female_Sovereign_Archers_Doublet_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_Female_Sovereign_Archers_Doublet_Default">
+                <IconFile>WarriorShirtLeather_Dark.png</IconFile>
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>				
+                <SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>	
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\K_Female_Arming_Doublet_Mesh_01.hkb</ModelFile>
+					<Texture_All>Sovereign_Female_Archers_Doublet.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+	<GameItemType InternalName="Shirt_K_Male_Sovereign_Arming_Doublet_Cloth">
+        <DisplayName>Cloth Sovereign Arming Doublet</DisplayName>
+        <Type>Torso</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Shirt_K_Male_Sovereign_Arming_Doublet_Cloth_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Shirt_K_Male_Sovereign_Arming_Doublet_Cloth_ArtDef">
+            <GameItemTypeModelPack InternalName="Shirt_K_Male_Sovereign_Arming_Doublet_Cloth_Default">
+                <IconFile>WarriorShirtLeather_Dark.png</IconFile>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\K_Arming_Doublet_01.hkb</ModelFile>
+					<Texture_All>Sovereign_Arming_Doublet_Cloth.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>					
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>		
+    </GameItemType>	
+	<GameItemType InternalName="Surcoat_K_Male_Chain">
+        <DisplayName>Chain Surcoat</DisplayName>
+        <Type>Surcoat</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Surcoat_K_Male_Chain_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Surcoat_K_Male_Chain_ArtDef">
+            <GameItemTypeModelPack InternalName="Surcoat_K_Male_Chain_Default">
+                <IconFile>ChainmailShirt.png</IconFile>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>					
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Male_Surcoat_Mesh_01.hkb</ModelFile>
+					<Texture_All>K_ChainmailSurcoat_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>					
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>		
+    </GameItemType>
+	<GameItemType InternalName="Surcoat_F_Male_Chain">
+        <DisplayName>Chain Surcoat</DisplayName>
+        <Type>Surcoat</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Surcoat_F_Male_Chain_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Surcoat_F_Male_Chain_ArtDef">
+            <GameItemTypeModelPack InternalName="Surcoat_F_Male_Chain_Default">
+                <IconFile>ChainmailShirt.png</IconFile>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>					
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\F_Male_Surcoat_Mesh_01.hkb</ModelFile>
+					<Texture_All>K_ChainmailSurcoat_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>					
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>		
+    </GameItemType>
+	<GameItemType InternalName="Surcoat_Female_Chain">
+        <DisplayName>Chain Surcoat</DisplayName>
+        <Type>Surcoat</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Surcoat_Female_Chain_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Surcoat_Female_Chain_ArtDef">
+            <GameItemTypeModelPack InternalName="Surcoat_Female_Chain_Default">
+                <IconFile>ChainmailShirt.png</IconFile>
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>				
+                <SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>					
+                <GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Female_Surcoat_Mesh_01.hkb</ModelFile>
+					<Texture_All>K_ChainmailSurcoat_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>					
+				</GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>		
+    </GameItemType>
+	<GameItemType InternalName="Pants_Sovereign_Maxus">
+        <DisplayName>Sovereign Maxus' Slacks</DisplayName>
+        <Type>LowerBody</Type>
+        <Subtype>Clothes</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>	
+        <ArtDef>Pants_Sovereign_Maxus_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Pants_Sovereign_Maxus_ArtDef">
+            <GameItemTypeModelPack InternalName="Pants_Sovereign_Maxus_Default">
+                <IconFile>FallenBasicPants.png</IconFile>                
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>				
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>				
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>				
+                <GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Clothes\F_Male_Pants_Mesh_01.hkb</ModelFile>
+                    <AttachmentType>Skinned</AttachmentType>                    
+                    <Texture_All>Sovereign_Maxus_Pants_Texture_01.png</Texture_All>                    
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</GameItemTypes>

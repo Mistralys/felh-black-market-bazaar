@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Black Market Bazaar by Hellions -->
+<PlayerAbilityTypes>    
+	<UnitStatType InternalName="UnitStat_BlackSpike">
+		<DisplayName>Black Spike Set</DisplayName>
+		<Description>The number of Black Spike items being used.</Description>
+		<Icon>Stat_SpawnRating_Icon.png</Icon>
+		<Hidden>1</Hidden>
+        <DefaultValue>0.0</DefaultValue>
+    </UnitStatType>
+	<UnitStatType InternalName="UnitStat_Mastersmith">
+		<DisplayName>Tools of the Mastersmith Set</DisplayName>
+		<Description>The number of Mastersmith items being used.</Description>
+		<Icon>Stat_SpawnRating_Icon.png</Icon>
+		<Hidden>1</Hidden>
+        <DefaultValue>0.0</DefaultValue>
+    </UnitStatType>
+	<UnitStatType InternalName="UnitStat_PenitentsSuffering">
+		<DisplayName>Penitent's Suffering</DisplayName>
+		<Description>The number of charges acquired by the Restraints of the Penitent.</Description>
+		<Icon>Stat_SpawnRating_Icon.png</Icon>
+		<Hidden>1</Hidden>
+        <DefaultValue>0.0</DefaultValue>
+    </UnitStatType>
+</PlayerAbilityTypes>

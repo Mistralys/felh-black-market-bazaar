@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Black Market Bazaar by Hellions -->
+<GameItemTypes>
+	<GameItemType InternalName="EsotericExposer">
+        <DisplayName>Esoteric Exposer</DisplayName>
+        <Description>Can the brain be attuned to arcane energies? This helmet would be the argument to convince the most stubborn naysayer.</Description>
+        <Type>Head</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>300</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>2</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>20</Value>
+            <Provides>20% chance to find better items from goodie huts</Provides>
+        </GameModifier>        
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>		
+            <AIData AIPersonality="AI_General">
+                <AIPriority>26</AIPriority>
+            </AIData>
+        <ArtDef>Art_EsotericExposer</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_EsotericExposer">
+			<GameItemTypeModelPack InternalName="Art_EsotericExposer_1">
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<IconFile>BMB_EsotericExposer.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/F_Emerald_Skullcap_Mesh_01.hkb</ModelFile>
+					<Texture_All>BMB_Esoteric_Exposer_Texture.png</Texture_All>
+					<Attachment>head_lcf</Attachment>	
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>			        
+		</GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="LeatherVambraces_ArtifactHandlers">
+        <DisplayName>Artifact Handlers</DisplayName>
+        <Description>The tools of trade of ancient curators haunting the museums of yonder, these gloves were also used by unscrupulous graverobbers to find secret treasure chambers.</Description>
+        <Type>Forearms</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>300</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>1</Value>
+        </GameModifier>
+		 <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>20</Value>
+            <Provides>20% chance to find better items from goodie huts</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>20</AIPriority>
+            </AIData>
+        <ArtDef>Art_LeatherVambraces_ArtifactHandlers</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_LeatherVambraces_ArtifactHandlers">
+			<GameItemTypeModelPack InternalName="Art_LeatherVambraces_ArtifactHandlers_1">
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_ArtifactHandlers.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Male_Gloves_Mesh_01.hkb</ModelFile>
+                    <AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>210,94,150</Color_Clothing1>
+					<Color_Clothing2>166,134,194</Color_Clothing2>
+                    <Texture_Clothing1>Gfx\HKB\Clothes\MaleLeatherGloves_Kingdom_Recolorable.png</Texture_Clothing1>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_LeatherVambraces_ArtifactHandlers_2">
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<IconFile>BMB_ArtifactHandlers.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Clothes\F_Male_Gloves_Mesh_01.hkb</ModelFile>
+                    <AttachmentType>Skinned</AttachmentType>
+                    <Color_Clothing1>210,94,150</Color_Clothing1>
+					<Color_Clothing2>166,134,194</Color_Clothing2>
+                    <Texture_Clothing1>Gfx\HKB\Clothes\MaleLeatherGloves_Kingdom_Recolorable.png</Texture_Clothing1>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_LeatherVambraces_ArtifactHandlers_3">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<IconFile>BMB_ArtifactHandlers.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Clothes\K_Female_Gloves_Mesh_01.hkb</ModelFile>
+                    <AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>210,94,150</Color_Clothing1>
+					<Color_Clothing2>166,134,194</Color_Clothing2>
+                    <Texture_Clothing1>Gfx\HKB\Clothes\MaleLeatherGloves_Kingdom_Recolorable.png</Texture_Clothing1>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+    </GameItemType>
+	<GameItemType InternalName="Robe_Riches">
+        <DisplayName>Robe of Riches</DisplayName>
+        <Description>These robes will allow you to play "seeker, finder, keeper" with a definite advantage over the other contestants.</Description>
+        <Type>Torso</Type>
+        <Type>Surcoat</Type>
+        <Type>Lowerbody</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>300</ShopValue>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>6</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>20</Value>
+            <Provides>20% chance to find better items from goodie huts</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>        
+            <AIData AIPersonality="AI_General">
+                <AIPriority>70</AIPriority>
+            </AIData>
+        <ArtDef>Art_Robe_Riches</ArtDef>		
+		<GameItemTypeArtDef InternalName="Art_Robe_Riches">
+			<GameItemTypeModelPack InternalName="Art_Robe_Riches_1">
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_RobeOfRiches.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Male_Robe_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Clothes\EmpireUnisexRobe.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>210,94,150</Color_Clothing1>
+					<Color_Clothing2>166,134,194</Color_Clothing2>
+				</GameItemTypeModel>            
+			</GameItemTypeModelPack>			
+			<GameItemTypeModelPack InternalName="Art_Robe_Riches_2">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<IconFile>BMB_RobeOfRiches.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Female_Robe_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Clothes\EmpireUnisexRobe.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>210,94,150</Color_Clothing1>
+					<Color_Clothing2>166,134,194</Color_Clothing2>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+    <GameItemType InternalName="TreasureGormandizer">
+        <DisplayName>Treasure Gormandizer</DisplayName>
+        <Description>A strangely glowing sphere which feeds into the inner greed of its owner and heightens the need to unearth lost treasures.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>300</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>25</Value>
+            <Provides>25% chance to find better items from goodie huts</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>50</AIPriority>
+            </AIData>
+        <ArtDef>TreasureGormandizer_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="TreasureGormandizer_ArtDef">
+            <GameItemTypeModelPack InternalName="TreasureGormandizer_Default">
+                <IconFile>BMB_TreasureGormandizer.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+</GameItemTypes>

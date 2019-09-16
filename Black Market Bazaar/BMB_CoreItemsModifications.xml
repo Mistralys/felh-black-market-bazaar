@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<GameItemTypes>	
+	<GameItemType InternalName="Staff_Leht">
+        <DisplayName>Leht Staff</DisplayName>
+        <Description>Much like Queen Procipinee herself, this staff's beauty is a mask for the power it contains.</Description>
+        <Type>Weapon</Type>
+        <Type>Defense</Type>
+        <WeaponType>Staff</WeaponType>
+        <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+        <CanBeEquipped>1</CanBeEquipped>
+        <AdditionalTrainingTurns>48</AdditionalTrainingTurns>
+        <ShopValue>290</ShopValue>
+        <ProductionRequirement>
+            <Type>Resource</Type>
+            <Attribute>RefinedCrystal</Attribute>
+            <Value>6</Value>
+        </ProductionRequirement>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Lightning</StrVal>
+            <Value>13</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>-6</Value>
+        </GameModifier>
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>UnlockRangedAction</Attribute>
+                <StrVal>BowAttack_Lightning</StrVal>
+                <Provides>Ranged attack</Provides>
+            </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>10</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <TacticalRange>20</TacticalRange>
+        <Prereq>
+            <Type>AbilityBonusOption</Type>
+            <Attribute>Enchanters</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <Prereq>
+            <Type>RestrictedAbilityBonusOption</Type>
+            <Attribute>NoRangedWeapons</Attribute>
+            <Target>Player</Target>
+        </Prereq>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Arcane_Weapons</Attribute>
+        </Prereq>
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_BLUNT</AIPrefType>
+            <AIPriority>212</AIPriority>
+        </AIData>
+        <ArtDef>Staff_Leht_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Staff_Leht_ArtDef">
+            <GameItemTypeModelPack InternalName="Staff_Leht_Default">
+                <IconFile>W_Staff_Leht_Icon_01.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <AttackSFX>Hit_Staff_01</AttackSFX>
+                <AttackSFX>Hit_Staff_02</AttackSFX>
+                <AttackSFX>Hit_Staff_03</AttackSFX>
+                <EquipSFX>Equip_WoodenItem_01</EquipSFX>
+                <EquipSFX>Equip_WoodenItem_02</EquipSFX>
+                <EquipSFX>Equip_WoodenItem_03</EquipSFX>
+                <OnHitParticleName>Staff_Attack</OnHitParticleName>
+                <SoundPack>SoundPack_Staff_Lightning</SoundPack>
+                <SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+                <SupportedUnitModelType>Banshee</SupportedUnitModelType>
+                <SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+                <GameItemTypeModel>
+                    <ModelFile>gfx/hkb/weapons/w_banishing_staff_mesh_02.hkb</ModelFile>
+                    <Texture_All>W_Club_Texture_01.png</Texture_All>
+                    <Attachment>hand_right_Lcf</Attachment>
+                    <Color_Metal>151, 39,39</Color_Metal>
+        <EffectAttachment>
+            <Attachment>Effect_Loc_04</Attachment>
+            <EffectName>A_LightningHammer_Particle</EffectName>
+            <EffectPosition>0,0,-5</EffectPosition>
+            <EffectRotation>0,0,0</EffectRotation>
+            <EffectScale>0.25</EffectScale>
+        </EffectAttachment>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>	
+</GameItemTypes>	

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Black Market Bazaar by Hellions -->
+<AbilityBonuses>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+	<AbilityBonus InternalName="BMB_EruditeAbility">        
+        <AbilityBonusOption InternalName="BMB_Erudite">
+            <DisplayName>Erudite</DisplayName>
+            <Description>+30% Experience and 10% Research</Description>
+            <Icon>BMB_Ability_Erudite.png</Icon> 
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>30</Value>
+                <Provides>+30% Experience</Provides>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Research</StrVal>
+                <Value>10</Value>
+                <Provides>+10% Research</Provides>
+            </GameModifier>	
+            <Type>Army</Type>            
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+    <AbilityBonus InternalName="BMB_FamousAbility">        
+        <AbilityBonusOption InternalName="BMB_Famous">
+            <DisplayName>Famous</DisplayName>
+            <Description>+1 Fame per Season</Description>
+            <Icon>BMB_Ability_Famous.png</Icon>            
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Fame</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Fame per Season</Provides>
+            </GameModifier>
+            <Type>Army</Type>            
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+</AbilityBonuses>
