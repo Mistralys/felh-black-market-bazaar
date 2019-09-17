@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace FELH;
+
 require_once 'Items/Item.php';
 
 class Items
@@ -29,7 +31,7 @@ class Items
     {
         foreach($this->folders as $folder)
         {
-            $d = new DirectoryIterator($folder);
+            $d = new \DirectoryIterator($folder);
             foreach($d as $item) 
             {
                 if(!$item->isFile()) {
@@ -54,7 +56,7 @@ class Items
         );
     }
     
-    public function addItem(DOMElement $itemNode, Reader $reader)
+    public function addItem(\DOMElement $itemNode, Reader $reader)
     {
         $this->items[] = new Items_Item($this, $itemNode, $reader);
     }

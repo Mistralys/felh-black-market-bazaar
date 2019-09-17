@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace FELH;
+
 class Reader
 {
    /**
@@ -22,7 +24,7 @@ class Reader
     
     public function parse() : void
     {
-        $dom = new DomDocument();
+        $dom = new \DomDocument();
         $dom->load($this->xmlPath);
         
         $nodes = $dom->getElementsByTagName('GameItemType');

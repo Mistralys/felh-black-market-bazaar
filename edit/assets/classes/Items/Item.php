@@ -1,5 +1,7 @@
 <?php
 
+namespace FELH;
+
 class Items_Item
 {
     protected $id;
@@ -24,7 +26,7 @@ class Items_Item
         'ArtDef'
     );
     
-    public function __construct(Items $items, DOMElement $node, Reader $reader)
+    public function __construct(Items $items, \DOMElement $node, Reader $reader)
     {
         $this->id = $node->getAttribute('InternalName');
         $this->node = $node;
