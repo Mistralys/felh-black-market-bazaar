@@ -1,0 +1,33 @@
+{
+    "name":        "mistralys/felh-black-market-bazaar",
+    "description": "Item editor for Fallen Enchantress: Legendary Heroes",
+    "type":        "application",
+
+    "authors": [
+        {
+            "email": "s.mordziopl@mistralys.eu",
+            "name": "Sebastian Mordziol",
+            "role": "Lead"
+        }
+    ],
+	"autoload" : {
+		"classmap" : [
+			"assets/classes"
+		]
+	},
+    "repositories":[
+        {
+            "type":"vcs",
+            "url":"https://github.com/Mistralys/HTML_QuickForm2.git"
+        },
+        {
+            "type":"vcs",
+            "url":"https://github.com/Mistralys/application-utils.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+		"mistralys/application-utils" : "dev-master"
+    }
+}
