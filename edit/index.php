@@ -1,17 +1,16 @@
 <?php
 
-    define('APP_ROOT', __DIR__);
-
-    $localConfig = APP_ROOT.'/config-local.php';
-    if(!file_exists($localConfig)) {
-        die('<b>ERROR:</b> The local configuration file does not exist. See <a href="README.md">README</a>.');
+    $autoload = __DIR__.'/vendor/autoload.php';
+    if(!file_exists($autoload)) {
+        die('<b>ERROR:</b> The composer autoloader is not present, please run composer first.');
     }
     
-    require_once $localConfig;
-    
-    set_include_path(get_include_path().PATH_SEPARATOR.APP_ROOT.'/assets/classes');
-    
-    require_once 'Editor.php';
+    require_once $autoload;
 
-    $editor = new \FELH\Editor();
-    $editor->display();
+    $site = \FELH\Site::boot(
+        'FELH',
+        __DIR__, 
+        'http://127.0.0.1/svn/personal/Black%20Market%20Bazaar/edit/'
+    );
+    
+    $site->display();

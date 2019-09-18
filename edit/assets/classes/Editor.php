@@ -4,14 +4,9 @@ declare(strict_types=1);
 
 namespace FELH;
 
-require_once 'Items.php';
-require_once 'Reader.php';
-
 class Editor
 {
     protected $items;
-    
-    protected $page = 'list';
     
     public function __construct()
     {

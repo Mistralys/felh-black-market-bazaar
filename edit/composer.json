@@ -5,12 +5,16 @@
 
     "authors": [
         {
-            "email": "s.mordziopl@mistralys.eu",
+            "email": "s.mordziol@mistralys.eu",
             "name": "Sebastian Mordziol",
             "role": "Lead"
         }
     ],
 	"autoload" : {
+		"psr-4" : 
+		{
+			"FELH\\" : "assets/classes"
+		},
 		"classmap" : [
 			"assets/classes"
 		]
@@ -23,11 +27,15 @@
         {
             "type":"vcs",
             "url":"https://github.com/Mistralys/application-utils.git"
+        },
+        {
+            "type":"vcs",
+            "url":"https://github.com/Mistralys/microsite.git"
         }
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-		"mistralys/application-utils" : "dev-master"
+		"mistralys/microsite" : "dev-master"
     }
 }

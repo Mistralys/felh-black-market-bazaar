@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace FELH;
 
-require_once 'Items/Item.php';
-
 class Items
 {
     protected $folders = array();
