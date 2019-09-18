@@ -15,13 +15,19 @@ class Items_Item
     protected $singleValues = array(
         'DisplayName',
         'Description',
-        'Type',
+        'Type', // MULTIPLE
+        'Subtype',
+        'AdditionalTrainingTurns',
+        'WeaponType',
+        'WeaponUpgradeType',
+        'TacticalRange',
         'CanBeEquipped',
         'ShopValue',
         'IsAvailableForSovereignCustomization',
         'IsAvailableForUnitDesign',
         'Likelihood',
         'RarityDisplay',
+        'IsUsable',
         'HeroOnly',
         'ArtDef'
     );
@@ -54,9 +60,31 @@ class Items_Item
         return $default;
     }
     
+    public function getRarity() : string
+    {
+        return $this->getKey('RarityDisplay', '');
+    }
+    
     public function getType() : string
     {
         return $this->getKey('Type', '');
+    }
+    
+    public function getSubtype() : string
+    {
+        return $this->getKey('Subtype', '');
+    }
+    
+    public function getFullType() : string
+    {
+        $type = $this->getType();
+        $subtype = $this->getSubtype();
+        
+        if(!empty($subtype)) {
+            $type .= ' - '.$subtype;
+        }
+        
+        return $type;
     }
     
     public function getShopPrice()
@@ -84,7 +112,7 @@ class Items_Item
         $result = $this->node->getElementsByTagName($name);
         $value = null;
         
-        if($result->length > 0) {
+        if($result->length == 1) {
             $value = $result->item(0)->nodeValue;
         }
         

@@ -51,6 +51,7 @@ class Page_Items extends Page
         				<th>Name</th>
         				<th>Type</th>
         				<th>Shop price</th>
+        				<th>Rarity</th>
         			</tr>
         		</thead>
         		<tbody>
@@ -64,8 +65,9 @@ class Page_Items extends Page
                 		    			<?php echo $item->getLabel() ?>
             		    			</a>
                 		    	</td>
-                		    	<td><?php echo $item->getType() ?></td>
+                		    	<td><?php echo $item->getFullType() ?></td>
                 		    	<td><?php echo $item->getShopPrice() ?></td>
+                		    	<td><?php echo $item->getRarity() ?></td>
             		    	</tr>
             		    <?php 
             		}
