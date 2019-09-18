@@ -45,14 +45,33 @@ class Items_Item
         return $this->id;
     }
     
-    public function getLabel()
+    protected function getKey($name, $default=null)
     {
-        return $this->data['DisplayName'];
+        if(isset($this->data[$name])) {
+            return $this->data[$name];
+        }
+        
+        return $default;
     }
     
-    public function getDescription()
+    public function getType() : string
     {
-        return $this->data['Description'];
+        return $this->getKey('Type', '');
+    }
+    
+    public function getShopPrice()
+    {
+        return $this->getKey('ShopValue');
+    }
+    
+    public function getLabel() : string
+    {
+        return $this->getKey('DisplayName', '');
+    }
+    
+    public function getDescription() : string
+    {
+        return $this->getKey('Description', '');
     }
     
     public function getSourceFile()

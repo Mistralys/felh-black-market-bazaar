@@ -29,8 +29,51 @@ class Page_Items extends Page
         
     }
 
+   /**
+    * @var Editor
+    */
+    protected $editor;
+    
+    protected function processActions()
+    {
+        $this->editor = new Editor($this->site->getWebrootFolder());
+    }
+
     protected function _render(): string
     {
-        return 'YO';
+        $items = $this->editor->getItems();
+        
+        ob_start();
+        ?>
+        	<table class="table table-hover">
+        		<thead>
+        			<tr>
+        				<th>Name</th>
+        				<th>Type</th>
+        				<th>Shop price</th>
+        			</tr>
+        		</thead>
+        		<tbody>
+        		<?php 
+            		foreach($items as $item) 
+            		{
+            		    ?>
+            		    	<tr>
+                		    	<td>
+                		    		<a href="<?php  ?>">
+                		    			<?php echo $item->getLabel() ?>
+            		    			</a>
+                		    	</td>
+                		    	<td><?php echo $item->getType() ?></td>
+                		    	<td><?php echo $item->getShopPrice() ?></td>
+            		    	</tr>
+            		    <?php 
+            		}
+        		?>
+        		</tbody>
+        	</table>
+        <?php 
+        
+        return ob_get_clean();
     }
 }

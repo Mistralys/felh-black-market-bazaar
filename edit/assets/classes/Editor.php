@@ -6,22 +6,20 @@ namespace FELH;
 
 class Editor
 {
+   /**
+    * @var Items
+    */
     protected $items;
     
-    public function __construct()
+    public function __construct($webrootFolder)
     {
         $this->items = new Items();
-        $this->items->addFolder(APP_ROOT.'/../Black Market Bazaar');
+        $this->items->addFolder($webrootFolder.'/../Black Market Bazaar');
         $this->items->load();
     }
     
-    public function display()
+    public function getItems()
     {
-        $items = $this->items->getItems();
-        
-        foreach($items as $item)
-        {
-            echo $item->getLabel().'<br>';
-        }
+        return $this->items->getItems();
     }
 }
