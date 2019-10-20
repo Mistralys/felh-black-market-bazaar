@@ -58,9 +58,6 @@ class Page_Items extends Page
              );
         }
         
-        echo $grid->render();
-        echo 'DONE';
-        exit;
         return $grid->render();
         
         ob_start();
