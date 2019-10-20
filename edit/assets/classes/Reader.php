@@ -16,6 +16,11 @@ class Reader
     */
     protected $items;
     
+   /**
+    * @var \DOMDocument
+    */
+    protected $dom;
+    
     public function __construct(Items $items, string $xmlPath)
     {
         $this->xmlPath = $xmlPath;
@@ -24,15 +29,22 @@ class Reader
     
     public function parse() : void
     {
-        $dom = new \DomDocument();
-        $dom->load($this->xmlPath);
+        $this->dom = new \DomDocument();
+        $this->dom->preserveWhiteSpace = false;
         
-        $nodes = $dom->getElementsByTagName('GameItemType');
+        $this->dom->load($this->xmlPath);
+        
+        $nodes = $this->dom->getElementsByTagName('GameItemType');
 
         foreach($nodes as $node) 
         {
             $this->items->addItem($node, $this);
         }
+    }
+    
+    public function getDOM() : \DOMDocument
+    {
+        return $this->dom;
     }
     
     public function getXMLPath() : string

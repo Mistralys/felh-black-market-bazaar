@@ -11,6 +11,11 @@ class Site extends \Microsite\Site
         return 'Items';
     }
     
+    public function getSlug() : string
+    {
+        return $this->getDefaultSlug();
+    }
+    
     public function getDocumentTitle() : string
     {
         return 'Fallen Enchantress: Legendary Heroes item editor';
@@ -23,6 +28,6 @@ class Site extends \Microsite\Site
     
     protected function initNavigation() : void
     {
-        $this->navigation->addPage($this->getPageBySlug('Items'));
+        $this->navigation->addPage($this->getPageBySlug($this->getDefaultSlug()));
     }
 }

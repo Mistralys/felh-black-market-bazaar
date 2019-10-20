@@ -17,17 +17,12 @@
 		},
 		"classmap" : [
 			"assets/classes"
+		],
+		"files" : [
+			"assets/functions.php"
 		]
 	},
     "repositories":[
-        {
-            "type":"vcs",
-            "url":"https://github.com/Mistralys/HTML_QuickForm2.git"
-        },
-        {
-            "type":"vcs",
-            "url":"https://github.com/Mistralys/application-utils.git"
-        },
         {
             "type":"vcs",
             "url":"https://github.com/Mistralys/microsite.git"

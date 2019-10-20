@@ -15,7 +15,6 @@ class Items_Item
     protected $singleValues = array(
         'DisplayName',
         'Description',
-        'Type', // MULTIPLE
         'Subtype',
         'AdditionalTrainingTurns',
         'WeaponType',
@@ -29,8 +28,26 @@ class Items_Item
         'RarityDisplay',
         'IsUsable',
         'HeroOnly',
-        'ArtDef'
+        'ArtDef',
+        'UsableInBattle',
+        'UsableOnlyOnceInBattle',
+        'HideInHiergamenon',
+        'CustomizationPointCost'
     );
+    
+    protected $multipleValues = array(
+        'Type'
+    );
+    
+    protected $complexValues = array(
+        'GameModifier' => 'GameModifier',
+        'Prereq' => 'Prerequisites',
+        'AIData' => 'AI',
+        'GameItemTypeArtDef' => 'ArtDef',
+        'ProductionRequirement' => 'ProductionRequirement'
+    );
+    
+    public static $missing = array();
     
     public function __construct(Items $items, \DOMElement $node, Reader $reader)
     {
@@ -39,8 +56,39 @@ class Items_Item
         $this->sourceFile = $reader->getXMLPath();
         $this->items = $items;
         
-        foreach($this->singleValues as $name) {
-            $this->getSingleValue($name);
+        foreach($node->childNodes as $child) 
+        {
+            $name = $child->nodeName;
+            
+            if(in_array($name, $this->singleValues)) 
+            {
+                $this->data[$name] = $child->nodeValue;
+                
+                continue;
+            }
+            
+            if(in_array($name, $this->multipleValues))
+            {
+                $this->initKey($name, array());
+                $this->data[$name][] = $child->nodeValue;
+                continue;
+            }
+            
+            if(isset($this->complexValues[$name])) 
+            {
+                $this->initKey($name, array());
+                $array = \AppUtils\XMLHelper::convertDOMElement($child)->toArray();
+
+                $class = '\FELH\Items_Data_'.$this->complexValues[$name];
+                $value = new $class($this, $array);
+                
+                $this->data[$name][] = $value;
+                continue;
+            }
+            
+            if(!isset(self::$missing[$name])) {
+                self::$missing[$name] = htmlspecialchars($reader->getDOM()->saveXML($child));
+            }
         }
         
         unset($this->node);
@@ -60,14 +108,51 @@ class Items_Item
         return $default;
     }
     
+    public function hasGameModifiers() : bool
+    {
+        return $this->getKey('GameModifiers') !== null;
+    }
+    
+   /**
+    * Retrieves all game modifiers attached to the item.
+    * @return Items_Data_GameModifier[]
+    */
+    public function getGameModifiers()
+    {
+        if($this->hasGameModifiers()) {
+            return $this->getKey('GameModifiers');
+        }
+        
+        return array();
+    }
+    
+    public function hasAI() : bool
+    {
+        return $this->getKey('AIData') !== null;
+    }
+    
+    public function getAI() : ?Items_Data_AI
+    {
+        if($this->hasAI()) {
+            return $this->data['AIData'][0];
+        }
+        
+        return null;
+    }
+    
     public function getRarity() : string
     {
         return $this->getKey('RarityDisplay', '');
     }
     
-    public function getType() : string
+    public function getTypes() : array
     {
-        return $this->getKey('Type', '');
+        return $this->getKey('Type', array());
+    }
+    
+    public function getTypesString() : string
+    {
+        return implode(', ', $this->getTypes());
     }
     
     public function getSubtype() : string
@@ -77,7 +162,7 @@ class Items_Item
     
     public function getFullType() : string
     {
-        $type = $this->getType();
+        $type = $this->getTypesString();
         $subtype = $this->getSubtype();
         
         if(!empty($subtype)) {
@@ -107,16 +192,23 @@ class Items_Item
         return $this->sourceFile;
     }
     
-    protected function getSingleValue($name)
+    protected function setKey($name, $value)
     {
-        $result = $this->node->getElementsByTagName($name);
-        $value = null;
-        
-        if($result->length == 1) {
-            $value = $result->item(0)->nodeValue;
-        }
-        
         $this->data[$name] = $value;
+    }
+    
+    protected function initKey($name, $value)
+    {
+        if(!isset($this->data[$name])) {
+            $this->data[$name] = $value;
+        }
+    }
+    
+    protected function parse_Type(\DOMElement $node)
+    {
+        $this->initKey('Type', array());
+        
+        $this->data['Type'][] = $node->nodeValue;
     }
 }
     

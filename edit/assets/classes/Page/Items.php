@@ -39,9 +39,29 @@ class Page_Items extends Page
         $this->editor = new Editor($this->site->getWebrootFolder());
     }
 
-    protected function _render(): string
+    protected function _renderContent(): string
     {
+        $grid = $this->ui->createDataGrid();
+        $grid->addColumn('label', t('Name'));
+        $grid->addColumn('type', t('Type'));
+        $grid->addColumn('price', t('Shop price'))->alignRight();
+        $grid->addColumn('rarity', t('Rarity'));
+
         $items = $this->editor->getItems();
+        foreach($items as $item)
+        {
+            $grid->addRow(
+                '<a href="">'.$item->getLabel().'</a>',
+                $item->getFullType(),
+                $item->getShopPrice(),
+                $item->getRarity()
+             );
+        }
+        
+        echo $grid->render();
+        echo 'DONE';
+        exit;
+        return $grid->render();
         
         ob_start();
         ?>
@@ -50,7 +70,7 @@ class Page_Items extends Page
         			<tr>
         				<th>Name</th>
         				<th>Type</th>
-        				<th>Shop price</th>
+        				<th class="align-right">Shop price</th>
         				<th>Rarity</th>
         			</tr>
         		</thead>
@@ -66,7 +86,7 @@ class Page_Items extends Page
             		    			</a>
                 		    	</td>
                 		    	<td><?php echo $item->getFullType() ?></td>
-                		    	<td><?php echo $item->getShopPrice() ?></td>
+                		    	<td class="align-right"><?php echo $item->getShopPrice() ?></td>
                 		    	<td><?php echo $item->getRarity() ?></td>
             		    	</tr>
             		    <?php 
