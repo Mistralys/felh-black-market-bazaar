@@ -18,8 +18,8 @@ class Editor
         $this->items->load();
     }
     
-    public function getItems()
+    public function getItems() : Items
     {
-        return $this->items->getItems();
+        return $this->items;
     }
 }

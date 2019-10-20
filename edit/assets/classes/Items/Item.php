@@ -210,5 +210,23 @@ class Items_Item
         
         $this->data['Type'][] = $node->nodeValue;
     }
-}
     
+    public function getURLEdit(array $params=array())
+    {
+        $params['slug'] = 'Items.Edit';
+        return $this->getURL($params);
+    }
+    
+    public function getURLView(array $params=array())
+    {
+        $params['slug'] = 'Items.View';
+        return $this->getURL($params);
+    }
+    
+    public function getURL(array $params=array())
+    {
+        $params['item_id'] = $this->getID();
+        
+        return '?'.http_build_query($params);
+    }
+}

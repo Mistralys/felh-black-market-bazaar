@@ -47,11 +47,11 @@ class Page_Items extends Page
         $grid->addColumn('price', t('Shop price'))->alignRight();
         $grid->addColumn('rarity', t('Rarity'));
 
-        $items = $this->editor->getItems();
+        $items = $this->editor->getItems()->getItems();
         foreach($items as $item)
         {
             $grid->addRow(
-                '<a href="">'.$item->getLabel().'</a>',
+                '<a href="'.$item->getURLView().'">'.$item->getLabel().'</a>',
                 $item->getFullType(),
                 $item->getShopPrice(),
                 $item->getRarity()

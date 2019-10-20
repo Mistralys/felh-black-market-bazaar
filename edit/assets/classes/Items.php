@@ -6,6 +6,8 @@ namespace FELH;
 
 class Items
 {
+    const ERROR_UNKNOWN_ITEM_ID = 40201;
+    
     protected $folders = array();
     
    /**
@@ -66,5 +68,23 @@ class Items
     public function getItems()
     {
         return $this->items;
+    }
+    
+    public function getByID(string $id) : Items_Item
+    {
+        foreach($this->items as $item) {
+            if($item->getID() === $id) {
+                return $item;
+            }
+        }
+        
+        throw new Exception(
+            'Unknown item ID',
+            sprintf(
+                'There is no item with the ID [%s] in the collection.',
+                \AppUtils\parseVariable($id)->toString()    
+            ),
+            self::ERROR_UNKNOWN_ITEM_ID
+        );
     }
 }
