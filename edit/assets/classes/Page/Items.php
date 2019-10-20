@@ -6,17 +6,17 @@ class Page_Items extends Page
 {
     public function getPageAbstract(): string
     {
-        return 'The following is a list of all items available in the game and all mods.';
+        return t('The following is a list of all items available in the game and all mods.');
     }
 
     public function getPageTitle(): string
     {
-        return 'Items list';
+        return t('Items list');
     }
     
     public function getNavigationTitle() : string
     {
-        return 'Items list';
+        return t('Items list');
     }
     
     public function getDefaultSlug(): string
@@ -36,7 +36,7 @@ class Page_Items extends Page
     
     protected function processActions()
     {
-        $this->editor = new Editor($this->site->getWebrootFolder());
+        $this->editor = $this->site->createEditor();
     }
 
     protected function _renderContent(): string
@@ -65,10 +65,10 @@ class Page_Items extends Page
         	<table class="table table-hover">
         		<thead>
         			<tr>
-        				<th>Name</th>
-        				<th>Type</th>
-        				<th class="align-right">Shop price</th>
-        				<th>Rarity</th>
+        				<th><?php pt('Name') ?></th>
+        				<th><?php pt('Type') ?></th>
+        				<th class="align-right"><?php pt('Shop price') ?></th>
+        				<th><?php pt('Rarity') ?></th>
         			</tr>
         		</thead>
         		<tbody>
