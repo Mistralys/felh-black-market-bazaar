@@ -30,4 +30,18 @@ class Site extends \Microsite\Site
     {
         $this->navigation->addPage($this->getPageBySlug($this->getDefaultSlug()));
     }
+    
+    /**
+     * @var Editor
+     */
+    protected $editor;
+    
+    public function createEditor() : Editor
+    {
+        if(!isset($this->editor)) {
+            $this->editor = new Editor($this);
+        }
+        
+        return $this->editor;
+    }
 }
