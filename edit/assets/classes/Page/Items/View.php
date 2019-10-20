@@ -35,29 +35,32 @@ class Page_Items_View extends Page
     protected $editor;
     
    /**
-    * @var Items
-    */
-    protected $items;
-    
-   /**
     * @var Items_Item
     */
     protected $item;
     
     protected function processActions()
     {
-        $this->editor = new Editor($this->site->getWebrootFolder());
-        $this->items = $this->editor->getItems();
-        
-        $id = $this->request->getParam('item_id');
-        
-        $this->item = $this->items->getByID($id);
-        
+        $this->editor = $this->site->createEditor();
+        $this->item = $this->editor->getItems()->getByRequest();
+
+        if($this->item === null) {
+            $this->redirectWithErrorMessage(
+                t('Unknown item'), 
+                $this->items->getURLList()
+            );
+        }
     }
     
     protected function _renderContent(): string
     {
         ob_start();
+        
+        ?>
+        	<a href="<?php echo $this->item->getURLEdit() ?>" class="btn btn-primary">
+        		<?php pt('Edit item') ?>
+        	</a>
+        <?php 
         
         if($this->item->hasPrerequisites())
         {
