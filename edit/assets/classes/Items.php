@@ -15,9 +15,20 @@ class Items
     */
     protected $items = array();
     
-    public function __construct()
+   /**
+    * @var Editor
+    */
+    protected $editor;
+    
+   /**
+    * @var \AppUtils\Request
+    */
+    protected $request;
+    
+    public function __construct(Editor $editor)
     {
-        
+        $this->editor = $editor;
+        $this->request = $editor->getSite()->getRequest();
     }
     
     public function addFolder(string $folder) : Items
@@ -86,5 +97,33 @@ class Items
             ),
             self::ERROR_UNKNOWN_ITEM_ID
         );
+    }
+    
+    public function idExists(string $id) : bool
+    {
+        foreach($this->items as $item) {
+            if($item->getID() === $id) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    public function getByRequest() : ?Items_Item
+    {
+        $id = $this->request->getParam('item_id');
+        if(!empty($id) && $this->idExists($id)) {
+            return $this->getByID($id);
+        }
+        
+        return null; 
+    }
+    
+    public function getURLList(array $params=array()) : string
+    {
+        $params['slug'] = 'Items';
+        
+        return $this->editor->getSite()->buildURL($params);
     }
 }
