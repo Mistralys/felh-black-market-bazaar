@@ -6,12 +6,12 @@ class Page_Items_Edit extends Page
 {
     public function getPageAbstract(): string
     {
-        return 'This allows you to edit the item.';
+        return t('This allows you to edit the item.');
     }
     
     public function getPageTitle(): string
     {
-        return 'Edit item';
+        return $this->item->getLabel();
     }
     
     public function getNavigationTitle() : string
@@ -29,14 +29,27 @@ class Page_Items_Edit extends Page
         
     }
     
-    /**
-     * @var Editor
-     */
+   /**
+    * @var Editor
+    */
     protected $editor;
+    
+   /**
+    * @var Items_Item
+    */
+    protected $item;
     
     protected function processActions()
     {
-        $this->editor = new Editor($this->site->getWebrootFolder());
+        $this->editor = $this->site->createEditor();
+        $this->item = $this->editor->getItems()->getByRequest();
+        
+        if($this->item === null) {
+            $this->redirectWithErrorMessage(
+                t('Unknown item'),
+                $this->items->getURLList()
+            );
+        }
     }
     
     protected function _renderContent(): string
