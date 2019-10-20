@@ -99,6 +99,11 @@ class Items_Item
         return $this->id;
     }
     
+    public function getRawData() : array
+    {
+         return $this->data;
+    }
+    
     protected function getKey($name, $default=null)
     {
         if(isset($this->data[$name])) {
@@ -107,6 +112,25 @@ class Items_Item
         
         return $default;
     }
+    
+    public function hasPrerequisites() : bool
+    {
+        return $this->getKey('Prerequisites') !== null;
+    }
+    
+   /**
+    * Retrieves all prerequisites attached to the item.
+    * @return Items_Data_Prerequisites[]
+    */
+    public function getPrerequities()
+    {
+        if($this->hasPrerequisites()) {
+            return $this->getKey('Prerequisites');
+        }
+        
+        return array();
+    }
+    
     
     public function hasGameModifiers() : bool
     {

@@ -19,4 +19,9 @@ abstract class Items_Data
         $this->item = $item;
         $this->data = $data;
     }
+    
+    public function getRawData()
+    {
+        return $this->data;
+    }
 }

@@ -57,13 +57,48 @@ class Page_Items_View extends Page
     
     protected function _renderContent(): string
     {
-        
-        
         ob_start();
-        ?>
-        	Item here
-        <?php 
         
+        if($this->item->hasPrerequisites())
+        {
+            ?>
+            	<h2><?php pt('Prerequisites') ?></h2>
+            	<?php 
+            	
+            	   $entries = $this->item->getPrerequities();
+            	   
+            	   foreach($entries as $prereq) 
+            	   {
+            	       ?>
+                	       <pre style="background:#fff;font-family:monospace;font-size:14px;color:#444;padding:16px;border:solid 1px #999;border-radius:4px;">
+	                	       	<?php print_r($prereq->getRawData()); ?>
+                	       </pre>
+            	       <?php 
+            	   }
+            	?>
+        	<?php
+        }
+        
+        if($this->item->hasGameModifiers())
+        {
+            ?>
+            	<h2><?php pt('Game modifiers') ?></h2>
+            	<?php 
+            	
+            	   $modifiers = $this->item->getGameModifiers();
+            	   
+            	   foreach($modifiers as $modifier) 
+            	   {
+            	       ?>
+                	       <pre style="background:#fff;font-family:monospace;font-size:14px;color:#444;padding:16px;border:solid 1px #999;border-radius:4px;">
+	                	       	<?php print_r($modifier->getRawData()); ?>
+                	       </pre>
+            	       <?php 
+            	   }
+            	?>
+        	<?php 
+    	}
+        	
         return ob_get_clean();
     }
 }
