@@ -62,6 +62,45 @@ class Page_Items_View extends Page
         	</a>
         <?php 
         
+        ?>
+        	<table class="table">
+        		<tbody>
+        			<tr>
+        				<td><?php pt('Shop value') ?></td>
+        				<td><?php echo $this->item->getShopPrice() ?></td>
+        			</tr>
+        			<?php
+        			    $afs = $this->item->objAvailableForSovereign();
+        			    if($afs) 
+        			    {
+        			?>
+        			<tr>
+        				<td><?php pt('Available for sovereign?') ?></td>
+        				<td><?php echo $afs->toHTML() ?></td>
+        			</tr>
+        			<?php 
+        			    }
+        			?>
+        			<tr>
+        				<td><?php pt('Rarity') ?></td>
+        				<td><?php echo $this->item->getRarity() ?></td>
+        			</tr>
+        			<tr>
+        				<td><?php pt('Can be equipped?') ?></td>
+        				<td><?php echo $this->item->objCanBeEquipped()->toHTML() ?></td>
+        			</tr>
+        			<tr>
+        				<td><?php pt('Type') ?></td>
+        				<td><?php echo $this->item->objType()->getText() ?></td>
+        			</tr>
+        			<tr>
+        				<td><?php pt('Likelihood') ?></td>
+        				<td><?php echo $this->item->objLikelihood()->getValue() ?></td>
+        			</tr>
+        		</tbody>
+        	</table>
+        <?php 
+        
         if($this->item->hasPrerequisites())
         {
             ?>

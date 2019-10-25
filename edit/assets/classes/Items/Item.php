@@ -2,106 +2,23 @@
 
 namespace FELH;
 
-class Items_Item
+class Items_Item extends DataType_Container
 {
     protected $id;
     
-    protected $node;
-    
-    protected $data = array();
-    
     protected $sourceFile;
-    
-    protected $singleValues = array(
-        'DisplayName',
-        'Description',
-        'Subtype',
-        'AdditionalTrainingTurns',
-        'WeaponType',
-        'WeaponUpgradeType',
-        'TacticalRange',
-        'CanBeEquipped',
-        'ShopValue',
-        'IsAvailableForSovereignCustomization',
-        'IsAvailableForUnitDesign',
-        'Likelihood',
-        'RarityDisplay',
-        'IsUsable',
-        'HeroOnly',
-        'ArtDef',
-        'UsableInBattle',
-        'UsableOnlyOnceInBattle',
-        'HideInHiergamenon',
-        'CustomizationPointCost'
-    );
-    
-    protected $multipleValues = array(
-        'Type'
-    );
-    
-    protected $complexValues = array(
-        'GameModifier' => 'GameModifier',
-        'Prereq' => 'Prerequisites',
-        'AIData' => 'AI',
-        'GameItemTypeArtDef' => 'ArtDef',
-        'ProductionRequirement' => 'ProductionRequirement'
-    );
-    
-    public static $missing = array();
     
     public function __construct(Items $items, \DOMElement $node, Reader $reader)
     {
-        $this->id = $node->getAttribute('InternalName');
-        $this->node = $node;
+        parent::__construct('GameItemType', $node);
+
         $this->sourceFile = $reader->getXMLPath();
         $this->items = $items;
-        
-        foreach($node->childNodes as $child) 
-        {
-            $name = $child->nodeName;
-            
-            if(in_array($name, $this->singleValues)) 
-            {
-                $this->data[$name] = $child->nodeValue;
-                
-                continue;
-            }
-            
-            if(in_array($name, $this->multipleValues))
-            {
-                $this->initKey($name, array());
-                $this->data[$name][] = $child->nodeValue;
-                continue;
-            }
-            
-            if(isset($this->complexValues[$name])) 
-            {
-                $this->initKey($name, array());
-                $array = \AppUtils\XMLHelper::convertDOMElement($child)->toArray();
-
-                $class = '\FELH\Items_Data_'.$this->complexValues[$name];
-                $value = new $class($this, $array);
-                
-                $this->data[$name][] = $value;
-                continue;
-            }
-            
-            if(!isset(self::$missing[$name])) {
-                self::$missing[$name] = htmlspecialchars($reader->getDOM()->saveXML($child));
-            }
-        }
-        
-        unset($this->node);
     }
     
     public function getID()
     {
-        return $this->id;
-    }
-    
-    public function getRawData() : array
-    {
-         return $this->data;
+        return $this->getAttribute('InternalName');
     }
     
     protected function getKey($name, $default=null)
@@ -113,9 +30,14 @@ class Items_Item
         return $default;
     }
     
+    protected function hasKey(string $name) : bool
+    {
+        return isset($this->data[$name]);
+    }
+    
     public function hasPrerequisites() : bool
     {
-        return $this->getKey('Prerequisites') !== null;
+        return $this->hasKey('Prerequisites');
     }
     
    /**
@@ -134,7 +56,7 @@ class Items_Item
     
     public function hasGameModifiers() : bool
     {
-        return $this->getKey('GameModifiers') !== null;
+        return $this->hasKey('GameModifier');
     }
     
    /**
@@ -144,7 +66,7 @@ class Items_Item
     public function getGameModifiers()
     {
         if($this->hasGameModifiers()) {
-            return $this->getKey('GameModifiers');
+            return $this->getKey('GameModifier');
         }
         
         return array();
@@ -152,21 +74,12 @@ class Items_Item
     
     public function hasAI() : bool
     {
-        return $this->getKey('AIData') !== null;
-    }
-    
-    public function getAI() : ?Items_Data_AI
-    {
-        if($this->hasAI()) {
-            return $this->data['AIData'][0];
-        }
-        
-        return null;
+        return $this->hasChildName('AIData');
     }
     
     public function getRarity() : string
     {
-        return $this->getKey('RarityDisplay', '');
+        return $this->objRarityDisplay()->getTranslated();
     }
     
     public function getTypes() : array
@@ -177,6 +90,16 @@ class Items_Item
     public function getTypesString() : string
     {
         return implode(', ', $this->getTypes());
+    }
+    
+    public function getShopPrice() : int
+    {
+        $price = $this->objShopPrice();
+        if($price) {
+            return $price->getValue();
+        }
+        
+        return 0;
     }
     
     public function getSubtype() : string
@@ -196,43 +119,77 @@ class Items_Item
         return $type;
     }
     
-    public function getShopPrice()
-    {
-        return $this->getKey('ShopValue');
-    }
-    
     public function getLabel() : string
     {
-        return $this->getKey('DisplayName', '');
+        return $this->objDisplayName()->getText();
     }
-    
+
     public function getDescription() : string
     {
-        return $this->getKey('Description', '');
+        if($this->hasChildName('Description')) {
+            return $this->objDescription()->getText();
+        }
+        
+        return '';
     }
     
+    public function canBeEquipped() : bool
+    {
+        return $this->objCanBeEquipped()->getValue();
+    }
+    
+    public function objAI() : ?Types_GameItemType_AIData
+    {
+        if($this->hasChildName('AIData')) {
+            return $this->getChildByName('AIData');
+        }
+        
+        return null;
+    }
+    
+    public function objDisplayName() : Types_GameItemType_DisplayName
+    {
+        return $this->getChildByName('DisplayName');
+    }
+    
+    public function objRarityDisplay() : Types_GameItemType_RarityDisplay
+    {
+        return $this->getChildByName('RarityDisplay');
+    }
+    
+    public function objShopPrice() : ?Types_GameItemType_ShopValue
+    {
+        return $this->getChildByName('ShopValue');
+    }
+    
+    public function objDescription() : ?Types_GameItemType_Description
+    {
+        return $this->getChildByName('Description');
+    }
+    
+    public function objAvailableForSovereign() : ?Types_GameItemType_IsAvailableForSovereignCustomization
+    {
+        return $this->getChildByName('IsAvailableForSovereignCustomization');
+    }
+    
+    public function objCanBeEquipped() : Types_GameItemType_CanBeEquipped
+    {
+        return $this->getChildByName('CanBeEquipped');
+    }
+    
+    public function objType() : Types_GameItemType_Type
+    {
+        return $this->getChildByName('Type');
+    }
+    
+    public function objLikelihood() : Types_GameItemType_Likelihood
+    {
+        return $this->getChildByName('Likelihood');
+    }
+     
     public function getSourceFile()
     {
         return $this->sourceFile;
-    }
-    
-    protected function setKey($name, $value)
-    {
-        $this->data[$name] = $value;
-    }
-    
-    protected function initKey($name, $value)
-    {
-        if(!isset($this->data[$name])) {
-            $this->data[$name] = $value;
-        }
-    }
-    
-    protected function parse_Type(\DOMElement $node)
-    {
-        $this->initKey('Type', array());
-        
-        $this->data['Type'][] = $node->nodeValue;
     }
     
     public function getURLEdit(array $params=array())
@@ -254,3 +211,4 @@ class Items_Item
         return '?'.http_build_query($params);
     }
 }
+

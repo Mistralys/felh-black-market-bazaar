@@ -7,8 +7,6 @@
     // the URL to access the website - can be a local address like localhost.
     $siteURL = 'http://127.0.0.1/svn/personal/Black%20Market%20Bazaar/edit/';
     
-    
-    
     // ---------------------------------------------------------
     // DO NOT CHANGE ANYTHING BELOW
     // ---------------------------------------------------------
