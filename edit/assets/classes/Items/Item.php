@@ -82,14 +82,23 @@ class Items_Item extends DataType_Container
         return $this->objRarityDisplay()->getTranslated();
     }
     
-    public function getTypes() : array
+   /**
+    * @return \FELH\Types_GameItemType_Type[]
+    */
+    public function getTypes()
     {
-        return $this->getKey('Type', array());
+        return $this->getChildrenByName('Type');
     }
     
     public function getTypesString() : string
     {
-        return implode(', ', $this->getTypes());
+        $types = $this->getTypes();
+        $names = array();
+        foreach($types as $type) {
+            $names[] = $type->getTranslated();
+        }
+        
+        return implode(', ', $names);
     }
     
     public function getShopPrice() : int
@@ -102,18 +111,34 @@ class Items_Item extends DataType_Container
         return 0;
     }
     
+   /**
+    * Retrieves the item's subtype label, or an empty string if none has been specified.
+    * 
+    * @return string
+    * @see Items_Item::objSubtype()
+    */
     public function getSubtype() : string
     {
-        return $this->getKey('Subtype', '');
+        $subtype = $this->objSubtype();
+        if($subtype) {
+            return $subtype->getText();
+        }
+        
+        return '';
     }
     
+   /**
+    * Retrieves the item's type and subtype (if any), concatenated into a single string.
+    * 
+    * @return string
+    */
     public function getFullType() : string
     {
         $type = $this->getTypesString();
         $subtype = $this->getSubtype();
         
         if(!empty($subtype)) {
-            $type .= ' - '.$subtype;
+            $type = $subtype.' - '.$type;
         }
         
         return $type;
@@ -145,6 +170,11 @@ class Items_Item extends DataType_Container
         }
         
         return null;
+    }
+    
+    public function objSubtype() : ?Types_GameItemType_Subtype
+    {
+        return $this->getChildByName('Subtype');
     }
     
     public function objDisplayName() : Types_GameItemType_DisplayName
@@ -185,6 +215,11 @@ class Items_Item extends DataType_Container
     public function objLikelihood() : Types_GameItemType_Likelihood
     {
         return $this->getChildByName('Likelihood');
+    }
+    
+    public function objArtDef() : Types_GameItemType_ArtDef
+    {
+        return $this->getChildByName('ArtDef');
     }
      
     public function getSourceFile()

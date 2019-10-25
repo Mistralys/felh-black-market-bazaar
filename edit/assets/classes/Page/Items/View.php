@@ -91,7 +91,7 @@ class Page_Items_View extends Page
         			</tr>
         			<tr>
         				<td><?php pt('Type') ?></td>
-        				<td><?php echo $this->item->objType()->getText() ?></td>
+        				<td><?php echo $this->item->getFullType() ?></td>
         			</tr>
         			<tr>
         				<td><?php pt('Likelihood') ?></td>
