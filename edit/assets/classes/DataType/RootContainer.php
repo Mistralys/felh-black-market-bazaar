@@ -6,17 +6,17 @@ namespace FELH;
 
 abstract class DataType_RootContainer extends DataType_Container
 {
-    protected $sourceFile;
+    protected $folder;
     
-    public function __construct(string $name, \DOMElement $node, string $sourceFile)
+    public function __construct(string $name, \DOMElement $node, Items_Folder $folder)
     {
-        $this->sourceFile = $sourceFile;
+        $this->folder = $folder;
         
         parent::__construct($name, $node);
     }
     
-    public function getSourceFile() : string
+    public function getFolder() : Items_Folder
     {
-        return $this->sourceFile;
+        return $this->folder;
     }
 }

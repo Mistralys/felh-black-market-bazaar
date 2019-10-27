@@ -8,7 +8,7 @@ class Items_Item extends DataType_RootContainer
     
     public function __construct(Items $items, \DOMElement $node, Reader $reader)
     {
-        parent::__construct('GameItemType', $node, $reader->getXMLPath());
+        parent::__construct('GameItemType', $node, $reader->getFolder());
 
         $this->items = $items;
     }
@@ -76,7 +76,11 @@ class Items_Item extends DataType_RootContainer
     
     public function getRarity() : string
     {
-        return $this->objRarityDisplay()->getTranslated();
+        if($this->hasChildName('RarityDisplay')) {
+            return $this->objRarityDisplay()->getTranslated();
+        }
+        
+        return '';
     }
     
    /**
@@ -179,7 +183,7 @@ class Items_Item extends DataType_RootContainer
         return $this->getChildByName('DisplayName');
     }
     
-    public function objRarityDisplay() : Types_GameItemType_RarityDisplay
+    public function objRarityDisplay() : ?Types_GameItemType_RarityDisplay
     {
         return $this->getChildByName('RarityDisplay');
     }

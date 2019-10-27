@@ -51,7 +51,7 @@ abstract class DataType
                     echo '<pre style="background:#fff;font-family:monospace;font-size:14px;color:#444;padding:16px;border:solid 1px #999;border-radius:4px;">';
                     print_r(array(
                         $name, 
-                        $this->getSourceFile(),
+                        $this->getFolder()->getPath(),
                         $this->getFullName()
                     ));
                     echo '</pre>';
@@ -171,8 +171,8 @@ abstract class DataType
         return $this->parent->getRootContainer();
     }
     
-    public function getSourceFile() : string
+    public function getFolder() : Items_Folder
     {
-        return $this->getRootContainer()->getSourceFile();
+        return $this->getRootContainer()->getFolder();
     }
 }

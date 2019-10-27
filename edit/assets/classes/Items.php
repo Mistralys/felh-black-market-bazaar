@@ -8,6 +8,9 @@ class Items
 {
     const ERROR_UNKNOWN_ITEM_ID = 40201;
     
+   /**
+    * @var Items_Folder[]
+    */
     protected $folders = array();
     
    /**
@@ -31,10 +34,9 @@ class Items
         $this->request = $editor->getSite()->getRequest();
     }
     
-    public function addFolder(string $folder) : Items
+    public function addFolder(string $label, string $folder) : Items
     {
-        $this->folders[] = $folder;
-        
+        $this->folders[] = new Items_Folder($label, $folder);
         return $this;
     }
  
@@ -42,7 +44,7 @@ class Items
     {
         foreach($this->folders as $folder)
         {
-            $d = new \DirectoryIterator($folder);
+            $d = new \DirectoryIterator($folder->getPath());
             foreach($d as $item) 
             {
                 if(!$item->isFile()) {
@@ -54,7 +56,29 @@ class Items
                     continue;
                 }
                 
-                $reader = new Reader($this, $item->getPathname());
+                $f = fopen($item->getPathname(), 'r');
+                $line = fgets($f); // xml declaration
+                $seekMax = 10;
+                
+                for($i=0; $i < $seekMax; $i++) 
+                {
+                    $line = trim(fgets($f));
+                    if(empty($line)) {
+                        continue;
+                    }
+                    
+                    if($line[0] == '<' && substr($line, 0, 4) != '<!--') {
+                        break;
+                    }
+                }
+                
+                fclose($f);
+                
+                if(!stristr($line, 'GameItemTypes')) {
+                    continue;
+                }
+                
+                $reader = new Reader($this, $folder, $item->getPathname());
                 $reader->parse();
             }
         }

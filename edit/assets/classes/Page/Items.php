@@ -44,6 +44,7 @@ class Page_Items extends Page
         $grid = $this->ui->createDataGrid();
         $grid->addColumn('label', t('Name'));
         $grid->addColumn('type', t('Type'));
+        $grid->addColumn('source', t('Source'));
         $grid->addColumn('price', t('Shop price'))->alignRight();
         $grid->addColumn('rarity', t('Rarity'));
 
@@ -53,6 +54,7 @@ class Page_Items extends Page
             $grid->addRow(
                 '<a href="'.$item->getURLView().'">'.$item->getLabel().'</a>',
                 $item->getFullType(),
+                $item->getFolder()->getLabel(),
                 $item->getShopPrice(),
                 $item->getRarity()
              );

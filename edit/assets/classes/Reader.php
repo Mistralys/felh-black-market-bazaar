@@ -21,10 +21,21 @@ class Reader
     */
     protected $dom;
     
-    public function __construct(Items $items, string $xmlPath)
+   /**
+    * @var Items_Folder
+    */
+    protected $folder;
+    
+    public function __construct(Items $items, Items_Folder $folder, string $xmlPath)
     {
         $this->xmlPath = $xmlPath;
         $this->items = $items;
+        $this->folder = $folder;
+    }
+    
+    public function getFolder() : Items_Folder
+    {
+        return $this->folder;
     }
     
     public function parse() : void
@@ -32,7 +43,13 @@ class Reader
         $this->dom = new \DomDocument();
         $this->dom->preserveWhiteSpace = false;
         
-        $this->dom->load($this->xmlPath);
+        $xml = file_get_contents($this->xmlPath);
+        
+        $result = array();
+        preg_match_all('/<\?xml.*\?>/six', $xml, $result, PREG_PATTERN_ORDER);
+        $xml = str_replace($result[0][0], $result[0][0].PHP_EOL.'<DummyRoot>', $xml).'</DummyRoot>';        
+        
+        $this->dom->loadXML($xml);
         
         $nodes = $this->dom->getElementsByTagName('GameItemType');
 

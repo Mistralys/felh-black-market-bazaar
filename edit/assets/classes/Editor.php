@@ -21,7 +21,8 @@ class Editor
         $this->site = $site;
         
         $this->items = new Items($this);
-        $this->items->addFolder($site->getWebrootFolder().'/../Black Market Bazaar');
+        $this->items->addFolder('Black Market Bazaar', $site->getWebrootFolder().'/../Black Market Bazaar');
+        $this->items->addFolder('Core Game', APP_GAME_PATH.'/data/English');
         $this->items->load();
     }
     
