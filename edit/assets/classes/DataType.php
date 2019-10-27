@@ -39,10 +39,22 @@ abstract class DataType
             {
                 $name = $child->nodeName;
                 
+                if($name == '#text') {
+                    continue;
+                }
+                
                 $className = '\FELH\Types_'.$this->getFullName().'_'.$name;
                 
                 if(class_exists($className)) {
                     $this->data[] = new $className($name, $child, $this);
+                } else {
+                    echo '<pre style="background:#fff;font-family:monospace;font-size:14px;color:#444;padding:16px;border:solid 1px #999;border-radius:4px;">';
+                    print_r(array(
+                        $name, 
+                        $this->getSourceFile(),
+                        $this->getFullName()
+                    ));
+                    echo '</pre>';
                 }
             }
         }
@@ -57,6 +69,20 @@ abstract class DataType
     protected function init()
     {
         
+    }
+    
+    public function getDepth() : int
+    {
+        if(!$this->hasParent()) {
+            return 0;
+        }
+        
+        return $this->parent->getDepth() + 1;
+    }
+        
+    public function hasParent() : bool
+    {
+        return isset($this->parent);
     }
     
     public function isContainer() : bool
@@ -123,5 +149,30 @@ abstract class DataType
         }
         
         return $result;
+    }
+    
+    abstract public function getLabel() : string;
+
+    abstract public function toString() : string;
+    
+    abstract public function toHTML() : string;
+    
+    public function multipleAllowed() : bool
+    {
+        return false;
+    }
+    
+    public function getRootContainer() : DataType_RootContainer
+    {
+        if($this instanceof DataType_RootContainer) {
+            return $this;
+        }
+        
+        return $this->parent->getRootContainer();
+    }
+    
+    public function getSourceFile() : string
+    {
+        return $this->getRootContainer()->getSourceFile();
     }
 }

@@ -1,0 +1,11 @@
+<?php
+
+namespace FELH;
+
+class Types_GameItemType_GameModifier_DisplayName extends DataType_String
+{
+    public function getLabel() : string
+    {
+        return t('Display name');
+    }
+}

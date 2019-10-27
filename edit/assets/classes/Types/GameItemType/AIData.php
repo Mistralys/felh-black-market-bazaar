@@ -18,4 +18,9 @@ class Types_GameItemType_AIData extends DataType_Container
     {
         return $this->getChildByName('AIPriority');
     }
+    
+    public function getLabel() : string
+    {
+        return t('AI data');
+    }
 }

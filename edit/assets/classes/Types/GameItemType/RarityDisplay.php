@@ -13,4 +13,9 @@ class Types_GameItemType_RarityDisplay extends DataType_StringEnum
             'Nil' => t('None')
         );
     }
+    
+    public function getLabel() : string
+    {
+        return t('Rarity');
+    }
 }

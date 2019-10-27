@@ -2,17 +2,14 @@
 
 namespace FELH;
 
-class Items_Item extends DataType_Container
+class Items_Item extends DataType_RootContainer
 {
     protected $id;
     
-    protected $sourceFile;
-    
     public function __construct(Items $items, \DOMElement $node, Reader $reader)
     {
-        parent::__construct('GameItemType', $node);
+        parent::__construct('GameItemType', $node, $reader->getXMLPath());
 
-        $this->sourceFile = $reader->getXMLPath();
         $this->items = $items;
     }
     
@@ -222,11 +219,6 @@ class Items_Item extends DataType_Container
         return $this->getChildByName('ArtDef');
     }
      
-    public function getSourceFile()
-    {
-        return $this->sourceFile;
-    }
-    
     public function getURLEdit(array $params=array())
     {
         $params['slug'] = 'Items.Edit';

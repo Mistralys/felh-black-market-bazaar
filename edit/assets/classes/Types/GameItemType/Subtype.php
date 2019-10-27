@@ -10,4 +10,9 @@ class Types_GameItemType_Subtype extends DataType_StringEnum
             'Clothes' => t('Clothes')
         );
     }
+    
+    public function getLabel() : string
+    {
+        return t('Subtype');
+    }
 }

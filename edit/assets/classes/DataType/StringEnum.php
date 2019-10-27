@@ -23,4 +23,14 @@ abstract class DataType_StringEnum extends DataType_String
         
         return $value;
     }
+    
+    public function toString() : string
+    {
+        return $this->getTranslated();
+    }
+    
+    public function toHTML() : string
+    {
+        return $this->toString();
+    }
 }

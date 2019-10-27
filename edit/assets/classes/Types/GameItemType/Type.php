@@ -11,4 +11,9 @@ class Types_GameItemType_Type extends DataType_StringEnum
             'Surcoat' => t('Surcoat')
         );
     }
+    
+    public function getLabel() : string
+    {
+        return t('Type');
+    }
 }

@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FELH;
 
-class Types_GameItemType_GameItemTypeArtDef_GameItemTypeModelPack_GameItemTypeModel_Texture_Hair extends DataType_String
+class Types_GameItemType_GameItemTypeArtDef_GameItemTypeModelPack_GameItemTypeModel_Texture_Hair extends DataType_Texture
 {
-    public function getPath() : string
+    public function getLabel() : string
     {
-        return $this->value;
+        return t('Hair texture');
     }
 }
