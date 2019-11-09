@@ -29,20 +29,9 @@ class Page_Items_View extends Page
         
     }
     
-    /**
-     * @var Editor
-     */
-    protected $editor;
-    
-   /**
-    * @var Items_Item
-    */
-    protected $item;
-    
     protected function processActions()
     {
-        $this->editor = $this->site->createEditor();
-        $this->item = $this->editor->getItems()->getByRequest();
+        $this->item = $this->items->getByRequest();
 
         if($this->item === null) {
             $this->redirectWithErrorMessage(
@@ -56,9 +45,19 @@ class Page_Items_View extends Page
     {
         $this->ui->addScript('css/main.css');   
         
+        $icon = $this->item->getIcon();
+        
         ob_start();
         
-        ?>
+        if($icon) 
+        {
+            ?>
+            	<p>
+            		<img src="<?php echo $icon->getURL() ?>">
+            	</p>
+        	<?php 
+        }
+    	?>
         	<p>
             	<a href="<?php echo $this->item->getURLEdit() ?>" class="btn btn-primary">
             		<?php pt('Edit item') ?>
