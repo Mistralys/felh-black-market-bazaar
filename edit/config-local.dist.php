@@ -11,3 +11,8 @@
     * @var string
     */
     define('APP_GAME_DOCUMENTS_PATH', 'C:\Users\Username\Documents\My Games\LegendaryHeroes');
+    
+    define('APP_DB_NAME', 'legendary_heroes');
+    define('APP_DB_HOST', 'localhost');
+    define('APP_DB_USER', 'root');
+    define('APP_DB_PASSWORD', '');
