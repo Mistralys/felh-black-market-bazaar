@@ -67,4 +67,9 @@ class Items_Collection extends \AppDB\DBHelper_BaseCollection
     {
         return 'record_id';
     }
+    
+    public function getFilters() : Items_Collection_Filters
+    {
+        return $this->getFilterCriteria();
+    }
 }
