@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace FELH;
 
+use AppDB\DBHelper;
+
 class Site extends \Microsite\Site
 {
     public function getDefaultSlug() : string
@@ -29,6 +31,7 @@ class Site extends \Microsite\Site
     protected function initNavigation() : void
     {
         $this->navigation->addPage($this->getPageBySlug($this->getDefaultSlug()));
+        $this->navigation->addPage($this->getPageBySlug('Items.Load'));
     }
     
     /**
@@ -43,5 +46,13 @@ class Site extends \Microsite\Site
         }
         
         return $this->editor;
+    }
+    
+    protected function init()
+    {
+        // Initialize the database access
+        DBHelper::addDatabase('main', APP_DB_NAME)
+        ->setCredentials(APP_DB_USER, APP_DB_PASSWORD)
+        ->setHost(APP_DB_HOST);
     }
 }
