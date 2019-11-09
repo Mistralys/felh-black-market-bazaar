@@ -18,4 +18,39 @@ class Items_Collection_Record extends \AppDB\DBHelper_BaseRecord
     {
         
     }
+    
+    public function getLabel() : string
+    {
+        return $this->getRecordStringKey('label');
+    }
+    
+   /**
+    * The source file name without path.
+    * @return string
+    */
+    public function getSourceFile() : string
+    {
+        return $this->getRecordStringKey('source_file');
+    }
+    
+    public function getFolderLabel()  : string
+    {
+        return $this->getRecordStringKey('folder_label');
+    }
+    
+    public function getTag() : Items_XMLTag
+    {
+        $items = Editor::getInstance()->getItems();
+        return $items->getTagByID($this->getRecordIntKey('tag_id'));
+    }
+    
+    public function getURLView($params=array())
+    {
+        $params['record_id'] = $this->getID();
+        
+        return Editor::getInstance()->getSite()->buildSlugURL(
+            'Items.View', 
+            $params
+        );
+    }
 }
