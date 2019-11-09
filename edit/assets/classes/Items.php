@@ -76,7 +76,7 @@ class Items
 
     protected function registerTags()
     {
-        $this->registerTag('GameItemType', 1, t('Items'));
+        $this->registerTag('GameItemType', 1, t('Item'));
     }
     
    /**
