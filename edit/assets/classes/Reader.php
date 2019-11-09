@@ -26,11 +26,18 @@ class Reader
     */
     protected $folder;
     
-    public function __construct(Items $items, Items_Folder $folder, string $xmlPath)
+   /**
+    * The tags that were detected in the file.
+    * @var Items_XMLTag[]
+    */
+    protected $tags;
+    
+    public function __construct(Items $items, Items_Folder $folder, string $xmlPath, array $tags)
     {
         $this->xmlPath = $xmlPath;
         $this->items = $items;
         $this->folder = $folder;
+        $this->tags = $tags;
     }
     
     public function getFolder() : Items_Folder
@@ -51,11 +58,14 @@ class Reader
         
         $this->dom->loadXML($xml);
         
-        $nodes = $this->dom->getElementsByTagName('GameItemType');
-
-        foreach($nodes as $node) 
+        foreach($this->tags as $tag)
         {
-            $this->items->addItem($node, $this);
+            $nodes = $this->dom->getElementsByTagName($tag->getName());
+    
+            foreach($nodes as $node) 
+            {
+                $this->items->addFromNode($tag, $node, $this->xmlPath, $this->folder);
+            }
         }
     }
     
