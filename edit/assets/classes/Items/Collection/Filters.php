@@ -28,4 +28,16 @@ class Items_Collection_Filters extends \AppDB\DBHelper_BaseFilterCriteria
     {
         
     }
+    
+   /**
+    * Retrieves all matching records. Alias for the
+    * base method getItemsObjects, but with the correct
+    * return type.
+    * 
+    * @return Items_Collection_Record[]
+    */
+    public function getRecords()
+    {
+        return $this->getItemsObjects();
+    }
 }
