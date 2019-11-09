@@ -29,16 +29,6 @@ class Page_Items extends Page
         
     }
 
-   /**
-    * @var Editor
-    */
-    protected $editor;
-    
-    protected function processActions()
-    {
-        $this->editor = $this->site->createEditor();
-    }
-
     protected function _renderContent(): string
     {
         $grid = $this->ui->createDataGrid();
