@@ -6,14 +6,23 @@ namespace FELH;
 
 abstract class DataType_File extends DataType
 {
-    public function getPath() : string
+    public function getFileName() : string
     {
-        return $this->value;
+        return basename($this->getPath());
     }
+    
+    public function getURL() : string
+    {
+        $path = $this->getPath();
+        
+        return Editor::getInstance()->getSite()->getMediaURL($path);
+    }
+    
+    abstract public function getPath() : string;
     
     public function toString() : string
     {
-        return $this->getPath();
+        return $this->getFileName();
     }
     
     public function toHTML() : string

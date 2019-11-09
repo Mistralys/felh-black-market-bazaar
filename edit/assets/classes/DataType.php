@@ -4,6 +4,8 @@ namespace FELH;
 
 abstract class DataType
 {
+    const ERROR_INVALID_INSTANTIATION = 41201;
+    
    /**
     * @var DataType
     */
@@ -12,7 +14,7 @@ abstract class DataType
    /**
     * @var string
     */
-    protected $name;
+    protected $tagName;
     
    /**
     * @var DataType[]
@@ -23,11 +25,51 @@ abstract class DataType
     
     protected $value = null;
     
-    public function __construct(string $name, \DOMElement $node, ?DataType $parent=null)
+   /**
+    * @var Items
+    */
+    protected $items;
+    
+    public static function fromNode(Items $items, string $tagName, \DOMElement $node, ?DataType $parent=null) : DataType
     {
-        $this->name = $name;
+        $class = get_called_class();
+        return new $class($items, $tagName, $node, $parent);
+    }
+    
+    public static function fromArray(Items $items, string $tagName, array $data, ?DataType $parent=null) : DataType
+    {
+        $class = get_called_class();
+        return new $class($items, $tagName, $data, $parent);
+    }
+    
+    protected function __construct(Items $items, string $tagName, $nodeOrData, ?DataType $parent=null)
+    {
+        $this->items = $items;
+        $this->tagName = $tagName;
         $this->parent = $parent;
         
+        if($nodeOrData instanceof \DOMElement)
+        {
+            $this->importNode($nodeOrData);
+        }
+        else if(is_array($nodeOrData))
+        {
+            $this->importArray($nodeOrData);
+        }
+        else
+        {
+            throw new Exception(
+                'Invalid instantiation',
+                null,
+                self::ERROR_INVALID_INSTANTIATION
+            );
+        }
+        
+        $this->init();
+    }
+    
+    protected function importNode(\DOMElement $node)
+    {
         foreach($node->attributes as $attribute)
         {
             $this->attributes[$attribute->nodeName] = $attribute->nodeValue;
@@ -45,9 +87,12 @@ abstract class DataType
                 
                 $className = '\FELH\Types_'.$this->getFullName().'_'.$name;
                 
-                if(class_exists($className)) {
-                    $this->data[] = new $className($name, $child, $this);
-                } else {
+                if(class_exists($className)) 
+                {
+                    $this->data[] = call_user_func(array($className, 'fromNode'), $this->items, $name, $child, $this);
+                } 
+                else 
+                {
                     echo '<pre style="background:#fff;font-family:monospace;font-size:14px;color:#444;padding:16px;border:solid 1px #999;border-radius:4px;">';
                     print_r(array(
                         $name, 
@@ -62,8 +107,49 @@ abstract class DataType
         {
             $this->value = $node->nodeValue;
         }
+    }
+    
+    protected function importArray(array $data)
+    {
+        $this->tagName = $data['tag_name'];
+        $this->value = $data['value'];
+        $this->attributes = $data['attributes'];
         
-        $this->init();
+        if($this->isContainer())
+        {
+            foreach($data['children'] as $childData)
+            {
+                $name = $childData['name'];
+                
+                $className = '\FELH\Types_'.$this->getFullName().'_'.$name;
+                
+                if(class_exists($className)) {
+                    $this->data[] = call_user_func(array($className, 'fromArray'), $name, $childData, $this);
+                }
+            }
+        }
+    }
+    
+    public function toStorageArray()  : array
+    {
+        $data = array(
+            'class' => get_class($this),
+            'tag_name' => $this->tagName,
+            'value' => $this->value,
+            'attributes' => $this->attributes
+        );
+        
+        if($this->isContainer()) 
+        {
+            $data['children'] = array();
+            
+            foreach($this->data as $child) 
+            {
+                $data['children'][] = $child->toStorageArray();
+            }
+        }
+        
+        return $data;
     }
     
     protected function init()
@@ -90,18 +176,23 @@ abstract class DataType
         return false;
     }
     
+    public function isRoot() : bool
+    {
+        return false;
+    }
+     
     public function getName() : string
     {
-        return $this->name;
+        return $this->tagName;
     }
     
-    public function getFullName()
+    public function getFullName() : string
     {
         if($this->parent !== null) {
-            return $this->parent->getFullName().'_'.$this->name;
+            return $this->parent->getFullName().'_'.$this->tagName;
         }
         
-        return $this->name;
+        return $this->tagName;
     }
     
     public function getAttribute(string $name) : string
