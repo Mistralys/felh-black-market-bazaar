@@ -31,7 +31,7 @@ class Page_Items_View extends Page
     
     protected function processActions()
     {
-        $this->item = $this->items->getByRequest();
+        $this->item = $this->items->getCollection()->getByRequest();
 
         if($this->item === null) {
             $this->redirectWithErrorMessage(
