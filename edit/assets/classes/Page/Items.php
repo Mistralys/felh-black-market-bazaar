@@ -35,56 +35,22 @@ class Page_Items extends Page
         $grid->addColumn('label', t('Name'));
         $grid->addColumn('type', t('Type'));
         $grid->addColumn('source', t('Source'));
-        $grid->addColumn('price', t('Shop price'))->alignRight();
-        $grid->addColumn('rarity', t('Rarity'));
 
-        $items = $this->editor->getItems()->getItems();
-        foreach($items as $item)
+        $collection = $this->editor->getItems()->getCollection();
+        $filters = $collection->getFilters();
+
+        $filters->setLimit(0, 20);
+        $records = $filters->getRecords();
+        
+        foreach($records as $record)
         {
             $grid->addRow(
-                '<a href="'.$item->getURLView().'">'.$item->getLabel().'</a>',
-                $item->getFullType(),
-                $item->getFolder()->getLabel(),
-                $item->getShopPrice(),
-                $item->getRarity()
+                '<a href="'.$record->getURLView().'">'.$record->getLabel().'</a>',
+                $record->getTag()->getLabel(),
+                $record->getFolderLabel()
              );
         }
         
         return $grid->render();
-        
-        ob_start();
-        ?>
-        	<table class="table table-hover">
-        		<thead>
-        			<tr>
-        				<th><?php pt('Name') ?></th>
-        				<th><?php pt('Type') ?></th>
-        				<th class="align-right"><?php pt('Shop price') ?></th>
-        				<th><?php pt('Rarity') ?></th>
-        			</tr>
-        		</thead>
-        		<tbody>
-        		<?php 
-            		foreach($items as $item) 
-            		{
-            		    ?>
-            		    	<tr>
-                		    	<td>
-                		    		<a href="<?php  ?>">
-                		    			<?php echo $item->getLabel() ?>
-            		    			</a>
-                		    	</td>
-                		    	<td><?php echo $item->getFullType() ?></td>
-                		    	<td class="align-right"><?php echo $item->getShopPrice() ?></td>
-                		    	<td><?php echo $item->getRarity() ?></td>
-            		    	</tr>
-            		    <?php 
-            		}
-        		?>
-        		</tbody>
-        	</table>
-        <?php 
-        
-        return ob_get_clean();
     }
 }
