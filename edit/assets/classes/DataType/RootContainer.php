@@ -6,6 +6,8 @@ namespace FELH;
 
 abstract class DataType_RootContainer extends DataType_Container
 {
+    const ERROR_CANNOT_CHANGE_RECORD = 41301;
+    
     protected $folder;
 
     protected $sourceFile;
@@ -15,9 +17,34 @@ abstract class DataType_RootContainer extends DataType_Container
     */
     protected $tag;
     
+   /**
+    * @var Items_Collection_Record
+    */
+    protected $record;
+    
     public function getID()
     {
         return $this->getAttribute('InternalName');
+    }
+    
+    public function setRecord(Items_Collection_Record $record)
+    {
+        if(!isset($this->record)) 
+        {
+            $this->record = $record;
+            return;
+        }
+        
+        throw new Exception(
+            'Record already set.',
+            null,
+            self::ERROR_CANNOT_CHANGE_RECORD
+        );
+    }
+    
+    public function getRecord() :  Items_Collection_Record
+    {
+        return $this->record;
     }
     
     public function setSourceFile(string $file)
@@ -110,10 +137,24 @@ abstract class DataType_RootContainer extends DataType_Container
         ));
     }
     
-    public function getRecord() 
+    abstract public function getDescription() : string;
+
+    public function getURLEdit(array $params=array())
     {
-        
+        $params['slug'] = 'Items.Edit';
+        return $this->getURL($params);
     }
     
-    abstract public function getDescription() : string;
+    public function getURLView(array $params=array())
+    {
+        $params['slug'] = 'Items.View';
+        return $this->getURL($params);
+    }
+    
+    public function getURL(array $params=array())
+    {
+        $params['record_id'] = $this->getRecord()->getID();
+        
+        return '?'.http_build_query($params);
+    }
 }

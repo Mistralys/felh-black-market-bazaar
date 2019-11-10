@@ -104,6 +104,7 @@ class Items_Collection_Record extends \AppDB\DBHelper_BaseRecord
             $obj->setSourceFile($data['sourceFile']);
             $obj->setFolder($this->getFolder());
             $obj->setTag($tag);
+            $obj->setRecord($this);
             
             $this->dataType = $obj;
             return $obj;
