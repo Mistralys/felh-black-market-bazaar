@@ -35,21 +35,28 @@ class Page_Items_Edit extends Page
     protected $editor;
     
    /**
-    * @var Items_Item
+    * @var Items_Collection_Record
+    */  
+    protected $record;
+    
+   /**
+    * @var DataType
     */
     protected $item;
     
     protected function processActions()
     {
         $this->editor = $this->site->createEditor();
-        $this->item = $this->editor->getItems()->getByRequest();
+        $this->record = $this->editor->getItems()->getCollection()->getByRequest();
         
-        if($this->item === null) {
+        if($this->record === null) {
             $this->redirectWithErrorMessage(
                 t('Unknown item'),
                 $this->items->getURLList()
             );
         }
+        
+        $this->item = $this->record->getDataType();
     }
     
     protected function _renderContent(): string
