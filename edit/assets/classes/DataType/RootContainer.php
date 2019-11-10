@@ -102,9 +102,10 @@ abstract class DataType_RootContainer extends DataType_Container
         
         $this->record = $collection->createNewRecord(array(
             'source_file' => $this->getSourceFileName(),
-            'folder_label' => $this->folder->getLabel(),
+            'folder_id' => $this->folder->getID(),
             'tag_id' => $this->tag->getDBID(),
             'label' => $this->getLabel(),
+            'description' => $this->getDescription(),
             'data' => json_encode($this->toStorageArray())
         ));
     }
@@ -113,4 +114,6 @@ abstract class DataType_RootContainer extends DataType_Container
     {
         
     }
+    
+    abstract public function getDescription() : string;
 }
