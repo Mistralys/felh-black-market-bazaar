@@ -4,6 +4,16 @@ namespace FELH;
 
 class Page_Items_View extends Page
 {
+   /**
+    * @var Items_Collection_Record
+    */
+    protected $record;
+    
+   /**
+    * @var DataType
+    */
+    protected $item;
+    
     public function getPageAbstract(): string
     {
         return $this->item->getDescription();
@@ -11,12 +21,12 @@ class Page_Items_View extends Page
     
     public function getPageTitle(): string
     {
-        return $this->item->getLabel();
+        return $this->record->getLabel();
     }
     
     public function getNavigationTitle() : string
     {
-        return $this->item->getLabel();
+        return $this->record->getLabel();
     }
     
     public function getDefaultSlug(): string
@@ -31,14 +41,16 @@ class Page_Items_View extends Page
     
     protected function processActions()
     {
-        $this->item = $this->items->getCollection()->getByRequest();
+        $this->record = $this->items->getCollection()->getByRequest();
 
-        if($this->item === null) {
+        if($this->record === null) {
             $this->redirectWithErrorMessage(
                 t('Unknown item'), 
                 $this->items->getURLList()
             );
         }
+        
+        $this->item = $this->record->getDataType();
     }
     
     protected function _renderContent(): string
