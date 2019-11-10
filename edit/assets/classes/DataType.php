@@ -119,12 +119,12 @@ abstract class DataType
         {
             foreach($data['children'] as $childData)
             {
-                $name = $childData['name'];
+                $name = $childData['tag_name'];
                 
                 $className = '\FELH\Types_'.$this->getFullName().'_'.$name;
                 
                 if(class_exists($className)) {
-                    $this->data[] = call_user_func(array($className, 'fromArray'), $name, $childData, $this);
+                    $this->data[] = call_user_func(array($className, 'fromArray'), $this->items, $name, $childData, $this);
                 }
             }
         }
