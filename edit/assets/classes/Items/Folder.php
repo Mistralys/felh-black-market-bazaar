@@ -51,6 +51,11 @@ class Items_Folder
         );
     }
     
+    public function getID() : string
+    {
+        return hash('crc32b', $this->getPath());
+    }
+    
     public function getLabel() : string
     {
         return $this->label;
