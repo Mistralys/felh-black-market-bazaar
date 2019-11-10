@@ -160,25 +160,6 @@ class Types_GameItemType extends DataType_RootContainer
         return $this->getChildByName('ArtDef');
     }
     
-    public function getURLEdit(array $params=array())
-    {
-        $params['slug'] = 'Items.Edit';
-        return $this->getURL($params);
-    }
-    
-    public function getURLView(array $params=array())
-    {
-        $params['slug'] = 'Items.View';
-        return $this->getURL($params);
-    }
-    
-    public function getURL(array $params=array())
-    {
-        $params['item_id'] = $this->getID();
-        
-        return '?'.http_build_query($params);
-    }
-    
     public function objTypeArtDef() : ?Types_GameItemType_GameItemTypeArtDef
     {
         return $this->getChildByName('GameItemTypeArtDef');
