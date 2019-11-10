@@ -16,6 +16,8 @@ class Items
     
     const ERROR_UNKNOWN_TAG_ID = 40203;
     
+    const ERROR_UNKNOWN_FOLDER_ID = 40204;
+    
    /**
     * @var Items_Folder[]
     */
@@ -270,5 +272,21 @@ class Items
         }
         
         return true;
+    }
+    
+    public function getFolderByID(string $id) : Items_Folder
+    {
+        foreach($this->folders as $folder) 
+        {
+            if($folder->getID() === $id) {
+                return $folder;
+            }
+        }
+        
+        throw new Exception(
+            'Unknown folder ID.',
+            sprintf('Cannot find any folder for the ID [%s].', $id),
+            self::ERROR_UNKNOWN_FOLDER_ID
+        );
     }
 }
