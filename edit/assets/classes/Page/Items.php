@@ -47,7 +47,7 @@ class Page_Items extends Page
             $grid->addRow(
                 '<a href="'.$record->getURLView().'">'.$record->getLabel().'</a>',
                 $record->getTag()->getLabel(),
-                $record->getFolderLabel()
+                $record->getFolder()->getLabel()
              );
         }
         
