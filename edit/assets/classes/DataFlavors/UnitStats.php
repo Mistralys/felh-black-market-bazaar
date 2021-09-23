@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FELH;
 
-abstract class DataType_StringEnum_UnitStats extends DataType_StringEnum
+abstract class DataFlavors_UnitStats extends DataType_StringEnum
 {
     protected function getValues(): array
     {

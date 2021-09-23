@@ -31,7 +31,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-    	"mistralys/application-dbhelper" : "dev-master",
-		"mistralys/microsite" : "dev-master"
+        "mistralys/application-dbhelper" : "dev-master",
+        "mistralys/microsite" : "dev-master",
+        "ext-dom": "*",
+        "ext-json": "*"
     }
 }
