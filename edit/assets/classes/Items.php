@@ -5,53 +5,54 @@ declare(strict_types=1);
 namespace FELH;
 
 use AppDB\DBHelper;
+use AppUtils\Request;
+use DirectoryIterator;
+use DOMElement;
+use function AppUtils\parseVariable;
 
 class Items
 {
     const DATA_VERSION = 1;
     
     const ERROR_UNKNOWN_ITEM_ID = 40201;
-    
     const ERROR_ROOT_CONTAINER_WRONG_CLASS = 40202;
-    
     const ERROR_UNKNOWN_TAG_ID = 40203;
-    
     const ERROR_UNKNOWN_FOLDER_ID = 40204;
     
    /**
     * @var Items_Folder[]
     */
-    protected $folders = array();
+    protected array $folders = array();
     
    /**
     * @var DataType[]
     */
-    protected $items = array();
+    protected array $items = array();
     
    /**
     * @var Editor
     */
-    protected $editor;
+    protected Editor $editor;
     
    /**
-    * @var \AppUtils\Request
+    * @var Request
     */
-    protected $request;
+    protected Request $request;
     
    /**
     * @var string
     */
-    protected $cacheFile;
+    protected string $cacheFile;
     
    /**
     * @var Items_XMLTag[]
     */
-    protected $tags = array();
+    protected array $tags = array();
     
    /**
     * @var Items_Collection
     */
-    protected $collection;
+    protected Items_Collection $collection;
     
     public function __construct(Editor $editor)
     {
@@ -79,6 +80,7 @@ class Items
     protected function registerTags()
     {
         $this->registerTag('GameItemType', 1, t('Item'));
+        $this->registerTag('QuestDef', 2, t('Quest'));
     }
     
    /**
@@ -101,7 +103,7 @@ class Items
         
         foreach($this->folders as $folder)
         {
-            $d = new \DirectoryIterator($folder->getXMLPath());
+            $d = new DirectoryIterator($folder->getXMLPath());
             foreach($d as $item) 
             {
                 if(!$item->isFile()) {
@@ -154,18 +156,33 @@ class Items
         
         DBHelper::commitTransaction();
     }
-    
-    public function addFromNode(Items_XMLTag $tag, \DOMElement $itemNode, string $xmlFile, Items_Folder $folder)
+
+    /**
+     * @param Items_XMLTag $tag
+     * @param DOMElement $itemNode
+     * @param string $xmlFile
+     * @param Items_Folder $folder
+     * @throws Exception
+     *
+     * @see DataType::fromNode()
+     */
+    public function addFromNode(Items_XMLTag $tag, DOMElement $itemNode, string $xmlFile, Items_Folder $folder)
     {
         $class = '\FELH\Types_'.$tag->getName();
         
-        $obj = call_user_func(array($class, 'fromNode'), $this, $tag->getName(), $itemNode);
-        
+        $obj = call_user_func(
+            array($class, 'fromNode'),
+            $this,
+            $tag->getName(),
+            $itemNode,
+            null,
+            $xmlFile,
+            $folder,
+            $tag
+        );
+
         if($obj instanceof DataType_RootContainer) 
         {
-            $obj->setSourceFile($xmlFile);
-            $obj->setFolder($folder);
-            $obj->setTag($tag);
             $this->items[] = $obj;
             return;
         }
@@ -198,7 +215,7 @@ class Items
             'Unknown item ID',
             sprintf(
                 'There is no item with the ID [%s] in the collection.',
-                \AppUtils\parseVariable($id)->toString()    
+                parseVariable($id)->toString()
             ),
             self::ERROR_UNKNOWN_ITEM_ID
         );

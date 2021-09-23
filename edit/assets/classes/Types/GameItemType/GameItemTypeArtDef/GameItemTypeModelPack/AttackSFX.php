@@ -2,7 +2,7 @@
 
 namespace FELH;
 
-class Types_GameItemType_GameItemTypeArtDef_GameItemTypeModelPack_AttackSFX extends DataType_StringEnum_SFX
+class Types_GameItemType_GameItemTypeArtDef_GameItemTypeModelPack_AttackSFX extends DataFlavors_SFXFile
 {
     public function getLabel() : string
     {

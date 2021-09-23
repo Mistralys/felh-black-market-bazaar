@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace FELH;
 
-class Types_GameItemType_GameModifier_StrVal extends DataType_StringEnum_UnitStats
+class Types_GameItemType_GameModifier_StrVal extends DataFlavors_GameModifier_StrVal
 {
-    public function getLabel() : string
-    {
-        return t('Type');
-    }
 }

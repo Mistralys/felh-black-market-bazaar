@@ -2,6 +2,10 @@
 
 namespace FELH;
 
+use AppUtils\FileHelper;
+use DOMElement;
+use DOMNode;
+
 abstract class DataType
 {
     const ERROR_INVALID_INSTANTIATION = 41201;
@@ -28,12 +32,12 @@ abstract class DataType
    /**
     * @var Items
     */
-    protected $items;
+    protected Items $items;
     
-    public static function fromNode(Items $items, string $tagName, \DOMElement $node, ?DataType $parent=null) : DataType
+    public static function fromNode(Items $items, string $tagName, DOMElement $node, ?DataType $parent=null, string $xmlFile='', ?Items_Folder $folder=null, ?Items_XMLTag $tag=null) : DataType
     {
         $class = get_called_class();
-        return new $class($items, $tagName, $node, $parent);
+        return new $class($items, $tagName, $node, $parent, $xmlFile, $folder, $tag);
     }
     
     public static function fromArray(Items $items, string $tagName, array $data, ?DataType $parent=null) : DataType
@@ -47,8 +51,8 @@ abstract class DataType
         $this->items = $items;
         $this->tagName = $tagName;
         $this->parent = $parent;
-        
-        if($nodeOrData instanceof \DOMElement)
+
+        if($nodeOrData instanceof DOMElement)
         {
             $this->importNode($nodeOrData);
         }
@@ -67,8 +71,13 @@ abstract class DataType
         
         $this->init();
     }
+
+    private $tagTypos = array(
+        'Unitclass' => 'UnitClass',
+        'Liklihood' => 'Likelihood'
+    );
     
-    protected function importNode(\DOMElement $node)
+    protected function importNode(DOMElement $node)
     {
         foreach($node->attributes as $attribute)
         {
@@ -77,27 +86,37 @@ abstract class DataType
         
         if($this->isContainer()) 
         {
+            /**
+             * @var DOMNode $child
+             */
             foreach($node->childNodes as $child) 
             {
                 $name = $child->nodeName;
                 
-                if($name == '#text') {
+                if($name === '#text' || $name === '#comment')
+                {
                     continue;
                 }
-                
+
+                if(isset($this->tagTypos[$name]))
+                {
+                    $name = $this->tagTypos[$name];
+                }
+
                 $className = '\FELH\Types_'.$this->getFullName().'_'.$name;
-                
-                if(class_exists($className)) 
+
+                if(class_exists($className))
                 {
                     $this->data[] = call_user_func(array($className, 'fromNode'), $this->items, $name, $child, $this);
-                } 
-                else 
+                }
+                else
                 {
                     echo '<pre style="background:#fff;font-family:monospace;font-size:14px;color:#444;padding:16px;border:solid 1px #999;border-radius:4px;">';
                     print_r(array(
-                        $name, 
-                        $this->getFolder()->getPath(),
-                        $this->getFullName()
+                        'Tag name' => $name,
+                        'Class base' => $className,
+                        'Source file' => FileHelper::normalizePath($this->resolveFile()),
+                        'Value' => $child->nodeValue
                     ));
                     echo '</pre>';
                 }
@@ -244,6 +263,11 @@ abstract class DataType
     
     abstract public function getLabel() : string;
 
+    public function getDescription() : string
+    {
+        return '';
+    }
+
     abstract public function toString() : string;
     
     abstract public function toHTML() : string;
@@ -265,5 +289,20 @@ abstract class DataType
     public function getFolder() : Items_Folder
     {
         return $this->getRootContainer()->getFolder();
+    }
+
+    public function resolveFile() : string
+    {
+        if($this instanceof DataType_RootContainer)
+        {
+            return $this->getSourceFile();
+        }
+
+        if(isset($this->parent))
+        {
+            return $this->parent->resolveFile();
+        }
+
+        return '';
     }
 }

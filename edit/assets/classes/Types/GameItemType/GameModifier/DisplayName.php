@@ -2,10 +2,6 @@
 
 namespace FELH;
 
-class Types_GameItemType_GameModifier_DisplayName extends DataType_String
+class Types_GameItemType_GameModifier_DisplayName extends DataFlavors_DisplayName
 {
-    public function getLabel() : string
-    {
-        return t('Display name');
-    }
 }

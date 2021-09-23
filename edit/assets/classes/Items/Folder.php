@@ -80,6 +80,11 @@ class Items_Folder
     {
         return $this->getSubfolder('gfx');
     }
+
+    public function getMoviePath() : string
+    {
+        return $this->getSubfolder('Movies');
+    }
     
     protected function getSubfolder(string $type) : string
     {

@@ -1,21 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace FELH;
 
-class Types_GameItemType_GameModifier extends DataType_Container
+class Types_GameItemType_GameModifier extends DataFlavors_GameModifier
 {
-    public function getLabel() : string
-    {
-        return t('Modifier');
-    }
-     
-    public function multipleAllowed() : bool
-    {
-        return true;
-    }
-    
-    public function objModType() : Types_GameItemType_GameModifier_ModType
-    {
-        return $this->getChildByName('ModType');
-    }
 }

@@ -12,7 +12,7 @@ abstract class DataType_Container extends DataType
     }
     
    /**
-    * @return \FELH\DataType[]
+    * @return DataType[]
     */
     public function getChildren()
     {

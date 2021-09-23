@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace FELH;
 
-class Types_GameItemType_GameItemTypeArtDef_GameItemTypeModelPack_GameItemTypeModel_SkeletonFile extends DataType_File_HKB
+class Types_GameItemType_GameItemTypeArtDef_GameItemTypeModelPack_GameItemTypeModel_SkeletonFile extends DataFlavors_HKBFile
 {
     public function getLabel() : string
     {

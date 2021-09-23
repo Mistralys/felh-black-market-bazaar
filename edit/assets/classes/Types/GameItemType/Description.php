@@ -2,10 +2,6 @@
 
 namespace FELH;
 
-class Types_GameItemType_Description extends DataType_String
+class Types_GameItemType_Description extends DataFlavors_Description
 {
-    public function getLabel() : string
-    {
-        return t('Description');
-    }
 }

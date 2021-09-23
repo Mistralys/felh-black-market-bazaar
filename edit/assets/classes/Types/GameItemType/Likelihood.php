@@ -2,10 +2,6 @@
 
 namespace FELH;
 
-class Types_GameItemType_Likelihood extends DataType_Integer
+class Types_GameItemType_Likelihood extends DataFlavors_Likelihood
 {
-    public function getLabel() : string
-    {
-        return t('Likelihood');
-    }
 }

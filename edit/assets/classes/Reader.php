@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace FELH;
 
+use DOMDocument;
+
 class Reader
 {
    /**
@@ -14,17 +16,17 @@ class Reader
    /**
     * @var Items
     */
-    protected $items;
+    protected Items $items;
     
    /**
-    * @var \DOMDocument
+    * @var DOMDocument
     */
     protected $dom;
     
    /**
     * @var Items_Folder
     */
-    protected $folder;
+    protected Items_Folder $folder;
     
    /**
     * The tags that were detected in the file.
@@ -47,7 +49,7 @@ class Reader
     
     public function parse() : void
     {
-        $this->dom = new \DomDocument();
+        $this->dom = new DomDocument();
         $this->dom->preserveWhiteSpace = false;
         
         $xml = file_get_contents($this->xmlPath);
@@ -69,7 +71,7 @@ class Reader
         }
     }
     
-    public function getDOM() : \DOMDocument
+    public function getDOM() : DOMDocument
     {
         return $this->dom;
     }

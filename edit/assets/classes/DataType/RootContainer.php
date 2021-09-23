@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace FELH;
 
+use AppUtils\FileHelper;
+
 abstract class DataType_RootContainer extends DataType_Container
 {
     const ERROR_CANNOT_CHANGE_RECORD = 41301;
@@ -21,8 +23,17 @@ abstract class DataType_RootContainer extends DataType_Container
     * @var Items_Collection_Record
     */
     protected $record;
-    
-    public function getID()
+
+    protected function __construct(Items $items, string $tagName, $nodeOrData, ?DataType $parent = null, string $xmlFile = '', ?Items_Folder $folder = null, ?Items_XMLTag $tag = null)
+    {
+        $this->folder = $folder;
+        $this->sourceFile = $xmlFile;
+        $this->tag = $tag;
+
+        parent::__construct($items, $tagName, $nodeOrData, $parent);
+    }
+
+    public function getID() : string
     {
         return $this->getAttribute('InternalName');
     }
@@ -47,11 +58,6 @@ abstract class DataType_RootContainer extends DataType_Container
         return $this->record;
     }
     
-    public function setSourceFile(string $file)
-    {
-        $this->sourceFile = $file;
-    }
-    
    /**
     * The absolute path to the XML source file in which the element was found.
     * @return string
@@ -67,19 +73,9 @@ abstract class DataType_RootContainer extends DataType_Container
     */
     public function getSourceFileName() : string
     {
-        return \AppUtils\FileHelper::getFilename($this->getSourceFile());
+        return FileHelper::getFilename($this->getSourceFile());
     }
     
-    public function setFolder(Items_Folder $folder)
-    {
-        $this->folder = $folder;
-    }
-    
-    public function setTag(Items_XMLTag $tag)
-    {
-        $this->tag = $tag;
-    }
-        
     public function getFolder() : Items_Folder
     {
         return $this->folder;
@@ -137,8 +133,6 @@ abstract class DataType_RootContainer extends DataType_Container
         ));
     }
     
-    abstract public function getDescription() : string;
-
     public function getURLEdit(array $params=array())
     {
         $params['slug'] = 'Items.Edit';

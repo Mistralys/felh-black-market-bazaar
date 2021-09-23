@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace FELH;
 
-class Types_GameItemType_GameItemTypeArtDef_GameItemTypeModelPack_EquipSFX extends DataType_StringEnum_SFX
+class Types_GameItemType_GameItemTypeArtDef_GameItemTypeModelPack_EquipSFX extends DataFlavors_SFXFile
 {
     public function getLabel() : string
     {

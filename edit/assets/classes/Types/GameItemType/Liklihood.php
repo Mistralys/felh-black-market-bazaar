@@ -2,10 +2,6 @@
 
 namespace FELH;
 
-class Types_GameItemType_Liklihood extends DataType_Percentage
+class Types_GameItemType_Liklihood extends DataFlavors_Likelihood
 {
-    public function getLabel() : string
-    {
-        return t('Likelihood');
-    }
 }

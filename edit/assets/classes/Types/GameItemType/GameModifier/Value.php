@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace FELH;
 
-class Types_GameItemType_GameModifier_Value extends DataType_String
+class Types_GameItemType_GameModifier_Value extends DataFlavors_Value
 {
-    public function getLabel() : string
-    {
-        return t('Value');
-    }
 }

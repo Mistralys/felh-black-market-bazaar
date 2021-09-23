@@ -21,9 +21,9 @@ class Types_GameItemType extends DataType_RootContainer
     }
     
     /**
-     * @return \FELH\Types_GameItemType_Type[]
+     * @return Types_GameItemType_Type[]
      */
-    public function getTypes()
+    public function getTypes() : array
     {
         return $this->getChildrenByName('Type');
     }
