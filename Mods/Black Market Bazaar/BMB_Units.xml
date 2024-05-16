@@ -198,7 +198,7 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Amarians</Attribute>
         </Prereq>
-        <Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channelers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle most possess a similar familiarity with the enchanter's art.</Backstory>
+        <Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channelers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
         <AnimationPack>SoldierAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>
@@ -281,7 +281,7 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Amarians</Attribute>
         </Prereq>
-        <Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channelers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle most possess a similar familiarity with the enchanter's art.</Backstory>
+        <Backstory>All who wear the colors of this army, from commander to common foot-soldier, can trace their lineage back to the great kingdoms of the pre-cataclysmic era - to Coriopolis, Zad-Zabril, and even fabled Antheros. The blood of the channelers of old runs in their veins; they know and are unafraid of using this power to aid them in combat, both as shield and sword, in defense and attack. The commander who would engage this army in battle must possess a similar familiarity with the enchanter's art.</Backstory>
         <AnimationPack>SoldierAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>
@@ -347,9 +347,9 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Dead</Attribute>
         </Prereq>        
-		<Backstory>You sealed yourself within the buried city of Calebethon, and toiled as each light went out. As the darkness crept through Calebethon there was a rising tide of screams and madness. It would be unjust to say that the citizens became as animals, because animals were never so cruel or afraid.
+		<Backstory>You sealed yourself within the buried city of Calebethon, and toiled as each light went out. As the darkness crept through Calebethon, there was a rising tide of screams and madness. It would be unjust to say that the citizens became as animals, because animals were never so cruel or afraid.
 		
-		Eventually the darkness claimed those voices too, and the city settled to the gentle sounds of ragged breath and the drip of blood, flesh and filth. When the last light of Calebethon finally went out you could only hear echoes of your great city in the darkness.  You have no memories of those last, horrible days.
+		Eventually the darkness claimed those voices too, and the city settled to the gentle sounds of ragged breath and the drip of blood, flesh and filth. When the last light of Calebethon finally went out, you could only hear echoes of your great city in the darkness.  You have no memories of those last, horrible days.
 		
 		When you awoke you walked through the streets of ancient Calebethon, and where you walked the long dead citizens of your city rose to follow.</Backstory>
         <AnimationPack>SoldierAnimationPack</AnimationPack>
@@ -437,9 +437,9 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Dead</Attribute>
         </Prereq>
-		<Backstory>You sealed yourself within the buried city of Calebethon, and toiled as each light went out. As the darkness crept through Calebethon there was a rising tide of screams and madness. It would be unjust to say that the citizens became as animals, because animals were never so cruel or afraid.
+		<Backstory>You sealed yourself within the buried city of Calebethon, and toiled as each light went out. As the darkness crept through Calebethon, there was a rising tide of screams and madness. It would be unjust to say that the citizens became as animals, because animals were never so cruel or afraid.
 		
-		Eventually the darkness claimed those voices too, and the city settled to the gentle sounds of ragged breath and the drip of blood, flesh and filth. When the last light of Calebethon finally went out you could only hear echoes of your great city in the darkness.  You have no memories of those last, horrible days.
+		Eventually the darkness claimed those voices too, and the city settled to the gentle sounds of ragged breath and the drip of blood, flesh and filth. When the last light of Calebethon finally went out, you could only hear echoes of your great city in the darkness.  You have no memories of those last, horrible days.
 		
 		When you awoke you walked through the streets of ancient Calebethon, and where you walked the long dead citizens of your city rose to follow.</Backstory>
 		<AnimationPack>SoldierAnimationPack</AnimationPack>
@@ -1106,7 +1106,7 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Tarthans</Attribute>
         </Prereq>
-        <Backstory>Once they were rebels; slaves fighting to shake off the chains of the Capitaran arenas. Now they are an army - brave and determined soldiers with a country of their own to defend. Yet by training and nature Tarthans remain gladiators - used to fighting alone, or in small groups. They will strike quickly, and retreat, never allowing themselves to get bogged down in a long, drawn-out conflict. Their commanders drill them constantly on all types of terrain, so that in combat they may move as quickly in swamp as on packed earth.</Backstory>
+        <Backstory>Once they were rebels; slaves fighting to shake off the chains of the Capitaran arenas. Now they are an army - brave and determined soldiers with a country of their own to defend. Yet by training and nature, Tarthans remain gladiators - used to fighting alone, or in small groups. They will strike quickly and retreat, never allowing themselves to get bogged down in a long, drawn-out conflict. Their commanders drill them constantly on all types of terrain, so that in combat they may move as quickly in swamp as on packed earth.</Backstory>
         <AnimationPack>SoldierAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>
@@ -1191,7 +1191,7 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Tarthans</Attribute>
         </Prereq>
-        <Backstory>Once they were rebels; slaves fighting to shake off the chains of the Capitaran arenas. Now they are an army - brave and determined soldiers with a country of their own to defend. Yet by training and nature Tarthans remain gladiators - used to fighting alone, or in small groups. They will strike quickly, and retreat, never allowing themselves to get bogged down in a long, drawn-out conflict. Their commanders drill them constantly on all types of terrain, so that in combat they may move as quickly in swamp as on packed earth.</Backstory>
+        <Backstory>Once they were rebels; slaves fighting to shake off the chains of the Capitaran arenas. Now they are an army - brave and determined soldiers with a country of their own to defend. Yet by training and nature, Tarthans remain gladiators - used to fighting alone, or in small groups. They will strike quickly and retreat, never allowing themselves to get bogged down in a long, drawn-out conflict. Their commanders drill them constantly on all types of terrain, so that in combat they may move as quickly in swamp as on packed earth.</Backstory>
         <AnimationPack>SoldierAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>
@@ -1406,7 +1406,7 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Urxen</Attribute>
         </Prereq>
-        <Backstory>For a thousand years, following their banishment from Imperium, the Urxen roamed the great Umbran wastes. There, in the shadow of the mountain ranges ruled by the Titan Ilosa, she who became the Lady Umber, they forged a special relationship with the creatures of Elemental, a bond that not even the Cataclysm could break.  Even now, the Urxen can call to their cause the great serpents of this world - the naja and the ophidian - and command them in battle.</Backstory>
+        <Backstory>For a thousand years, following their banishment from Imperium, the Urxen roamed the great Umbran wastes. There, in the shadow of the mountain ranges ruled by the Titan Ilosa, she who became the Lady Umber, they forged a special relationship with the creatures of Elemental, a bond that not even the Cataclysm could break. Even now, the Urxen can call the great serpents of this world to their cause - the naja and the ophidian - and command them in battle.</Backstory>
         <AnimationPack>SoldierAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>
@@ -1489,7 +1489,7 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Urxen</Attribute>
         </Prereq>
-        <Backstory>For a thousand years, following their banishment from Imperium, the Urxen roamed the great Umbran wastes. There, in the shadow of the mountain ranges ruled by the Titan Ilosa, she who became the Lady Umber, they forged a special relationship with the creatures of Elemental, a bond that not even the Cataclysm could break.  Even now, the Urxen can call to their cause the great serpents of this world - the naja and the ophidian - and command them in battle.</Backstory>
+        <Backstory>For a thousand years, following their banishment from Imperium, the Urxen roamed the great Umbran wastes. There, in the shadow of the mountain ranges ruled by the Titan Ilosa, she who became the Lady Umber, they forged a special relationship with the creatures of Elemental, a bond that not even the Cataclysm could break.  Even now, the Urxen can call the great serpents of this world to their cause - the naja and the ophidian - and command them in battle.</Backstory>
         <AnimationPack>MaleSovereignAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>
@@ -1556,7 +1556,7 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Wraiths</Attribute>
         </Prereq>
-        <Backstory>Resoln is a new country - but its fighters draw their strength from the old powers, from the magics of  the Dread Lord Curgen, most powerful of all the Titans to ever walk upon Elemental. The armies of Resoln discount the use of much equipment the typical soldier relies upon, and instead make use of the enchantments, spells, and creatures that are their birthright.</Backstory>
+        <Backstory>Resoln is a new country - but its fighters draw their strength from the old powers, from the magics of the Dread Lord Curgen, most powerful of all the Titans to ever walk upon Elemental. The armies of Resoln discount the use of much equipment the typical soldier relies upon, and instead make use of the enchantments, spells, and creatures that are their birthright.</Backstory>
         <AnimationPack>SoldierAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>
@@ -1638,7 +1638,7 @@
             <Type>Race</Type>
             <Attribute>Race_Type_Wraiths</Attribute>
         </Prereq>
-        <Backstory>Resoln is a new country - but its fighters draw their strength from the old powers, from the magics of  the Dread Lord Curgen, most powerful of all the Titans to ever walk upon Elemental. The armies of Resoln discount the use of much equipment the typical soldier relies upon, and instead make use of the enchantments, spells, and creatures that are their birthright.</Backstory>
+        <Backstory>Resoln is a new country - but its fighters draw their strength from the old powers, from the magics of the Dread Lord Curgen, most powerful of all the Titans to ever walk upon Elemental. The armies of Resoln discount the use of much equipment the typical soldier relies upon, and instead make use of the enchantments, spells, and creatures that are their birthright.</Backstory>
         <AnimationPack>SoldierAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>

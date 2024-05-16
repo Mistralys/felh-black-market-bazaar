@@ -3,7 +3,7 @@
 <GameItemTypes>    
 	<GameItemType InternalName="Axe_FireAndIce_Trog">
         <DisplayName>Fire and Ice</DisplayName>
-        <Description>Using this axe set will entail having one hand burning while the other is freezing. If manipulation will unavoidably be physically taxing, your targets will get the full brunt of the discomfort.</Description>
+        <Description>Using this axe set will entail having one hand burning while the other is freezing. Its manipulation will unavoidably be physically taxing, your targets will get the full brunt of the discomfort.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>Blunt</WeaponType>
@@ -462,7 +462,7 @@
     </GameItemType>
 	<GameItemType InternalName="Axe_Fulminating">
         <DisplayName>Fulminating Axe</DisplayName>
-        <Description>It's a given that trees hate lightning even if they aren't exactly outspoken about it. So using such an axe to chop one down would be be adding shocking insult to an already sappy injury.</Description>
+        <Description>It's a given that trees hate lightning even if they aren't exactly outspoken about it. So using such an axe to chop one down would be adding shocking insult to an already sappy injury.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>TwoHanded</WeaponType>
@@ -584,7 +584,7 @@
     </GameItemType>
 	<GameItemType InternalName="Axe_Fulminating_Trog">
         <DisplayName>Dual Fulminating Axe</DisplayName>
-        <Description>It's a given that trees hate lightning even if they aren't exactly outspoken about it. So using such axes to chop one down would be be adding shocking insult to an already sappy injury.</Description>
+        <Description>It's a given that trees hate lightning even if they aren't exactly outspoken about it. So using such axes to chop one down would be adding shocking insult to an already sappy injury.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>Blunt</WeaponType>
@@ -712,7 +712,7 @@
     </GameItemType>
 	<GameItemType InternalName="Axe_Treebane">
         <DisplayName>Treebane Axe</DisplayName>
-        <Description>This woodcutter's axe has seen some better days but it's still sturdy enough to fell a few extra forests. Provided you put some muscle into it of course.</Description>
+        <Description>This woodcutter's axe has seen some better days, but it's still sturdy enough to fell a few extra forests. Provided you put some muscle into it, of course.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>TwoHanded</WeaponType>
@@ -1086,7 +1086,7 @@
     </GameItemType>
 	<GameItemType InternalName="BattleAxe_Freezing">
         <DisplayName>Freezing Battle Axe</DisplayName>
-        <Description>This axe is without a doubt a formidable weapon but that's just one of its many practical uses: for example you can also freeze meat instantly while chopping it, behead an interloper without any bloody spills or even instantly cool tepid water jugs during hot summer days. Clearly, lots of icing to be had on many cakes.</Description>
+        <Description>This axe is without a doubt a formidable weapon, but that's just one of its many practical uses: for example, you can also freeze meat instantly while chopping it, behead an interloper without any bloody spills or even instantly cool tepid water jugs during hot summer days. Clearly, lots of icing to be had on many cakes.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>TwoHanded</WeaponType>
@@ -1226,7 +1226,7 @@
     </GameItemType>
 	<GameItemType InternalName="BattleAxe_Freezing_Trog">
         <DisplayName>Dual Freezing Battle Axe</DisplayName>
-        <Description>These axes are without a doubt formidable weapons but that's just one of their many practical uses: for example you can also freeze meat instantly while chopping it, behead an interloper without any bloody spills or even instantly cool tepid water jugs during hot summer days. Clearly, lots of icing to be had on many cakes.</Description>
+        <Description>These axes are without a doubt formidable weapons, but that's just one of their many practical uses: for example, you can also freeze meat instantly while chopping it, behead an interloper without any bloody spills or even instantly cool tepid water jugs during hot summer days. Clearly, lots of icing to be had on many cakes.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>Blunt</WeaponType>
@@ -1916,7 +1916,7 @@
             <Attribute>AdjustUnitStat</Attribute>
             <StrVal>UnitStat_Attack_Pierce</StrVal>
             <Multiplier>1.20</Multiplier>
-            <Provides>+20% Attack vs Damaged Opponents</Provides>
+            <Provides>+20% Attack vs. Damaged Opponents</Provides>
             <vsDamaged>1</vsDamaged>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
@@ -2005,7 +2005,7 @@
             <StrVal>UnitStat_Attack_Boost</StrVal>
             <StrVal2>UnitStat_Level</StrVal2>
             <Value>4</Value>
-            <Provides>+4 Attack vs opponents with a lower Level</Provides>
+            <Provides>+4 Attack vs. opponents with a lower Level</Provides>
             <vsLower>1</vsLower>
         </GameModifier>
         <GameModifier>
@@ -2019,7 +2019,7 @@
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
         <Likelihood>20</Likelihood>
@@ -2112,7 +2112,7 @@
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
         <Likelihood>20</Likelihood>
@@ -2327,7 +2327,7 @@
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>BMB_ParalyzingCold</StrVal>
-            <Provides>Paralyzing Cold- Victims take 3 Cold damage per turn</Provides>
+            <Provides>Paralyzing Cold - Victims take 3 Cold damage per turn</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -2522,7 +2522,7 @@
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>BMB_DaggerOfCorruption</StrVal>
-            <Provides>Dagger Of Corruption Effect- Reduces the attack of the target by 2 (+1 per death shard) unless they resist</Provides>
+            <Provides>Dagger Of Corruption Effect - Reduces the attack of the target by 2 (+1 per death shard) unless they resist</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -2587,7 +2587,7 @@
     </GameItemType>
 	<GameItemType InternalName="Dagger_Dual_ShadowSharp">
         <DisplayName>Cutthroat's Sidekicks</DisplayName>
-        <Description>The Cutthroat lying in wait at the street corner
+        <Description>The Cutthroat lying in wait in the street corner
 Won't care to listen to your pleading rejoinder.
 Formal legalities will make him cuss and curse
 So feed him the jingling money in your purse.</Description>
@@ -2718,7 +2718,7 @@ So feed him the jingling money in your purse.</Description>
     </GameItemType>
 	<GameItemType InternalName="Dagger_LittleRevenger">
         <DisplayName>Little Revenger</DisplayName>
-        <Description>This nervous little dagger became something of an urban legend when the infamous bandit lord Fuskurt, probably unaware of its properties, walked through the crowded streets of Hope on Market Day. Every shopper innocently bumping into him got automatically stabbed once and when panic ensued, the death count soared to ridiculous numbers. For stayed hands are antinomic to the Little Revenger, the dagger which strikes back so fast as to be unseen.</Description>
+        <Description>This nervous little dagger became something of an urban legend when the infamous bandit lord Fuskurt, probably unaware of its properties, walked through the crowded streets of Hope on Market Day. Every shopper innocently bumping into him got automatically stabbed once, and when panic ensued, the death count soared to ridiculous numbers. For stayed hands are antinomic to the Little Revenger, the dagger which strikes back so fast as to be unseen.</Description>
         <Type>Weapon</Type>
         <WeaponType>OneHanded</WeaponType>
         <WeaponUpgradeType>Blade</WeaponUpgradeType>
@@ -2746,7 +2746,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>MeleeDefenseAppliesSpell</Attribute>
             <StrVal>BMB_LittleRevenger</StrVal>
-			<Provides>Little Revenger effect- Enemies that strike the wielder suffer two retaliating strikes</Provides>
+			<Provides>Little Revenger effect - Enemies that strike the wielder suffer two retaliating strikes</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -2810,7 +2810,7 @@ So feed him the jingling money in your purse.</Description>
     </GameItemType>
 	<GameItemType InternalName="Greataxe_HighbornBeheader">
         <DisplayName>Highborn Beheader</DisplayName>
-        <Description>"They're not even worthy of licking the mud spattered on your boots. Off with their heads I say!" - Hangman Nebrax.</Description>
+        <Description>"They're not even worthy of licking the mud spattered on your boots. Off with their heads, I say!" - Hangman Nebrax.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>TwoHanded</WeaponType>
@@ -3157,7 +3157,7 @@ So feed him the jingling money in your purse.</Description>
     </GameItemType>
 	<GameItemType InternalName="Longbow_RuthlessPelter">
         <DisplayName>Ruthless Pelter</DisplayName>
-        <Description>Missiles launched from this Longbow will whisk away with overwhelming force and send any target flying head over heels. An Archer's wet dream come true, it will rain desolation on your enemies and humiliate them into the hearafter.</Description>
+        <Description>Missiles launched from this Longbow will whisk away with overwhelming force and send any target flying head over heels. An Archer's wet dream come true, it will rain desolation on your enemies and humiliate them into the hereafter.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>Bow</WeaponType>
@@ -3193,7 +3193,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockRangedAction</Attribute>
             <StrVal>BMB_BowAttack_RuthlessPelter</StrVal>
-            <Provides>Ruthless Pelter Effect- Knocks back enemies and has a chance equal to the damage done of knocking the victim prone</Provides>
+            <Provides>Ruthless Pelter Effect - Knocks back enemies and has a chance equal to the damage done of knocking the victim prone</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -3521,7 +3521,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>BMB_FreezingBlood</StrVal>
-            <Provides>Freezing Blood- Target takes 5 Cold damage per round</Provides>
+            <Provides>Freezing Blood - Target takes 5 Cold damage per round</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -3878,7 +3878,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
 		<GameModifier>
             <ModType>Unit</ModType>
@@ -3990,7 +3990,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
 		<GameModifier>
             <ModType>Unit</ModType>
@@ -4095,7 +4095,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
 		<GameModifier>
             <ModType>Unit</ModType>
@@ -4107,7 +4107,7 @@ So feed him the jingling money in your purse.</Description>
 			<ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_ForgingExcellence</StrVal>
-            <Provides>Collect all three Tools of the Mastersmith to cast Forging Excellence- Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
+            <Provides>Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -4211,7 +4211,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
 		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -4509,7 +4509,7 @@ So feed him the jingling money in your purse.</Description>
     </GameItemType>
 	<GameItemType InternalName="Pike_Ethereal">
         <DisplayName>Ethereal Pike</DisplayName>
-        <Description>This spear's ghostly point glides through inanimate constituents and only hardens when it touches living matter. It will also wreak havoc to the inner workings of Constructs and dissipate the forces animating Undeads. Great for impaling pesky opponents through nagging walls.</Description>
+        <Description>This spear's ghostly point glides through inanimate constituents and only hardens when it touches living matter. It will also wreak havoc on the inner workings of Constructs and dissipate the forces animating the Undead. Great for impaling pesky opponents through nagging walls.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>Spear</WeaponType>
@@ -4733,7 +4733,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_TwinShaft</StrVal>
-            <Provides>Twin Shaft- Strike twice</Provides>
+            <Provides>Twin Shaft - Strike twice</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -4957,7 +4957,7 @@ So feed him the jingling money in your purse.</Description>
             <StrVal>UnitStat_Accuracy</StrVal>
             <StrVal2>UnitStat_Level</StrVal2>
             <Value>15</Value>
-            <Provides>+15 Accuracy vs higher level enemies</Provides>
+            <Provides>+15 Accuracy vs. higher level enemies</Provides>
             <vsHigher>1</vsHigher>
         </GameModifier>
         <GameModifier>
@@ -5157,7 +5157,7 @@ So feed him the jingling money in your purse.</Description>
     </GameItemType>
 	<GameItemType InternalName="Spear_Krax_ShiftyDepleter">
         <DisplayName>Shifty Depleter</DisplayName>
-        <Description>Breaking down enemy morale is a commendable achievement and the Shifty Depleter will conveniently kill combat enthusiasm with a single strike.</Description>
+        <Description>Breaking down enemy morale is a commendable achievement, and the Shifty Depleter will conveniently kill combat enthusiasm with a single strike.</Description>
         <Type>Weapon</Type>
         <WeaponType>Spear</WeaponType>
         <WeaponUpgradeType>Spear</WeaponUpgradeType>
@@ -5178,7 +5178,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_StaminaDrain</StrVal>
-            <Provides>Stamina Drain- Attack that reduces the victim's Stamina to 0 if it hits</Provides>
+            <Provides>Stamina Drain - Attack that reduces the victim's Stamina to 0 if it hits</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -6024,7 +6024,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>BMB_PlagueTouch</StrVal>
-            <Provides>Plague Touch- Halves the Poison Resistance of Targets, Poisons them and spreads Infection</Provides>
+            <Provides>Plague Touch - Halves the Poison Resistance of Targets, Poisons them and spreads Infection</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
         <Likelihood>10</Likelihood>
@@ -6398,7 +6398,7 @@ So feed him the jingling money in your purse.</Description>
     </GameItemType>
 	<GameItemType InternalName="Staff_ShockingJolts">
         <DisplayName>Staff of Shocking Jolts</DisplayName>
-        <Description>This high quality staff is comprised of a Lightning Stone which has been been fastened to the tip of a sturdy shaft. Each blow will leave your enemies dazed and confused amidst deafening electrical shocks.</Description>
+        <Description>This high-quality staff is made of a Lightning Stone which has been fastened to the tip of a sturdy shaft. Each blow will leave your enemies dazed and confused amidst deafening electrical shocks.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>Spear</WeaponType>
@@ -6427,7 +6427,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>Confusion</StrVal>
-            <Provides>Shocked enemies have a 50% chance to swing at a random unit in melee instead of their target</Provides>
+            <Provides>Shocked enemies have a 50% chance to swing at a random unit in mêlée instead of their target</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -6505,7 +6505,7 @@ So feed him the jingling money in your purse.</Description>
     </GameItemType>
 	<GameItemType InternalName="Staff_SmolderingStick">
         <DisplayName>Smoldering Stick</DisplayName>
-        <Description>Jets of fire burst from this staff whenever it hits something solid, which stresses the all importance of selective aim and careful handling. Say, ever heard the story of the wooden legged man who accidentally dropped his Smoldering Stick in the latrines? Apparently the expression "fire in the hole" was born from the resulting explosion.</Description>
+        <Description>Jets of fire burst from this staff whenever it hits something solid, which stresses the all importance of selective aim and careful handling. Say, ever heard the story of the wooden-legged man who accidentally dropped his Smoldering Stick in the latrines? Apparently the expression "fire in the hole" was born from the resulting explosion.</Description>
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>Spear</WeaponType>
@@ -6754,7 +6754,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_FreezingJet</StrVal>
-            <Provides>Freezing Jet- Fire a Freezing Jet through 3 units in a line</Provides>
+            <Provides>Freezing Jet - Fire a Freezing Jet through 3 units in a line</Provides>
         </GameModifier>
 		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>1</IsAvailableForUnitDesign>
@@ -7196,7 +7196,7 @@ So feed him the jingling money in your purse.</Description>
 			<ModType>Unit</ModType>
 			<Attribute>UnlockCombatAbility</Attribute>
 			<StrVal>BMB_SummonAerialAlly</StrVal>
-			<Provides>Summon Aerial Ally- Allows the wielder to summon a winged ally in battle</Provides>
+			<Provides>Summon Aerial Ally - Allows the wielder to summon a winged ally in battle</Provides>
 		</GameModifier>
 		<GameModifier>
 			<ModType>Unit</ModType>
@@ -7635,7 +7635,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>BMB_Icebreaker_Effect</StrVal>
-            <Provides>Icebreaker Effect- Has a 50% chance of breaking the surface it has just frozen for an additional 4-10 points of damage</Provides>
+            <Provides>Icebreaker Effect - Has a 50% chance of breaking the surface it has just frozen for an additional 4-10 points of damage</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -7648,7 +7648,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -7777,7 +7777,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -7839,7 +7839,7 @@ So feed him the jingling money in your purse.</Description>
     </GameItemType>
 	<GameItemType InternalName="Warhammer_NimbleCrusher">
         <DisplayName>Nimble Crusher</DisplayName>
-        <Description>This hammer clearly won't grind Earth Elementals to dust in a single devastating blow but it's surprisingly easy to handle, making it much faster than its hardheaded siblings.</Description>
+        <Description>This hammer clearly won't grind Earth Elementals to dust in a single devastating blow, but it's surprisingly easy to handle, making it much faster than its hardheaded siblings.</Description>
         <Type>Weapon</Type>
         <WeaponType>Blunt</WeaponType>
         <WeaponUpgradeType>Blunt</WeaponUpgradeType>
@@ -7868,7 +7868,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -7965,7 +7965,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>CrushingBlow</StrVal>
-            <Provides>Crushing Blow- Attack at +1 per Stamina</Provides>
+            <Provides>Crushing Blow - Attack at +1 per Stamina</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>

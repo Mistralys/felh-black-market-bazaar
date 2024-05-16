@@ -9,8 +9,8 @@
         <DefaultValue>0.0</DefaultValue>
     </UnitStatType>
 	<UnitStatType InternalName="UnitStat_Mastersmith">
-		<DisplayName>Tools of the Mastersmith Set</DisplayName>
-		<Description>The number of Mastersmith items being used.</Description>
+		<DisplayName>Tools of the Master smith Set</DisplayName>
+		<Description>The number of Master smith items being used.</Description>
 		<Icon>Stat_SpawnRating_Icon.png</Icon>
 		<Hidden>1</Hidden>
         <DefaultValue>0.0</DefaultValue>

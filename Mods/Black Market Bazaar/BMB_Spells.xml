@@ -996,7 +996,7 @@
     </SpellDef>
 	<SpellDef InternalName="BMB_CuttingSurface">
         <DisplayName>Cutting Surface</DisplayName>
-        <Description>Attacker takes a damage of 2.</Description>
+        <Description>Attacker takes 2 damage.</Description>
         <IconFG>Ability_ReapI_Icon.png</IconFG>
         <SpellBookSortCategory>Unit</SpellBookSortCategory>
         <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
@@ -1750,7 +1750,7 @@
     </SpellDef>
 	<SpellDef InternalName="BMB_Icebreaker_Effect">
         <DisplayName>Icebreaker Effect</DisplayName>
-        <Description>Attacker has a 50% chance of inflicting an extra 4-10 damage.</Description>
+        <Description>Attacker has a 50% chance of inflicting extra 4-10 damage.</Description>
         <IconFG>Ability_ReapI_Icon.png</IconFG>
         <SpellBookSortCategory>Unit</SpellBookSortCategory>
         <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
@@ -1916,7 +1916,7 @@
     </SpellDef>
 	<SpellDef InternalName="BMB_InsectPlague">
         <DisplayName>Insect Plague</DisplayName>
-        <Description>A harassing plague of insects targetting all enemies which reduces Accuracy and Dodge by 40% and lowers initiative by 3 for 5 turns unless resisted.</Description>
+        <Description>A harassing plague of insects targeting all enemies which reduces Accuracy and Dodge by 40% and lowers initiative by 3 for 5 turns unless resisted.</Description>
         <FormattedDescription>A harassing plague of insects which reduces Accuracy and Dodge by 40% and lowers initiative by 3 for 5 turns unless resisted.</FormattedDescription>        
         <Image>T_Contagion_Painting.png</Image>
 		<IconFG>Apiary1.png</IconFG>
@@ -2144,7 +2144,7 @@
 	</SpellDef>
 	<SpellDef InternalName="BMB_LostBarrowhillWine">
         <DisplayName>Lost Barrowhill Wine Effect</DisplayName>
-        <Description>Lost Barrowhill Wine Effect- Random properties.</Description>
+        <Description>Lost Barrowhill Wine Effect - Random properties.</Description>
         <Image>T_Wellspring_Painting.png</Image>
         <IconFG>T_Wellspring_Icon.png</IconFG>
         <SpellBookSortCategory>Unit</SpellBookSortCategory>
@@ -2883,7 +2883,7 @@
 	</SpellDef>
 	<SpellDef InternalName="BMB_RejuvenatingFusion">
         <DisplayName>Rejuvenating Fusion Effect</DisplayName>
-        <Description>Rejuvenating Fusion Effect- Healing an injury comes with the added benefit of a random permanent increase in Hit Points.</Description>
+        <Description>Rejuvenating Fusion Effect - Healing an injury comes with the added benefit of a random permanent increase in Hit Points.</Description>
         <Image>T_Wellspring_Painting.png</Image>
         <IconFG>T_Wellspring_Icon.png</IconFG>
         <SpellBookSortCategory>Unit</SpellBookSortCategory>
@@ -3844,8 +3844,8 @@
     </SpellDef>
 	<SpellDef InternalName="BMB_SwampGasExplosion">
         <DisplayName>Swamp Gas Explosion</DisplayName>
-        <Description>A violent methane explosion which damages units within a 1 tile radius for twice the caster's level + 8; half if resisted.</Description>
-        <FormattedDescription>Swamp Gas Explosion does %d damage to units within a 1 tile radius.</FormattedDescription>
+        <Description>A violent methane explosion which damages units within a 1-tile radius for twice the caster's level + 8; half if resisted.</Description>
+        <FormattedDescription>Swamp Gas Explosion does %d damage to units within a 1-tile radius.</FormattedDescription>
         <Image>T_Curse_Painting.png</Image>
         <IconFG>BMB_Ability_SwampGasExplosion.png</IconFG>
 		<Cooldown>6</Cooldown>	
@@ -3918,7 +3918,7 @@
     </SpellDef>
 	<SpellDef InternalName="BMB_SyphonStrength">
         <DisplayName>Syphon Strength</DisplayName>
-        <Description>The victim's Attack is lowered by 25% and the caster's Attack is increased by 25% unless the victim resists.</Description>
+        <Description>The victim's Attack is lowered by 25%, and the caster's Attack is increased by 25% unless the victim resists.</Description>
         <Image>T_Erosion_Painting.png</Image>
         <IconFG>T_SyphonStrength_Icon.png</IconFG>
         <Cooldown>5</Cooldown>

@@ -103,7 +103,7 @@
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_SummonArachnid</StrVal>
-            <Provides>Summon Arachnid- Summons a random level 6 Spider</Provides>
+            <Provides>Summon Arachnid - Summons a random level 6 Spider</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
         <Likelihood>20</Likelihood>
@@ -140,7 +140,7 @@
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>BMB_BeltOfWeariness_Effect</StrVal>
-            <Provides>Belt of Weariness Effect- Units struck suffer -1 to Stamina and growth is halted for 3 turns</Provides>
+            <Provides>Belt of Weariness Effect - Units suffer -1 to Stamina when struck and growth is halted for 3 turns</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
         <Likelihood>20</Likelihood>
@@ -635,7 +635,7 @@
     </GameItemType>
 	<GameItemType InternalName="CorruptiveChalice">
         <DisplayName>Corruptive Chalice</DisplayName>
-        <Description>Any liquid poured into this chalice will turn instantly into the deadliest poison. A delightful drinking accessory to bring to either plebeian feasts or highbrow soirees.</Description>
+        <Description>Any liquid poured into this chalice will turn instantly into the deadliest poison. A delightful drinking accessory to bring to either plebeian feasts or highbrow soirées.</Description>
         <Type>Accessory</Type>
         <CanBeEquipped>1</CanBeEquipped>        
         <ShopValue>300</ShopValue>
@@ -711,7 +711,7 @@
     </GameItemType>
 	<GameItemType InternalName="DimensionalDiadem">
         <DisplayName>Dimensional Diadem</DisplayName>
-        <Description>Could this possibly be the headpiece of one of the mythical Plane Travelers? Luck of the Saints, why it is! Because the general theory of dimensional shifting requires a very specific and very convoluted mindset, you will have to satisfy yourself with activating only its most basic powers. Don't you pout now, blinking around in a semi tangible state ain't exactly chopped liver.</Description>
+        <Description>Could this possibly be the headpiece of one of the mythical Plane Travelers? Luck of the Saints, why it is! Because the general theory of dimensional shifting requires a very specific and very convoluted mindset, you will have to satisfy yourself with activating only its most basic powers. Don't you pout now, blinking around in a semi-tangible state ain't exactly chopped liver.</Description>
         <Type>Accessory</Type>
         <CanBeEquipped>1</CanBeEquipped>        
         <ShopValue>600</ShopValue>		
@@ -924,7 +924,7 @@
     </GameItemType>
 	<GameItemType InternalName="ElementalsFairyTales">
         <DisplayName>Elemental's Fairy Tales</DisplayName>
-        <Description>The title of this book is fairly self-explanatory. It contains all the classics ranging from "the Glitter Emperor with the Gildar Touch" to "Pariden's Shadow Warrior". There are also a few rather obscure stories which will undoubtedly regal your troops around campfires. A window to better times.</Description>
+        <Description>The title of this book is fairly self-explanatory. It contains all the classics ranging from "the Glitter Emperor with the Gildar Touch" to "Pariden's Shadow Warrior". There are also a few rather obscure stories that will undoubtedly regal your troops around campfires. A window to better times.</Description>
         <ShopValue>180</ShopValue>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -959,7 +959,7 @@
     </GameItemType>
 	<GameItemType InternalName="EternalIcicle">
         <DisplayName>Eternal Icicle</DisplayName>
-        <Description>A piece of primeval ice broken off the wintry hair of the world's rooftop, this icicle's core is self regenerative and will stubbornly refuse to melt even in a blacksmith's raging furnace.</Description>
+        <Description>A piece of primeval ice broken off the wintry hair of the world's rooftop, this icicle's core is self-regenerative and will stubbornly refuse to melt even in a blacksmith's raging furnace.</Description>
 		<Type>Accessory</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>60</ShopValue>
@@ -1190,7 +1190,7 @@
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_PowerSweep</StrVal>
-            <Provides>Power Sweep- Attack all enemies within a 1 tile radius, push them back and knock them prone</Provides>
+            <Provides>Power Sweep - Attack all enemies within a 1 tile radius, push them back and knock them prone</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<Likelihood>20</Likelihood>	
@@ -1219,7 +1219,7 @@
     </GameItemType>
 	<GameItemType InternalName="HeartbloodRing">
         <DisplayName>Heartblood Ring</DisplayName>
-        <Description>When it flows straight from the heart, it's vital, it's pure and it's supremely strong.</Description>
+        <Description>When it flows straight from the heart, it's vital, it's pure, and it's supremely strong.</Description>
 		<Type>Accessory</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>300</ShopValue>
@@ -1446,7 +1446,7 @@
     </GameItemType>
 	<GameItemType InternalName="Letter_Aggrandizement">
         <DisplayName>Letter of Self-Aggrandizement</DisplayName>
-        <Description>The contents of this letter describe in great lifelike details the success of an intricate heroic quest. It's so captivating you feel as if you could have been a participant. And the strangest thing is that all of protagonists' names have been mysteriously erased. You only need to fill in the blanks and claim for yourself the glory of these anonymous champions.</Description>
+        <Description>The contents of this letter describe in great lifelike details the success of an intricate heroic quest. It's so captivating you feel as if you could have been a participant. And the strangest thing is that all protagonist names have been mysteriously erased. You only need to fill in the blanks and claim for yourself the glory of these anonymous champions.</Description>
         <ShopValue>80</ShopValue>
         <GameModifier>
             <ModType>Resource</ModType>
@@ -1573,7 +1573,7 @@
             <ModType>Unit</ModType>
             <Attribute>UseSpell</Attribute>
             <StrVal>BMB_LostBarrowhillWine</StrVal>            
-            <Provides>Lost Barrowhill Wine Effect- Random effect on the Caster</Provides>
+            <Provides>Lost Barrowhill Wine Effect - Random effect on the Caster</Provides>
         </GameModifier>        
         <GameModifier>
             <ModType>Resource</ModType>
@@ -1608,7 +1608,7 @@
     </GameItemType>
 	<GameItemType InternalName="MagnifyingStimulant">
         <DisplayName>Magnifying Stimulant</DisplayName>
-        <Description>This alchemical marvel is notoriously difficult to brew, requiring costly out-of-this-world ingredients, state of the art equipment and the expert skills to match. Ingesting it will develop that latent physical and mental potential and push it to the surface. Drink without moderation and amplify it all.</Description>
+        <Description>This alchemical marvel is notoriously difficult to brew, requiring costly out-of-this-world ingredients, state-of-the-art equipment and the expert skills to match. Ingesting it will develop that latent physical and mental potential and push it to the surface. Drink without moderation and amplify it all.</Description>
         <ShopValue>500</ShopValue>
 		<GameModifier>
             <ModType>Unit</ModType>
@@ -1751,7 +1751,7 @@
             <Value>1</Value>            
         </GameModifier>
 		<GameModifier>                      
-            <Provides>Collect all three Tools of the Mastersmith to cast Forging Excellence- Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
+            <Provides>Collect all three Tools of the Mastersmith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
         <Likelihood>25</Likelihood>
@@ -1827,7 +1827,7 @@
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_ElementalMyriad</StrVal>            
-            <Provides>Elemental Myriad- Grants your army random Elemental damage for the duration of the battle</Provides>
+            <Provides>Elemental Myriad - Grants your army random Elemental damage for the duration of the battle</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
         <Likelihood>10</Likelihood>
@@ -1856,7 +1856,7 @@
     </GameItemType>
 	<GameItemType InternalName="Mushroom_Experience">
         <DisplayName>Magic Mushroom</DisplayName>
-        <Description>It's quite known that eating one of these mushrooms is akin to a toss of the proverbial dice. Dare you eat it?</Description>
+        <Description>It's quite known that eating one of these mushrooms is akin to a toss of the proverbial dice. Dare you to eat it?</Description>
 		<HideInHiergamenon>1</HideInHiergamenon>
         <ShopValue>60</ShopValue>
         <GameModifier>
@@ -1887,7 +1887,7 @@
     </GameItemType>
 	<GameItemType InternalName="Mushroom_Hallucinogenic">
         <DisplayName>Magic Mushroom</DisplayName>
-        <Description>It's quite known that eating one of these mushrooms is akin to a toss of the proverbial dice. Dare you eat it?</Description>
+        <Description>It's quite known that eating one of these mushrooms is akin to a toss of the proverbial dice. Dare you to eat it?</Description>
         <ShopValue>60</ShopValue>        
         <GameModifier>
             <ModType>Unit</ModType>
@@ -2059,7 +2059,7 @@
     </GameItemType>
 	<GameItemType InternalName="PhilosophersStone">
         <DisplayName>Philosopher's Stone</DisplayName>
-        <Description>The Ovum Philosophorum! Yes the legendary alchemical achievement of the highest order! Your status has just shifted from a miserable debtor to a universal creditor.</Description>
+        <Description>The Ovum Philosophorum! Yes - the legendary alchemical achievement of the highest order! Your status has just shifted from a miserable debtor to a universal creditor.</Description>
         <ShopValue>150</ShopValue>
 		<GameModifier>
             <ModType>Player</ModType>
@@ -2163,7 +2163,7 @@
     </GameItemType>
 	<GameItemType InternalName="PrismaticBelt">
         <DisplayName>Prismatic Belt</DisplayName>
-        <Description>This colorful belt may look like an innocuous and fancy clothing accessory but case in point, that only proves how much appearances can be deceiving. Each link has been empowered with either Cold, Fire, Lightning or Poison and elemental devastation will be released every time you strike an enemy.</Description>
+        <Description>This colorful belt may look like an innocuous and fancy clothing accessory but case in point, that only proves how many appearances can be deceiving. Each link has been empowered with either Cold, Fire, Lightning or Poison and elemental devastation will be released every time you strike an enemy.</Description>
         <Type>Accessory</Type>
         <CanBeEquipped>1</CanBeEquipped>        
         <ShopValue>380</ShopValue>
@@ -2245,7 +2245,7 @@ A brew with no toll, to cure that aching loose tooth.</Description>
             <ModType>Unit</ModType>
             <Attribute>UseSpell</Attribute>
             <StrVal>BMB_RejuvenatingFusion</StrVal>            
-            <Provides>Rejuvenating Fusion Effect- Healing an injury comes with the added benefit of a random permanent increase in Hit Points</Provides>
+            <Provides>Rejuvenating Fusion Effect - Healing an injury comes with the added benefit of a random permanent increase in Hit Points</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -2317,7 +2317,7 @@ A brew with no toll, to cure that aching loose tooth.</Description>
     </GameItemType>
 	<GameItemType InternalName="RingOfGlacialCollision">
         <DisplayName>Ring of Glacial Collision</DisplayName>
-        <Description>A severe cold front has been announced and just this once, it won't be coming from the skies.</Description>
+        <Description>A severe cold front has been announced, and just this once, it won't be coming from the skies.</Description>
         <Type>Accessory</Type>
         <CanBeEquipped>1</CanBeEquipped>        
         <ShopValue>400</ShopValue>
@@ -2606,7 +2606,7 @@ A brew with no toll, to cure that aching loose tooth.</Description>
     </GameItemType>
 	<GameItemType InternalName="SackOfProvisions">
         <DisplayName>Sack of Provisions</DisplayName>
-        <Description>The contents of this hefty gunny sack should keep your army's stomachs from grumbling for a quite a while. No fine cuisine but at the end of the weary day, who really cares? Now who gets to carry it?</Description>
+        <Description>The contents of this hefty gunny sack should keep your army's stomachs from grumbling for quite a while. No fine cuisine, but at the end of the weary day, who really cares? Now who gets to carry it?</Description>
         <Type>Accessory</Type>
         <CanBeEquipped>1</CanBeEquipped>        
         <ShopValue>80</ShopValue>
@@ -2757,7 +2757,7 @@ A brew with no toll, to cure that aching loose tooth.</Description>
     </GameItemType>
 	<GameItemType InternalName="Scroll_ArcaneMonolith">
         <DisplayName>Arcane Monolith Scroll</DisplayName>
-        <Description>Have you considered retreating to your own private tower for some well deserved downtime? Wait no further! Invoke your very own Arcane Monolith today!</Description>
+        <Description>Have you considered retreating to your own private tower for some well-deserved downtime? Wait no further! Invoke your very own Arcane Monolith today!</Description>
         <ShopValue>180</ShopValue>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -2912,7 +2912,7 @@ A brew with no toll, to cure that aching loose tooth.</Description>
             <ModType>Unit</ModType>
             <Attribute>UseSpell</Attribute>
             <StrVal>BMB_ShacklesOfEnslavement</StrVal>            
-            <Provides>Shackles of Enslavement- Enslaves a Trained Unit unless they resist. Caster must be adjacent to the target.</Provides>
+            <Provides>Shackles of Enslavement - Enslaves a Trained Unit unless they resist. Caster must be adjacent to the target.</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
         <Likelihood>20</Likelihood>
