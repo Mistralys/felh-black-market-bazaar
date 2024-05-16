@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/edit/assets/classes" isTestSource="false" packagePrefix="FELH\" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/components/jquery" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/fortawesome/font-awesome" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/geshi/geshi" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/mistralys/application-dbhelper" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/mistralys/application-localization" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/mistralys/application-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/mistralys/html_quickform2" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/mistralys/jtokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/mistralys/microsite" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/neitanod/forceutf8" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/parsecsv/php-parsecsv" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/pear/html_common2" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/pear/pear_exception" />
+      <excludeFolder url="file://$MODULE_DIR$/edit/vendor/twbs/bootstrap" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

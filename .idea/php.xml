@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/edit/vendor/pear/html_common2" />
+      <path value="$PROJECT_DIR$/edit/vendor/mistralys/application-localization" />
+      <path value="$PROJECT_DIR$/edit/vendor/mistralys/jtokenizer" />
+      <path value="$PROJECT_DIR$/edit/vendor/fortawesome/font-awesome" />
+      <path value="$PROJECT_DIR$/edit/vendor/pear/pear_exception" />
+      <path value="$PROJECT_DIR$/edit/vendor/mistralys/microsite" />
+      <path value="$PROJECT_DIR$/edit/vendor/mistralys/application-utils" />
+      <path value="$PROJECT_DIR$/edit/vendor/mistralys/application-dbhelper" />
+      <path value="$PROJECT_DIR$/edit/vendor/parsecsv/php-parsecsv" />
+      <path value="$PROJECT_DIR$/edit/vendor/geshi/geshi" />
+      <path value="$PROJECT_DIR$/edit/vendor/twbs/bootstrap" />
+      <path value="$PROJECT_DIR$/edit/vendor/neitanod/forceutf8" />
+      <path value="$PROJECT_DIR$/edit/vendor/composer" />
+      <path value="$PROJECT_DIR$/edit/vendor/components/jquery" />
+      <path value="$PROJECT_DIR$/edit/vendor/mistralys/html_quickform2" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>
