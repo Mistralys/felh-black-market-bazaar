@@ -87,7 +87,7 @@
     </GameItemType>
 	<GameItemType InternalName="CobaltVertex">
         <DisplayName>Cobalt Vertex</DisplayName>
-        <Description>Donning this skullcap will stimulate the motor regions of the brain and enhance one's dexterity and speed. Too advanced for post-Cataclysm ears? Very well then, use this helm and you'll move faster and shoot better.</Description>
+        <Description>Donning this skullcap will stimulate the motor regions of the brain and enhance one's dexterity and speed. Too advanced for post-Cataclysm ears? Very well then, use this helm, and you'll move faster and shoot better.</Description>
         <Type>Head</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>140</ShopValue>
@@ -180,7 +180,7 @@
 			<ModType>Unit</ModType>
 			<Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_MindBlast</StrVal>
-            <Provides>Mind Blast- Does mental damage to 5 units in a line and knocks them prone</Provides>
+            <Provides>Mind Blast - Does mental damage to 5 units in a line and knocks them prone.</Provides>
 		</GameModifier>		
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -538,7 +538,7 @@
     </GameItemType>
 	<GameItemType InternalName="MaraudersHood">
         <DisplayName>Marauder's Hood</DisplayName>
-        <Description>Planning a hit-and-run robbery? Or maybe to double-cross and ambush your neighbors? Don't forget to wear your Marauder's Hood to the party.</Description>
+        <Description>Planning a hit-and-run robbery? Or maybe to double-cross and ambush your neighbors? Remember to wear your Marauder's Hood to the party.</Description>
         <Type>Head</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>120</ShopValue>
@@ -624,7 +624,7 @@
     </GameItemType>
 	<GameItemType InternalName="PlateHelmet_BlackSpike">
         <DisplayName>Black Spike's Horns</DisplayName>
-        <Description>Legendary gladiator Black Spike was said to be invincible in the arena, piling up victories and corpses, slaying champions and monsters alike with tireless and relentless determination. This helmet radiates glory galore and maybe you could claim some as you own?</Description>
+        <Description>Legendary gladiator Black Spike was said to be invincible in the arena, piling up victories and corpses, slaying champions and monsters alike with tireless and relentless determination. This helmet radiates glory galore, and maybe you could claim some as your own?</Description>
         <Type>Head</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>500</ShopValue>
@@ -740,7 +740,7 @@
             <Attribute>AdjustUnitStat</Attribute>
             <StrVal>UnitStat_Attack_Pierce</StrVal>
             <Multiplier>1.50</Multiplier>
-            <Provides>+50% Attack vs Damaged Opponents</Provides>
+            <Provides>+50% Attack vs. Damaged Opponents</Provides>
             <vsDamaged>1</vsDamaged>
         </GameModifier>		
 		<GameModifier>
@@ -826,7 +826,7 @@
             <Attribute>AdjustUnitStat</Attribute>
             <StrVal>UnitStat_Attack_Pierce</StrVal>
             <Multiplier>1.20</Multiplier>
-            <Provides>+20% Attack vs opponents of the opposite race (fallen vs men)</Provides>
+            <Provides>+20% Attack vs. opponents of the opposite race (Fallen vs. Men)</Provides>
             <vsOtherAllegiance>1</vsOtherAllegiance>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
@@ -1358,7 +1358,7 @@
 	</GameItemType>
 	<GameItemType InternalName="InsectoidExoskeleton">
         <DisplayName>Insectoid Exoskeleton</DisplayName>
-        <Description>This ancient chitinous exoskeleton belonged to the soldier of a now extinct insectoid humanoid race. Twitching antennas, clacking mandibles and vibrating wings, you are now privy to the chorus of your insect brethren and boy do they have some recriminations to voice. Bzz bzz.</Description>
+        <Description>This ancient chitinous exoskeleton belonged to the soldier of a now extinct insectoid humanoid race. Twitching antennas, clacking mandibles and vibrating wings, you are now privy to the chorus of your insect brethren, and boy do they have some recriminations to voice. Bzz bzz.</Description>
         <Type>Torso</Type>
         <Type>Surcoat</Type>
         <CanBeEquipped>1</CanBeEquipped>
@@ -1373,7 +1373,7 @@
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>SpitAcid2</StrVal>
-            <Provides>Spit Acid- Target enemy takes 2-6 damage a round for 15 rounds.</Provides>
+            <Provides>Spit Acid - Target enemy takes 2-6 damage a round for 15 rounds.</Provides>
         </GameModifier>		
 		<GameModifier>
             <ModType>Unit</ModType>
@@ -1460,7 +1460,7 @@
 	</GameItemType>
 	<GameItemType InternalName="LeatherBreastpiece_Ancient">
         <DisplayName>Forefather's Armor</DisplayName>
-        <Description>This battleworn relic radiates intimacy with the legendary conflicts of the past as the permanent bloodstains dotting its surface would attest.</Description>
+        <Description>This battle worn relic radiates intimacy with the legendary conflicts of the past as the permanent bloodstains dotting its surface would attest.</Description>
         <Type>Torso</Type>
         <Type>Surcoat</Type>
         <CanBeEquipped>1</CanBeEquipped>
@@ -1588,7 +1588,7 @@
 		</GameItemTypeArtDef>
 	</GameItemType>
 	<GameItemType InternalName="LeatherBreastpiece_Mastersmiths">
-        <DisplayName>Mastersmith's Forging Leathers</DisplayName>
+        <DisplayName>Master smith's Forging Leathers</DisplayName>
         <Description>A blacksmith's apron which can double as armor, it is so resistant to heat you could take a swim in molten rock with it. Or maybe not.</Description>
         <Type>Torso</Type>
         <Type>Surcoat</Type>
@@ -1615,7 +1615,7 @@
             <Value>1</Value>            
         </GameModifier>
 		<GameModifier>                      
-            <Provides>Collect all three Tools of the Mastersmith to cast Forging Excellence- Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
+            <Provides>Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -2126,7 +2126,7 @@
 			<ModType>Unit</ModType>
 			<Attribute>UnlockCombatAbility</Attribute>
 			<StrVal>BMB_SaintlyAura</StrVal>			
-			<Provides>Saintly Aura- Adjacent friendly units regenerate 4 hit points per turn</Provides>
+			<Provides>Saintly Aura - Adjacent friendly units regenerate 4 hit points per turn</Provides>
 		</GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -2943,7 +2943,7 @@
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>BMB_GildarTouch</StrVal>
-            <Provides>Gildar Touch Effect- The unit gains +1 Gold each time it strikes an enemy</Provides>
+            <Provides>Gildar Touch Effect - The unit gains +1 Gold each time it strikes an enemy</Provides>
         </GameModifier>		
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -3033,14 +3033,14 @@
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_BullsEye</StrVal>
-            <Provides>Bull's Eye- +300% Attack when using a Bow but you lose your next turn</Provides>
+            <Provides>Bull's Eye- +300% Attack when using a Bow, but you lose your next turn.</Provides>
         </GameModifier>
 		<GameModifier>
 			<ModType>Unit</ModType>
 			<Attribute>BattleAutoCastSpell</Attribute>
 			<StrVal>BMB_HeartOfTheTarget</StrVal>
 			<Value>100</Value>
-			<Provides>Heart of the Target- Ignores 20% of the victim's defense when using a Bow</Provides>
+			<Provides>Heart of the Target - Ignores 20% of the victim's defense when using a Bow</Provides>
 		</GameModifier>		
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -3298,7 +3298,7 @@
             <ModType>Unit</ModType>
             <Attribute>MeleeDefenseAppliesSpell</Attribute>
             <StrVal>BMB_PenitentsSuffering</StrVal>
-            <Provides>Penitent's Suffering- Penance is served each time the wearer is struck in combat (+1 charge)</Provides>
+            <Provides>Penitent's Suffering - Penance is served each time the wearer is struck in combat (+1 charge)</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -3990,7 +3990,7 @@
             <StrVal2>UnitStat_ResistCold</StrVal2>
             <Value>10</Value>
             <BonusValue>50</BonusValue>
-            <Provides>+10 Critical Chance vs enemies with less than 50 Cold Resistance</Provides>
+            <Provides>+10 Critical Chance vs. enemies with less than 50 Cold Resistance</Provides>
             <vsLower>1</vsLower>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
@@ -4085,7 +4085,7 @@
     </GameItemType>
 	<GameItemType InternalName="AcrobatsPantaloons">
         <DisplayName>Acrobat's Pantaloons</DisplayName>
-        <Description>These well preserved slacks probably belonged to a circus performer. Strong emotional vibes still cling to them: stage fright, exhilaration and the fierce pride that follows cheers and applause. Put them on and the show will go on!</Description>
+        <Description>These well-preserved slacks probably belonged to a circus performer. Strong emotional vibes still cling to them: stage fright, exhilaration and the fierce pride that follows cheers and applause. Put them on and the show will go on!</Description>
         <Type>LowerBody</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>65</ShopValue>		
@@ -4255,7 +4255,7 @@
 	</GameItemType>
 	<GameItemType InternalName="DemonicAnchors">
         <DisplayName>Demonic Anchors</DisplayName>
-        <Description>The purpose of these Stygian restraints is to mystically anchor higher demons visiting the material plane, helping their global minds focus on a far smaller scale. Mortals lucky enough to have a pair fall in their laps can also wear them for a devilish thrill or two. What a cliché, eh?</Description>
+        <Description>The purpose of these Stygian restraints is to mystically anchor higher demons visiting the material plane, helping their global minds focus on a far smaller scale. Mortals lucky enough to have a pair of these anchors fall in their laps can also wear them for a devilish thrill or two. What a cliché, eh?</Description>
         <Type>LowerBody</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>400</ShopValue>		
@@ -4327,7 +4327,7 @@
 	</GameItemType>	
 	<GameItemType InternalName="LeatherGreaves_Ancient">
         <DisplayName>Old Style Leg Braces</DisplayName>
-        <Description>These greaves may look antiquated and probably won't garner the admiration of your fellow soldiers but the excellence of their craftsmanship cannot be disputed. You won't be able to find such quality in marketplaces nowadays.</Description>
+        <Description>These greaves may look antiquated and probably won't garner the admiration of your fellow soldiers, but the excellence of their craftsmanship cannot be disputed. You won't be able to find such quality in marketplaces nowadays.</Description>
         <Type>LowerBody</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>80</ShopValue>
@@ -4892,7 +4892,7 @@
 	</GameItemType>
 	<GameItemType InternalName="ArcticBoots">
         <DisplayName>Arctic Boots</DisplayName>
-        <Description>Wearing these bulky boots let's one enjoy the benefits of a prolonged winter.</Description>
+        <Description>Wearing these bulky boots lets one enjoy the benefits of a prolonged winter.</Description>
         <Type>Boots</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>250</ShopValue>
@@ -4979,7 +4979,7 @@
     </GameItemType>
 	<GameItemType InternalName="CrystallineBoots">
         <DisplayName>Crystalline Boots</DisplayName>
-        <Description>Some Ice Elemental is bound to come looking for these sooner or later. Plus the surface is razor-sharp and you already have several cuts to nurse. And yet, despite these minor quibbles, all this crystalline razzle-dazzle fits you to a tee.</Description>
+        <Description>Some Ice Elemental is bound to come looking for these sooner or later. The surface is also razor-sharp, and you already have several cuts to nurse. And yet, despite these minor quibbles, all this crystalline razzle-dazzle fits you to a tee.</Description>
         <Type>Boots</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>160</ShopValue>
@@ -4999,7 +4999,7 @@
             <ModType>Unit</ModType>
             <Attribute>MeleeDefenseAppliesSpell</Attribute>
             <StrVal>BMB_CuttingSurface</StrVal>
-			<Provides>Cutting Surface- Enemies that strike the wearer take 2 damage</Provides>
+			<Provides>Cutting Surface - Enemies that strike the wearer take 2 damage</Provides>
         </GameModifier>		        
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -5101,7 +5101,7 @@
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>DemonicAlly</StrVal>
-            <Provides>Demonic Ally- Summons an Assassin Demon at the same level as the caster</Provides>
+            <Provides>Demonic Ally - Summons an Assassin Demon at the same level as the caster</Provides>
         </GameModifier>	
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -5821,7 +5821,7 @@ A most sticky stride to stay firm on the ground.</Description>
 			<ModType>Unit</ModType>
 			<Attribute>MeleeDefenseAppliesSpell</Attribute>
 			<StrVal>TangledWeb</StrVal>                
-			<Provides>Sticky Goo- Enemies that strike the wearer are immobilized for 3 rounds unless they resist</Provides>
+			<Provides>Sticky Goo - Enemies that strike the wearer are immobilized for 3 rounds unless they resist</Provides>
         </GameModifier>	        
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
@@ -6217,7 +6217,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -6314,7 +6314,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -6376,7 +6376,7 @@ A most sticky stride to stay firm on the ground.</Description>
     </GameItemType>
 	<GameItemType InternalName="RoundShield_BlackSpike">
         <DisplayName>Black Spike's Spokes</DisplayName>
-        <Description>Legendary gladiator Black Spike was said to be invincible in the arena, piling up victories and corpses, slaying champions and monsters alike with tireless and relentless determination. His shield was crafted by a renowned mastersmith who happened to be one of his greatest admirers. So sharp are its spokes that a casual touch might lead to a disabling injury.</Description>
+        <Description>Legendary gladiator Black Spike was said to be invincible in the arena, piling up victories and corpses, slaying champions and monsters alike with tireless and relentless determination. His shield was crafted by a renowned master smith who happened to be one of his greatest admirers. So sharp are its spokes that a casual touch might lead to a disabling injury.</Description>
         <Type>Defense</Type>
         <WeaponType>Shield</WeaponType>
         <CanBeEquipped>1</CanBeEquipped>
@@ -6404,7 +6404,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>MeleeDefenseAppliesSpell</Attribute>
             <StrVal>BMB_LaceratingSpokes</StrVal>
-			<Provides>Lacerating Spokes- Enemies that strike the wearer take 2-5 damage</Provides>
+			<Provides>Lacerating Spokes - Enemies that strike the wearer take 2-5 damage</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -6517,7 +6517,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -6586,7 +6586,7 @@ A most sticky stride to stay firm on the ground.</Description>
     </GameItemType>
 	<GameItemType InternalName="RoundShield_PracticeBuckler">
         <DisplayName>Practice Buckler</DisplayName>
-        <Description>So you've found your practice shield. Now you need to locate your wooden sword and your wooden dummy and work on those basic moves some more. Complaints not welcome.</Description>
+        <Description>So you've found your practice shield. Now you need to locate your wooden sword and your wooden dummy and work on those basic moves some more. Complaints are not welcome.</Description>
         <Type>Defense</Type>
         <WeaponType>Shield</WeaponType>
         <CanBeEquipped>1</CanBeEquipped>
@@ -6621,7 +6621,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -6710,13 +6710,13 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>MeleeDefenseAppliesSpell</Attribute>
             <StrVal>BMB_RebounderEffect</StrVal>
-            <Provides>Rebounder Effect- Striking this unit causes the attacker to be knocked back one tile</Provides>
+            <Provides>Rebounder Effect - Striking this unit causes the attacker to be knocked back one tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -6799,7 +6799,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_Scrambler</StrVal>
-            <Provides>Scrambler Effect- Disrupts a spell an enemy unit is casting and causes them to lose their next turn unless they resist</Provides>
+            <Provides>Scrambler Effect - Disrupts a spell an enemy unit is casting and causes them to lose their next turn unless they resist</Provides>
         </GameModifier>
 		<GameModifier>
             <ModType>Unit</ModType>
@@ -6824,7 +6824,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -6923,7 +6923,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -7013,7 +7013,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>BMB_WaywardDeathBane_Effect</StrVal>
-            <Provides>Wayward Deathbane Effect- Has a 25% chance of healing 8 hit points when the wielder hits an enemy</Provides>
+            <Provides>Wayward Deathbane Effect - Has a 25% chance of healing 8 hit points when the wielder hits an enemy</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -7026,7 +7026,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -7119,7 +7119,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>BMB_BulwarkOfTheBrute</StrVal>
-            <Provides>Bulwark of the Brute Effect- Double Shield Bash damage and knocks the victim back a tile</Provides>
+            <Provides>Bulwark of the Brute Effect - Double Shield Bash damage and knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -7217,7 +7217,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -7337,7 +7337,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <ModType>Unit</ModType>
             <Attribute>UnlockCombatAbility</Attribute>
             <StrVal>ShieldBash_Ability</StrVal>
-            <Provides>Shield Bash- Knocks the victim back a tile</Provides>
+            <Provides>Shield Bash - Knocks the victim back a tile</Provides>
         </GameModifier>
         <GameModifier>
             <ModType>Unit</ModType>
@@ -7787,7 +7787,7 @@ A most sticky stride to stay firm on the ground.</Description>
     </GameItemType>
 	<GameItemType InternalName="LupusCloak">
         <DisplayName>Lupus Cloak</DisplayName>
-        <Description>The hour of the Wolf is at hand and the urge to howl at the moon cannot be denied.</Description>
+        <Description>The hour of the Wolf is at hand, and the urge to howl at the moon cannot be denied.</Description>
         <Type>Cloak</Type>
         <CanBeEquipped>1</CanBeEquipped>        
         <ShopValue>90</ShopValue>
@@ -7865,7 +7865,7 @@ A most sticky stride to stay firm on the ground.</Description>
     </GameItemType>
 	<GameItemType InternalName="MantleOfTheHedgewitch">
         <DisplayName>Mantle of the Hedgewitch</DisplayName>
-        <Description>This cloak may look like a frayed rag barely fit for a beggar but it was made by life-loving hands which sewed in every stitch unbounded generosity, pure kindness and tender affection.</Description>
+        <Description>This cloak may look like a frayed rag barely fit for a beggar, but it was made by life-loving hands which sewed in every stitch unbounded generosity, pure kindness and tender affection.</Description>
         <Type>Cloak</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>100</ShopValue>        
@@ -8034,7 +8034,7 @@ A most sticky stride to stay firm on the ground.</Description>
     </GameItemType>
 	<GameItemType InternalName="ViscousMembrane">
         <DisplayName>Viscous Membrane</DisplayName>
-        <Description>This revolting thing's squishy surface oozes corrosive digestive fluids and the first thing you'll notice is the sudden disappearance of flying insects from your vicinity. It is in reality a living organism shaped like cloak which awards its willing host a symbiotic relationship drenched in acid. Are you really willing to put that thing on your back?</Description>
+        <Description>This revolting thing's squishy surface oozes corrosive digestive fluids, and the first thing you'll notice is the sudden disappearance of flying insects from your vicinity. It is in reality a living organism shaped like cloak which awards its willing host a symbiotic relationship drenched in acid. Are you really willing to put that thing on your back?</Description>
         <Type>Cloak</Type>
         <CanBeEquipped>1</CanBeEquipped>
         <ShopValue>60</ShopValue>        
@@ -8049,7 +8049,7 @@ A most sticky stride to stay firm on the ground.</Description>
             <Attribute>AdjustUnitStat</Attribute>
             <StrVal>UnitStat_HitPoints</StrVal>
             <Value>-3</Value>
-			<Provides>-3 Hit Points- the Membrane is slowly eating the host.</Provides>
+			<Provides>-3 Hit Points - the Membrane is slowly eating the host.</Provides>
         </GameModifier>
 		 <GameModifier>
             <ModType>Unit</ModType>
