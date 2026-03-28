@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Black Market Bazaar by Hellions -->
 <GameItemTypes>
 	<GameItemType InternalName="Hair_Arielle_BlueTiara_Head">
@@ -27,7 +27,6 @@
 				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
 				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
 				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>				
 				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
 				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
@@ -68,7 +67,6 @@
 				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
 				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
 				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>				
 				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
 				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
@@ -110,7 +108,6 @@
 				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
 				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
 				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>				
 				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
 				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
@@ -153,7 +150,6 @@
 				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
 				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
 				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>				
 				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
 				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
@@ -187,7 +183,6 @@
                 <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
                 <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
                 <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
                 <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
                 <GameItemTypeModel>
@@ -215,7 +210,6 @@
                 <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
                 <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
                 <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
                 <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
                 <GameItemTypeModel>
@@ -243,7 +237,6 @@
                 <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
                 <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
                 <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
                 <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
                 <GameItemTypeModel>
@@ -271,7 +264,6 @@
                 <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
                 <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
                 <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
                 <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
                 <GameItemTypeModel>
@@ -395,7 +387,6 @@
                 <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
                 <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
                 <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
                 <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
                 <GameItemTypeModel>
@@ -453,7 +444,6 @@
                 <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
                 <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
                 <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
                 <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
                 <GameItemTypeModel>
@@ -481,7 +471,6 @@
                 <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
                 <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
                 <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
-				<SupportedUnitModelType>Skeleton</SupportedUnitModelType>
                 <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
 				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>					
                 <GameItemTypeModel>

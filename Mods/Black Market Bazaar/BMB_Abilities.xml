@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Black Market Bazaar by Hellions -->
 <AbilityBonuses>
     <DataChecksum NoParse="1">
         <Ignore>DispName</Ignore>
         <Translate>DisplayName,Description</Translate>
     </DataChecksum>
-	<AbilityBonus InternalName="BMB_EruditeAbility">        
+    <AbilityBonus InternalName="BMB_EruditeAbility">
         <AbilityBonusOption InternalName="BMB_Erudite">
             <DisplayName>Erudite</DisplayName>
             <Description>+30% Experience and 10% Research</Description>

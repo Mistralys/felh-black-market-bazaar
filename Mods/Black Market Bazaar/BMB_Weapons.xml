@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Black Market Bazaar by Hellions -->
 <GameItemTypes>    
 	<GameItemType InternalName="Axe_FireAndIce_Trog">
@@ -6427,7 +6427,7 @@ So feed him the jingling money in your purse.</Description>
             <ModType>Unit</ModType>
             <Attribute>MeleeAppliesSpell</Attribute>
             <StrVal>Confusion</StrVal>
-            <Provides>Shocked enemies have a 50% chance to swing at a random unit in mêlée instead of their target</Provides>
+            <Provides>Shocked enemies have a 50% chance to swing at a random unit in mÃªlÃ©e instead of their target</Provides>
         </GameModifier>
         <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
 		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>

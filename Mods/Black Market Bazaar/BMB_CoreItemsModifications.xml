@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <GameItemTypes>	
 	<GameItemType InternalName="Staff_Leht">
         <DisplayName>Leht Staff</DisplayName>
@@ -6,7 +6,7 @@
         <Type>Weapon</Type>
         <Type>Defense</Type>
         <WeaponType>Staff</WeaponType>
-        <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+        <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
         <CanBeEquipped>1</CanBeEquipped>
         <AdditionalTrainingTurns>48</AdditionalTrainingTurns>
         <ShopValue>290</ShopValue>

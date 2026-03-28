@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <UnitTypes>
 	<UnitType InternalName="BMB_Unit_Altarian_Mage_Lightning_AI">
         <DisplayName>Lightning Strikers</DisplayName>
@@ -27,7 +27,7 @@
 		<Equipment>Kingdom_Female_Leather_Gloves_Light</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -176,7 +176,7 @@
 		<Equipment>TightBoots_Dark</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -302,7 +302,7 @@
     </UnitType>	
 	<UnitType InternalName="BMB_Unit_Dead_Mage_Lightning_AI">
         <DisplayName>Tempest Howlers</DisplayName>        
-        <RaceType>Race_Type_Dead</RaceType>
+        <RaceType>Race_Type_Wraiths</RaceType>
         <CanBeDesigned>1</CanBeDesigned>
         <Gender>Female</Gender>
         <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
@@ -313,7 +313,7 @@
         <LevelMilestone InternalName="L1">
             <Level>1</Level>
         </LevelMilestone>
-        <SelectedAbilityBonusOption>Blood_Undead</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
         <SelectedAbilityBonusOption>Fast</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Precision</SelectedAbilityBonusOption>	
 		<SelectedAbilityBonusOption>Spirit</SelectedAbilityBonusOption>
@@ -325,7 +325,7 @@
 		<Equipment>Basic_Wraith_Skirt_ID1</Equipment>
 		<EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -345,13 +345,13 @@
         </EquipmentUpgradeDef>	
         <Prereq>
             <Type>Race</Type>
-            <Attribute>Race_Type_Dead</Attribute>
+            <Attribute>Race_Type_Wraiths</Attribute>
         </Prereq>        
-		<Backstory>You sealed yourself within the buried city of Calebethon, and toiled as each light went out. As the darkness crept through Calebethon, there was a rising tide of screams and madness. It would be unjust to say that the citizens became as animals, because animals were never so cruel or afraid.
-		
-		Eventually the darkness claimed those voices too, and the city settled to the gentle sounds of ragged breath and the drip of blood, flesh and filth. When the last light of Calebethon finally went out, you could only hear echoes of your great city in the darkness.  You have no memories of those last, horrible days.
-		
-		When you awoke you walked through the streets of ancient Calebethon, and where you walked the long dead citizens of your city rose to follow.</Backstory>
+		<Backstory>You remember the binding fire, though Ceresa's rites demand you do not. There were runes carved into the stone of Resoln's oldest temple, and you were pressed against them while the storm gathered overhead. It was not the lightning that changed you, though the lightning came — it was whatever the lightning replaced.
+
+		The woman who screamed during the rites is not the creature that emerged. She felt everything. You feel only the current, and the waiting, and the cold want to let it loose again.
+
+		They call you Tempest Howlers. You do not disagree.</Backstory>
         <AnimationPack>SoldierAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>
@@ -375,7 +375,7 @@
     </UnitType>	
 	<UnitType InternalName="BMB_Unit_Dead_Staff_AI">
         <DisplayName>Intangible Knockers</DisplayName>
-        <RaceType>Race_Type_Dead</RaceType>
+        <RaceType>Race_Type_Wraiths</RaceType>
         <CanBeDesigned>1</CanBeDesigned>
         <Gender>Female</Gender>
         <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
@@ -386,7 +386,7 @@
         <LevelMilestone InternalName="L1">
             <Level>1</Level>
         </LevelMilestone>        
-        <SelectedAbilityBonusOption>Blood_Undead</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Spirit</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>ArmorProficiency1</SelectedAbilityBonusOption>
 		<SelectedAbilityBonusOption>Fast</SelectedAbilityBonusOption>
@@ -435,13 +435,13 @@
         </EquipmentUpgradeDef>
         <Prereq>
             <Type>Race</Type>
-            <Attribute>Race_Type_Dead</Attribute>
+            <Attribute>Race_Type_Wraiths</Attribute>
         </Prereq>
-		<Backstory>You sealed yourself within the buried city of Calebethon, and toiled as each light went out. As the darkness crept through Calebethon, there was a rising tide of screams and madness. It would be unjust to say that the citizens became as animals, because animals were never so cruel or afraid.
-		
-		Eventually the darkness claimed those voices too, and the city settled to the gentle sounds of ragged breath and the drip of blood, flesh and filth. When the last light of Calebethon finally went out, you could only hear echoes of your great city in the darkness.  You have no memories of those last, horrible days.
-		
-		When you awoke you walked through the streets of ancient Calebethon, and where you walked the long dead citizens of your city rose to follow.</Backstory>
+		<Backstory>You remember the passage but not the return. The rite that unmade you in the shadow-places of Resoln was not a rite of death — it only felt that way from the inside. When you crossed the threshold, you were still recognisably yourself.
+
+		When you came back, something came back with you. Something that knows all the doors.
+
+		The living fear you because you are not fully here. You knock against the walls they think can hold you, and the walls open. They call you Intangible Knockers. You pass through regardless.</Backstory>
 		<AnimationPack>SoldierAnimationPack</AnimationPack>
         <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
         <ClothMapScale>1.6</ClothMapScale>
@@ -484,7 +484,7 @@
 		<Equipment>Noble_Shirt_ID2</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -635,7 +635,7 @@
 		<Equipment>K_Female_Hair_Curly_01</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -783,7 +783,7 @@
 		<Equipment>Warrior_Trenchcoat_ID2</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -932,7 +932,7 @@
 		<Equipment>Empire_Overskirt_ID1</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -1084,7 +1084,7 @@
 		<Equipment>Muchant_Cloak_ID1</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -1237,7 +1237,7 @@
 		<Equipment>Sovereign_Female_Warrior_Shirt_Leather_ID2</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -1384,7 +1384,7 @@
 		<Equipment>Hooded_Cloak_ID2</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
@@ -1534,7 +1534,7 @@
 		<Equipment>TightBoots_Light</Equipment>
         <EquipmentUpgradeDef>
             <EquipmentSlot>Weapon</EquipmentSlot>
-            <WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
             <EquipmentSlot>Defense</EquipmentSlot>
             <SelectionCriteria>MaximizeSum</SelectionCriteria>
             <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
