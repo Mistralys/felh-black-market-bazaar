@@ -1,0 +1,10 @@
+{
+  "name": "felh-black-market-bazaar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Script runner for the Black Market Bazaar mod project",
+  "type": "module",
+  "scripts": {
+    "menu": "node scripts/menu.mjs"
+  }
+}
