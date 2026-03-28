@@ -11,6 +11,21 @@ A continuation of Hellion's original mod for the PC game _Fallen Enchantress Leg
 - Reworked some of the item icons.
 - Fixed some typos and grammar issues.
 
+## Script Runner
+
+A Node.js CLI menu is available for common project tasks. Run it with:
+
+```
+npm run menu
+```
+
+Available commands:
+
+| Key | Action |
+|-----|--------|
+| `a` | Generate context documentation (`ctx generate`) |
+| `q` | Quit |
+
 ## Disclaimer
 
 I am not the original author of the mod. Since it is abandoned, 
