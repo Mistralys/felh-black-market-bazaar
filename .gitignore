@@ -4,3 +4,9 @@ edit/js/locale-fr.js
 edit/js/md5.min.js
 edit/js/translator.js
 edit/js/cachekey.txt
+build.config.json
+/docs/agents/**/work.md
+/docs/agents/**/work/
+/docs/agents/**/dependency-analysis.md
+/docs/agents/**/pipeline-configuration.md
+/docs/agents/**/work-packages-draft.md
