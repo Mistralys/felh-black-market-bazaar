@@ -6,14 +6,14 @@ Reboot of the "Black Market Bazaar" mod for Fallen Enchantress: Legendary Heroes
 
 ## Full item reference
 
-See [docs/references/items.md](docs/references/items.md).
+See [items.md](docs/references/items.md).
 
 ---
 
 ## Credits
 
 - Original mod by Hellions1 for Fallen Enchantress: Legendary Heroes.
-- Original readme: [docs/references/original-felh-readme.txt]
+- Original readme: [original-felh-readme.txt](docs/references/original-felh-readme.txt)
 
 ---
 
