@@ -1,10 +1,23 @@
 # Black Market Bazaar - Continued
 
-A mod project for the video game **Elemental: Reforged**.
+Reboot of the "Black Market Bazaar" mod for Fallen Enchantress: Legendary Heroes, modernized and adapted to **Elemental: Reforged**.
 
 ---
 
-## Getting Started
+## Full item reference
+
+See [docs/references/items.md](docs/references/items.md).
+
+---
+
+## Credits
+
+- Original mod by Hellions1 for Fallen Enchantress: Legendary Heroes.
+- Original readme: [docs/references/original-felh-readme.txt]
+
+---
+
+## Development Guide
 
 ### Prerequisites
 
