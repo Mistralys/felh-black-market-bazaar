@@ -4,11 +4,13 @@ _SOURCE: Item definitions_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_Items.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_Items.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_Items.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_Items.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -3619,15 +3621,8 @@ A brew with no toll, to cure that aching loose tooth.</Description>
     </GameItemType>	
 </GameItemTypes>
 ```
-_SOURCE: DLC05 item definitions_
-# DLC05 item definitions
-```
-// Structure of documents
-No files found.
-
-```
 ---
 **File Statistics**
-- **Size**: 168.3 KB
-- **Lines**: 3619
+- **Size**: 169.24 KB
+- **Lines**: 3634
 File: `modules/bmb-mod/items.md`

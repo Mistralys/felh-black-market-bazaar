@@ -4,11 +4,13 @@ _SOURCE: Spell definitions_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_Spells.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_Spells.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_Spells.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_Spells.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -4545,11 +4547,13 @@ _SOURCE: Ability definitions_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_Abilities.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_Abilities.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_Abilities.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_Abilities.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -4606,6 +4610,6 @@ _SOURCE: Ability definitions_
 ```
 ---
 **File Statistics**
-- **Size**: 201.16 KB
+- **Size**: 201.14 KB
 - **Lines**: 4612
 File: `modules/bmb-mod/spells-abilities.md`

@@ -22,17 +22,18 @@ The manifest is the canonical documentation source. Read it before touching any 
 | Project README | `README.md` | High-level mod description and history |
 | Game Data Reference | `docs/game-data/README.md` | Base game XML schemas, folder layout, encoding rules, Reforged breaking changes |
 | Modding Guide | `docs/modding-guide/README.md` | BMB-specific XML patterns, naming conventions, validation checklist |
-| Mod Module README | `Mods/Black Market Bazaar/README.md` | File inventory, naming conventions, Reforged compatibility changelog |
+| Mod Module README | `Mods/README.md` | File inventory, naming conventions, Reforged compatibility changelog |
 | Local Workspace | `local-workspace.md` | Multi-root workspace layout and disk paths |
 | Research Notes | `docs/agents/research/` | Compatibility research documents |
 | Plans | `docs/agents/plans/` | Agent work plans (dated directories) |
+| Implementation History | `docs/agents/implementation-history/` | Archived implementation plans and synthesis documents |
 
 ### Quick Start Workflow
 
 1. **Read** `README.md` — understand what the mod is.
 2. **Read** `docs/modding-guide/README.md` — learn the XML patterns, naming conventions, and Reforged constraints.
 3. **Read** `docs/game-data/README.md` — understand the base game's data schemas.
-4. **Read** `Mods/Black Market Bazaar/README.md` — review the file inventory and recent compatibility changes.
+4. **Read** `Mods/README.md` — review the file inventory and recent compatibility changes.
 5. **Reference** specific XML files only after completing steps 1–4.
 
 ---
@@ -43,13 +44,13 @@ When you change code, update the corresponding manifest documents:
 
 | Change Made | Documents to Update |
 |---|---|
-| New item / weapon / armor / clothing added | `Mods/Black Market Bazaar/README.md` (file inventory & counts), `docs/modding-guide/README.md` (if new pattern) |
-| New spell or ability added | `Mods/Black Market Bazaar/README.md`, `docs/modding-guide/README.md` |
-| New unit added | `Mods/Black Market Bazaar/README.md` |
-| New XML file added to mod | `Mods/Black Market Bazaar/README.md` (file inventory table), `Mods/Black Market Bazaar/module-context.yaml`, `context.yaml` |
-| Icon or texture added | `Mods/Gfx/Black Market Bazaar Icons/` (place file), `Mods/Black Market Bazaar/README.md` (update counts if noted) |
-| String table entry added | `Mods/Data/BMB.str` |
-| Base game override changed | `Mods/Black Market Bazaar/README.md` (compatibility section) |
+| New item / weapon / armor / clothing added | `Mods/README.md` (file inventory & counts), `docs/modding-guide/README.md` (if new pattern) |
+| New spell or ability added | `Mods/README.md`, `docs/modding-guide/README.md` |
+| New unit added | `Mods/README.md` |
+| New XML file added to mod | `Mods/README.md` (file inventory table), `Mods/module-context.yaml`, `context.yaml` |
+| Icon or texture added | `Mods/src/Gfx/Black Market Bazaar Icons/` (place file), `Mods/README.md` (update counts if noted) |
+| String table entry added | `Mods/src/Data/BMB.str` |
+| Base game override changed | `Mods/README.md` (compatibility section) |
 | Naming convention changed | `docs/modding-guide/README.md` |
 | Game data schema discovered | `docs/game-data/README.md` |
 | New Reforged breaking change found | `docs/game-data/README.md`, `docs/modding-guide/README.md` |
@@ -60,7 +61,7 @@ When you change code, update the corresponding manifest documents:
 
 ## 4. Efficiency Rules — Search Smart
 
-- **Finding files?** Check the file inventory table in `Mods/Black Market Bazaar/README.md` FIRST.
+- **Finding files?** Check the file inventory table in `Mods/README.md` FIRST.
 - **Understanding XML schemas?** Check `docs/game-data/README.md` FIRST.
 - **Implementation patterns & conventions?** Check `docs/modding-guide/README.md` FIRST.
 - **Reforged compatibility rules?** Check BOTH `docs/game-data/README.md` and `docs/modding-guide/README.md` FIRST.
@@ -139,7 +140,7 @@ All scripts in `scripts/` MUST be OS-independent. Targeted platforms: Windows, m
 | **Build Tool** | `npm run build` (`scripts/build.mjs` — deploys mod to game folder) |
 | **Reference Generator** | `npm run reference` (`scripts/generate-reference.mjs` — generates `docs/references/items.md`) |
 | **Context Generator** | CTX Generator (`context.yaml`) |
-| **String Table** | `Mods/Data/BMB.str` |
+| **String Table** | `Mods/src/Data/BMB.str` |
 
 ---
 
@@ -169,6 +170,7 @@ felh-black-market-bazaar/
 ├── design/                            ← PSD source files for icons
 ├── docs/
 │   ├── agents/
+│   │   ├── implementation-history/    ← Archived implementation plans & synthesis
 │   │   ├── plans/                     ← Agent work plans (dated)
 │   │   └── research/                  ← Compatibility research
 │   ├── game-data/
@@ -179,22 +181,31 @@ felh-black-market-bazaar/
 │   │   └── module-context.yaml
 │   └── references/
 │       └── items.md                   ← Auto-generated item reference (npm run reference)
+├── scripts/
+│   ├── build.mjs                      ← Build/deploy script
+│   ├── generate-reference.mjs         ← Item reference generator
+│   ├── menu.mjs                       ← Interactive terminal menu
+│   ├── prepare.mjs                    ← Config-reminder hook
+│   └── lib/
+│       └── output.mjs                 ← Shared console output helpers
 └── Mods/
-    ├── Black Market Bazaar/
-    │   ├── README.md                  ← Mod file inventory & changelog
-    │   ├── module-context.yaml
-    │   ├── BMB_Items.xml              ← Accessories, consumables
-    │   ├── BMB_Weapons.xml            ← Weapons
-    │   ├── BMB_Armor.xml              ← Armor
-    │   ├── BMB_Clothes.xml            ← Clothing
-    │   ├── BMB_Spells.xml             ← 76 item-triggered spells
-    │   ├── BMB_Abilities.xml          ← Ability definitions
-    │   ├── BMB_Effects.xml            ← Visual effects
-    │   ├── BMB_Units.xml              ← Custom units
-    │   ├── BMB_UnitStats.xml          ← Custom unit stats
-    │   └── BMB_CoreItemsModifications.xml  ← Base game overrides
-    ├── Data/
-    │   └── BMB.str                    ← String table
-    └── Gfx/
-        └── Black Market Bazaar Icons/ ← ~230 PNG icons + ~15 DDS textures
+    ├── README.md                      ← Mod file inventory & changelog
+    ├── module-context.yaml            ← CTX Generator module config
+    └── src/
+        ├── BlackMarketBazaar.elemd    ← Mod definition file
+        ├── Data/
+        │   ├── BMB.str                ← String table
+        │   └── GameCore/
+        │       ├── BMB_Items.xml      ← Accessories, consumables
+        │       ├── BMB_Weapons.xml    ← Weapons
+        │       ├── BMB_Armor.xml      ← Armor
+        │       ├── BMB_Clothes.xml    ← Clothing
+        │       ├── BMB_Spells.xml     ← 76 item-triggered spells
+        │       ├── BMB_Abilities.xml  ← Ability definitions
+        │       ├── BMB_Effects.xml    ← Visual effects
+        │       ├── BMB_Units.xml      ← Custom units
+        │       ├── BMB_UnitStats.xml  ← Custom unit stats
+        │       └── BMB_CoreItemsModifications.xml ← Base game overrides
+        └── Gfx/
+            └── Black Market Bazaar Icons/ ← 227 PNG icons + 16 DDS textures
 ```

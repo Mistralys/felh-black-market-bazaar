@@ -4,11 +4,10 @@ _SOURCE: Mod overview and file inventory_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── README.md
+    └── README.md
 
 ```
-###  Path: `\Mods\Black Market Bazaar/README.md`
+###  Path: `\Mods/README.md`
 
 ```md
 # Black Market Bazaar - Mod Module 
@@ -33,15 +32,14 @@ All mod XML files use the BMB_ prefix for InternalName values to avoid collision
 | BMB_Units.xml | - | Custom unit definitions (e.g., summoned creatures) |  
 | BMB_UnitStats.xml | - | Custom unit stat type definitions |  
 | BMB_CoreItemsModifications.xml | GameItemTypes | Modifications/overrides to base game items |  
-| BMB_Items_DLC05.xml | GameItemTypes | Items requiring DLC05 (Leader Pack) | 
   
 ## Supporting Files  
   
 | File | Location | Purpose |  
 |---|---|---|  
-| BMB.str | Mods/Data/ | String table for UI labels (weapon type names, etc.) |  
-| *.png | Mods/Gfx/Black Market Bazaar Icons/ | Item icons (~230 PNG files) |  
-| *.dds | Mods/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (~15 DDS files) | 
+| BMB.str | Mods/src/Data/ | String table for UI labels (weapon type names, etc.) |  
+| *.png | Mods/src/Gfx/Black Market Bazaar Icons/ | Item icons (227 PNG files) |  
+| *.dds | Mods/src/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (16 DDS files) | 
   
 ## Naming Conventions  
   
@@ -58,10 +56,6 @@ The mod adds new weapon upgrade types not in the base game:
 - Wand - Wand-type weapons  
   
 These are registered via the BMB.str string table. 
-  
-## DLC05 Dependency  
-  
-BMB_Items_DLC05.xml contains items that depend on the Leader Pack DLC. If DLC05 is not installed, these items (4 "Treasure Finder" items) will have no effect. The file can be safely deleted in that case. 
   
 ## Integration with Base Game  
   
@@ -170,6 +164,6 @@ These are an inherent limitation of automated mod testing — the game engine mu
 ```
 ---
 **File Statistics**
-- **Size**: 3.23 KB
-- **Lines**: 78
+- **Size**: 10.37 KB
+- **Lines**: 176
 File: `modules/bmb-mod/overview.md`

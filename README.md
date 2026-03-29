@@ -75,7 +75,7 @@ This project uses a **local build config** file that is machine-specific and nev
 
 ## Build Command
 
-Deploys `Mods/197542/` to the game's Mods folder in one step.
+Deploys `Mods/src/` to the game's Mods folder in one step.
 
 ### Run directly
 
@@ -91,10 +91,10 @@ node scripts/build.mjs
 
 What it does:
 
-1. Reads `build.config.json` and validates `deployPath`.
-2. Confirms `Mods/197542/` exists in the project.
-3. Deletes `<deployPath>/197542/` if it already exists (clean slate).
-4. Copies `Mods/197542/` to `<deployPath>/197542/`.
+1. Reads `build.config.json` and validates `deployPath` and `modID`.
+2. Confirms `Mods/src/` exists in the project.
+3. Deletes `<deployPath>/<modID>/` if it already exists (clean slate).
+4. Copies `Mods/src/` to `<deployPath>/<modID>/`.
 5. Prints a summary: `Build complete. N file(s) deployed to: <path>`.
 
 The operation is idempotent — running it again produces the same result.
@@ -107,7 +107,8 @@ The operation is idempotent — running it again produces the same result.
 | `deployPath` absent or empty | `build.config.json is missing a valid deployPath ...` | 1 |
 | `deployPath` does not exist | `deployPath does not exist or is not accessible: <path>` | 1 |
 | `deployPath` is not a directory | `deployPath is not a directory: <path>` | 1 |
-| Source folder `Mods/197542/` missing | `Source folder not found: <path>` | 1 |
+| `modID` absent or empty | `build.config.json is missing a valid modID ...` | 1 |
+| Source folder `Mods/src/` missing | `Source folder not found: <path>` | 1 |
 
 ### Use from another script
 

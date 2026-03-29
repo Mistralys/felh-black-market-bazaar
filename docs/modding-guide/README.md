@@ -159,25 +159,33 @@ All 31 qualifying consumable items in `BMB_Items.xml` have been tagged with
 ## AbilityBonusType
 
 `AbilityBonusType` is a child element of `AbilityBonus` that categorises the ability for
-Elemental: Reforged's ability-management system. Without a valid `AbilityBonusType`, the
-engine may fail to register or display the ability correctly.
+Elemental: Reforged's ability-management system. It determines where the ability appears
+in the game UI (unit designer, level-up screen, etc.).
 
-### Required value for BMB abilities
+### When to use AbilityBonusType
 
-All `AbilityBonus` entries in `BMB_Abilities.xml` must use:
+`AbilityBonusType` is required **only** when the ability legitimately appears in the unit
+designer or level-up screen, and must always be paired with a valid `<Cost>` element.
 
-```xml
-<AbilityBonusType>Unit_Design</AbilityBonusType>
-```
+Known values: `Unit_Design` (unit-level / item-granted), `Unit_Level` (gained on level-up),
+`Player` (sovereign), `Champion_Spellbook`, `Champion_Talent`.
 
-`Unit_Design` categorises the ability as a unit-design-time selection, which is the correct
-category for item-granted hero abilities in BMB.
+### Item-granted abilities — do NOT use AbilityBonusType
 
-### Example (BMB_EruditeAbility)
+BMB abilities are item-granted only (`HeroOnly=1`, `IsAvailableForUnitDesign=0`). These
+abilities must **not** include `AbilityBonusType`. In the core game, every ability using
+`AbilityBonusType=Unit_Design` also carries a `<Cost>` element defining its unit-designer
+purchase price. Without `<Cost>`, the abilities would appear as free 0-cost options in the
+unit designer, bypassing the item-selling mechanic.
+
+The correct pattern — matching the 127-entry item-only model used by the core game — omits
+`AbilityBonusType` entirely. Items reference abilities via `UnlockUnitAbility`/`StrVal`
+using the option InternalName, which is unaffected by the absence of `AbilityBonusType`.
+
+### Example (BMB_EruditeAbility — no AbilityBonusType)
 
 ```xml
 <AbilityBonus InternalName="BMB_EruditeAbility">
-    <AbilityBonusType>Unit_Design</AbilityBonusType>
     <AbilityBonusOption InternalName="BMB_Erudite">
         <DisplayName>Erudite</DisplayName>
         <Description>+30% Experience and 10% Research</Description>
@@ -194,13 +202,9 @@ category for item-granted hero abilities in BMB.
 </AbilityBonus>
 ```
 
-`AbilityBonusType` must be the **first** child element of `AbilityBonus`, before any
-`AbilityBonusOption` children.
-
-> **Known risk:** The `Unit_Design` value for item-granted abilities has not been fully
-> verified in-game for all edge cases. If an ability stops functioning after adding
-> `AbilityBonusType`, verify the value against the base game's `AbilityBonuses` files and
-> test with a controlled save.
+> **Rule for future maintainers:** Do **not** add `AbilityBonusType` to any item-granted-only
+> ability. Only use `AbilityBonusType` for abilities that legitimately appear in the unit
+> designer or level-up screen, and only when paired with a valid `<Cost>` element.
 
 ---
 

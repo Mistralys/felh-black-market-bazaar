@@ -451,6 +451,6 @@ When creating a mod, files are deployed to the user's "My Documents" game folder
 ```
 ---
 **File Statistics**
-- **Size**: 12.15 KB
-- **Lines**: 340
+- **Size**: 19.33 KB
+- **Lines**: 457
 File: `modules/game-data/overview.md`

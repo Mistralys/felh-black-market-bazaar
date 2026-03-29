@@ -4,17 +4,28 @@ _SOURCE: Project README_
 ```
 // Structure of documents
 └── Mods/
-    ├── Black Market Bazaar/
-    │   └── README.md
+    ├── README.md
 └── README.md
 └── docs/
-    └── game-data/
+    ├── agents/
+    │   ├── implementation-history/
+    │   │   └── README.md
+    ├── game-data/
+    │   ├── README.md
+    ├── modding-guide/
+    │   └── README.md
+└── node_modules/
+    └── fast-xml-builder/
         ├── README.md
-    └── modding-guide/
+    └── fast-xml-parser/
+        ├── README.md
+    └── path-expression-matcher/
+        ├── README.md
+    └── strnum/
         └── README.md
 
 ```
-###  Path: `\Mods\Black Market Bazaar/README.md`
+###  Path: `\Mods/README.md`
 
 ```md
 # Black Market Bazaar - Mod Module 
@@ -39,15 +50,14 @@ All mod XML files use the BMB_ prefix for InternalName values to avoid collision
 | BMB_Units.xml | - | Custom unit definitions (e.g., summoned creatures) |  
 | BMB_UnitStats.xml | - | Custom unit stat type definitions |  
 | BMB_CoreItemsModifications.xml | GameItemTypes | Modifications/overrides to base game items |  
-| BMB_Items_DLC05.xml | GameItemTypes | Items requiring DLC05 (Leader Pack) | 
   
 ## Supporting Files  
   
 | File | Location | Purpose |  
 |---|---|---|  
-| BMB.str | Mods/Data/ | String table for UI labels (weapon type names, etc.) |  
-| *.png | Mods/Gfx/Black Market Bazaar Icons/ | Item icons (~230 PNG files) |  
-| *.dds | Mods/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (~15 DDS files) | 
+| BMB.str | Mods/src/Data/ | String table for UI labels (weapon type names, etc.) |  
+| *.png | Mods/src/Gfx/Black Market Bazaar Icons/ | Item icons (227 PNG files) |  
+| *.dds | Mods/src/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (16 DDS files) | 
   
 ## Naming Conventions  
   
@@ -64,10 +74,6 @@ The mod adds new weapon upgrade types not in the base game:
 - Wand - Wand-type weapons  
   
 These are registered via the BMB.str string table. 
-  
-## DLC05 Dependency  
-  
-BMB_Items_DLC05.xml contains items that depend on the Leader Pack DLC. If DLC05 is not installed, these items (4 "Treasure Finder" items) will have no effect. The file can be safely deleted in that case. 
   
 ## Integration with Base Game  
   
@@ -179,27 +185,174 @@ These are an inherent limitation of automated mod testing — the game engine mu
 ```md
 # Black Market Bazaar - Continued
 
-A continuation of Hellion's original mod for the PC game _Fallen Enchantress Legendary Heroes_:
+Reboot of the "Black Market Bazaar" mod for Fallen Enchantress: Legendary Heroes, modernized and adapted to **Elemental: Reforged**.
 
-- 242 new items.
-- 76 new item related spells.
-- Including 19 new clothes to equip your custom sovereigns.
+---
 
-## Continuation features
+## Full item reference
 
-- Reworked some of the item icons.
-- Fixed some typos and grammar issues.
+See [items.md](docs/references/items.md).
 
-## Disclaimer
+---
 
-I am not the original author of the mod. Since it is abandoned, 
-I created this repository on GitHub to be able to work on it, 
-and let others participate to further extend it.
+## Credits
 
-The original mod was published on NexusMods by _Hellions1_. 
-It can still be downloaded there:
+- Original mod by Hellions1 for Fallen Enchantress: Legendary Heroes.
+- Original readme: [original-felh-readme.txt](docs/references/original-felh-readme.txt)
 
-https://www.nexusmods.com/fallenenchantress/mods/1885
+---
+
+## Development Guide
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (for the script runner)
+- The game installed (the Mods folder is the deployment target)
+- Supported on Windows, macOS, and Linux
+
+### Clone and install
+
+```
+git clone <repo-url>
+cd felh-black-market-bazaar
+npm install
+```
+
+---
+
+## Local Build Configuration
+
+This project uses a **local build config** file that is machine-specific and never committed to version control.
+
+### Setup (first time)
+
+1. Copy the example file to create your local config:
+
+   ```
+   cp .build.config.example.json build.config.json
+   ```
+
+2. Open `build.config.json` and set `deployPath` to the Mods folder on your machine:
+
+   **Windows:**
+
+   ```json
+   { "deployPath": "C:\\Users\\alice\\Documents\\My Games\\ElementalReforged\\Mods" }
+   ```
+
+   **macOS:**
+
+   ```json
+   { "deployPath": "/Users/alice/Library/Application Support/ElementalReforged/Mods" }
+   ```
+
+   **Linux:**
+
+   ```json
+   { "deployPath": "/home/alice/.local/share/ElementalReforged/Mods" }
+   ```
+
+> `build.config.json` is listed in `.gitignore` -- your local path will never be committed.
+>
+> `.build.config.example.json` is the committed template; do not edit it with real paths.
+
+---
+
+## Build Command
+
+Deploys `Mods/src/` to the game's Mods folder in one step.
+
+### Run directly
+
+```
+npm run build
+```
+
+Or equivalently:
+
+```
+node scripts/build.mjs
+```
+
+What it does:
+
+1. Reads `build.config.json` and validates `deployPath` and `modID`.
+2. Confirms `Mods/src/` exists in the project.
+3. Deletes `<deployPath>/<modID>/` if it already exists (clean slate).
+4. Copies `Mods/src/` to `<deployPath>/<modID>/`.
+5. Prints a summary: `Build complete. N file(s) deployed to: <path>`.
+
+The operation is idempotent — running it again produces the same result.
+
+### Error cases
+
+| Condition | Message | Exit code |
+|---|---|---|
+| `build.config.json` missing | `build.config.json not found. Copy .build.config.example.json ...` | 1 |
+| `deployPath` absent or empty | `build.config.json is missing a valid deployPath ...` | 1 |
+| `deployPath` does not exist | `deployPath does not exist or is not accessible: <path>` | 1 |
+| `deployPath` is not a directory | `deployPath is not a directory: <path>` | 1 |
+| `modID` absent or empty | `build.config.json is missing a valid modID ...` | 1 |
+| Source folder `Mods/src/` missing | `Source folder not found: <path>` | 1 |
+
+### Use from another script
+
+```js
+import { build } from './scripts/build.mjs';
+await build();
+```
+
+The exported `build()` function is async and uses `process.exit(1)` on failure,
+making it safe to call directly from menu handlers without an extra child process.
+
+---
+
+## Script Runner
+
+```
+npm run menu
+```
+
+Launches an interactive terminal menu with shortcut keys for common tasks.
+Must be run in an interactive terminal (TTY). Press **q** or **Ctrl+C** to quit.
+
+### Available menu items
+
+| Key | Action |
+|---|---|
+| `a` | Generate context documentation (`ctx generate`) |
+| `b` | Build mod (deploy to game folder) |
+| `c` | Generate item reference (`docs/references/`) |
+| `q` | Quit |
+
+Keys are assigned alphabetically in declaration order. Adding a new item appends the next letter automatically. The menu supports up to 26 items (a–z).
+
+---
+
+## Repository Layout
+
+| Path | Purpose |
+|---|---|
+| ``scripts/build.mjs`` | Build/deploy script — copies mod to game folder |
+| ``scripts/menu.mjs`` | Interactive terminal menu |
+| ``scripts/prepare.mjs`` | Config-reminder hook (runs after `npm install`) |
+| ``scripts/lib/output.mjs`` | Shared console output helpers (colours, symbols) |
+| ``scripts/`` | Node.js build and tooling scripts |
+| ``Mods/`` | Mod source files |
+| ``docs/`` | Project documentation |
+| ``.build.config.example.json`` | Committed template for local build config |
+| ``build.config.json`` | Your local build config (git-ignored) |
+
+```
+###  Path: `\docs\agents\implementation-history/README.md`
+
+```md
+# Implementation Archive
+
+This folder contains an archive of implementation plans for the project.
+
+**DEPRECATION WARNING:** These are historical documents, and very likely
+do not reflect the current state of the application.
 
 ```
 ###  Path: `\docs\game-data/README.md`
@@ -646,26 +799,22 @@ When creating a mod, files are deployed to the user's "My Documents" game folder
 ###  Path: `\docs\modding-guide/README.md`
 
 ```md
-# Modding Guide -- Black Market Bazaar (Elemental: Reforged)
+# Modding Guide — Elemental: Reforged Compatibility
 
 This guide documents the XML patterns, naming conventions, and Reforged-specific constraints
 that must be followed when creating or maintaining content for the Black Market Bazaar mod.
-It covers general modding conventions and the breaking changes in Elemental: Reforged that
-affect how mod XML files are parsed and loaded.
+It focuses on the breaking changes introduced in Elemental: Reforged (formerly Fallen Enchantress:
+Legendary Heroes) that affect how mod XML files are parsed and loaded.
 
 ---
 
 ## Table of Contents
 
 1. [File Encoding](#file-encoding)
-2. [File Layout and InternalName Convention](#file-layout-and-internalname-convention)
-3. [Items XML Schema](#items-xml-schema)
-4. [Abilities XML Schema](#abilities-xml-schema)
-5. [Spells XML Schema](#spells-xml-schema)
-6. [Effects XML Schema](#effects-xml-schema)
-7. [Units XML Schema](#units-xml-schema)
-8. [Mod File Deployment](#mod-file-deployment)
-9. [Pre-Launch Validation Checklist](#pre-launch-validation-checklist)
+2. [SupportedUnitModelType - Skeleton Deprecation](#supportedunitmodeltype--skeleton-deprecation)
+3. [HideInHiergamenon - Consumable Items](#hideinhiergamenon--consumable-items)
+4. [AbilityBonusType](#abilitybonustype)
+5. [Unit Race Types](#unit-race-types)
 
 ---
 
@@ -687,10 +836,13 @@ All BMB XML files already declare UTF-8 in their XML prolog:
 
 When creating or editing a mod XML file:
 
-- Ensure your text editor saves the file as **UTF-8** (without BOM is preferred).
-- Do **not** save as UTF-16, UTF-32, or any single-byte code page (including ISO-8859-1).
-- If you copy content from another source, re-check the encoding after pasting.
-- Special characters must be stored as UTF-8 byte sequences.
+- Ensure your text editor saves the file as **UTF-8** (without BOM is preferred; BOM is tolerated
+  but can cause issues in some XML parsers).
+- Do **not** save as UTF-16, UTF-32, or any single-byte code page (including ISO-8859-1 / Windows-1252).
+- If you copy content from another source (e.g., a forum post or older mod), re-check the encoding
+  after pasting - editors can silently switch encoding when pasting non-ASCII characters.
+- Special characters (accented letters, typographic quotes, em-dashes) must be stored as their
+  UTF-8 byte sequences. XML character references (e.g., `&#233;` for e-acute) are also valid.
 
 > **ISO-8859-1 is deprecated.** Files encoded in ISO-8859-1 were accepted by the original
 > Fallen Enchantress: Legendary Heroes engine but will not load correctly under Elemental:
@@ -698,355 +850,1301 @@ When creating or editing a mod XML file:
 
 ---
 
-## File Layout and InternalName Convention
-
-The BMB mod ships as a set of XML files placed in the mod root folder. Each file has a
-dedicated content domain:
-
-| File | Root Element | Content |
-|---|---|---|
-| `BMB_Items.xml` | <GameItemTypes> | Accessories, consumables, and miscellaneous items |
-| `BMB_Weapons.xml` | <GameItemTypes> | Weapon definitions (axes, swords, staves, bows, wands) |
-| `BMB_Armor.xml` | <GameItemTypes> | Armor pieces (helmets, shields, body armor) |
-| `BMB_Clothes.xml` | <GameItemTypes> | Clothing items (robes, cloaks, boots) |
-| `BMB_Spells.xml` | <Spells> | 76 item-triggered spell definitions |
-| `BMB_Abilities.xml` | <AbilityBonuses> | Custom hero/unit ability definitions |
-| `BMB_Effects.xml` | -- | Visual effect definitions for BMB items |
-| `BMB_Units.xml` | -- | Custom unit definitions (e.g., summoned creatures) |
-| `BMB_UnitStats.xml` | -- | Custom unit stat type definitions |
-| `BMB_CoreItemsModifications.xml` | <GameItemTypes> | Modifications/overrides to base game items |
-| `BMB_Items_DLC05.xml` | <GameItemTypes> | Items requiring DLC05 (Leader Pack) |
-
-### InternalName prefix
-
-All BMB entities use the `BMB_` prefix for `InternalName` values to avoid collisions:
-
-```xml
-<GameItemType InternalName="BMB_AmuletOfContamination">
-```
-
-- Items/weapons/armor/clothes: `BMB_PascalCaseName`
-- Abilities: `BMB_PascalCaseAbilityName`
-- Spells: `BMB_PascalCaseSpellName`
-- Units: `BMB_Unit_Description_AI` (AI army) or `BMB_Unit_Description` (summons)
-
-### Art file naming
-
-- Icons (2D): `BMB_PascalCaseName.png` -- must match the item `InternalName`
-- Ability icons: `BMB_Ability_PascalCaseName.png`
-- 3D textures: `BMB_PascalCaseName_Texture.dds`
-
----
-
-## Items XML Schema
-
-Items use `<GameItemType InternalName=...>` as the entry element inside a `<GameItemTypes>` root.
-
-### Art definition patterns
-
-**Inline:** the `GameItemTypeArtDef` block is embedded within the item definition.
-**External reference:** reference an existing art definition from `CoreItemArt.xml`:
-
-```xml
-<ArtDef>ExistingArtDefInternalName</ArtDef>
-```
-
-**PNG/DDS auto-resolution:** the engine tries both `.png` and `.dds` extensions automatically.
-
-### SupportedUnitModelType -- Skeleton Deprecation
+## SupportedUnitModelType - Skeleton Deprecation
 
 `SupportedUnitModelType` elements inside a `GameItemTypeModelPack` declare which unit model
 rigs the item artwork is compatible with. Elemental: Reforged removed the `Skeleton` model
-type from all non-weapon equipment slots.
+type from all non-weapon equipment slots. Retaining `<SupportedUnitModelType>Skeleton</SupportedUnitModelType>`
+on armor, clothing, or accessory items will produce a load-time warning and may cause the
+item to render incorrectly on affected units.
 
-#### Rule
+### Rule
 
 | Slot / File | `Skeleton` allowed? |
 |---|---|
-| `BMB_Weapons.xml` (Weapon slot) | **Yes** -- Skeleton units can still equip weapons |
-| `BMB_Armor.xml` | **No** -- remove |
-| `BMB_Clothes.xml` | **No** -- remove |
-| `BMB_Items.xml` (Accessory slot) | **No** -- remove |
+| `BMB_Weapons.xml` (Weapon slot) | **Yes** - Skeleton units can still equip weapons |
+| `BMB_Armor.xml` (Head, Torso, Defense, Forearms, Boots) | **No** - remove |
+| `BMB_Clothes.xml` (LowerBody, Surcoat, Cloak, ...) | **No** - remove |
+| `BMB_Items.xml` (Accessory slot) | **No** - remove |
 
 Weapons are the **only** slot type that retains `Skeleton` as a valid `SupportedUnitModelType`.
 
-#### Correct example (weapon - Skeleton retained)
+### Correct example (weapon - Skeleton retained)
 
 ```xml
 <GameItemTypeModelPack InternalName="Axe_FireAndIce_Trog_Default">
+    <!-- ... other model pack children ... -->
     <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
     <SupportedUnitModelType>Skeleton</SupportedUnitModelType>
     <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+    <SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+    <!-- ... -->
 </GameItemTypeModelPack>
 ```
 
-#### Incorrect example (armor - Skeleton must be removed)
+### Incorrect example (armor - Skeleton must be removed)
 
 ```xml
 <!-- BEFORE (Reforged-incompatible) -->
 <GameItemTypeModelPack InternalName="Art_ChainHelmet_BlackCrow_1">
     <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
     <SupportedUnitModelType>Skeleton</SupportedUnitModelType>  <!-- REMOVE THIS -->
+    <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
 </GameItemTypeModelPack>
 
 <!-- AFTER (Reforged-compatible) -->
 <GameItemTypeModelPack InternalName="Art_ChainHelmet_BlackCrow_1">
     <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+    <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
 </GameItemTypeModelPack>
 ```
 
 > **Rule for future maintainers:** When adding a new non-weapon item, do not include
-> `Skeleton` in any `SupportedUnitModelType` list. For new weapons, `Skeleton` is valid.
+> `Skeleton` in any `SupportedUnitModelType` list. For new weapons, `Skeleton` remains valid
+> and should be included alongside the other model types.
 
-### HideInHiergamenon -- Consumable Items
+---
 
-The Hiergamenon is the in-game codex/encyclopedia. Consumable items must be tagged with
-`HideInHiergamenon=1` to prevent them appearing as permanent catalogue entries.
+## HideInHiergamenon - Consumable Items
 
-An item qualifies as a consumable if it meets **both** conditions:
+The Hiergamenon is the in-game codex/encyclopedia. In Elemental: Reforged, single-use
+consumable items (potions, scrolls, tokens, etc.) must be tagged with `HideInHiergamenon=1`
+to prevent them from appearing as permanent catalogue entries. Without this tag, consumables
+clutter the Hiergamenon alongside equippable items, degrading the player experience.
+
+### Definition: qualifying consumable
+
+An item qualifies as a consumable (and therefore requires `HideInHiergamenon=1`) if it meets
+**both** of the following conditions:
 
 - It has `<IsUsable>1</IsUsable>`
-- It does **not** have a `<CanBeEquipped>` element
+- It does **not** have a `<CanBeEquipped>` element (or has `<CanBeEquipped>0</CanBeEquipped>`)
+
+Equippable items (accessories, armor, weapons, clothing) that also set `IsUsable=1` are
+intentionally excluded - they are permanent items that belong in the Hiergamenon.
+
+### Example
 
 ```xml
 <GameItemType InternalName="BloomingTonic">
     <DisplayName>Blooming Tonic</DisplayName>
     <HideInHiergamenon>1</HideInHiergamenon>
+    <ShopValue>450</ShopValue>
+    <GameModifier>
+        <ModType>Unit</ModType>
+        <Attribute>CurHealth</Attribute>
+        <Value>50</Value>
+        <Provides>Heals 50 Hit Points</Provides>
+    </GameModifier>
+    <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+    <Likelihood>20</Likelihood>
     <IsUsable>1</IsUsable>
-    <!-- No CanBeEquipped element -- this is a consumable -->
+    <!-- No <CanBeEquipped> element - this is a consumable -->
 </GameItemType>
 ```
 
-All 31 qualifying consumable items in `BMB_Items.xml` carry `HideInHiergamenon=1`.
+Note that `HideInHiergamenon=1` is placed near the top of the element, before `ShopValue`,
+for readability. Placement within the element does not affect parsing.
 
-> **Rule for future maintainers:** Any new item with `IsUsable=1` and no `CanBeEquipped`
-> must include `<HideInHiergamenon>1</HideInHiergamenon>`. Add after `<DisplayName>`.
+### Current scope in BMB
 
-### WeaponUpgradeType
+All 31 qualifying consumable items in `BMB_Items.xml` have been tagged with
+`HideInHiergamenon=1` as part of the Reforged compatibility update.
 
-`WeaponUpgradeType` categorises a weapon into an upgrade pool for AI equipment selection.
-
-#### Known values
-
-| Value | Description |
-|---|---|
-| `Sword` | Standard sword-type weapons |
-| `Axe` | Axe-type weapons |
-| `Mace` | Mace/blunt weapons |
-| `Bow` | Ranged bow-type weapons |
-| `Staff` | Generic staff weapons |
-| `FireStaff` | Fire-element staves |
-| `LightningStaff` | Lightning-element staves |
-| `Wand` | Wand-type weapons (BMB addition) |
-| `PoisonStaff` | Poison-element staves (BMB addition) |
-
-#### Staff_Leht reclassification (Reforged breaking change)
-
-In Elemental: Reforged, `Staff_Leht` was moved from `LightningStaff` to `FireStaff`.
-`BMB_CoreItemsModifications.xml` has been updated:
-
-```xml
-<!-- BEFORE (FELH) -->
-<WeaponUpgradeType>LightningStaff</WeaponUpgradeType>
-
-<!-- AFTER (Reforged-compatible) -->
-<WeaponUpgradeType>FireStaff</WeaponUpgradeType>
-```
-
-> **Known downstream impact:** `BMB_Unit_Dead_Mage_Lightning_AI` EquipmentUpgradeDef
-> (BMB_Units.xml line 328) still filters on `LightningStaff` and will no longer select
-> `Staff_Leht`. A follow-up work package will fix this.
-
-> **Rule for future maintainers:** Verify `WeaponUpgradeType` values against Reforged categories,
-> not FELH categories -- they can differ for items reclassified between editions.
+> **Rule for future maintainers:** Any new item in `BMB_Items.xml` with `IsUsable=1` and no
+> `CanBeEquipped` element must also include `<HideInHiergamenon>1</HideInHiergamenon>`. Add
+> this tag immediately after the `<DisplayName>` element.
 
 ---
 
-## Abilities XML Schema
+## AbilityBonusType
 
-Ability entries use `<AbilityBonus InternalName=...>` inside an `<AbilityBonuses>` root.
+`AbilityBonusType` is a child element of `AbilityBonus` that categorises the ability for
+Elemental: Reforged's ability-management system. It determines where the ability appears
+in the game UI (unit designer, level-up screen, etc.).
 
-### AbilityBonusType
+### When to use AbilityBonusType
 
-`AbilityBonusType` categorises an ability for Reforged's ability-management system. **BMB item-granted abilities do not use this tag** — see below.
+`AbilityBonusType` is required **only** when the ability legitimately appears in the unit
+designer or level-up screen, and must always be paired with a valid `<Cost>` element.
 
-#### BMB pattern: item-granted abilities omit AbilityBonusType
+Known values: `Unit_Design` (unit-level / item-granted), `Unit_Level` (gained on level-up),
+`Player` (sovereign), `Champion_Spellbook`, `Champion_Talent`.
 
-All BMB abilities (`BMB_EruditeAbility`, `BMB_FamousAbility`) are item-granted only and must **not** include `AbilityBonusType`.
+### Item-granted abilities — do NOT use AbilityBonusType
 
-**Why:** In the core game, every `AbilityBonusType=Unit_Design` ability also carries a `<Cost>` element. Without `<Cost>`, the ability appears as a free 0-cost option in the unit designer. Since BMB abilities are granted by equipping items — not purchased in the unit designer — adding `Unit_Design` without `<Cost>` is incorrect. BMB items carry `IsAvailableForUnitDesign=0` and `HeroOnly=1` as independent safeguards.
+BMB abilities are item-granted only (`HeroOnly=1`, `IsAvailableForUnitDesign=0`). These
+abilities must **not** include `AbilityBonusType`. In the core game, every ability using
+`AbilityBonusType=Unit_Design` also carries a `<Cost>` element defining its unit-designer
+purchase price. Without `<Cost>`, the abilities would appear as free 0-cost options in the
+unit designer, bypassing the item-selling mechanic.
 
-#### Correct example (BMB_EruditeAbility — no AbilityBonusType)
+The correct pattern — matching the 127-entry item-only model used by the core game — omits
+`AbilityBonusType` entirely. Items reference abilities via `UnlockUnitAbility`/`StrVal`
+using the option InternalName, which is unaffected by the absence of `AbilityBonusType`.
+
+### Example (BMB_EruditeAbility — no AbilityBonusType)
 
 ```xml
 <AbilityBonus InternalName="BMB_EruditeAbility">
     <AbilityBonusOption InternalName="BMB_Erudite">
         <DisplayName>Erudite</DisplayName>
+        <Description>+30% Experience and 10% Research</Description>
+        <Icon>BMB_Ability_Erudite.png</Icon>
         <GameModifier>
             <ModType>Unit</ModType>
             <Attribute>AdjustUnitStat</Attribute>
             <StrVal>UnitStat_ExpBonus</StrVal>
             <Value>30</Value>
+            <Provides>+30% Experience</Provides>
         </GameModifier>
+        <Type>Army</Type>
     </AbilityBonusOption>
 </AbilityBonus>
 ```
 
-#### When to use AbilityBonusType
-
-Only use `AbilityBonusType` for abilities that legitimately appear in the **unit designer** or **level-up** screen, and only when paired with a valid `<Cost>` element. If adding it, it must be the **first** child element of `AbilityBonus`.
-
-#### Known values
-
-| Value | Usage |
-|---|---|
-| `Unit_Design` | Unit-designer abilities — requires `<Cost>` |
-| `Unit_Level` | Abilities gained on level-up |
-| `Player` | Sovereign-level abilities |
-| `Champion_Spellbook` | Champion spellbook abilities |
-| `Champion_Talent` | Champion talent abilities |
+> **Rule for future maintainers:** Do **not** add `AbilityBonusType` to any item-granted-only
+> ability. Only use `AbilityBonusType` for abilities that legitimately appear in the unit
+> designer or level-up screen, and only when paired with a valid `<Cost>` element.
 
 ---
 
-## Spells XML Schema
+## Unit Race Types
 
-Spell entries use `<SpellDef InternalName=...>` inside a `<Spells>` root.
+Elemental: Reforged renamed several race type and blood type identifiers. Using the old
+identifiers causes units to be assigned to an unrecognised race, which breaks race-gated
+prerequisites, AI logic, and unit display.
 
-```xml
-<SpellDef InternalName="BMB_ExampleSpell">
-    <DisplayName>Example Spell</DisplayName>
-    <HideInHiergamenon>1</HideInHiergamenon>
-    <IsSpecialAbility>1</IsSpecialAbility>
-    <GameModifier>
-        <ModType>Unit</ModType>
-        <Attribute>AdjustUnitStat</Attribute>
-        <StrVal>UnitStat_CurHealth</StrVal>
-        <Value>-20</Value>
-    </GameModifier>
-</SpellDef>
-```
-
-### Key spell elements
-
-- `HideInHiergamenon`: Add to all BMB item-triggered spells to keep the Hiergamenon clean.
-- `IsSpecialAbility`: Marks as a combat ability (shown in unit ability list).
-- `Cooldown`: Turns before the spell can be recast.
-- `Radius` / `RadiusType`: Area-of-effect radius and shape for splash spells.
-
----
-
-## Effects XML Schema
-
-Visual effect entries in `BMB_Effects.xml` define particle and animation effects attached to
-items and abilities.
-
-### Reforged additions
-
-New optional emitter tags available in Elemental: Reforged:
-
-- `AnimatedStrip`: Reference to an animated sprite strip texture.
-- `AnimatedStripFPS`: Frame rate of the animated strip playback.
-- `AnimatedStripStartRandom`: Randomise the starting frame.
-- `LocalParticles`: Use local-space particle simulation.
-
-These tags are optional. Omitting them falls back to engine defaults.
-
----
-
-## Units XML Schema
-
-Unit entries use `<UnitType InternalName=...>` elements. BMB defines two categories:
-
-- **AI army units** (`BMB_Unit_*_AI`): units that appear in enemy or neutral armies.
-- **Summoned creatures**: units created by item-triggered spells.
-
-```xml
-<UnitType InternalName="BMB_Unit_Example_AI">
-    <DisplayName>Example Unit</DisplayName>
-    <RaceType>Race_Type_Wraiths</RaceType>
-    <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
-</UnitType>
-```
-
-### Unit Race Types
-
-Elemental: Reforged renamed several race type and blood type identifiers.
-
-#### Replacement table
+### Replacement table
 
 | Old value (FELH) | New value (Reforged) | Scope |
 |---|---|---|
 | `Race_Type_Dead` | `Race_Type_Wraiths` | `<RaceType>` and `<Prereq><Attribute>` elements |
 | `Blood_Undead` | `Blood_Wraith` | `<SelectedAbilityBonusOption>` elements |
 
-#### Valid Reforged race types (complete list)
-
-`Race_Type_Altarians`, `Race_Type_Mancers`, `Race_Type_Ironeers`, `Race_Type_Amarians`,
-`Race_Type_Tarthans`, `Race_Type_Krax`, `Race_Type_Wraiths`, `Race_Type_Trogs`,
-`Race_Type_Urxen`, `Race_Type_Quendar`.
-
-#### Rationale
+### Rationale
 
 In Elemental: Reforged, the undead/wraith faction was consolidated under the Wraith identity.
-`Race_Type_Dead` and `Blood_Undead` no longer exist in the Reforged data tables.
+The race type `Race_Type_Dead` and the blood option `Blood_Undead` no longer exist as valid
+identifiers in the Reforged data tables. Units that reference these old values will either
+fail to load or be silently assigned to no race, removing their faction bonuses.
+
+### Before / after example
 
 ```xml
 <!-- BEFORE (FELH - incompatible with Reforged) -->
 <UnitType InternalName="BMB_Unit_Resoln_Mage_AI">
     <RaceType>Race_Type_Dead</RaceType>
     <SelectedAbilityBonusOption>Blood_Undead</SelectedAbilityBonusOption>
+    <!-- ... -->
 </UnitType>
 
 <!-- AFTER (Reforged-compatible) -->
 <UnitType InternalName="BMB_Unit_Resoln_Mage_AI">
     <RaceType>Race_Type_Wraiths</RaceType>
     <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
+    <!-- ... -->
 </UnitType>
 ```
 
-> **Rule for future maintainers:** Never use `Race_Type_Dead` or `Blood_Undead` in BMB unit XML.
+> **Rule for future maintainers:** Never use `Race_Type_Dead` or `Blood_Undead` in any BMB
+> unit XML. All units intended for the wraith/undead faction must use `Race_Type_Wraiths`
+> and `Blood_Wraith` respectively.
+
+```
+###  Path: `\node_modules\fast-xml-builder/README.md`
+
+```md
+# fast-xml-builder
+Build XML from JSON
+
+
+XML Builder was the part of [fast-xml-parser](https://github.com/NaturalIntelligence/fast-xml-parser) for years. But considering that any bug in parser may false-alarm the users who are only using builder, we have decided to split it into a separate package.
+
+## Installation
+
+```bash
+npm install fast-xml-builder
+```
+
+## Usage
+
+```javascript
+import XMLBuilder from 'fast-xml-builder';
+
+const builder = new XMLBuilder();
+const xml = builder.build({ name: 'value' });
+```
+
+fast-xml-builder fully support the response generated by fast-xml-parser. So you can use the maximum options as you are using for fast-xml-parser like `preserveOrder`, `ignoreAttributes`, `attributeNamePrefix`, `textNodeName`, `cdataTagName`, `cdataPositionChar`, `format`, `indentBy`, `suppressEmptyNode` and many more. Any change in parser will reflect here time to time.
+
+
+```
+###  Path: `\node_modules\fast-xml-parser/README.md`
+
+```md
+# [fast-xml-parser](https://www.npmjs.com/package/fast-xml-parser)
+
+[![NPM total downloads](https://img.shields.io/npm/dt/fast-xml-parser.svg)](https://npm.im/fast-xml-parser)
+
+Validate XML, Parse XML to JS Object, or Build XML from JS Object without C/C++ based libraries and no callback.
+
+<img align="right" src="static/img/fxp_logo.png" width="180px" alt="FXP logo"/>
+
+* Validate XML data syntactically. Use [detailed-xml-validator](https://github.com/NaturalIntelligence/detailed-xml-validator/) to verify business rules.
+* Parse XML to JS Objects and vice versa
+* Common JS, ESM, and browser compatible
+* Faster than any other pure JS implementation.
+
+It can handle big files (tested up to 100mb). XML Entities, HTML entities, and DOCTYPE entites are supported. Unpaired tags (Eg `<br>` in HTML), stop nodes (Eg `<script>` in HTML) are supported. It can also preserve Order of tags in JS object
+
+---
+# Your Support, Our Motivation
+
+## Try out our New Thoughts
+
+- WishIn - You need it if negative thoughts take over all the time <br>
+<a href="https://play.google.com/store/apps/details?id=com.solothought.wishin"> <img src="https://solothought.com/products/assets/images/wishin/YouTubeThumbnail.png" width="500px"/> </a>
+- **Flowgger**: 90% less logs size and 90% less debugging time<br>
+<a href="https://github.com/solothought/flowgger"> <img src="static/img/flowgger_h.webp" alt="Flowgger Logging Framework" width="300px"/></a>
+- [Text2Chart](https://solothought.com/text2chart/flow): interactive flow chart out of simple text.
+
+## Financial Support
+
+Sponsor this project
+
+<a href="https://github.com/sponsors/NaturalIntelligence"> 
+  <img src="https://raw.githubusercontent.com/NaturalIntelligence/ThankYouBackers/main/github_sponsor.png" width="180" />
+</a>
+<a href="https://opencollective.com/fast-xml-parser/donate" target="_blank">
+  <img src="https://opencollective.com/fast-xml-parser/donate/button@2x.png?color=blue" width=180 />
+</a>
+<a href="https://paypal.me/naturalintelligence"> <img src="static/img/support_paypal.svg" alt="donate button" width="180"/></a>
+<br>
+<br>
+<br>
+
+<!--
+### Current Sponsors
+
+Check the complete list at [ThankYouBackers](https://github.com/NaturalIntelligence/ThankYouBackers) for our sponsors and supporters.
+
+Through Github
+
+<a href="https://github.com/skunkteam" target="_blank"><img src="https://avatars.githubusercontent.com/u/46373671?s=60" width="60px"></a>
+<a href="https://github.com/getsentry" target="_blank"><img src="https://avatars.githubusercontent.com/u/1396951?s=60" width="60px"></a>
+
+Through OpenCollective
+
+<a href="https://opencollective.com/fast-xml-parser/sponsor/0/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/fast-xml-parser/sponsor/1/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/fast-xml-parser/sponsor/2/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/fast-xml-parser/sponsor/3/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/fast-xml-parser/sponsor/4/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/fast-xml-parser/sponsor/5/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/fast-xml-parser/sponsor/6/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/fast-xml-parser/sponsor/7/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/fast-xml-parser/sponsor/8/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/fast-xml-parser/sponsor/9/website" target="_blank"><img src="https://opencollective.com/fast-xml-parser/sponsor/9/avatar.svg"></a>
+-->
+
+![fxp_sponsors](https://raw.githubusercontent.com/NaturalIntelligence/ThankYouBackers/main/assets/NI_sponsors.jpg)
+
+> This is a donation. No goods or services are expected in return. Any requests for refunds for those purposes will be rejected.
+
+## Users
+
+<a href="https://github.com/renovatebot/renovate" title="renovate" ><img src="https://avatars1.githubusercontent.com/u/38656520" width="60px" ></a>
+<a href="https://vmware.com/" title="vmware" > <img src="https://avatars0.githubusercontent.com/u/473334" width="60px" ></a>
+<a href="https://opensource.microsoft.com/" title="microsoft" > <img src="https://avatars0.githubusercontent.com/u/6154722" width="60px" ></a>
+<a href="http://ibm.github.io/" title="IBM" > <img src="https://avatars2.githubusercontent.com/u/1459110" width="60px" ></a>
+<a href="http://www.smartbear.com" title="SmartBear Software" > <img src="https://avatars2.githubusercontent.com/u/1644671" width="60px" ></a>
+<a href="http://nasa.github.io/" title="NASA" > <img src="https://avatars0.githubusercontent.com/u/848102" width="60px" ></a>
+<a href="https://github.com/prettier" title="Prettier" > <img src="https://avatars0.githubusercontent.com/u/25822731" width="60px" ></a>
+<a href="http://brain.js.org/" title="brain.js" > <img src="https://avatars2.githubusercontent.com/u/23732838" width="60px" ></a>
+<a href="https://github.com/aws" title="AWS SDK" > <img src="https://avatars.githubusercontent.com/u/2232217" width="60px" ></a>
+<a href="http://www.fda.gov/" title="Food and Drug Administration " > <img src="https://avatars2.githubusercontent.com/u/6471964" width="60px" ></a>
+<a href="http://www.magento.com/" title="Magento" > <img src="https://avatars2.githubusercontent.com/u/168457" width="60px" ></a>
+<a href="https://github.com/SAP" title="SAP" > <img src="https://user-images.githubusercontent.com/7692328/204835214-d9d25b58-e3df-408d-87a3-c7d36b578ee4.png" width="60px" ></a>
+<a href="https://github.com/postmanlabs" title="postman" > <img src="https://user-images.githubusercontent.com/7692328/204835529-e9e290ad-696a-49ad-9d34-08e955704715.png" width="60px" ></a>
+<a href="https://github.com/react-native-community" title="React Native Community" > <img src="https://avatars.githubusercontent.com/u/20269980?v=4" width="60px" ></a>
+<a href="https://github.com/googleapis" title="Google APIs" > <img src="https://avatars.githubusercontent.com/u/16785467?v=4" width="60px" ></a>
+<a href="https://github.com/langchain-ai" title="Langchain AI" > <img src="https://avatars.githubusercontent.com/u/126733545?v=4" width="60px" ></a>
+<a href="https://github.com/withastro" title="Astro websie builder" > <img src="https://avatars.githubusercontent.com/u/44914786?v=4" width="60px" ></a>
+<a href="https://github.com/baidu" title="Baidu" > <img src="https://avatars.githubusercontent.com/u/13245940?v=4" width="60px" ></a>
+[more](./USERs.md)
+
+<small>The list of users are mostly published by Github or communicated directly. Feel free to contact if you find any information wrong.</small>
 
 ---
 
-## Mod File Deployment
+# More about this library
 
-| Content type | Location |
-|---|---|
-| XML data files | `Mods/Black Market Bazaar/` |
-| Icon/texture files | `Mods/Gfx/Black Market Bazaar Icons/` |
-| String table | `Mods/Data/BMB.str` |
+## How to use
 
-The `BMB.str` string table registers custom weapon type names so they display correctly in the UI.
+To use as package dependency
+`$ npm install fast-xml-parser` 
+or 
+`$ yarn add fast-xml-parser`
+
+To use as system command
+`$ npm install fast-xml-parser -g` 
+
+To use it on a **webpage** include it from a [CDN](https://cdnjs.com/libraries/fast-xml-parser)
+
+**Example**
+
+As CLI command
+```bash
+$ fxparser some.xml
+```
+
+In a node js project
+```js
+const { XMLParser, XMLBuilder, XMLValidator} = require("fast-xml-parser");
+
+const parser = new XMLParser();
+let jObj = parser.parse(XMLdata);
+
+const builder = new XMLBuilder();
+const xmlContent = builder.build(jObj);
+```
+
+In a HTML page
+```html
+<script src="path/to/fxp.min.js"></script>
+:
+<script>
+  const parser = new fxparser.XMLParser();
+  parser.parse(xmlContent);
+</script>
+```
+
+Bundle size
+
+| Bundle Name        | Size |
+| ------------------ | ---- |
+| fxbuilder.min.js   | 6.5K |
+| fxparser.min.js    | 20K  |
+| fxp.min.js         | 26K  |
+| fxvalidator.min.js | 5.7K |
+
+## Documents
+<table>
+  <tr><td>v3</td><td>v4 and v5</td><td>v6</td></tr>
+  <tr>
+    <td>
+      <a href="./docs/v3/docs.md">documents</a>
+    </td>
+    <td><ol>
+      <li><a href="./docs/v4,v5/1.GettingStarted.md">Getting Started</a></li>
+      <li><a href="./docs/v4,v5/2.XMLparseOptions.md">XML Parser</a></li>
+      <li><a href="./docs/v4,v5/3.XMLBuilder.md">XML Builder</a></li>
+      <li><a href="./docs/v4,v5/4.XMLValidator.md">XML Validator</a></li>
+      <li><a href="./docs/v4,v5/5.Entities.md">Entities</a></li>
+      <li><a href="./docs/v4,v5/6.HTMLParsing.md">HTML Document Parsing</a></li>
+      <li><a href="./docs/v4,v5/7.PITags.md">PI Tag processing</a></li>
+      <li><a href="./docs/v4,v5/8.PathExpression.md">Path Expression</a></li>
+    </ol></td>
+    <td><ol>
+      <li></li><a href="./docs/v6/1.GettingStarted.md">Getting Started</a></li>
+      <li><a href="./docs/v6/2.Features.md">Features</a></li>
+      <li><a href="./docs/v6/3.Options.md">Options</a></li>
+      <li><a href="./docs/v6/4.OutputBuilders.md">Output Builders</a></li>
+      <li><a href="./docs/v6/5.ValueParsers.md">Value Parsers</a></li>
+    </ol></td>
+  </tr>
+</table>
+
+**note**: 
+- Version 6 is released with version 4 for experimental use. Based on its demand, it'll be developed and the features can be different in final release.
+- Version 5 has the same functionalities as version 4.
+
+## Performance
+<small>negative means error</small>
+
+### XML Parser
+
+<img align="left" src="./docs/imgs/XMLParser_v4.png" width="45%" />
+<img src="./docs/imgs/XMLParser_large_v4.png" width="47%" />
+
+* Y-axis: requests per second
+* X-axis: File size
+
+### XML Builder
+
+<img src="./docs/imgs/XMLBuilder_v4.png" width="50%" />
+* Y-axis: requests per second
+
+<!-- [![](static/img/ni_ads_ads.gif)](https://github.com/NaturalIntelligence/ads/) -->
 
 ---
 
-## Pre-Launch Validation Checklist
+## Usage Trend
 
-### Automated checks
+[Usage Trend of fast-xml-parser](https://npm-compare.com/fast-xml-parser#timeRange=THREE_YEARS)
+  
+<a href="https://npm-compare.com/fast-xml-parser#timeRange=THREE_YEARS" target="_blank">
+  <img src="https://npm-compare.com/img/npm-trend/THREE_YEARS/fast-xml-parser.png" width="50%" alt="NPM Usage Trend of fast-xml-parser" />
+</a>
 
-1. **Encoding:** All 11 XML files declare `encoding=utf-8` on line 1.
-2. **No BOM:** No file starts with a UTF-8 BOM (EF BB BF bytes).
-3. **Skeleton:** Zero `Skeleton` SupportedUnitModelType entries in BMB_Armor.xml, BMB_Clothes.xml, BMB_Items.xml, BMB_Items_DLC05.xml.
-4. **HideInHiergamenon:** Count in BMB_Items.xml equals count of IsUsable=1 items without CanBeEquipped. Currently 31.
-5. **AbilityBonusType:** Both BMB_EruditeAbility and BMB_FamousAbility have `AbilityBonusType=Unit_Design` as first child.
-6. **Race types:** Zero `Race_Type_Dead` or `Blood_Undead` in all 11 XML files.
-7. **Staff_Leht:** BMB_CoreItemsModifications.xml has `WeaponUpgradeType=FireStaff` for Staff_Leht.
-8. **XML well-formedness:** All 11 files parse without errors.
+# Supporters
+#### Contributors
 
-### In-game smoke test
+This project exists thanks to [all](graphs/contributors) the people who contribute. [[Contribute](docs/CONTRIBUTING.md)].
 
-1. No load-time errors in the game log for BMB files.
-2. Consumables do **not** appear in the Hiergamenon. Equippable items do.
-3. BMB consumables are usable in combat and apply effects correctly.
-4. Wraith-race units (BMB_Unit_Dead_Mage_Lightning_AI, BMB_Unit_Dead_Staff_AI) appear in Wraith army screen.
-5. Staff_Leht appears under **Fire Staff** upgrade category (not Lightning Staff).
-6. BMB abilities (BMB_EruditeAbility, BMB_FamousAbility) apply stat modifiers correctly.
-7. Items with 3D models render without glitches on Wraith, Kingdom, and Darkling unit models.
-8. **AbilityBonusType risk:** If any item-granted ability is broken, try changing AbilityBonusType
-   from Unit_Design to Unit_Level and retest. See the AbilityBonusType section for fallback values.
+<a href="graphs/contributors"><img src="https://opencollective.com/fast-xml-parser/contributors.svg?width=890&button=false" /></a>
+
+
+#### Backers from Open collective
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/fast-xml-parser#backer)]
+
+<a href="https://opencollective.com/fast-xml-parser#backers" target="_blank"><img src="https://opencollective.com/fast-xml-parser/backers.svg?width=890"></a>
+
+
+
+# License
+* MIT License
+
+![Donate $5](static/img/donation_quote.png)
+
+```
+###  Path: `\node_modules\path-expression-matcher/README.md`
+
+```md
+# path-expression-matcher
+
+Efficient path tracking and pattern matching for XML, JSON, YAML or any other parsers.
+
+## 🎯 Purpose
+
+`path-expression-matcher` provides two core classes for tracking and matching paths:
+
+- **`Expression`**: Parses and stores pattern expressions (e.g., `"root.users.user[id]"`)
+- **`Matcher`**: Tracks current path during parsing and matches against expressions
+
+Compatible with [fast-xml-parser](https://github.com/NaturalIntelligence/fast-xml-parser) and similar tools.
+
+## 📦 Installation
+
+```bash
+npm install path-expression-matcher
+```
+
+## 🚀 Quick Start
+
+```javascript
+import { Expression, Matcher } from 'path-expression-matcher';
+
+// Create expression (parse once, reuse many times)
+const expr = new Expression("root.users.user");
+
+// Create matcher (tracks current path)
+const matcher = new Matcher();
+
+matcher.push("root");
+matcher.push("users");
+matcher.push("user", { id: "123" });
+
+// Match current path against expression
+if (matcher.matches(expr)) {
+  console.log("Match found!");
+  console.log("Current path:", matcher.toString()); // "root.users.user"
+}
+
+// Namespace support
+const nsExpr = new Expression("soap::Envelope.soap::Body..ns::UserId");
+matcher.push("Envelope", null, "soap");
+matcher.push("Body", null, "soap");
+matcher.push("UserId", null, "ns");
+console.log(matcher.toString()); // "soap:Envelope.soap:Body.ns:UserId"
+```
+
+## 📖 Pattern Syntax
+
+### Basic Paths
+
+```javascript
+"root.users.user"           // Exact path match
+"*.users.user"              // Wildcard: any parent
+"root.*.user"               // Wildcard: any middle
+"root.users.*"              // Wildcard: any child
+```
+
+### Deep Wildcard
+
+```javascript
+"..user"                    // user anywhere in tree
+"root..user"                // user anywhere under root
+"..users..user"             // users somewhere, then user below it
+```
+
+### Attribute Matching
+
+```javascript
+"user[id]"                  // user with "id" attribute
+"user[type=admin]"          // user with type="admin" (current node only)
+"root[lang]..user"          // user under root that has "lang" attribute
+```
+
+### Position Selectors
+
+```javascript
+"user:first"                // First user (counter=0)
+"user:nth(2)"               // Third user (counter=2, zero-based)
+"user:odd"                  // Odd-numbered users (counter=1,3,5...)
+"user:even"                 // Even-numbered users (counter=0,2,4...)
+"root.users.user:first"     // First user under users
+```
+
+**Note:** Position selectors use the **counter** (occurrence count of the tag name), not the position (child index). For example, in `<root><a/><b/><a/></root>`, the second `<a/>` has position=2 but counter=1.
+
+### Namespaces
+
+```javascript
+"ns::user"                  // user with namespace "ns"
+"soap::Envelope"            // Envelope with namespace "soap"
+"ns::user[id]"              // user with namespace "ns" and "id" attribute
+"ns::user:first"            // First user with namespace "ns"
+"*::user"                   // user with any namespace
+"..ns::item"                // item with namespace "ns" anywhere in tree
+"soap::Envelope.soap::Body" // Nested namespaced elements
+"ns::first"                 // Tag named "first" with namespace "ns" (NO ambiguity!)
+```
+
+**Namespace syntax:**
+- Use **double colon (::)** for namespace: `ns::tag`
+- Use **single colon (:)** for position: `tag:first`
+- Combined: `ns::tag:first` (namespace + tag + position)
+
+**Namespace matching rules:**
+- Pattern `ns::user` matches only nodes with namespace "ns" and tag "user"
+- Pattern `user` (no namespace) matches nodes with tag "user" regardless of namespace
+- Pattern `*::user` matches tag "user" with any namespace (wildcard namespace)
+- Namespaces are tracked separately for counter/position (e.g., `ns1::item` and `ns2::item` have independent counters)
+
+### Wildcard Differences
+
+**Single wildcard (`*`)** - Matches exactly ONE level:
+- `"*.fix1"` matches `root.fix1` (2 levels) ✅
+- `"*.fix1"` does NOT match `root.another.fix1` (3 levels) ❌
+- Path depth MUST equal pattern depth
+
+**Deep wildcard (`..`)** - Matches ZERO or MORE levels:
+- `"..fix1"` matches `root.fix1` ✅
+- `"..fix1"` matches `root.another.fix1` ✅
+- `"..fix1"` matches `a.b.c.d.fix1` ✅
+- Works at any depth
+
+### Combined Patterns
+
+```javascript
+"..user[id]:first"              // First user with id, anywhere
+"root..user[type=admin]"        // Admin user under root
+"ns::user[id]:first"            // First namespaced user with id
+"soap::Envelope..ns::UserId"    // UserId with namespace ns under SOAP envelope
+```
+
+## 🔧 API Reference
+
+### Expression
+
+#### Constructor
+
+```javascript
+new Expression(pattern, options)
+```
+
+**Parameters:**
+- `pattern` (string): Pattern to parse
+- `options.separator` (string): Path separator (default: `'.'`)
+
+**Example:**
+```javascript
+const expr1 = new Expression("root.users.user");
+const expr2 = new Expression("root/users/user", { separator: '/' });
+```
+
+#### Methods
+
+- `hasDeepWildcard()` → boolean
+- `hasAttributeCondition()` → boolean
+- `hasPositionSelector()` → boolean
+- `toString()` → string
+
+### Matcher
+
+#### Constructor
+
+```javascript
+new Matcher(options)
+```
+
+**Parameters:**
+- `options.separator` (string): Default path separator (default: `'.'`)
+
+#### Path Tracking Methods
+
+##### `push(tagName, attrValues, namespace)`
+
+Add a tag to the current path. Position and counter are automatically calculated.
+
+**Parameters:**
+- `tagName` (string): Tag name
+- `attrValues` (object, optional): Attribute key-value pairs (current node only)
+- `namespace` (string, optional): Namespace for the tag
+
+**Example:**
+```javascript
+matcher.push("user", { id: "123", type: "admin" });
+matcher.push("item");  // No attributes
+matcher.push("Envelope", null, "soap");  // With namespace
+matcher.push("Body", { version: "1.1" }, "soap");  // With both
+```
+
+**Position vs Counter:**
+- **Position**: The child index in the parent (0, 1, 2, 3...)
+- **Counter**: How many times this tag name appeared at this level (0, 1, 2...)
+
+Example:
+```xml
+<root>
+  <a/>      <!-- position=0, counter=0 -->
+  <b/>      <!-- position=1, counter=0 -->
+  <a/>      <!-- position=2, counter=1 -->
+</root>
+```
+
+##### `pop()`
+
+Remove the last tag from the path.
+
+```javascript
+matcher.pop();
+```
+
+##### `updateCurrent(attrValues)`
+
+Update current node's attributes (useful when attributes are parsed after push).
+
+```javascript
+matcher.push("user");  // Don't know values yet
+// ... parse attributes ...
+matcher.updateCurrent({ id: "123" });
+```
+
+##### `reset()`
+
+Clear the entire path.
+
+```javascript
+matcher.reset();
+```
+
+#### Query Methods
+
+##### `matches(expression)`
+
+Check if current path matches an Expression.
+
+```javascript
+const expr = new Expression("root.users.user");
+if (matcher.matches(expr)) {
+  // Current path matches
+}
+```
+
+##### `getCurrentTag()`
+
+Get current tag name.
+
+```javascript
+const tag = matcher.getCurrentTag(); // "user"
+```
+
+##### `getCurrentNamespace()`
+
+Get current namespace.
+
+```javascript
+const ns = matcher.getCurrentNamespace(); // "soap" or undefined
+```
+
+##### `getAttrValue(attrName)`
+
+Get attribute value of current node.
+
+```javascript
+const id = matcher.getAttrValue("id"); // "123"
+```
+
+##### `hasAttr(attrName)`
+
+Check if current node has an attribute.
+
+```javascript
+if (matcher.hasAttr("id")) {
+  // Current node has "id" attribute
+}
+```
+
+##### `getPosition()`
+
+Get sibling position of current node (child index in parent).
+
+```javascript
+const position = matcher.getPosition(); // 0, 1, 2, ...
+```
+
+##### `getCounter()`
+
+Get repeat counter of current node (occurrence count of this tag name).
+
+```javascript
+const counter = matcher.getCounter(); // 0, 1, 2, ...
+```
+
+##### `getIndex()` (deprecated)
+
+Alias for `getPosition()`. Use `getPosition()` or `getCounter()` instead for clarity.
+
+```javascript
+const index = matcher.getIndex(); // Same as getPosition()
+```
+
+##### `getDepth()`
+
+Get current path depth.
+
+```javascript
+const depth = matcher.getDepth(); // 3 for "root.users.user"
+```
+
+##### `toString(separator?, includeNamespace?)`
+
+Get path as string.
+
+**Parameters:**
+- `separator` (string, optional): Path separator (uses default if not provided)
+- `includeNamespace` (boolean, optional): Whether to include namespaces (default: true)
+
+```javascript
+const path = matcher.toString();           // "root.ns:user.item"
+const path2 = matcher.toString('/');       // "root/ns:user/item"
+const path3 = matcher.toString('.', false); // "root.user.item" (no namespaces)
+```
+
+##### `toArray()`
+
+Get path as array.
+
+```javascript
+const arr = matcher.toArray(); // ["root", "users", "user"]
+```
+
+#### State Management
+
+##### `snapshot()`
+
+Create a snapshot of current state.
+
+```javascript
+const snapshot = matcher.snapshot();
+```
+
+##### `restore(snapshot)`
+
+Restore from a snapshot.
+
+```javascript
+matcher.restore(snapshot);
+```
+
+#### Read-Only Access
+
+##### `readOnly()`
+
+Returns a **live, read-only proxy** of the matcher. All query and inspection methods work normally, but any attempt to call a state-mutating method (`push`, `pop`, `reset`, `updateCurrent`, `restore`) or to write/delete a property throws a `TypeError`.
+
+This is the recommended way to share the matcher with external consumers — plugins, callbacks, event handlers — that only need to inspect the current path without being able to corrupt parser state.
+
+```javascript
+const ro = matcher.readOnly();
+```
+
+**What works on the read-only view:**
+
+```javascript
+ro.matches(expr)          // ✓ pattern matching
+ro.getCurrentTag()        // ✓ current tag name
+ro.getCurrentNamespace()  // ✓ current namespace
+ro.getAttrValue("id")     // ✓ attribute value
+ro.hasAttr("id")          // ✓ attribute presence check
+ro.getPosition()          // ✓ sibling position
+ro.getCounter()           // ✓ occurrence counter
+ro.getDepth()             // ✓ path depth
+ro.toString()             // ✓ path as string
+ro.toArray()              // ✓ path as array
+ro.snapshot()             // ✓ snapshot (can be used to restore the real matcher)
+```
+
+**What throws a `TypeError`:**
+
+```javascript
+ro.push("child", {})      // ✗ TypeError: Cannot call 'push' on a read-only Matcher
+ro.pop()                  // ✗ TypeError: Cannot call 'pop' on a read-only Matcher
+ro.reset()                // ✗ TypeError: Cannot call 'reset' on a read-only Matcher
+ro.updateCurrent({})      // ✗ TypeError: Cannot call 'updateCurrent' on a read-only Matcher
+ro.restore(snapshot)      // ✗ TypeError: Cannot call 'restore' on a read-only Matcher
+ro.separator = '/'        // ✗ TypeError: Cannot set property on a read-only Matcher
+```
+
+**Important:** The read-only view is **live** — it always reflects the current state of the underlying matcher. If you need a frozen-in-time copy instead, use `snapshot()`.
+
+```javascript
+const matcher = new Matcher();
+const ro = matcher.readOnly();
+
+matcher.push("root");
+ro.getDepth();    // 1 — immediately reflects the push
+matcher.push("users");
+ro.getDepth();    // 2 — still live
+```
+
+## 💡 Usage Examples
+
+### Example 1: XML Parser with stopNodes
+
+```javascript
+import { XMLParser } from 'fast-xml-parser';
+import { Expression, Matcher } from 'path-expression-matcher';
+
+class MyParser {
+  constructor() {
+    this.matcher = new Matcher();
+    
+    // Pre-compile stop node patterns
+    this.stopNodeExpressions = [
+      new Expression("html.body.script"),
+      new Expression("html.body.style"),
+      new Expression("..svg"),
+    ];
+  }
+  
+  parseTag(tagName, attrs) {
+    this.matcher.push(tagName, attrs);
+    
+    // Check if this is a stop node
+    for (const expr of this.stopNodeExpressions) {
+      if (this.matcher.matches(expr)) {
+        // Don't parse children, read as raw text
+        return this.readRawContent();
+      }
+    }
+    
+    // Continue normal parsing
+    this.parseChildren();
+    
+    this.matcher.pop();
+  }
+}
+```
+
+### Example 2: Conditional Processing
+
+```javascript
+const matcher = new Matcher();
+const userExpr = new Expression("..user[type=admin]");
+const firstItemExpr = new Expression("..item:first");
+
+function processTag(tagName, value, attrs) {
+  matcher.push(tagName, attrs);
+  
+  if (matcher.matches(userExpr)) {
+    value = enhanceAdminUser(value);
+  }
+  
+  if (matcher.matches(firstItemExpr)) {
+    value = markAsFirst(value);
+  }
+  
+  matcher.pop();
+  return value;
+}
+```
+
+### Example 3: Path-based Filtering
+
+```javascript
+const patterns = [
+  new Expression("data.users.user"),
+  new Expression("data.posts.post"),
+  new Expression("..comment[approved=true]"),
+];
+
+function shouldInclude(matcher) {
+  return patterns.some(expr => matcher.matches(expr));
+}
+```
+
+### Example 4: Custom Separator
+
+```javascript
+const matcher = new Matcher({ separator: '/' });
+const expr = new Expression("root/config/database", { separator: '/' });
+
+matcher.push("root");
+matcher.push("config");
+matcher.push("database");
+
+console.log(matcher.toString()); // "root/config/database"
+console.log(matcher.matches(expr)); // true
+```
+
+### Example 5: Attribute Checking
+
+```javascript
+const matcher = new Matcher();
+matcher.push("root");
+matcher.push("user", { id: "123", type: "admin", status: "active" });
+
+// Check attribute existence (current node only)
+console.log(matcher.hasAttr("id"));        // true
+console.log(matcher.hasAttr("email"));     // false
+
+// Get attribute value (current node only)
+console.log(matcher.getAttrValue("type")); // "admin"
+
+// Match by attribute
+const expr1 = new Expression("user[id]");
+console.log(matcher.matches(expr1));       // true
+
+const expr2 = new Expression("user[type=admin]");
+console.log(matcher.matches(expr2));       // true
+```
+
+### Example 6: Position vs Counter
+
+```javascript
+const matcher = new Matcher();
+matcher.push("root");
+
+// Mixed tags at same level
+matcher.push("item");  // position=0, counter=0 (first item)
+matcher.pop();
+
+matcher.push("div");   // position=1, counter=0 (first div)
+matcher.pop();
+
+matcher.push("item");  // position=2, counter=1 (second item)
+
+console.log(matcher.getPosition()); // 2 (third child overall)
+console.log(matcher.getCounter());  // 1 (second "item" specifically)
+
+// :first uses counter, not position
+const expr = new Expression("root.item:first");
+console.log(matcher.matches(expr)); // false (counter=1, not 0)
+```
+
+### Example 8: Passing a Read-Only Matcher to External Consumers
+
+When passing the matcher into callbacks, plugins, or other code you don't control, use `readOnly()` to prevent accidental state corruption.
+
+```javascript
+import { Expression, Matcher } from 'path-expression-matcher';
+
+const matcher = new Matcher();
+
+const adminExpr = new Expression("..user[type=admin]");
+
+function parseTag(tagName, attrs, onTag) {
+  matcher.push(tagName, attrs);
+
+  // Pass a read-only view — consumer can inspect but not mutate
+  onTag(matcher.readOnly());
+
+  matcher.pop();
+}
+
+// Safe consumer — can only read
+function myPlugin(ro) {
+  if (ro.matches(adminExpr)) {
+    console.log("Admin at path:", ro.toString());
+    console.log("Depth:", ro.getDepth());
+    console.log("ID:", ro.getAttrValue("id"));
+  }
+}
+
+// ro.push(...) or ro.reset() here would throw TypeError,
+// so the parser's state is always safe.
+parseTag("user", { id: "1", type: "admin" }, myPlugin);
+```
+
+**Combining with `snapshot()`:** A snapshot taken via the read-only view can still be used to restore the real matcher.
+
+```javascript
+const matcher = new Matcher();
+matcher.push("root");
+matcher.push("users");
+
+const ro = matcher.readOnly();
+const snap = ro.snapshot();       // ✓ snapshot works on read-only view
+
+matcher.push("user");             // continue parsing...
+matcher.restore(snap);            // restore to "root.users" using the snapshot
+```
+
+```javascript
+const matcher = new Matcher();
+const soapExpr = new Expression("soap::Envelope.soap::Body..ns::UserId");
+
+// Parse SOAP document
+matcher.push("Envelope", { xmlns: "..." }, "soap");
+matcher.push("Body", null, "soap");
+matcher.push("GetUserRequest", null, "ns");
+matcher.push("UserId", null, "ns");
+
+// Match namespaced pattern
+if (matcher.matches(soapExpr)) {
+  console.log("Found UserId in SOAP body");
+  console.log(matcher.toString()); // "soap:Envelope.soap:Body.ns:GetUserRequest.ns:UserId"
+}
+
+// Namespace-specific counters
+matcher.reset();
+matcher.push("root");
+matcher.push("item", null, "ns1");  // ns1::item counter=0
+matcher.pop();
+matcher.push("item", null, "ns2");  // ns2::item counter=0 (different namespace)
+matcher.pop();
+matcher.push("item", null, "ns1");  // ns1::item counter=1
+
+const firstNs1Item = new Expression("root.ns1::item:first");
+console.log(matcher.matches(firstNs1Item)); // false (counter=1)
+
+const secondNs1Item = new Expression("root.ns1::item:nth(1)");
+console.log(matcher.matches(secondNs1Item)); // true
+
+// NO AMBIGUITY: Tags named after position keywords
+matcher.reset();
+matcher.push("root");
+matcher.push("first", null, "ns");  // Tag named "first" with namespace
+
+const expr = new Expression("root.ns::first");
+console.log(matcher.matches(expr)); // true - matches namespace "ns", tag "first"
+```
+
+## 🏗️ Architecture
+
+### Data Storage Strategy
+
+**Ancestor nodes:** Store only tag name, position, and counter (minimal memory)
+**Current node:** Store tag name, position, counter, and attribute values
+
+This design minimizes memory usage:
+- No attribute names stored (derived from values object when needed)
+- Attribute values only for current node, not ancestors
+- Attribute checking for ancestors is not supported (acceptable trade-off)
+- For 1M nodes with 3 attributes each, saves ~50MB vs storing attribute names
+
+### Matching Strategy
+
+Matching is performed **bottom-to-top** (from current node toward root):
+1. Start at current node
+2. Match segments from pattern end to start
+3. Attribute checking only works for current node (ancestors have no attribute data)
+4. Position selectors use **counter** (occurrence count), not position (child index)
+
+### Performance
+
+- **Expression parsing:** One-time cost when Expression is created
+- **Expression analysis:** Cached (hasDeepWildcard, hasAttributeCondition, hasPositionSelector)
+- **Path tracking:** O(1) for push/pop operations
+- **Pattern matching:** O(n*m) where n = path depth, m = pattern segments
+- **Memory per ancestor node:** ~40-60 bytes (tag, position, counter only)
+- **Memory per current node:** ~80-120 bytes (adds attribute values)
+
+## 🎓 Design Patterns
+
+### Pre-compile Patterns (Recommended)
+
+```javascript
+// ✅ GOOD: Parse once, reuse many times
+const expr = new Expression("..user[id]");
+
+for (let i = 0; i < 1000; i++) {
+  if (matcher.matches(expr)) {
+    // ...
+  }
+}
+```
+
+```javascript
+// ❌ BAD: Parse on every iteration
+for (let i = 0; i < 1000; i++) {
+  if (matcher.matches(new Expression("..user[id]"))) {
+    // ...
+  }
+}
+```
+
+### Batch Pattern Checking
+
+```javascript
+// For multiple patterns, check all at once
+const patterns = [
+  new Expression("..user"),
+  new Expression("..post"),
+  new Expression("..comment"),
+];
+
+function matchesAny(matcher, patterns) {
+  return patterns.some(expr => matcher.matches(expr));
+}
+```
+
+## 🔗 Integration with fast-xml-parser
+
+**Basic integration:**
+
+```javascript
+import { XMLParser } from 'fast-xml-parser';
+import { Expression, Matcher } from 'path-expression-matcher';
+
+const parser = new XMLParser({
+  // Custom options using path-expression-matcher
+  stopNodes: ["script", "style"].map(tag => new Expression(`..${tag}`)),
+  
+  tagValueProcessor: (tagName, value, jPath, hasAttrs, isLeaf, matcher) => {
+    // matcher is available in callbacks
+    if (matcher.matches(new Expression("..user[type=admin]"))) {
+      return enhanceValue(value);
+    }
+    return value;
+  }
+});
+```
+
+## 📄 License
+
+MIT
+
+## 🤝 Contributing
+
+Issues and PRs welcome! This package is designed to be used by XML/JSON parsers like fast-xml-parser.
+```
+###  Path: `\node_modules\strnum/README.md`
+
+```md
+# strnum
+Parse string into Number based on configuration
+
+## Users
+
+<a href="https://github.com/aws-amplify" target="_blank"><img src="https://avatars.githubusercontent.com/u/41077760?s=100&v=4"></a>
+<a href="https://github.com/astrapay" target="_blank"><img src="https://avatars.githubusercontent.com/u/90901882?s=100&v=4"></a>
+<a href="https://github.com/process-analytics" target="_blank"><img src="https://avatars.githubusercontent.com/u/60110287?s=100&v=4"></a>
+<a href="https://github.com/NaturalIntelligence" target="_blank"><img src="https://avatars.githubusercontent.com/u/16322633?s=100&v=4"></a>
+Many React Native projects and plugins
+
+## Usage
+
+```bash
+npm install strnum
+```
+```js
+const toNumber = require("strnum");
+
+toNumber(undefined) // undefined
+toNumber(null)) //null
+toNumber("")) // ""
+toNumber("string"); //"string")
+toNumber("12,12"); //"12,12")
+toNumber("12 12"); //"12 12")
+toNumber("12-12"); //"12-12")
+toNumber("12.12.12"); //"12.12.12")
+toNumber("0x2f"); //47)
+toNumber("-0x2f"); //-47)
+toNumber("0x2f", { hex :  true}); //47)
+toNumber("-0x2f", { hex :  true}); //-47)
+toNumber("0x2f", { hex :  false}); //"0x2f")
+toNumber("-0x2f", { hex :  false}); //"-0x2f")
+toNumber("06"); //6)
+toNumber("06", { leadingZeros :  true}); //6)
+toNumber("06", { leadingZeros :  false}); //"06")
+
+toNumber("006"); //6)
+toNumber("006", { leadingZeros :  true}); //6)
+toNumber("006", { leadingZeros :  false}); //"006")
+toNumber("0.0"); //0)
+toNumber("00.00"); //0)
+toNumber("0.06"); //0.06)
+toNumber("00.6"); //0.6)
+toNumber(".006"); //0.006)
+toNumber("6.0"); //6)
+toNumber("06.0"); //6)
+
+toNumber("0.0",  { leadingZeros :  false}); //0)
+toNumber("00.00",  { leadingZeros :  false}); //"00.00")
+toNumber("0.06",  { leadingZeros :  false}); //0.06)
+toNumber("00.6",  { leadingZeros :  false}); //"00.6")
+toNumber(".006", { leadingZeros :  false}); //0.006)
+toNumber("6.0"  ,  { leadingZeros :  false}); //6)
+toNumber("06.0"  ,  { leadingZeros :  false}); //"06.0")
+toNumber("-06"); //-6)
+toNumber("-06", { leadingZeros :  true}); //-6)
+toNumber("-06", { leadingZeros :  false}); //"-06")
+
+toNumber("-0.0"); //-0)
+toNumber("-00.00"); //-0)
+toNumber("-0.06"); //-0.06)
+toNumber("-00.6"); //-0.6)
+toNumber("-.006"); //-0.006)
+toNumber("-6.0"); //-6)
+toNumber("-06.0"); //-6)
+
+toNumber("-0.0"   ,  { leadingZeros :  false}); //-0)
+toNumber("-00.00",  { leadingZeros :  false}); //"-00.00")
+toNumber("-0.06",  { leadingZeros :  false}); //-0.06)
+toNumber("-00.6",  { leadingZeros :  false}); //"-00.6")
+toNumber("-.006",  {leadingZeros :  false}); //-0.006)
+toNumber("-6.0"  ,  { leadingZeros :  false}); //-6)
+toNumber("-06.0"  ,  { leadingZeros :  false}); //"-06.0")
+toNumber("420926189200190257681175017717")  ; //4.209261892001902e+29)
+toNumber("000000000000000000000000017717"  ,  { leadingZeros :  false}); //"000000000000000000000000017717")
+toNumber("000000000000000000000000017717"  ,  { leadingZeros :  true}); //17717)
+toNumber("01.0e2"  ,  { leadingZeros :  false}); //"01.0e2")
+toNumber("-01.0e2"  ,  { leadingZeros :  false}); //"-01.0e2")
+toNumber("01.0e2") ; //100)
+toNumber("-01.0e2") ; //-100)
+toNumber("1.0e2") ; //100)
+
+toNumber("-1.0e2") ; //-100)
+toNumber("1.0e-2"); //0.01)
+
+toNumber("+1212121212"); // 1212121212
+toNumber("+1212121212", { skipLike: /\+[0-9]{10}/} )); //"+1212121212"
+```
+
+Supported Options
+```js
+hex: true,          //when hexadecimal string should be parsed
+leadingZeros: true, //when number with leading zeros like 08 should be parsed. 0.0 is not impacted
+eNotation: true,    //when number with eNotation or number parsed in eNotation should be considered
+skipLike: /regex/   //when string should not be parsed when it matches the specified regular expression
+infinity: "original", // "null", "infinity" (Infinity type), "string" ("Infinity" (the string literal))
+```
+
+
+# Try out our other work
+
+WishIn - You need it if negative thoughts take over all the time <br>
+<a href="https://play.google.com/store/apps/details?id=com.solothought.wishin"> <img src="https://solothought.com/products/assets/images/wishin/YouTubeThumbnail.png" width="500px"/> </a>
+
 ```
 ---
 **File Statistics**
-- **Size**: 25.31 KB
-- **Lines**: 781
+- **Size**: 45.43 KB
+- **Lines**: 1053
 File: `project-overview.md`

@@ -31,10 +31,6 @@ documents:
         description: 'Item definitions'
         sourcePaths: [ ./ ]
         filePattern: "BMB_Items.xml"
-      - type: file
-        description: 'DLC05 item definitions'
-        sourcePaths: [ ./ ]
-        filePattern: "BMB_Items_DLC05.xml"
 
   - description: 'BMB Mod - Weapons'
     outputPath: 'modules/bmb-mod/weapons.md'

@@ -12,3 +12,4 @@ build.config.json
 /docs/agents/**/work-packages-draft.md
 .build.config.json
 /node_modules
+local-workspace.md

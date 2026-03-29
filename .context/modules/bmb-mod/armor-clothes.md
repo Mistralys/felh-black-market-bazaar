@@ -4,11 +4,13 @@ _SOURCE: Armor definitions_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_Armor.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_Armor.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_Armor.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_Armor.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -8061,11 +8063,13 @@ _SOURCE: Clothing definitions_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_Clothes.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_Clothes.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_Clothes.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_Clothes.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -8630,6 +8634,6 @@ _SOURCE: Clothing definitions_
 ```
 ---
 **File Statistics**
-- **Size**: 442.69 KB
-- **Lines**: 8734
+- **Size**: 436.4 KB
+- **Lines**: 8636
 File: `modules/bmb-mod/armor-clothes.md`

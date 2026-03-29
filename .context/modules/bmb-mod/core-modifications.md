@@ -4,11 +4,13 @@ _SOURCE: Modifications to base game items_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_CoreItemsModifications.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_CoreItemsModifications.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_CoreItemsModifications.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_CoreItemsModifications.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
@@ -128,6 +130,6 @@ _SOURCE: Modifications to base game items_
 ```
 ---
 **File Statistics**
-- **Size**: 6.17 KB
+- **Size**: 6.16 KB
 - **Lines**: 134
 File: `modules/bmb-mod/core-modifications.md`

@@ -4,11 +4,13 @@ _SOURCE: Weapon definitions_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_Weapons.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_Weapons.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_Weapons.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_Weapons.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

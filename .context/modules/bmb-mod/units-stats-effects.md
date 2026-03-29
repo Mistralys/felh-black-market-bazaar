@@ -4,11 +4,13 @@ _SOURCE: Unit definitions_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_Units.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_Units.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_Units.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_Units.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1678,11 +1680,13 @@ _SOURCE: Unit stat definitions_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_UnitStats.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_UnitStats.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_UnitStats.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_UnitStats.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1717,11 +1721,13 @@ _SOURCE: Effect definitions_
 ```
 // Structure of documents
 └── Mods/
-    └── Black Market Bazaar/
-        └── BMB_Effects.xml
+    └── src/
+        └── Data/
+            └── GameCore/
+                └── BMB_Effects.xml
 
 ```
-###  Path: `\Mods\Black Market Bazaar/BMB_Effects.xml`
+###  Path: `\Mods\src\Data\GameCore/BMB_Effects.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -5862,6 +5868,6 @@ _SOURCE: Effect definitions_
 ```
 ---
 **File Statistics**
-- **Size**: 305.86 KB
+- **Size**: 305.36 KB
 - **Lines**: 5868
 File: `modules/bmb-mod/units-stats-effects.md`
