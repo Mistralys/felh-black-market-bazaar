@@ -54,6 +54,7 @@ When you change code, update the corresponding manifest documents:
 | Game data schema discovered | `docs/game-data/README.md` |
 | New Reforged breaking change found | `docs/game-data/README.md`, `docs/modding-guide/README.md` |
 | Directory restructured | `context.yaml`, relevant `module-context.yaml` files |
+| New `npm run` script or menu item added | `README.md` (Script Runner — Available menu items table), `AGENTS.md` (Project Stats Build Tool row if applicable) |
 
 ---
 
@@ -111,6 +112,16 @@ All XML files MUST use **UTF-8** (no BOM). Declare in the XML prolog:
 - Ability icons: `BMB_Ability_PascalCaseName.png`
 - 3D textures: `BMB_PascalCaseName_Texture.dds`
 
+### Script OS Independence
+
+All scripts in `scripts/` MUST be OS-independent. Targeted platforms: Windows, macOS, and Unix (Linux).
+
+- Use `node:path` (`path.join`, `path.resolve`) for all file paths — never hardcode separators.
+- Use `node:fs` / `node:fs/promises` for file operations — never shell-specific commands (`rm`, `del`, `xcopy`, `cp`).
+- Use `node:child_process` with `execSync`/`spawn` when invoking external tools — never platform-specific shells.
+- ANSI escape sequences are acceptable for terminal styling (supported on all target platforms).
+- Config examples must show paths for all three platforms.
+
 ---
 
 ## 7. Project Stats
@@ -125,7 +136,7 @@ All XML files MUST use **UTF-8** (no BOM). Declare in the XML prolog:
 | **Architecture** | Flat XML file set with `InternalName` cross-references |
 | **Package Manager** | N/A (manual file deployment) |
 | **Test Framework** | Manual in-game smoke testing |
-| **Build Tool** | N/A (no compilation step) |
+| **Build Tool** | `npm run build` (`scripts/build.mjs` — deploys mod to game folder) |
 | **Context Generator** | CTX Generator (`context.yaml`) |
 | **String Table** | `Mods/Data/BMB.str` |
 

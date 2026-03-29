@@ -1,0 +1,93 @@
+moduleMetaData:
+  id: "bmb-mod"
+  label: "Black Market Bazaar Mod"
+  description: "The BMB mod's XML data files — items, weapons, armor, clothes, spells, abilities, effects, units, and base game modifications."
+  keywords:
+    - BMB
+    - Items
+    - Weapons
+    - Armor
+    - Spells
+    - Abilities
+    - Clothes
+    - GameModifier
+  relatedModules:
+    - game-data
+    - modding-guide
+
+documents:
+  - description: 'BMB Mod - Overview'
+    outputPath: 'modules/bmb-mod/overview.md'
+    sources:
+      - type: file
+        description: 'Mod overview and file inventory'
+        sourcePaths: [ ./ ]
+        filePattern: "README.md"
+
+  - description: 'BMB Mod - Items & Accessories'
+    outputPath: 'modules/bmb-mod/items.md'
+    sources:
+      - type: file
+        description: 'Item definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_Items.xml"
+      - type: file
+        description: 'DLC05 item definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_Items_DLC05.xml"
+
+  - description: 'BMB Mod - Weapons'
+    outputPath: 'modules/bmb-mod/weapons.md'
+    sources:
+      - type: file
+        description: 'Weapon definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_Weapons.xml"
+
+  - description: 'BMB Mod - Armor & Clothes'
+    outputPath: 'modules/bmb-mod/armor-clothes.md'
+    sources:
+      - type: file
+        description: 'Armor definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_Armor.xml"
+      - type: file
+        description: 'Clothing definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_Clothes.xml"
+
+  - description: 'BMB Mod - Spells & Abilities'
+    outputPath: 'modules/bmb-mod/spells-abilities.md'
+    sources:
+      - type: file
+        description: 'Spell definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_Spells.xml"
+      - type: file
+        description: 'Ability definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_Abilities.xml"
+
+  - description: 'BMB Mod - Units, Stats & Effects'
+    outputPath: 'modules/bmb-mod/units-stats-effects.md'
+    sources:
+      - type: file
+        description: 'Unit definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_Units.xml"
+      - type: file
+        description: 'Unit stat definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_UnitStats.xml"
+      - type: file
+        description: 'Effect definitions'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_Effects.xml"
+
+  - description: 'BMB Mod - Base Game Modifications'
+    outputPath: 'modules/bmb-mod/core-modifications.md'
+    sources:
+      - type: file
+        description: 'Modifications to base game items'
+        sourcePaths: [ ./ ]
+        filePattern: "BMB_CoreItemsModifications.xml"
