@@ -7,7 +7,7 @@
 
 ## 1. Project Overview
 
-**Black Market Bazaar (BMB)** is a content mod for the PC game *Elemental: Reforged* (formerly *Fallen Enchantress: Legendary Heroes*). It adds 242 items, 76 spells, and 19 clothing pieces via XML data files. This repository is the development workspace — it is not a compiled application.
+**Black Market Bazaar (BMB)** is a content mod for the PC game *Elemental: Reforged* (formerly *Fallen Enchantress: Legendary Heroes*). It adds new items, spells, and clothing pieces via XML data files. This repository is the development workspace — it is not a compiled application.
 
 ---
 
