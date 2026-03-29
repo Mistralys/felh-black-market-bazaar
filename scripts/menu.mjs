@@ -24,6 +24,10 @@ const menuItems = [
     label: "Build mod (deploy to game folder)",
     action: () => runCommand("node scripts/build.mjs"),
   },
+  {
+    label: "Generate item reference (docs/references/)",
+    action: () => runCommand("node scripts/generate-reference.mjs"),
+  },
 ];
 
 // Assign alphabetical shortcut keys (a, b, c, …)
