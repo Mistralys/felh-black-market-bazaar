@@ -1,6 +1,16 @@
 import { stdin, stdout } from "node:process";
 import { execSync } from "node:child_process";
 import * as readline from "node:readline";
+import { success, error } from "./lib/output.mjs";
+
+// ─── Persistent readline instance ───────────────────────────
+// Created once at startup and reused by waitForEnter().
+// Prevents MaxListenersExceededWarning from repeated create/destroy cycles.
+const rl = readline.createInterface({ input: stdin, output: stdout });
+rl.on("close", () => {
+  // If stdin closes (e.g. EOF in a pipe), exit gracefully.
+  process.exit(0);
+});
 
 // ─── Menu items ──────────────────────────────────────────────
 // Each entry: { key, label, action }
@@ -10,9 +20,18 @@ const menuItems = [
     label: "Generate context documentation (ctx generate)",
     action: () => runCommand("ctx generate"),
   },
+  {
+    label: "Build mod (deploy to game folder)",
+    action: () => runCommand("node scripts/build.mjs"),
+  },
 ];
 
 // Assign alphabetical shortcut keys (a, b, c, …)
+const MAX_KEYS = 26;
+if (menuItems.length > MAX_KEYS) {
+  console.warn(`Warning: ${menuItems.length} menu items exceed the ${MAX_KEYS}-key limit (a\u2013z). Items beyond [z] will not have shortcut keys.`);
+  menuItems.length = MAX_KEYS;
+}
 for (let i = 0; i < menuItems.length; i++) {
   menuItems[i].key = String.fromCharCode(97 + i); // 'a' = 97
 }
@@ -46,18 +65,16 @@ function runCommand(cmd) {
   try {
     execSync(cmd, { stdio: "inherit", cwd: process.cwd() });
     console.log();
-    console.log("✔ Done.");
-  } catch (error) {
+    success("Done.");
+  } catch (err) {
     console.error();
-    console.error(`✖ Command failed with exit code ${error.status ?? "unknown"}.`);
+    error(`Command failed with exit code ${err.status ?? "unknown"}.`);
   }
 }
 
 function waitForEnter() {
   return new Promise((resolve) => {
-    const rl = readline.createInterface({ input: stdin, output: stdout });
     rl.question("Press Enter to return to menu…", () => {
-      rl.close();
       resolve();
     });
   });
@@ -79,6 +96,7 @@ async function main() {
     if (key === "q") {
       clearScreen();
       console.log("Goodbye.");
+      rl.close();
       process.exit(0);
     }
 
@@ -103,6 +121,7 @@ function readKey() {
       if (data === "\u0003") {
         clearScreen();
         console.log("Goodbye.");
+        rl.close();
         process.exit(0);
       }
       resolve(data.toLowerCase());

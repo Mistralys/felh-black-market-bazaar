@@ -5,6 +5,8 @@
   "description": "Script runner for the Black Market Bazaar mod project",
   "type": "module",
   "scripts": {
-    "menu": "node scripts/menu.mjs"
+    "prepare": "node scripts/prepare.mjs",
+    "menu": "node scripts/menu.mjs",
+    "build": "node scripts/build.mjs"
   }
 }
