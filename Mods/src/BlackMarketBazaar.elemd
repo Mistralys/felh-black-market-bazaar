@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModDefinition>
+    <InternalName>BlackMarketBazaar</InternalName>
+    <DisplayName>Black Market Bazaar</DisplayName>
+    <Description>Lotsa items!</Description>
+    <Author>AeonOfTime</Author>
+    <Version>1.0</Version>
+</ModDefinition>
