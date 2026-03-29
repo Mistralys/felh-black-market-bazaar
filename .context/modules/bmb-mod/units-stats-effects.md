@@ -5868,6 +5868,6 @@ _SOURCE: Effect definitions_
 ```
 ---
 **File Statistics**
-- **Size**: 305.36 KB
-- **Lines**: 5868
+- **Size**: 305.5 KB
+- **Lines**: 5874
 File: `modules/bmb-mod/units-stats-effects.md`

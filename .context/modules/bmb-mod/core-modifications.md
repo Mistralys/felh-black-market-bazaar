@@ -130,6 +130,6 @@ _SOURCE: Modifications to base game items_
 ```
 ---
 **File Statistics**
-- **Size**: 6.16 KB
-- **Lines**: 134
+- **Size**: 6.21 KB
+- **Lines**: 136
 File: `modules/bmb-mod/core-modifications.md`

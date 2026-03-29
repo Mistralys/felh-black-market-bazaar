@@ -128,6 +128,7 @@ _SOURCE: BMB mod project layout_
     │           └── BMB_FreezeburnWand.png
     │           └── BMB_FreezingAxe.png
     │           └── BMB_FreezingBattleAxe.png
+    │           └── BMB_FrenzyCharm.png
     │           └── BMB_FrostbiteFingers.png
     │           └── BMB_FrozenAutumn.png
     │           └── BMB_FulminatingAxe.png
@@ -271,13 +272,6 @@ _SOURCE: BMB mod project layout_
 └── README.md
 └── build.config.json
 └── context.yaml
-└── design/
-    ├── BMB_BlueCrystal.psd
-    ├── BMB_DimensionalDiadem.psd
-    ├── BMB_FourLeafClover.psd
-    ├── BMB_MushroomHallucinogenic.psd
-    ├── BMB_MythicalComposer.psd
-    ├── BMB_SackOfProvisions.psd
 └── docs/
     ├── agents/
     │   ├── implementation-history/
@@ -316,11 +310,10 @@ _SOURCE: BMB mod project layout_
     │   │   │   ├── plan.md
     │   │   │   ├── synthesis.md
     │   │   ├── README.md
-    │   ├── project-manifest/
-    │   │   ├── audit-report-2026-03-29.md
     │   ├── research/
     │   │   └── 2026-03-28-full-xml-compatibility.md
     │   │   └── 2026-03-28-item-xml-compatibility.md
+    │   │   └── 2026-03-29-icon-upscaling-technologies.md
     ├── game-data/
     │   ├── README.md
     │   ├── module-context.yaml
@@ -331,111 +324,6 @@ _SOURCE: BMB mod project layout_
     │   └── items.md
     │   └── original-felh-readme.txt
 └── local-workspace.md
-└── node_modules/
-    ├── fast-xml-builder/
-    │   ├── CHANGELOG.md
-    │   ├── LICENSE/
-    │   ├── README.md
-    │   ├── lib/
-    │   │   ├── fxb.cjs
-    │   │   ├── fxb.d.cts
-    │   │   ├── fxb.min.js
-    │   │   ├── fxb.min.js.map
-    │   ├── package.json
-    │   ├── src/
-    │   │   └── fxb.d.ts
-    │   │   └── fxb.js
-    │   │   └── ignoreAttributes.js
-    │   │   └── orderedJs2Xml.js
-    │   │   └── prettifyJs2Xml.js
-    ├── fast-xml-parser/
-    │   ├── CHANGELOG.md
-    │   ├── LICENSE/
-    │   ├── README.md
-    │   ├── lib/
-    │   │   ├── fxbuilder.min.js
-    │   │   ├── fxbuilder.min.js.map
-    │   │   ├── fxp.cjs
-    │   │   ├── fxp.d.cts
-    │   │   ├── fxp.min.js
-    │   │   ├── fxp.min.js.map
-    │   │   ├── fxparser.min.js
-    │   │   ├── fxparser.min.js.map
-    │   │   ├── fxvalidator.min.js
-    │   │   ├── fxvalidator.min.js.map
-    │   ├── package.json
-    │   ├── src/
-    │   │   └── cli/
-    │   │       ├── cli.js
-    │   │       ├── man.js
-    │   │       ├── read.js
-    │   │   └── fxp.d.ts
-    │   │   └── fxp.js
-    │   │   └── ignoreAttributes.js
-    │   │   └── util.js
-    │   │   └── v6/
-    │   │       ├── CharsSymbol.js
-    │   │       ├── EntitiesParser.js
-    │   │       ├── OptionsBuilder.js
-    │   │       ├── OutputBuilders/
-    │   │       │   ├── BaseOutputBuilder.js
-    │   │       │   ├── JsArrBuilder.js
-    │   │       │   ├── JsMinArrBuilder.js
-    │   │       │   ├── JsObjBuilder.js
-    │   │       │   ├── ParserOptionsBuilder.js
-    │   │       ├── Report.js
-    │   │       ├── TagPath.js
-    │   │       ├── TagPathMatcher.js
-    │   │       ├── XMLParser.js
-    │   │       ├── Xml2JsParser.js
-    │   │       ├── XmlPartReader.js
-    │   │       ├── XmlSpecialTagsReader.js
-    │   │       ├── inputSource/
-    │   │       │   ├── BufferSource.js
-    │   │       │   ├── StringSource.js
-    │   │       ├── valueParsers/
-    │   │       │   └── EntitiesParser.js
-    │   │       │   └── booleanParser.js
-    │   │       │   └── booleanParserExt.js
-    │   │       │   └── currency.js
-    │   │       │   └── join.js
-    │   │       │   └── number.js
-    │   │       │   └── trim.js
-    │   │   └── validator.js
-    │   │   └── xmlbuilder/
-    │   │       ├── json2xml.js
-    │   │   └── xmlparser/
-    │   │       └── DocTypeReader.js
-    │   │       └── OptionsBuilder.js
-    │   │       └── OrderedObjParser.js
-    │   │       └── XMLParser.js
-    │   │       └── node2json.js
-    │   │       └── xmlNode.js
-    ├── path-expression-matcher/
-    │   ├── LICENSE/
-    │   ├── README.md
-    │   ├── lib/
-    │   │   ├── pem.cjs
-    │   │   ├── pem.d.cts
-    │   │   ├── pem.min.js
-    │   │   ├── pem.min.js.map
-    │   ├── package.json
-    │   ├── src/
-    │   │   └── Expression.js
-    │   │   └── Matcher.js
-    │   │   └── index.d.ts
-    │   │   └── index.js
-    ├── strnum/
-    │   └── CHANGELOG.md
-    │   └── LICENSE/
-    │   └── README.md
-    │   └── algo.stflow
-    │   └── package.json
-    │   └── strnum.js
-    │   └── tests/
-    │       └── infinity_test.js
-    │       └── strnum_test.js
-    │       └── temp.js
 └── package-lock.json
 └── package.json
 └── scripts/
@@ -449,6 +337,6 @@ _SOURCE: BMB mod project layout_
 ```
 ---
 **File Statistics**
-- **Size**: 14.51 KB
-- **Lines**: 320
+- **Size**: 21.23 KB
+- **Lines**: 463
 File: `project-folder-structure.md`

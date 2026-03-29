@@ -8052,6 +8052,6 @@ So feed him the jingling money in your purse.</Description>
 ```
 ---
 **File Statistics**
-- **Size**: 426.76 KB
-- **Lines**: 8056
+- **Size**: 426.8 KB
+- **Lines**: 8058
 File: `modules/bmb-mod/weapons.md`

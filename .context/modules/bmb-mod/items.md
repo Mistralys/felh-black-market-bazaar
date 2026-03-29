@@ -1145,6 +1145,43 @@ _SOURCE: Item definitions_
             </GameItemTypeModelPack>
         </GameItemTypeArtDef>
     </GameItemType>
+	<GameItemType InternalName="BMB_FrenzyCharm">
+        <DisplayName>Frenzy Charm</DisplayName>
+        <Description>An ancient bone charm etched with forgotten runes. When worn, it frenzies the bearer into a blind, berserker rage — they maul everything in their path.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>400</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockUnitAbility</Attribute>
+            <StrVal>Maul</StrVal>
+            <Provides>Grants the Maul ability</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>10</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>80</AIPriority>
+        </AIData>
+        <ArtDef>BMB_FrenzyCharm_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="BMB_FrenzyCharm_ArtDef">
+            <GameItemTypeModelPack InternalName="BMB_FrenzyCharm_Default">
+                <IconFile>BMB_FrenzyCharm.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
 	<GameItemType InternalName="FrozenAutumn">
         <DisplayName>Frozen Autumn</DisplayName>
         <Description>The transition from fall into winter is usually gradual and goes unnoticed. And sometimes it can be so sudden and violent as to become a devastating glacial onslaught which turns the world into a frozen wasteland in the blink of an eye. In these rare moments, autumn's symbols can freeze to the core and be encased in permanent ice, their fragile shells turning into improbable recipients for tremendous wintry powers.</Description>
@@ -3623,6 +3660,6 @@ A brew with no toll, to cure that aching loose tooth.</Description>
 ```
 ---
 **File Statistics**
-- **Size**: 169.24 KB
-- **Lines**: 3634
+- **Size**: 170.88 KB
+- **Lines**: 3666
 File: `modules/bmb-mod/items.md`

@@ -21,12 +21,13 @@ documents:
         description: 'BMB mod project layout'
         sourcePaths: [ . ]
         filePattern: '*'
-        excludePatterns:
+        notPath:
           - '.git/'
           - '.idea/'
           - '.context/'
           - 'design/'
           - 'node_modules/'
+          - 'docs/agents/plans/'
         renderFormat: ascii
         maxDepth: 5
 

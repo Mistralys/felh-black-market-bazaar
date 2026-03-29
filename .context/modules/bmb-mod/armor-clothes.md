@@ -8634,6 +8634,6 @@ _SOURCE: Clothing definitions_
 ```
 ---
 **File Statistics**
-- **Size**: 436.4 KB
-- **Lines**: 8636
+- **Size**: 436.5 KB
+- **Lines**: 8640
 File: `modules/bmb-mod/armor-clothes.md`

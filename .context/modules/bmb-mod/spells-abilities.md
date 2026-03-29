@@ -4610,6 +4610,6 @@ _SOURCE: Ability definitions_
 ```
 ---
 **File Statistics**
-- **Size**: 201.14 KB
-- **Lines**: 4612
+- **Size**: 201.24 KB
+- **Lines**: 4616
 File: `modules/bmb-mod/spells-abilities.md`

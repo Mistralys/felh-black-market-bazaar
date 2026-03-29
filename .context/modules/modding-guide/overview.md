@@ -266,6 +266,6 @@ fail to load or be silently assigned to no race, removing their faction bonuses.
 ```
 ---
 **File Statistics**
-- **Size**: 15.55 KB
-- **Lines**: 418
+- **Size**: 10.76 KB
+- **Lines**: 272
 File: `modules/modding-guide/overview.md`
