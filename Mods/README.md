@@ -1,6 +1,6 @@
 # Black Market Bazaar - Mod Module 
   
-The Black Market Bazaar (BMB) is a content mod for Elemental: Reforged (originally Fallen Enchantress: Legendary Heroes). It adds 242 new items, 76 item-related spells, and 19 new clothes for custom sovereigns. 
+The Black Market Bazaar (BMB) is a content mod for Elemental: Reforged (originally Fallen Enchantress: Legendary Heroes). It adds 243 new items, 76 item-related spells, and 19 new clothes for custom sovereigns. 
   
 All mod XML files use the BMB_ prefix for InternalName values to avoid collisions with the base game and other mods. 
   
