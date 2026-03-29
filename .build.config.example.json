@@ -1,0 +1,9 @@
+{
+  "deployPath": "<SEE EXAMPLES BELOW — set your local Mods folder path>",
+  "modID": "197542",
+  "_examples": {
+    "windows": "C:\\Users\\<username>\\Documents\\My Games\\ElementalReforged\\Mods",
+    "macos": "/Users/<username>/Library/Application Support/ElementalReforged/Mods",
+    "linux": "/home/<username>/.local/share/ElementalReforged/Mods"
+  }
+}
