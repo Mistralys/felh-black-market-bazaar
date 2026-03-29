@@ -123,6 +123,7 @@ Must be run in an interactive terminal (TTY). Press **q** or **Ctrl+C** to quit.
 |---|---|
 | `a` | Generate context documentation (`ctx generate`) |
 | `b` | Build mod (deploy to game folder) |
+| `c` | Generate item reference (`docs/references/`) |
 | `q` | Quit |
 
 Keys are assigned alphabetically in declaration order. Adding a new item appends the next letter automatically. The menu supports up to 26 items (a–z).

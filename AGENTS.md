@@ -137,6 +137,7 @@ All scripts in `scripts/` MUST be OS-independent. Targeted platforms: Windows, m
 | **Package Manager** | N/A (manual file deployment) |
 | **Test Framework** | Manual in-game smoke testing |
 | **Build Tool** | `npm run build` (`scripts/build.mjs` — deploys mod to game folder) |
+| **Reference Generator** | `npm run reference` (`scripts/generate-reference.mjs` — generates `docs/references/items.md`) |
 | **Context Generator** | CTX Generator (`context.yaml`) |
 | **String Table** | `Mods/Data/BMB.str` |
 
@@ -173,9 +174,11 @@ felh-black-market-bazaar/
 │   ├── game-data/
 │   │   ├── README.md                  ← Base game XML reference
 │   │   └── module-context.yaml
-│   └── modding-guide/
-│       ├── README.md                  ← BMB modding patterns & rules
-│       └── module-context.yaml
+│   ├── modding-guide/
+│   │   ├── README.md                  ← BMB modding patterns & rules
+│   │   └── module-context.yaml
+│   └── references/
+│       └── items.md                   ← Auto-generated item reference (npm run reference)
 └── Mods/
     ├── Black Market Bazaar/
     │   ├── README.md                  ← Mod file inventory & changelog
