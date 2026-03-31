@@ -12,17 +12,6 @@ _SOURCE: BMB mod project layout_
     │   └── BlackMarketBazaar.elemd
     │   └── Data/
     │       ├── BMB.str
-    │       ├── GameCore/
-    │       │   └── BMB_Abilities.xml
-    │       │   └── BMB_Armor.xml
-    │       │   └── BMB_Clothes.xml
-    │       │   └── BMB_CoreItemsModifications.xml
-    │       │   └── BMB_Effects.xml
-    │       │   └── BMB_Items.xml
-    │       │   └── BMB_Spells.xml
-    │       │   └── BMB_UnitStats.xml
-    │       │   └── BMB_Units.xml
-    │       │   └── BMB_Weapons.xml
     │   └── Gfx/
     │       └── Black Market Bazaar Icons/
     │           └── BMB_Ability_BullsEye.png
@@ -144,6 +133,7 @@ _SOURCE: BMB mod project layout_
     │           └── BMB_IceBomb.png
     │           └── BMB_Icebreaker.png
     │           └── BMB_ImpudentShortbow.png
+    │           └── BMB_InfernalCompanion.png
     │           └── BMB_InfiniteDiary.png
     │           └── BMB_InsectoidExoskeleton.png
     │           └── BMB_JadeRing.png
@@ -306,14 +296,22 @@ _SOURCE: BMB mod project layout_
     │   │   ├── 2026-03-29-build-command-polish/
     │   │   │   ├── plan.md
     │   │   │   ├── synthesis.md
+    │   │   ├── 2026-03-29-frenzy-charm/
+    │   │   │   ├── plan.md
+    │   │   │   ├── synthesis.md
     │   │   ├── 2026-03-29-item-reference-generator/
+    │   │   │   ├── plan.md
+    │   │   │   ├── synthesis.md
+    │   │   ├── 2026-03-31-infernal-companion/
+    │   │   │   ├── plan.md
+    │   │   │   ├── synthesis.md
+    │   │   ├── 2026-03-31-xml-fragment-build/
     │   │   │   ├── plan.md
     │   │   │   ├── synthesis.md
     │   │   ├── README.md
     │   ├── research/
     │   │   └── 2026-03-28-full-xml-compatibility.md
     │   │   └── 2026-03-28-item-xml-compatibility.md
-    │   │   └── 2026-03-29-icon-upscaling-technologies.md
     ├── game-data/
     │   ├── README.md
     │   ├── module-context.yaml
@@ -330,13 +328,15 @@ _SOURCE: BMB mod project layout_
     └── build.mjs
     └── generate-reference.mjs
     └── lib/
+        ├── merge-xml.mjs
         ├── output.mjs
     └── menu.mjs
     └── prepare.mjs
+    └── split-xml.mjs
 
 ```
 ---
 **File Statistics**
-- **Size**: 21.23 KB
-- **Lines**: 463
+- **Size**: 16.57 KB
+- **Lines**: 343
 File: `project-folder-structure.md`
