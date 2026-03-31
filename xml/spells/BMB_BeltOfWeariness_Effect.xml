@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_BeltOfWeariness_Effect">
+        <DisplayName>Belt of Weariness Effect</DisplayName>
+        <Description>Units struck suffer -1 to Stamina and growth is halted for 3 turns.</Description>
+        <IconFG>T_Slow_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Stamina</StrVal>
+            <DisplayName>Stamina Loss</DisplayName>
+            <Value>-1</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SetUnitStat</Attribute>
+            <StrVal>UnitStat_Stamina_Growth</StrVal>
+            <DisplayName>Weariness</DisplayName>
+			<Effect>BMB_BeltOfWeariness_Particle</Effect>
+            <Duration>3</Duration>            
+            <Value>0</Value>
+        </GameModifier>		
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_FreezeGroup</HitSoundFX>
+    </SpellDef>
+</Fragment>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="MalachiteCrown">
+        <DisplayName>Malachite Crown</DisplayName>
+        <Description>A crown to rule them all or at least a nifty ornament which will allow you to become that haughty, high and mighty ruler standing way above the rabble. Word to the wise sovereign: every once in a while, try to lose those superior airs and strive to remember who your friends are.</Description>
+        <Type>Head</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>600</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>6</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_SwarmBonusCounter</StrVal>
+            <Value>1</Value>
+            <Provides>This unit receives double the normal Swarm bonus</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CannotBeCounterattacked</Attribute>
+            <Provides>Unit never gets Counterattacked</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>ImmuneToSwarm</Attribute>
+            <Provides>Immune to Swarm</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockCombatAbility</Attribute>
+            <StrVal>CullTheWeak</StrVal>
+            <Provides>Allows the owner to cast Cull the Weak</Provides>
+        </GameModifier>		
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>20</Likelihood>	
+        <RarityDisplay>Rare</RarityDisplay>
+		<HeroOnly>1</HeroOnly>			
+            <AIData AIPersonality="AI_General">
+                <AIPriority>80</AIPriority>
+            </AIData>
+        <ArtDef>Art_MalachiteCrown</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_MalachiteCrown">
+			<GameItemTypeModelPack InternalName="Art_MalachiteCrown_1">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+                <SupportedUnitModelType>Banshee</SupportedUnitModelType>
+                <SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_MalachiteCrown.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/sovereign_viking_helmet.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Armor\Sovereign_Viking_Armor.png</Texture_All>
+					<Color_Metal>0,84,48</Color_Metal>
+					<Attachment>head_lcf</Attachment>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="LeatherVambraces_Integrity">
+        <DisplayName>Armbands of Integrity</DisplayName>
+        <Description>These tough yet malleable vambraces will provide complete protection for your arms and deflect any critical strikes aimed against them.</Description>
+        <Type>Forearms</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>60</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>1</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ChanceToAvoidCrit</StrVal>
+            <Value>20</Value>
+            <Provides>Unit has a 20% chance of resisting a Critical attack</Provides>
+        </GameModifier>		
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>40</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+		<HeroOnly>1</HeroOnly>		
+            <AIData AIPersonality="AI_General">
+                <AIPriority>15</AIPriority>
+            </AIData>
+        <ArtDef>Art_LeatherVambraces_Integrity</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_LeatherVambraces_Integrity">
+			<GameItemTypeModelPack InternalName="Art_LeatherVambraces_Integrity_1">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>K_LeatherGaultlet1_Icon.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>kingdom_leather_vambrace_A.hkb</ModelFile>
+					<Texture_All>kingdom_leather_armor_texture_A.png</Texture_All>
+					<Attachment>forearm_left_lcf</Attachment>					
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>kingdom_leather_vambrace_A.hkb</ModelFile>
+					<Texture_All>kingdom_leather_armor_texture_A.png</Texture_All>
+					<Attachment>forearm_right_lcf</Attachment>				
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_LeatherVambraces_Integrity_2">
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<IconFile>K_LeatherGaultlet1_Icon.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>fallen_leather_vambrace_A.hkb</ModelFile>
+					<Texture_All>leather_armor_A_texture.png</Texture_All>
+					<Attachment>forearm_left_lcf</Attachment>					
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>fallen_leather_vambrace_A.hkb</ModelFile>
+					<Texture_All>leather_armor_A_texture.png</Texture_All>
+					<Attachment>forearm_right_lcf</Attachment>	
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>        
+		</GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

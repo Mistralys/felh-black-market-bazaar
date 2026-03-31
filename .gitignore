@@ -13,3 +13,15 @@ build.config.json
 .build.config.json
 /node_modules
 local-workspace.md
+
+# Generated XML files (source of truth is /xml fragments)
+Mods/src/Data/GameCore/BMB_Items.xml
+Mods/src/Data/GameCore/BMB_Weapons.xml
+Mods/src/Data/GameCore/BMB_Armor.xml
+Mods/src/Data/GameCore/BMB_Clothes.xml
+Mods/src/Data/GameCore/BMB_Spells.xml
+Mods/src/Data/GameCore/BMB_Abilities.xml
+Mods/src/Data/GameCore/BMB_Effects.xml
+Mods/src/Data/GameCore/BMB_Units.xml
+Mods/src/Data/GameCore/BMB_UnitStats.xml
+Mods/src/Data/GameCore/BMB_CoreItemsModifications.xml

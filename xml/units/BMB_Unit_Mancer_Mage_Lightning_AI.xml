@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<UnitType InternalName="BMB_Unit_Mancer_Mage_Lightning_AI">
+        <DisplayName>Storm Dancers</DisplayName>
+        <RaceType>Race_Type_Mancers</RaceType>
+        <CanBeDesigned>1</CanBeDesigned>
+        <Gender>Female</Gender>
+        <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+        <HideInSetupLists>1</HideInSetupLists>
+        <IsAIOnlyUnit>1</IsAIOnlyUnit>
+        <IsSovereign>0</IsSovereign>
+        <IsStartingUnitType>1</IsStartingUnitType>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Mancer</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Precision</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fast</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Acrobat</SelectedAbilityBonusOption>	
+		<Equipment>Staff_Thunderous</Equipment>
+        <Equipment>K_Female_Head_03</Equipment>
+		<Equipment>K_Female_Bob_Hair_Mesh_01</Equipment>
+		<Equipment>TightBoots_Light</Equipment>
+		<Equipment>Warrior_Trenchcoat_ID2</Equipment>
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Weapon</EquipmentSlot>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
+            <EquipmentSlot>Defense</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+            <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+        </EquipmentUpgradeDef>       
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Boots</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+            <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+        </EquipmentUpgradeDef>
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Forearms</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+            <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+        </EquipmentUpgradeDef>        
+        <Prereq>
+            <Type>Race</Type>
+            <Attribute>Race_Type_Mancers</Attribute>
+        </Prereq>
+        <Backstory>The armies of Capitar have at their disposal the vast wealth of the great trading houses of old, money that lets them buy not just the best equipment, but the best fighters: mercenaries such as the Silver Swordsmen; archers whose skills rival the ninety-nine of Redstone; war horses bred from the stock of fabled Antheros. This great wealth buys influence in diplomatic councils as well as on the battlefield; a fact the seasoned commander would do well to keep in mind when forging alliances.</Backstory>
+        <AnimationPack>SoldierAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>0</ClothPoseIndex>        
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_f2_grn.png</EyeTexture>
+        <InfoCardBackground>BG_KingdomBarren</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Female</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_f2_grn.png</Texture_Eyes>
+        <Texture_Skin>K_Female_Thickbrows_Texture_01.png</Texture_Skin>
+        <UnitModelType>MancerFemale</UnitModelType>
+    </UnitType>	
+</Fragment>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+    <GameItemType InternalName="TreasureGormandizer">
+        <DisplayName>Treasure Gormandizer</DisplayName>
+        <Description>A strangely glowing sphere which feeds into the inner greed of its owner and heightens the need to unearth lost treasures.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>300</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>25</Value>
+            <Provides>25% chance to find better items from goodie huts</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>50</AIPriority>
+            </AIData>
+        <ArtDef>TreasureGormandizer_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="TreasureGormandizer_ArtDef">
+            <GameItemTypeModelPack InternalName="TreasureGormandizer_Default">
+                <IconFile>BMB_TreasureGormandizer.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

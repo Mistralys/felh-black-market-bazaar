@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+    <GameItemType InternalName="Scroll_VitalPoints">
+        <DisplayName>Scroll of Vital Points</DisplayName>
+        <Description>This ancient scroll teaches the reader where to hit to deadly effects.</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>180</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockUnitAbility</Attribute>
+            <StrVal>VitalStrike1</StrVal>
+            <Provides>Grants the unit the Vital Strike ability</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>1</IsUsable>
+        <UsableInBattle>0</UsableInBattle>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>Scroll_VitalPoints_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Scroll_VitalPoints_ArtDef">
+            <GameItemTypeModelPack InternalName="Scroll_VitalPoints_Default">
+                <IconFile>Scroll1.png</IconFile>
+                <TintG>255</TintG>
+                <SFX>AirShard_SFX_01</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

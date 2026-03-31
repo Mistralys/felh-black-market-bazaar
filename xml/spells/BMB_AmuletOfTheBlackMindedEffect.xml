@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_AmuletOfTheBlackMindedEffect">
+        <DisplayName>Amulet of the Black Minded Effect</DisplayName>
+        <Description>Target unit has a 33% chance of suffering critical hits from all attacks.</Description>
+        <Image>T_Graveseal_Painting.png</Image>
+        <IconFG>T_Graveseal_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<IsCastable>0</IsCastable>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>Graveseal</Attribute>
+			<DisplayName>Graveseal</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Graveseal_Particle</Effect>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>            
+            <Value>0</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>            
+            <Value>0</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>20</AIPriority>        
+        </AIData>
+        <HitSoundFX>Spell_Graveseal_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Graveseal_Particle</EffectName>
+            <LocalPosition>0,40,0</LocalPosition>
+            <EffectScale>0.7</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

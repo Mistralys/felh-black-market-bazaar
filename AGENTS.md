@@ -44,13 +44,13 @@ When you change code, update the corresponding manifest documents:
 
 | Change Made | Documents to Update |
 |---|---|
-| New item / weapon / armor / clothing added | `Mods/README.md` (file inventory & counts), `docs/modding-guide/README.md` (if new pattern) |
-| New spell or ability added | `Mods/README.md`, `docs/modding-guide/README.md` |
-| New unit added | `Mods/README.md` |
-| New XML file added to mod | `Mods/README.md` (file inventory table), `Mods/module-context.yaml`, `context.yaml` |
+| New item / weapon / armor / clothing added | Add fragment to `xml/<subfolder>/`, `Mods/README.md` (file inventory & counts), `docs/modding-guide/README.md` (if new pattern) |
+| New spell or ability added | Add fragment to `xml/<subfolder>/`, `Mods/README.md`, `docs/modding-guide/README.md` |
+| New unit added | Add fragment to `xml/units/`, `Mods/README.md` |
+| New XML fragment subfolder added | `Mods/README.md` (file inventory table), `scripts/lib/merge-xml.mjs` (MERGE_CONFIG), `Mods/module-context.yaml`, `context.yaml` |
 | Icon or texture added | `Mods/src/Gfx/Black Market Bazaar Icons/` (place file), `Mods/README.md` (update counts if noted) |
 | String table entry added | `Mods/src/Data/BMB.str` |
-| Base game override changed | `Mods/README.md` (compatibility section) |
+| Base game override changed | Add/edit fragment in `xml/core-items-mods/`, `Mods/README.md` (compatibility section) |
 | Naming convention changed | `docs/modding-guide/README.md` |
 | Game data schema discovered | `docs/game-data/README.md` |
 | New Reforged breaking change found | `docs/game-data/README.md`, `docs/modding-guide/README.md` |
@@ -62,12 +62,14 @@ When you change code, update the corresponding manifest documents:
 ## 4. Efficiency Rules — Search Smart
 
 - **Finding files?** Check the file inventory table in `Mods/README.md` FIRST.
+- **Editing item/spell/unit content?** Edit the fragment file in `xml/<subfolder>/` — NOT the monolithic files in `Mods/src/Data/GameCore/` (those are generated).
 - **Understanding XML schemas?** Check `docs/game-data/README.md` FIRST.
 - **Implementation patterns & conventions?** Check `docs/modding-guide/README.md` FIRST.
 - **Reforged compatibility rules?** Check BOTH `docs/game-data/README.md` and `docs/modding-guide/README.md` FIRST.
-- **Only then** read source XML files.
+- **Only then** read source XML fragment files in `xml/`.
 
 Do NOT scan all XML files to discover structure. The manifest already documents it.
+Do NOT edit monolithic XML files in `Mods/src/Data/GameCore/` directly — they are generated from `xml/` fragments during `npm run build`.
 
 ---
 
@@ -137,7 +139,9 @@ All scripts in `scripts/` MUST be OS-independent. Targeted platforms: Windows, m
 | **Architecture** | Flat XML file set with `InternalName` cross-references |
 | **Package Manager** | N/A (manual file deployment) |
 | **Test Framework** | Manual in-game smoke testing |
-| **Build Tool** | `npm run build` (`scripts/build.mjs` — deploys mod to game folder) |
+| **Build Tool** | `npm run build` (`scripts/build.mjs` — merges XML fragments, then deploys mod to game folder) |
+| **XML Fragment Merge** | `scripts/lib/merge-xml.mjs` (assembles `xml/` fragments into `Mods/src/Data/GameCore/`) |
+| **XML Split (migration)** | `scripts/split-xml.mjs` (one-time: splits monolithic XML into fragments) |
 | **Reference Generator** | `npm run reference` (`scripts/generate-reference.mjs` — generates `docs/references/items.md`) |
 | **Context Generator** | CTX Generator (`context.yaml`) |
 | **String Table** | `Mods/src/Data/BMB.str` |
@@ -168,6 +172,18 @@ felh-black-market-bazaar/
 ├── context.yaml                       ← CTX Generator config
 ├── local-workspace.md                 ← Multi-root workspace paths
 ├── design/                            ← PSD source files for icons
+├── xml/                               ← XML fragment source files (SOURCE OF TRUTH)
+│   ├── items/                         ← One .xml per item → BMB_Items.xml
+│   ├── weapons/                       ← One .xml per weapon → BMB_Weapons.xml
+│   ├── armor/                         ← One .xml per armor piece → BMB_Armor.xml
+│   ├── clothes/                       ← One .xml per clothing item → BMB_Clothes.xml
+│   ├── spells/                        ← One .xml per spell → BMB_Spells.xml
+│   ├── abilities/                     ← One .xml per ability → BMB_Abilities.xml
+│   │   └── _meta.xml                  ← DataChecksum metadata
+│   ├── effects/                       ← One .xml per effect → BMB_Effects.xml
+│   ├── units/                         ← One .xml per unit → BMB_Units.xml
+│   ├── unit-stats/                    ← One .xml per unit stat → BMB_UnitStats.xml
+│   └── core-items-mods/               ← One .xml per base game override → BMB_CoreItemsModifications.xml
 ├── docs/
 │   ├── agents/
 │   │   ├── implementation-history/    ← Archived implementation plans & synthesis
@@ -182,11 +198,13 @@ felh-black-market-bazaar/
 │   └── references/
 │       └── items.md                   ← Auto-generated item reference (npm run reference)
 ├── scripts/
-│   ├── build.mjs                      ← Build/deploy script
+│   ├── build.mjs                      ← Build/deploy script (merges fragments + deploys)
+│   ├── split-xml.mjs                  ← One-time migration script (monolithic → fragments)
 │   ├── generate-reference.mjs         ← Item reference generator
 │   ├── menu.mjs                       ← Interactive terminal menu
 │   ├── prepare.mjs                    ← Config-reminder hook
 │   └── lib/
+│       ├── merge-xml.mjs              ← XML fragment merge module
 │       └── output.mjs                 ← Shared console output helpers
 └── Mods/
     ├── README.md                      ← Mod file inventory & changelog
@@ -195,17 +213,17 @@ felh-black-market-bazaar/
         ├── BlackMarketBazaar.elemd    ← Mod definition file
         ├── Data/
         │   ├── BMB.str                ← String table
-        │   └── GameCore/
-        │       ├── BMB_Items.xml      ← Accessories, consumables
-        │       ├── BMB_Weapons.xml    ← Weapons
-        │       ├── BMB_Armor.xml      ← Armor
-        │       ├── BMB_Clothes.xml    ← Clothing
-        │       ├── BMB_Spells.xml     ← 76 item-triggered spells
-        │       ├── BMB_Abilities.xml  ← Ability definitions
-        │       ├── BMB_Effects.xml    ← Visual effects
-        │       ├── BMB_Units.xml      ← Custom units
-        │       ├── BMB_UnitStats.xml  ← Custom unit stats
-        │       └── BMB_CoreItemsModifications.xml ← Base game overrides
+        │   └── GameCore/              ← GENERATED from xml/ (git-ignored)
+        │       ├── BMB_Items.xml
+        │       ├── BMB_Weapons.xml
+        │       ├── BMB_Armor.xml
+        │       ├── BMB_Clothes.xml
+        │       ├── BMB_Spells.xml
+        │       ├── BMB_Abilities.xml
+        │       ├── BMB_Effects.xml
+        │       ├── BMB_Units.xml
+        │       ├── BMB_UnitStats.xml
+        │       └── BMB_CoreItemsModifications.xml
         └── Gfx/
             └── Black Market Bazaar Icons/ ← 227 PNG icons + 16 DDS textures
 ```

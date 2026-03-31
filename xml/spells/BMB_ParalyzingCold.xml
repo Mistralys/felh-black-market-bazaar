@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_ParalyzingCold">
+        <DisplayName>Paralyzing Cold</DisplayName>
+        <Description>Unit takes 3 Cold damage per round</Description>
+        <Image>T_Blizzard_Painting.png</Image>
+        <IconFG>S_FrozenBones_Icon.png</IconFG>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Cold</AttackStat>
+            <Duration>-1</Duration>
+            <Effect>A_HailstoneStaff_Impact_Particle</Effect>
+            <SoundFX>IceElemental_Death</SoundFX>
+            <PerTurn>1</PerTurn>
+            <Value>3</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>IceElemental_Death</HitSoundFX>
+        <HitSoundFX>IceElemental_Death</HitSoundFX>
+    </SpellDef>
+</Fragment>

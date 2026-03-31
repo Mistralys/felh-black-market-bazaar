@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Scroll_ArcaneMonolith">
+        <DisplayName>Arcane Monolith Scroll</DisplayName>
+        <Description>Have you considered retreating to your own private tower for some well-deserved downtime? Wait no further! Invoke your very own Arcane Monolith today!</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>180</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UseSpell</Attribute>
+            <StrVal>BMB_ArcaneMonolith</StrVal>
+            <Provides>Creates an Arcane Monolith on the map which extends your Zone of Control.</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>35</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>1</IsUsable>
+        <UsableInBattle>0</UsableInBattle>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>100</AIPriority>
+            </AIData>
+        <ArtDef>Scroll_ArcaneMonolith_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Scroll_ArcaneMonolith_ArtDef">
+            <GameItemTypeModelPack InternalName="Scroll_ArcaneMonolith_Default">
+                <IconFile>BMB_ArcaneMonolithScroll.png</IconFile>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

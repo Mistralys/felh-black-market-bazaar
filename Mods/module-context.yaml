@@ -1,7 +1,7 @@
 moduleMetaData:
   id: "bmb-mod"
   label: "Black Market Bazaar Mod"
-  description: "The BMB mod's XML data files — items, weapons, armor, clothes, spells, abilities, effects, units, and base game modifications."
+  description: "The BMB mod's XML data files — items, weapons, armor, clothes, spells, abilities, effects, units, and base game modifications. XML files in Mods/src/Data/GameCore/ are generated from fragments in /xml."
   keywords:
     - BMB
     - Items
@@ -15,6 +15,8 @@ moduleMetaData:
     - game-data
     - modding-guide
 
+# Note: The XML files referenced below are generated from /xml fragments
+# during `npm run build`. Run the build before generating context docs.
 documents:
   - description: 'BMB Mod - Overview'
     outputPath: 'modules/bmb-mod/overview.md'
@@ -28,7 +30,7 @@ documents:
     outputPath: 'modules/bmb-mod/items.md'
     sources:
       - type: file
-        description: 'Item definitions'
+        description: 'Item definitions (generated from xml/items/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_Items.xml"
 
@@ -36,7 +38,7 @@ documents:
     outputPath: 'modules/bmb-mod/weapons.md'
     sources:
       - type: file
-        description: 'Weapon definitions'
+        description: 'Weapon definitions (generated from xml/weapons/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_Weapons.xml"
 
@@ -44,11 +46,11 @@ documents:
     outputPath: 'modules/bmb-mod/armor-clothes.md'
     sources:
       - type: file
-        description: 'Armor definitions'
+        description: 'Armor definitions (generated from xml/armor/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_Armor.xml"
       - type: file
-        description: 'Clothing definitions'
+        description: 'Clothing definitions (generated from xml/clothes/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_Clothes.xml"
 
@@ -56,11 +58,11 @@ documents:
     outputPath: 'modules/bmb-mod/spells-abilities.md'
     sources:
       - type: file
-        description: 'Spell definitions'
+        description: 'Spell definitions (generated from xml/spells/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_Spells.xml"
       - type: file
-        description: 'Ability definitions'
+        description: 'Ability definitions (generated from xml/abilities/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_Abilities.xml"
 
@@ -68,15 +70,15 @@ documents:
     outputPath: 'modules/bmb-mod/units-stats-effects.md'
     sources:
       - type: file
-        description: 'Unit definitions'
+        description: 'Unit definitions (generated from xml/units/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_Units.xml"
       - type: file
-        description: 'Unit stat definitions'
+        description: 'Unit stat definitions (generated from xml/unit-stats/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_UnitStats.xml"
       - type: file
-        description: 'Effect definitions'
+        description: 'Effect definitions (generated from xml/effects/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_Effects.xml"
 
@@ -84,6 +86,6 @@ documents:
     outputPath: 'modules/bmb-mod/core-modifications.md'
     sources:
       - type: file
-        description: 'Modifications to base game items'
+        description: 'Modifications to base game items (generated from xml/core-items-mods/)'
         sourcePaths: [ ./ ]
         filePattern: "BMB_CoreItemsModifications.xml"

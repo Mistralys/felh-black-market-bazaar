@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Staff_MiasmaticStake">
+        <DisplayName>Miasmatic Stake</DisplayName>
+        <Description>Secretly crafted in the deepest recesses of suffocating swamps by lost souls, this evil staff goes by many reviled names such as the Horror Branch of the Asag, the Scourge Scepter or Morian's Toothpick. A recipient of highly contagious diseases, it can break the strongest immunities with a bare touch and spread minute putrefaction to entire communities, effectively wiping them out without bloodshed.</Description>
+        <Type>Weapon</Type>
+        <Type>Defense</Type>
+        <WeaponType>Spear</WeaponType>
+        <WeaponUpgradeType>Staff</WeaponUpgradeType>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>280</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Value>12</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Poison</StrVal>
+            <Value>18</Value>
+        </GameModifier>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>MeleeAppliesSpell</Attribute>
+            <StrVal>BMB_PlagueTouch</StrVal>
+            <Provides>Plague Touch - Halves the Poison Resistance of Targets, Poisons them and spreads Infection</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>10</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Prereq>
+            <Type>UnitStat_Level</Type>
+            <Attribute>6</Attribute>
+        </Prereq>
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_BLUNT</AIPrefType>
+            <AIPriority>528</AIPriority>
+        </AIData>
+        <ArtDef>Staff_MiasmaticStake_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Staff_MiasmaticStake_ArtDef">
+            <GameItemTypeModelPack InternalName="Staff_MiasmaticStake_Default">
+                <IconFile>BMB_MiasmaticStake.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <AttackSFX>Hit_WinterStaff_01</AttackSFX>
+                <AttackSFX>Hit_WinterStaff_02</AttackSFX>
+                <AttackSFX>Hit_WinterStaff_03</AttackSFX>
+                <EquipSFX>Equip_WoodenItem_01</EquipSFX>
+                <EquipSFX>Equip_WoodenItem_02</EquipSFX>
+                <EquipSFX>Equip_WoodenItem_03</EquipSFX>
+                <OnHitParticleName>E_Poison_Particle</OnHitParticleName>
+                <SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+                <SupportedUnitModelType>Banshee</SupportedUnitModelType>
+                <SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IronGolem</SupportedUnitModelType>
+                <SupportedUnitModelType>JuggernautMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+                <GameItemTypeModel>
+                    <ModelFile>gfx/hkb/weapons/w_winters_staff_mesh_01.hkb</ModelFile>
+                    <Texture_All>W_Club_Texture_01.png</Texture_All>
+                    <Attachment>hand_right_Lcf</Attachment>
+                    <Color_All>34,15,6</Color_All>					
+        <EffectAttachment>
+            <Attachment>Effect_Loc_04</Attachment>
+            <EffectName>BMB_InsectSwarm_Particle</EffectName>
+            <EffectPosition>0,-15,-5</EffectPosition>
+            <EffectRotation>0,0,0</EffectRotation>
+            <EffectScale>0.3</EffectScale>
+        </EffectAttachment>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

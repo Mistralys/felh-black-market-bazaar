@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="BookOfArcaneEquations">
+        <DisplayName>Book of Arcane Equations</DisplayName>
+        <Description>A treatise on breaking down the concept of magic. Ponderous but rewarding reading as it teaches how to focus on resisting adverse spell effects.</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>180</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockUnitAbility</Attribute>
+            <StrVal>SpellResistance_Level</StrVal>
+            <Provides>Grants the unit the Spell Resistance ability</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <IsUsable>1</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>BookOfArcaneEquations_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="BookOfArcaneEquations_ArtDef">
+            <GameItemTypeModelPack InternalName="BookOfArcaneEquations_Default">
+                <IconFile>BookOfCharisma_Item.png</IconFile>
+                <TintR>115</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>BookOfExperience_01</SFX>
+                <SFX>BookOfExperience_02</SFX>
+                <SFX>BookOfExperience_03</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

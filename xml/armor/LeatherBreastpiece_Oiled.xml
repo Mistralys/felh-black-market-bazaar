@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="LeatherBreastpiece_Oiled">
+        <DisplayName>Oiled Leather Armor</DisplayName>
+        <Description>Copiously lathered with oil, this leather armor's lack of conductivity offers its wearer a certain protection from electrical attacks.</Description>
+        <Type>Torso</Type>
+        <Type>Surcoat</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>90</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>3</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistLightning</StrVal>
+            <Value>15</Value>
+            <Provides>+15% Lightning resistance</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>40</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+		<HeroOnly>1</HeroOnly>       
+            <AIData AIPersonality="AI_General">
+                <AIPriority>35</AIPriority>
+            </AIData>
+		<ArtDef>Art_LeatherBreastpiece_Oiled</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_LeatherBreastpiece_Oiled">
+			<GameItemTypeModelPack InternalName="Art_LeatherBreastpiece_Oiled_1">
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_OiledLeatherArmor.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>   
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/K_Armor_Leather_Chestpiece_02.hkb</ModelFile>
+					<Texture_All>BMB_Oiled_Leather_Armor_Texture.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>	
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_LeatherBreastpiece_Oiled_2">
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<IconFile>BMB_OiledLeatherArmor.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>			
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/F_Armor_Leather_Chestpiece_03.hkb</ModelFile>
+					<Texture_All>BMB_Oiled_Leather_Armor_Texture.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>            
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_LeatherBreastpiece_Oiled_3">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<IconFile>BMB_OiledLeatherArmor.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>            
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/K_Armor_Leather_Chestpiece_02.hkb</ModelFile>
+					<Texture_All>BMB_Oiled_Leather_Armor_Texture.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>            
+			</GameItemTypeModelPack>        
+		</GameItemTypeArtDef>
+	</GameItemType>
+</Fragment>

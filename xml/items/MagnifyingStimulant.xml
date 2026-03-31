@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="MagnifyingStimulant">
+        <DisplayName>Magnifying Stimulant</DisplayName>
+        <Description>This alchemical marvel is notoriously difficult to brew, requiring costly out-of-this-world ingredients, state-of-the-art equipment and the expert skills to match. Ingesting it will develop that latent physical and mental potential and push it to the surface. Drink without moderation and amplify it all.</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>500</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Boost</StrVal>
+            <Value>1</Value>
+            <Provides>+1 Attack</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>1</Value>
+            <Provides>+1 Defense</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Accuracy</StrVal>
+            <Value>1</Value>
+			<Provides>+1 Accuracy</Provides>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Value>1</Value>
+            <Provides>+1 Dodge</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_HitPoints</StrVal>
+            <Value>1</Value>
+			<Provides>+1 Hit Points</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ChanceToCrit</StrVal>
+            <Value>1</Value>
+			<Provides>+1 Critical Chance</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_MagicPower</StrVal>
+            <Value>1</Value>
+			<Provides>+1 Spell Mastery</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_SpellDamage</StrVal>			
+            <Value>1</Value>
+			<Provides>+1 Spell Power</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_MagicResist</StrVal>			
+            <Value>1</Value>
+			<Provides>+1 Spell Resistance</Provides>
+        </GameModifier>
+		<IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>1</IsUsable>
+        <UsableInBattle>0</UsableInBattle>
+			<AIData AIPersonality="AI_General">
+				<AIPriority>100</AIPriority>
+			</AIData>
+        <ArtDef>MagnifyingStimulant_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="MagnifyingStimulant_ArtDef">
+            <GameItemTypeModelPack InternalName="MagnifyingStimulant_Default">
+                <IconFile>BMB_MagnifyingStimulant.png</IconFile>
+				<MapParticle>S_ImbueChampion_Particle</MapParticle>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Potion1_1</SFX>
+                <SFX>Potion1_2</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

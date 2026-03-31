@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="PrismaticBelt">
+        <DisplayName>Prismatic Belt</DisplayName>
+        <Description>This colorful belt may look like an innocuous and fancy clothing accessory but case in point, that only proves how many appearances can be deceiving. Each link has been empowered with either Cold, Fire, Lightning or Poison and elemental devastation will be released every time you strike an enemy.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>380</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>MeleeAppliesSpell</Attribute>
+            <StrVal>BMB_PrismaticBelt</StrVal>
+            <Provides>Prismatic Belt Effect- + 4-8 Elemental Attack per hit</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>15</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>80</AIPriority>
+            </AIData>
+        <ArtDef>PrismaticBelt_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="PrismaticBelt_ArtDef">
+            <GameItemTypeModelPack InternalName="PrismaticBelt_Default">
+                <IconFile>BMB_PrismaticBelt.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

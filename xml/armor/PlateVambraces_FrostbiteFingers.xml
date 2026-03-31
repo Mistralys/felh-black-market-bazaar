@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="PlateVambraces_FrostbiteFingers">
+        <DisplayName>Frostbite Fingers</DisplayName>
+        <Description>Cold hands, warm heart?</Description>
+        <Type>Forearms</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>320</ShopValue>       
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>-1</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>6</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Cold</StrVal>
+            <Value>4</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ChanceToCrit</StrVal>
+            <StrVal2>UnitStat_ResistCold</StrVal2>
+            <Value>10</Value>
+            <BonusValue>50</BonusValue>
+            <Provides>+10 Critical Chance vs. enemies with less than 50 Cold Resistance</Provides>
+            <vsLower>1</vsLower>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+            <Type>UnitStat</Type>
+            <Attribute>UnitStat_ArmorProficiency</Attribute>
+            <Value>2</Value>
+        </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>120</AIPriority>
+            </AIData>
+        <ArtDef>Art_PlateVambraces_FrostbiteFingers</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_PlateVambraces_FrostbiteFingers">
+			<GameItemTypeModelPack InternalName="Art_PlateVambraces_FrostbiteFingers_1">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_FrostbiteFingers.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/armor/K_Chainmail_Gloves_Mesh_01.hkb</ModelFile>
+					<Texture_All>K_Chainmail_Armor_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_All>14,156,222</Color_All>		
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/F_Armor_Plate_Vambrace_01.hkb</ModelFile>
+					<Texture_All>K_Armor_Plate_Texture_01.png</Texture_All>
+					<Attachment>forearm_left_lcf</Attachment>
+					<Color_Metal>58,205,255</Color_Metal>
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/F_Armor_Plate_Vambrace_01.hkb</ModelFile>
+					<Texture_All>K_Armor_Plate_Texture_01.png</Texture_All>
+					<Attachment>forearm_right_lcf</Attachment>
+					<Color_Metal>58,205,255</Color_Metal>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_PlateVambraces_FrostbiteFingers_2">
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<IconFile>BMB_FrostbiteFingers.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/armor/F_Chainmail_Gloves_Mesh_01.hkb</ModelFile>
+					<Texture_All>K_Chainmail_Armor_Texture_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_All>14,156,222</Color_All>
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/F_Armor_Plate_Vambrace_01.hkb</ModelFile>
+					<Texture_All>K_Armor_Plate_Texture_01.png</Texture_All>
+					<Attachment>forearm_left_lcf</Attachment>
+					<Color_Metal>58,205,255</Color_Metal>
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/F_Armor_Plate_Vambrace_01.hkb</ModelFile>
+					<Texture_All>K_Armor_Plate_Texture_01.png</Texture_All>
+					<Attachment>forearm_right_lcf</Attachment>
+					<Color_Metal>58,205,255</Color_Metal>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>			
+		</GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

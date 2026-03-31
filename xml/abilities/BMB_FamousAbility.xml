@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+    <AbilityBonus InternalName="BMB_FamousAbility">        
+        <AbilityBonusOption InternalName="BMB_Famous">
+            <DisplayName>Famous</DisplayName>
+            <Description>+1 Fame per Season</Description>
+            <Icon>BMB_Ability_Famous.png</Icon>            
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Fame</StrVal>
+                <Value>1</Value>
+                <Provides>+1 Fame per Season</Provides>
+            </GameModifier>
+            <Type>Army</Type>            
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+</Fragment>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="MysticalSiphon">
+        <DisplayName>Mystical Siphon</DisplayName>
+        <Description>This strange contraption is made of a hard yet pliable material and it's hard to say whether it's organic or mineral based. Gorging on the energy released when a soul is severed from its physical host, the corolla jerks and pulses while emitting nauseating sucking and slurping noises. Not compatible with any form of elegance.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>300</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_HPFromKills</StrVal>
+            <Value>3</Value>
+			<Provides>+3 Hit Points whenever an enemy is killed</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ManaFromKills</StrVal>
+			<DisplayName>+3 Mana</DisplayName>
+            <Value>3</Value>
+			<Provides>+3 Mana Points whenever an enemy is killed</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_StaminaFromKills</StrVal>
+            <Value>3</Value>
+            <Provides>+3 Stamina whenever an enemy is killed</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>60</AIPriority>
+            </AIData>
+        <ArtDef>MysticalSiphon_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="MysticalSiphon_ArtDef">
+            <GameItemTypeModelPack InternalName="MysticalSiphon_Default">
+                <IconFile>BMB_MysticalSiphon.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

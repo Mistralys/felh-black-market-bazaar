@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<UnitType InternalName="BMB_Unit_Dead_Staff_AI">
+        <DisplayName>Intangible Knockers</DisplayName>
+        <RaceType>Race_Type_Wraiths</RaceType>
+        <CanBeDesigned>1</CanBeDesigned>
+        <Gender>Female</Gender>
+        <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+        <HideInSetupLists>1</HideInSetupLists>
+        <IsAIOnlyUnit>1</IsAIOnlyUnit>
+        <IsSovereign>0</IsSovereign>
+        <IsStartingUnitType>1</IsStartingUnitType>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+        </LevelMilestone>        
+        <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Spirit</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>ArmorProficiency1</SelectedAbilityBonusOption>
+		<SelectedAbilityBonusOption>Fast</SelectedAbilityBonusOption>
+		<Equipment>Banshee_Head</Equipment>
+		<Equipment>Wraith_Doublet_ID1</Equipment>
+		<Equipment>Shirt_Female_Arming_Doublet</Equipment>
+		<Equipment>Bracers_Heavy</Equipment>
+		<Equipment>Wraith_Overskirt_ID2</Equipment>
+		<Equipment>Hood_Head_Light</Equipment>		
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Weapon</EquipmentSlot>
+            <WeaponUpgradeType>Staff</WeaponUpgradeType>
+            <EquipmentSlot>Defense</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Attack_Pierce</ComparisonAttribute>
+            <ComparisonAttribute>UnitStat_Attack_Cold</ComparisonAttribute>
+            <ComparisonAttribute>UnitStat_Attack_Fire</ComparisonAttribute>
+            <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+            <ComparisonAttribute>UnitStat_Attack_Poison</ComparisonAttribute>
+        </EquipmentUpgradeDef>
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Torso</EquipmentSlot>
+            <EquipmentSlot>Surcoat</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>            
+        </EquipmentUpgradeDef>
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>LowerBody</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>            
+        </EquipmentUpgradeDef>
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Boots</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>            
+        </EquipmentUpgradeDef>
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Head</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>            
+        </EquipmentUpgradeDef>
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Forearms</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>            
+        </EquipmentUpgradeDef>
+        <Prereq>
+            <Type>Race</Type>
+            <Attribute>Race_Type_Wraiths</Attribute>
+        </Prereq>
+		<Backstory>You remember the passage but not the return. The rite that unmade you in the shadow-places of Resoln was not a rite of death — it only felt that way from the inside. When you crossed the threshold, you were still recognisably yourself.
+
+		When you came back, something came back with you. Something that knows all the doors.
+
+		The living fear you because you are not fully here. You knock against the walls they think can hold you, and the walls open. They call you Intangible Knockers. You pass through regardless.</Backstory>
+		<AnimationPack>SoldierAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>8</ClothPoseIndex>
+		<Color_Hair>220,220,220,255</Color_Hair>
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <InfoCardBackground>BG_EmpireRugged</InfoCardBackground>
+        <ModelPath>M_Banshee_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Banshee</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\Eyeblink_Banshee.png</Texture_Eyes>
+        <Texture_Trans>M_Banshee_Skin_01.png</Texture_Trans>
+        <UnitModelType>Banshee</UnitModelType>
+    </UnitType>	
+</Fragment>

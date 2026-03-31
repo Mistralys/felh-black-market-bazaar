@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="DexterousElixir">
+        <DisplayName>Dexterous Elixir</DisplayName>
+        <Description>While the flavor is an acquired taste, this potion has undeniable virtues, namely granting a sharper eye and a better aim. So drink up already!</Description>        
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>225</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Accuracy</StrVal>
+            <Value>6</Value>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>25</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <IsUsable>1</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>DexterousElixir_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="DexterousElixir_ArtDef">
+            <GameItemTypeModelPack InternalName="DexterousElixir_Default">
+                <IconFile>Potion3.png</IconFile>
+                <TintR>88</TintR>
+                <TintG>130</TintG>
+                <TintB>170</TintB>
+                <SFX>Potion1_1</SFX>
+                <SFX>Potion1_2</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

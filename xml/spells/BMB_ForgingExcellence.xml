@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_ForgingExcellence">
+		<DisplayName>Forging Excellence</DisplayName>
+        <Description>Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Description>       
+        <IconFG>BMB_Ability_ForgingExcellence.png</IconFG>        
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>		
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<Prereq>
+            <Type>UnitStat</Type>
+            <Attribute>UnitStat_Mastersmith</Attribute>
+            <Value>3</Value>
+        </Prereq>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <DisplayName>Forging Excellence</DisplayName>
+            <Duration>-1</Duration>
+            <Value>6</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ChanceToCrit</StrVal>
+            <Duration>-1</Duration>
+            <Value>6</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CritDamageMultiplier</StrVal>
+			<Duration>-1</Duration>
+            <Value>1</Value>
+            <Provides>+100% Critical Damage</Provides>
+        </GameModifier>				
+        <AIData AIPersonality="AI_General">
+            <AIPriority>60</AIPriority>
+        </AIData>
+        <HitSoundFX>Drop_MetalItem1</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_BurningBlade_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.75</EffectScale>
+            <EffectDelay>0.25</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

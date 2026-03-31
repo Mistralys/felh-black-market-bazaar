@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Robe_Ardor">
+        <DisplayName>Robe of Ardor</DisplayName>
+        <Description>Still craving for that extra boost? Well look no further than these enchanted robes which bestow awesome energy levels without the added weight of armor.</Description>
+        <Type>Torso</Type>
+        <Type>Surcoat</Type>
+        <Type>Lowerbody</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>240</ShopValue>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>6</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Stamina_Starting</StrVal>
+            <Value>5</Value>
+            <Provides>+5 Starting Stamina</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Arcane_Apparel</Attribute>
+        </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>70</AIPriority>
+            </AIData>
+        <ArtDef>Art_Robe_Ardor</ArtDef>		
+		<GameItemTypeArtDef InternalName="Art_Robe_Ardor">
+			<GameItemTypeModelPack InternalName="Art_Robe_Ardor_1">
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_RobeOfArdor.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Male_Robe_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Clothes\EmpireUnisexRobe.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>20,65,108</Color_Clothing1>
+					<Color_Clothing2>206,109,45</Color_Clothing2>					
+				</GameItemTypeModel>				            
+			</GameItemTypeModelPack>			
+			<GameItemTypeModelPack InternalName="Art_Robe_Ardor_2">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<IconFile>BMB_RobeOfArdor.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Female_Robe_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Clothes\EmpireUnisexRobe.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>20,65,108</Color_Clothing1>
+					<Color_Clothing2>206,109,45</Color_Clothing2>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+</Fragment>

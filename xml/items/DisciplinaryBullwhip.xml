@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="DisciplinaryBullwhip">
+        <DisplayName>Disciplinary Bullwhip</DisplayName>
+        <Description>This finely crafted whip should motivate the laggards in your army to put some speed into it.</Description>
+		<Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>140</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustArmyStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>1</Value>
+            <Provides>+1 to the army's Initiative</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>50</AIPriority>
+            </AIData>
+        <ArtDef>DisciplinaryBullwhip_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="DisciplinaryBullwhip_ArtDef">
+            <GameItemTypeModelPack InternalName="DisciplinaryBullwhip_Default">
+                <IconFile>BMB_DisciplinaryBullwhip.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

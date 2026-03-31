@@ -1,25 +1,39 @@
-# Black Market Bazaar - Mod Module 
+# Black Market Bazaar - Mod Module
   
-The Black Market Bazaar (BMB) is a content mod for Elemental: Reforged (originally Fallen Enchantress: Legendary Heroes). It adds 244 new items, 76 item-related spells, and 19 new clothes for custom sovereigns. 
+The Black Market Bazaar (BMB) is a content mod for Elemental: Reforged (originally Fallen Enchantress: Legendary Heroes). It adds 244 new items, 76 item-related spells, and 19 new clothes for custom sovereigns.
   
-All mod XML files use the BMB_ prefix for InternalName values to avoid collisions with the base game and other mods. 
+All mod XML files use the BMB_ prefix for InternalName values to avoid collisions with the base game and other mods.
   
----  
+---
+
+## XML Fragment Workflow
+
+The XML files in `Mods/src/Data/GameCore/` are **generated** from individual fragment files in the `/xml` directory. The `/xml` directory is the source of truth — do not edit the monolithic XML files directly.
+
+- **To edit an item**: modify its fragment file in `xml/<subfolder>/<InternalName>.xml`.
+- **To add an item**: create a new fragment file in the appropriate `xml/` subfolder.
+- **To build**: run `npm run build` — the merge step assembles fragments into monolithic files, then deploys.
+
+The generated monolithic files are listed in `.gitignore` and are not tracked in version control.
+
+---
   
-## File Inventory 
+## File Inventory
+
+> **Note:** These files are generated from `/xml` fragments during `npm run build`.
   
-| File | Root Element | Content | 
-|---|---|---| 
-| BMB_Items.xml | GameItemTypes | Accessories, consumables, and miscellaneous items | 
-| BMB_Weapons.xml | GameItemTypes | Weapon definitions (axes, swords, staves, bows, wands) |  
-| BMB_Armor.xml | GameItemTypes | Armor pieces (helmets, shields, body armor) |  
-| BMB_Clothes.xml | GameItemTypes | Clothing items (robes, cloaks, boots) - includes 19 sovereign-equippable outfits |  
-| BMB_Spells.xml | Spells | 76 item-triggered spell definitions |  
-| BMB_Abilities.xml | AbilityBonuses | Custom hero/unit ability definitions |  
-| BMB_Effects.xml | - | Visual effect definitions for BMB items |  
-| BMB_Units.xml | - | Custom unit definitions (e.g., summoned creatures) |  
-| BMB_UnitStats.xml | - | Custom unit stat type definitions |  
-| BMB_CoreItemsModifications.xml | GameItemTypes | Modifications/overrides to base game items |  
+| File | Root Element | Content | Source Fragments |
+|---|---|---|---|
+| BMB_Items.xml | GameItemTypes | Accessories, consumables, and miscellaneous items | `xml/items/` |
+| BMB_Weapons.xml | GameItemTypes | Weapon definitions (axes, swords, staves, bows, wands) | `xml/weapons/` |
+| BMB_Armor.xml | GameItemTypes | Armor pieces (helmets, shields, body armor) | `xml/armor/` |
+| BMB_Clothes.xml | GameItemTypes | Clothing items (robes, cloaks, boots) - includes 19 sovereign-equippable outfits | `xml/clothes/` |
+| BMB_Spells.xml | Spells | 76 item-triggered spell definitions | `xml/spells/` |
+| BMB_Abilities.xml | AbilityBonuses | Custom hero/unit ability definitions | `xml/abilities/` |
+| BMB_Effects.xml | EffectBlueprints | Visual effect definitions for BMB items | `xml/effects/` |
+| BMB_Units.xml | UnitTypes | Custom unit definitions (e.g., summoned creatures) | `xml/units/` |
+| BMB_UnitStats.xml | PlayerAbilityTypes | Custom unit stat type definitions | `xml/unit-stats/` |
+| BMB_CoreItemsModifications.xml | GameItemTypes | Modifications/overrides to base game items | `xml/core-items-mods/` |
   
 ## Supporting Files  
   

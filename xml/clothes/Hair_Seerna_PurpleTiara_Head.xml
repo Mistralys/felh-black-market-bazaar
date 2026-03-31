@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Hair_Seerna_PurpleTiara_Head">
+        <DisplayName>Seerna Hair Purple Tiara</DisplayName>
+        <Type>Head</Type>
+        <Subtype>Hair</Subtype>
+        <CanBeEquipped>1</CanBeEquipped>
+		<Likelihood>0</Likelihood>
+		<RarityDisplay>Nil</RarityDisplay>
+        <ArtDef>Hair_Seerna_PurpleTiara_Head_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Hair_Seerna_PurpleTiara_Head_ArtDef">
+            <GameItemTypeModelPack InternalName="Hair_Seerna_PurpleTiara_Head_Default">
+                <IconFile>SeernaHair.png</IconFile>
+                <SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+                <GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Hair\F_Female_Hair_Mesh_02.hkb</ModelFile>
+                    <AttachmentType>Skinned</AttachmentType>
+                    <Texture_Hair>Gfx\HKB\Hair\F_Female_Hair_Texture_01.png</Texture_Hair>
+                    <Texture_Trans>BMB_Custom_F_Accessories_Texture_01.png</Texture_Trans>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

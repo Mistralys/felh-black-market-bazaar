@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_PlagueTouch">
+        <DisplayName>Plague Touch</DisplayName>
+        <Description>Halves the Poison Resistance of Targets, Poisons them and spreads Infection.</Description>
+        <Image>T_Infection_Painting.png</Image>
+        <IconFG>T_Infection_Icon.png</IconFG>
+        <CanStack>0</CanStack>        
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Other</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <IsResistable>1</IsResistable>
+		<HideInHiergamenon>1</HideInHiergamenon>        
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistPoison</StrVal>
+            <Duration>-1</Duration>
+            <Multiplier>0.5</Multiplier>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Poison</AttackStat>
+            <Duration>-1</Duration>
+            <Effect>E_Poison_Particle</Effect>
+            <SoundFX>Spell_Poisoned2_01</SoundFX>
+            <PerTurn>1</PerTurn>
+            <Value>4</Value>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>TacticalUnit</ModType>
+            <Attribute>InfectNearbyAlliesWith</Attribute>
+            <StrVal>SpellSubClass</StrVal>
+            <StrVal2>Debuff</StrVal2>
+            <DisplayName>Contagion</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Infection_Particle</Effect>
+            <PerTurn>1</PerTurn>
+            <Radius>-1</Radius>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Infection_01</HitSoundFX>
+        <HitSoundFX>Spell_Infection_02</HitSoundFX>
+    </SpellDef>
+</Fragment>

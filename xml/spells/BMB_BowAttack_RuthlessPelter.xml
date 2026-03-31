@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_BowAttack_RuthlessPelter">
+        <DisplayName>Ruthless Pelter Bow Attack</DisplayName>
+        <Description>Attack a unit from a distance with a single arrow from your bow, push them back and possibly knock them prone.</Description>
+        <Image>Action_BowArrow.png</Image>
+        <IconFG>Action_BowArrow.png</IconFG>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <IsRangedAttack>1</IsRangedAttack>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+        </GameModifier>
+		<GameModifier>
+            <ModType>TacticalUnit</ModType>
+            <Attribute>TargetMovesBack</Attribute>
+            <Value>2</Value>
+        </GameModifier>
+		 <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_BashChance</StrVal>
+            <Value>100</Value>
+            <Provides>Bash- Has a chance equal to the damage done of knocking the victim prone</Provides>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Hit_Arrow1</HitSoundFX>
+        <HitSoundFX>Hit_Arrow2</HitSoundFX>
+        <MissSoundFX>Miss_Swing2</MissSoundFX>
+        <SpellCastSoundFX>Spell_BowAttack_BasicCast_01</SpellCastSoundFX>
+        <SpellCastEffectName>Arrow</SpellCastEffectName>
+        <SpellCastEffectScale>0.3</SpellCastEffectScale>
+        <SpellCastProjectile>1</SpellCastProjectile>
+        <SpellCastProjectileSpeed>700</SpellCastProjectileSpeed>
+		 <SpellDefEffect>
+            <EffectName>BMB_RuthlessPelter_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

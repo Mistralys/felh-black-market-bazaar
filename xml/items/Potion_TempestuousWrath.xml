@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Potion_TempestuousWrath">
+        <DisplayName>Tempestuous Wrath</DisplayName>
+        <Description>Drink this stormy brew and let lightning bolts become the instruments of your raging anger.</Description>
+        <ShopValue>100</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UseSpell</Attribute>
+            <StrVal>BMB_TempestuousWrath</StrVal>
+            <Provides>+4 Lightning Attack for the duration of combat</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>40</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+        <UsableInBattle>1</UsableInBattle>
+        <UsableOnlyOnceInBattle>0</UsableOnlyOnceInBattle>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>Potion_TempestuousWrath_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Potion_TempestuousWrath_ArtDef">
+            <GameItemTypeModelPack InternalName="Potion_TempestuousWrath_Default">
+                <IconFile>BMB_TempestuousWrath.png</IconFile>
+                <SFX>Potion1_1</SFX>
+                <SFX>Potion1_2</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

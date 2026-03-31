@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_ShatterResistance">
+        <DisplayName>Shatter Resistance</DisplayName>
+        <Description>Target loses 3 Defense and 6 Spell Resistance points per strike</Description>
+        <Image>Tech_Arcane_Weapons.png</Image>
+        <IconFG>T_ShadowBolt_Icon.png</IconFG>
+		<CanStack>1</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_MagicResist</StrVal>
+            <DisplayName>Resist Loss</DisplayName>
+            <Duration>-1</Duration>
+			<Value>-8</Value>	
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <DisplayName>Defense Loss</DisplayName>
+            <Duration>-1</Duration>
+			<Value>-4</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Shadowbolt_Hit</HitSoundFX>
+		<SpellDefEffect>
+            <EffectName>T_Confusion_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>1</PlayOnAllTargets>
+        </SpellDefEffect>
+	</SpellDef>
+</Fragment>

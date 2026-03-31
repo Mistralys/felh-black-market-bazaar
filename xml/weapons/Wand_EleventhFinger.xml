@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Wand_EleventhFinger">
+        <DisplayName>Archmage's Eleventh Finger</DisplayName>
+        <Description>The epitome of sorcerous Wands, it will break the limiting barriers of arcane knowledge, send you on a mystical high and lead you to occult apotheosis.</Description>
+        <Type>Weapon</Type>        
+        <WeaponType>Staff</WeaponType>
+        <WeaponUpgradeType>Wand</WeaponUpgradeType>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>800</ShopValue>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Value>5</Value>
+			<Provides>5 Physical Attack + 10 Magical Attack (+1 per the Caster's Level)</Provides>	
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_MagicPower</StrVal>
+            <Value>25</Value>
+            <Provides>+25 Spell Mastery</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_SpellDamage</StrVal>
+            <Value>25</Value>
+            <Provides>+25% Spell Damage</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockRangedAction</Attribute>
+            <StrVal>BMB_BowAttack_EleventhFingerWand</StrVal>
+            <Provides>Ranged attack</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>10</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<TacticalRange>20</TacticalRange>
+		<Prereq>
+            <Type>UnitStat_Level</Type>
+            <Attribute>6</Attribute>
+        </Prereq>	
+        <AIData AIPersonality="AI_General">
+            <AIPrefType>AIPrefType_BLUNT</AIPrefType>
+            <AIPriority>500</AIPriority>
+        </AIData>
+        <ArtDef>Wand_EleventhFinger_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Wand_EleventhFinger_ArtDef">
+            <GameItemTypeModelPack InternalName="Wand_EleventhFinger_Default">
+                <IconFile>BMB_ArchmagesEleventhFinger.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <AttackSFX>Hit_WinterStaff_01</AttackSFX>
+                <AttackSFX>Hit_WinterStaff_02</AttackSFX>
+                <AttackSFX>Hit_WinterStaff_03</AttackSFX>
+                <EquipSFX>Equip_WoodenItem_01</EquipSFX>
+                <EquipSFX>Equip_WoodenItem_02</EquipSFX>
+                <EquipSFX>Equip_WoodenItem_03</EquipSFX>
+                <OnHitParticleName>Staff_Attack</OnHitParticleName>
+                <SoundPack>SoundPack_Staff_Lightning</SoundPack>
+                <SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+                <SupportedUnitModelType>Banshee</SupportedUnitModelType>
+                <SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IronGolem</SupportedUnitModelType>
+                <SupportedUnitModelType>JuggernautMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>Skeleton</SupportedUnitModelType>
+                <SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Items\magnar_staff.hkb</ModelFile>
+                    <Texture_All>Gfx\HKB\Items\F_Accessories_Texture_01.png</Texture_All>
+                    <Attachment>hand_right_Lcf</Attachment>
+					<Color_Metal>9,118,239</Color_Metal>
+					<Scale>0.68</Scale>        	
+        <EffectAttachment>
+            <Attachment>Effect_Loc_04</Attachment>
+            <EffectName>BMB_EleventhFingerWand_Particle</EffectName>
+            <EffectPosition>0,0,-35</EffectPosition>
+            <EffectRotation>0,0,0</EffectRotation>
+            <EffectScale>0.4</EffectScale>
+        </EffectAttachment>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

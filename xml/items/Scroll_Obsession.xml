@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Scroll_Obsession">
+        <DisplayName>Scroll of Obsession</DisplayName>
+        <Description>The difference between being focused and obsessed is paper thin indeed.</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>180</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockUnitAbility</Attribute>
+            <StrVal>Spell_Obsession</StrVal>
+            <Provides>Grants the unit the Obsession spell</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>1</IsUsable>
+        <UsableInBattle>0</UsableInBattle>
+        <ArtDef>Scroll_Obsession_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Scroll_Obsession_ArtDef">
+            <GameItemTypeModelPack InternalName="Scroll_Obsession_Default">
+                <IconFile>Parchment1.png</IconFile>
+                <TintG>255</TintG>
+                <SFX>AirShard_SFX_01</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

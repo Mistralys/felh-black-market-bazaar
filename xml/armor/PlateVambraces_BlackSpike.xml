@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="PlateVambraces_BlackSpike">
+        <DisplayName>Black Spike's Fists</DisplayName>
+        <Description>Legendary gladiator Black Spike was said to be invincible in the arena, piling up victories and corpses, slaying champions and monsters alike with tireless and relentless determination. These spiny vambraces can still pack quite a punch.</Description>
+        <Type>Forearms</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>500</ShopValue>       
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>1</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>6</Value>
+        </GameModifier>		
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockCombatAbility</Attribute>
+            <StrVal>BMB_PowerPunch</StrVal>
+            <Provides>BlackSpike's Power Punch- +50% Attack and the victim gets knocked back 2 tiles</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_BlackSpike</StrVal>
+            <Value>1</Value>            
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockCombatAbility</Attribute>
+            <StrVal>BMB_DismantlingStroke</StrVal>
+            <Provides>Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+            <Type>UnitStat</Type>
+            <Attribute>UnitStat_ArmorProficiency</Attribute>
+            <Value>2</Value>
+        </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>95</AIPriority>
+            </AIData>
+        <ArtDef>Art_PlateVambraces_BlackSpike</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_PlateVambraces_BlackSpike">
+			<GameItemTypeModelPack InternalName="Art_PlateVambraces_BlackSpike_1">				
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_BlackSpikesFists.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>				
+				<GameItemTypeModel>
+					<ModelFile>fallen_elite_vambrace_A.hkb</ModelFile>
+					<Texture_All>Fallen_Elite_armor_texture_A_01.png</Texture_All>
+					<Attachment>forearm_left_lcf</Attachment>
+					<Color_All>0,0,0</Color_All>					
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>fallen_elite_vambrace_A.hkb</ModelFile>
+					<Texture_All>Fallen_Elite_armor_texture_A_01.png</Texture_All>
+					<Attachment>forearm_right_lcf</Attachment>
+					<Color_All>0,0,0</Color_All>					
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>			
+		</GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

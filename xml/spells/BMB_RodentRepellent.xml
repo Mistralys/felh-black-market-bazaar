@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_RodentRepellent">
+        <DisplayName>Rodent Repellent</DisplayName>
+        <Description>Creates a rodent free zone in target city (+15% more food per Essence and -10% Unrest).</Description>
+        <Image>S_AuraofVitality_Painting.png</Image>
+        <IconFG>BMB_Ability_RodentRepellent.png</IconFG>        
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>City</SpellBookSortCategory>
+        <SpellBookSortSubCategory>CityEnchantment</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>ImpResourceBooster</SpellClass>
+        <SpellSubClass>Other</SpellSubClass>
+        <SpellTargetType>FriendlyCity</SpellTargetType>        
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>25</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>ResourceMultiplier</ModType>
+            <Attribute>Food</Attribute>
+            <Duration>-1</Duration>
+            <PerTurn>1</PerTurn>
+            <Calculate InternalName="Calc" ValueOwner="TargetCity">
+                <Expression><![CDATA[[TileYieldEssence] * 0.15]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 1]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Unrest</Attribute>
+            <Duration>-1</Duration>
+            <PerTurn>1</PerTurn>
+            <Value>-10</Value>
+        </GameModifier>
+        <ValidTerrainCategory>City</ValidTerrainCategory>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_BlessCity_01</HitSoundFX>
+        <SpellCastEffectName>Brilliance</SpellCastEffectName>
+        <SpellCastEffectScale>.4</SpellCastEffectScale>
+        <SpellDefEffect>
+            <EffectName>S_Inspiration_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.75</EffectScale>
+            <EffectDelay>0.5</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

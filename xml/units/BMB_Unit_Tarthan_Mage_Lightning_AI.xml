@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<UnitType InternalName="BMB_Unit_Tarthan_Mage_Lightning_AI">
+        <DisplayName>Thunderbirds</DisplayName>
+        <RaceType>Race_Type_Tarthans</RaceType>
+        <CanBeDesigned>1</CanBeDesigned>
+        <Gender>Female</Gender>
+        <AdditionalTrainingTurns>20</AdditionalTrainingTurns>
+        <HideInSetupLists>1</HideInSetupLists>
+        <IsAIOnlyUnit>1</IsAIOnlyUnit>
+        <IsSovereign>0</IsSovereign>
+        <IsStartingUnitType>1</IsStartingUnitType>
+        <LevelMilestone InternalName="L1">
+            <Level>1</Level>
+        </LevelMilestone>
+        <SelectedAbilityBonusOption>Blood_Tarth</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Precision</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Fast</SelectedAbilityBonusOption>
+        <SelectedAbilityBonusOption>Bloodthirsty</SelectedAbilityBonusOption>
+		<Equipment>Staff_Thunderous</Equipment>
+        <Equipment>K_Female_Head_05</Equipment>
+		<Equipment>Sovereign_Shoulder_Length_Hair</Equipment>
+		<Equipment>TallBoots_ID1</Equipment>
+		<Equipment>Sovereign_Female_Warrior_Shirt_ID1</Equipment>
+		<Equipment>Female_Vest_ID2</Equipment>
+		<Equipment>Female_Basic_Pants_ID1</Equipment>
+		<Equipment>Muchant_Cloak_ID1</Equipment>
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Weapon</EquipmentSlot>
+            <WeaponUpgradeType>FireStaff</WeaponUpgradeType>
+            <EquipmentSlot>Defense</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Attack_Lightning</ComparisonAttribute>
+            <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+        </EquipmentUpgradeDef>       
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Boots</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+            <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+        </EquipmentUpgradeDef>
+        <EquipmentUpgradeDef>
+            <EquipmentSlot>Forearms</EquipmentSlot>
+            <SelectionCriteria>MaximizeSum</SelectionCriteria>
+            <ComparisonAttribute>UnitStat_Defense_Pierce</ComparisonAttribute>
+            <ForUpgradeActionOnly>1</ForUpgradeActionOnly>
+        </EquipmentUpgradeDef>
+        <Prereq>
+            <Type>Race</Type>
+            <Attribute>Race_Type_Tarthans</Attribute>
+        </Prereq>
+        <Backstory>Once they were rebels; slaves fighting to shake off the chains of the Capitaran arenas. Now they are an army - brave and determined soldiers with a country of their own to defend. Yet by training and nature, Tarthans remain gladiators - used to fighting alone, or in small groups. They will strike quickly and retreat, never allowing themselves to get bogged down in a long, drawn-out conflict. Their commanders drill them constantly on all types of terrain, so that in combat they may move as quickly in swamp as on packed earth.</Backstory>
+        <AnimationPack>SoldierAnimationPack</AnimationPack>
+        <BattleAnimationBehavior>Melee</BattleAnimationBehavior>
+        <ClothMapScale>1.6</ClothMapScale>
+        <ClothPoseIndex>0</ClothPoseIndex>        
+        <CutSceneDataPack>DefaultUnitCutscenePack</CutSceneDataPack>
+        <EyeTexture>gfx\eyes\blinks\eyeblink_f2_blue.png</EyeTexture>
+        <InfoCardBackground>BG_Swamp</InfoCardBackground>
+        <ModelPath>Gfx\HKB\Units\K_Female_Mesh_01.hkb</ModelPath>
+        <ModelScale>1</ModelScale>
+        <MovingSFX>TEMP_KnightMarching1</MovingSFX>
+        <OnHitParticleName>Bloody_OnHit</OnHitParticleName>
+        <SkeletonPath>Gfx\HKB\Units\K_Male_Skeleton_01.hkb</SkeletonPath>
+        <SoundPack>SoundPack_Generic_Female</SoundPack>
+        <TacticalModelScale>1.5</TacticalModelScale>
+        <Texture_Eyes>gfx\eyes\blinks\eyeblink_f2_blue.png</Texture_Eyes>
+        <Texture_Skin>K_Female_Scarred_Texture_01.png</Texture_Skin>
+        <UnitModelType>TarthanFemale</UnitModelType>
+    </UnitType>	
+</Fragment>

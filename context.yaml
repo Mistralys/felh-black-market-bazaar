@@ -28,6 +28,7 @@ documents:
           - 'design/'
           - 'node_modules/'
           - 'docs/agents/plans/'
+          - 'xml/'
         renderFormat: ascii
         maxDepth: 5
 

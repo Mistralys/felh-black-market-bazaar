@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="LeatherBreastpiece_Mastersmiths">
+        <DisplayName>Master smith's Forging Leathers</DisplayName>
+        <Description>A blacksmith's apron which can double as armor, it is so resistant to heat you could take a swim in molten rock with it. Or maybe not.</Description>
+        <Type>Torso</Type>
+        <Type>Surcoat</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>200</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>5</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistFire</StrVal>
+            <Value>3</Value>
+			<PerLevel>1</PerLevel>
+            <Provides>+3% Fire Resistance per Level</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Mastersmith</StrVal>
+            <Value>1</Value>            
+        </GameModifier>
+		<GameModifier>                      
+            <Provides>Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>        
+            <AIData AIPersonality="AI_General">
+                <AIPriority>55</AIPriority>
+            </AIData>
+		<ArtDef>Art_LeatherBreastpiece_Mastersmiths</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_LeatherBreastpiece_Mastersmiths">
+			<GameItemTypeModelPack InternalName="Art_LeatherBreastpiece_Mastersmiths_1">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+                <SupportedUnitModelType>Banshee</SupportedUnitModelType>
+                <SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+                <SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+                <SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
+				<IconFile>BMB_MastersmithsForgingLeathers.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>fallen_medium_chest_guard_A.hkb</ModelFile>
+					<Texture_All>fallen_basic_armor_texture.png</Texture_All>
+					<Attachment>chest_center_lcf</Attachment>
+					<Color_All>178,102,0</Color_All>
+				</GameItemTypeModel>				
+				<GameItemTypeModel>
+					<ModelFile>fallen_medium_front_skirting_A.hkb</ModelFile>
+					<Texture_All>fallen_basic_armor_texture.png</Texture_All>
+					<Attachment>skirting_center_lcf</Attachment>
+					<Color_All>178,102,0</Color_All>
+				</GameItemTypeModel>	
+				<GameItemTypeModel>
+					<ModelFile>fallen_medium_rear_skirting_A.hkb</ModelFile>
+					<Texture_All>fallen_basic_armor_texture.png</Texture_All>
+					<Attachment>rear_skirting_lcf</Attachment>
+					<Color_All>178,102,0</Color_All>
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>fallen_medium_right_skirting_A.hkb</ModelFile>
+					<Texture_All>fallen_basic_armor_texture.png</Texture_All>
+					<Attachment>skirting_right_lcf</Attachment>
+					<Color_All>178,102,0</Color_All>
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>fallen_medium_right_skirting_A.hkb</ModelFile>
+					<Texture_All>fallen_basic_armor_texture.png</Texture_All>
+					<Attachment>skirting_left_lcf</Attachment>
+					<Color_All>178,102,0</Color_All>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>        			
+		</GameItemTypeArtDef>
+	</GameItemType>
+</Fragment>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="SlimyWaders">
+        <DisplayName>Slimy Waders</DisplayName>
+        <Description>Spongy texture and slimy color to behold,
+A squishy squashy walk with feet ever cold,
+A busy buzzin' swarm to twirl and whirl around, 
+A most sticky stride to stay firm on the ground.</Description>
+        <Type>Boots</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>160</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>2</Value>
+        </GameModifier>        
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockCombatAbility</Attribute>
+            <StrVal>BMB_InsectSwarm</StrVal>
+            <Provides>Allows the unit to cast Insect Swarm</Provides>
+        </GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>MeleeDefenseAppliesSpell</Attribute>
+			<StrVal>TangledWeb</StrVal>                
+			<Provides>Sticky Goo - Enemies that strike the wearer are immobilized for 3 rounds unless they resist</Provides>
+        </GameModifier>	        
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+		<Likelihood>20</Likelihood>	
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        	<AIData AIPersonality="AI_General">
+                <AIPriority>32</AIPriority>
+            </AIData>        
+        <ArtDef>Art_SlimyWaders</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_SlimyWaders">
+			<GameItemTypeModelPack InternalName="Art_SlimyWaders_1">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_SlimyWaders.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Male_Boots_Warrior_Mesh_01.hkb</ModelFile>
+					<Texture_All>BMB_Texture_SlimyWaders.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_All>124,152,56</Color_All>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_SlimyWaders_2">
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<IconFile>BMB_SlimyWaders.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/F_Chainmail_Boots_Mesh_02.hkb</ModelFile>
+					<Texture_All>BMB_Texture_SlimyWaders.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_All>124,152,56</Color_All>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+</Fragment>

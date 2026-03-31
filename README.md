@@ -75,7 +75,7 @@ This project uses a **local build config** file that is machine-specific and nev
 
 ## Build Command
 
-Deploys `Mods/src/` to the game's Mods folder in one step.
+Merges XML fragments and deploys `Mods/src/` to the game's Mods folder in one step.
 
 ### Run directly
 
@@ -91,11 +91,12 @@ node scripts/build.mjs
 
 What it does:
 
-1. Reads `build.config.json` and validates `deployPath` and `modID`.
-2. Confirms `Mods/src/` exists in the project.
-3. Deletes `<deployPath>/<modID>/` if it already exists (clean slate).
-4. Copies `Mods/src/` to `<deployPath>/<modID>/`.
-5. Prints a summary: `Build complete. N file(s) deployed to: <path>`.
+1. **Merges XML fragments** from `xml/` into monolithic XML files in `Mods/src/Data/GameCore/` (skipped if `xml/` doesn't exist).
+2. Reads `build.config.json` and validates `deployPath` and `modID`.
+3. Confirms `Mods/src/` exists in the project.
+4. Deletes `<deployPath>/<modID>/` if it already exists (clean slate).
+5. Copies `Mods/src/` to `<deployPath>/<modID>/`.
+6. Prints a summary: `Build complete. N file(s) deployed to: <path>`.
 
 The operation is idempotent — running it again produces the same result.
 
@@ -144,16 +145,60 @@ Keys are assigned alphabetically in declaration order. Adding a new item appends
 
 ---
 
+## XML Fragment Workflow
+
+The mod's XML data is authored as individual fragment files in the `xml/` directory, one file per game entity. During build, these fragments are merged into the monolithic XML files that the game engine expects.
+
+### Fragment structure
+
+```
+xml/
+├── items/                  → BMB_Items.xml
+├── weapons/                → BMB_Weapons.xml
+├── armor/                  → BMB_Armor.xml
+├── clothes/                → BMB_Clothes.xml
+├── spells/                 → BMB_Spells.xml
+├── abilities/              → BMB_Abilities.xml
+├── effects/                → BMB_Effects.xml
+├── units/                  → BMB_Units.xml
+├── unit-stats/             → BMB_UnitStats.xml
+└── core-items-mods/        → BMB_CoreItemsModifications.xml
+```
+
+Each fragment is a complete XML document with a `<Fragment>` wrapper:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+    <GameItemType InternalName="AmuletOfContamination">
+        <!-- ... full entry content ... -->
+    </GameItemType>
+</Fragment>
+```
+
+The `xml/` directory is the **source of truth**. The monolithic XML files in `Mods/src/Data/GameCore/` are generated and git-ignored.
+
+### Adding a new item
+
+1. Create a new `.xml` file in the appropriate `xml/` subfolder (e.g., `xml/items/BMB_NewItem.xml`).
+2. Use the `<Fragment>` wrapper format shown above.
+3. Run `npm run build` — the merge step assembles all fragments into the monolithic files, then deploys.
+
+---
+
 ## Repository Layout
 
 | Path | Purpose |
 |---|---|
-| ``scripts/build.mjs`` | Build/deploy script — copies mod to game folder |
+| ``xml/`` | XML fragment source files (one per game entity) — **source of truth** |
+| ``scripts/build.mjs`` | Build/deploy script — merges fragments, then copies mod to game folder |
+| ``scripts/split-xml.mjs`` | One-time migration script (splits monolithic XML into fragments) |
+| ``scripts/lib/merge-xml.mjs`` | XML fragment merge module (used by build.mjs) |
 | ``scripts/menu.mjs`` | Interactive terminal menu |
 | ``scripts/prepare.mjs`` | Config-reminder hook (runs after `npm install`) |
 | ``scripts/lib/output.mjs`` | Shared console output helpers (colours, symbols) |
 | ``scripts/`` | Node.js build and tooling scripts |
-| ``Mods/`` | Mod source files |
+| ``Mods/`` | Mod source files (GameCore XML files are generated from ``xml/``) |
 | ``docs/`` | Project documentation |
 | ``.build.config.example.json`` | Committed template for local build config |
 | ``build.config.json`` | Your local build config (git-ignored) |

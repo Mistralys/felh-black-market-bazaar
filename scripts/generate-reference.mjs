@@ -1,8 +1,22 @@
+/**
+ * Item reference generator for the Black Market Bazaar mod.
+ *
+ * Reads the monolithic XML files from Mods/src/Data/GameCore/ and generates
+ * a Markdown reference document at docs/references/items.md.
+ *
+ * DEPENDENCY: The XML files in Mods/src/Data/GameCore/ are generated from
+ * fragments in /xml by the merge step in build.mjs. If the generated files
+ * are missing or stale, run `npm run build` first (or invoke mergeXmlFragments
+ * directly) to regenerate them before running this script.
+ */
+
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { XMLParser } from 'fast-xml-parser';
-import { success, error, info, step } from './lib/output.mjs';
+import { success, error, warn, info, step } from './lib/output.mjs';
+import { mergeXmlFragments } from './lib/merge-xml.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
@@ -331,6 +345,20 @@ function generateMarkdown(categories) {
 
 // ─── Main entry point ────────────────────────────────────────
 export async function generateReference() {
+  // Ensure generated XML files are up-to-date by running the merge step first
+  const mergeResult = await mergeXmlFragments();
+  if (mergeResult) {
+    info(`Merged ${mergeResult.totalFragments} fragment(s) before generating reference.`);
+  }
+
+  // Warn if any expected source file is missing
+  for (const src of SOURCE_FILES) {
+    const filePath = path.join(GAMECORE_DIR, src.file);
+    if (!existsSync(filePath)) {
+      warn(`Source file missing: ${src.file}. Run 'npm run build' to generate it from xml/ fragments.`);
+    }
+  }
+
   info('Parsing XML source files...');
 
   const allSources = [];

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_Beguile">
+        <DisplayName>Beguile</DisplayName>
+        <Description>Victim has a 50% chance to swing at a random unit in melee instead of his target.</Description>
+        <Image>T_Confusion_Painting.png</Image>
+        <IconFG>T_Beguile_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <IsResistable>1</IsResistable>
+		<HideInHiergamenon>1</HideInHiergamenon>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <PreventStackingWith>Confusion</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ClumsyChance</StrVal>
+            <DisplayName>Beguiled</DisplayName>
+            <Duration>-1</Duration>
+            <Value>50</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="TargetUnit">
+                <Expression><![CDATA[2 - [Unit_GetWeaponTacticalRange]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc3" ValueOwner="">
+                <Expression><![CDATA[[Calc] * [Calc2]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Confusion_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Confusion_Particle</EffectName>
+            <LocalPosition>0,35,0</LocalPosition>
+            <EffectScale>0.65</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+            <PlayOnAllTargets>1</PlayOnAllTargets>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

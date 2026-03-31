@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_Mindblast">
+        <DisplayName>Mind Blast</DisplayName>
+        <Description>Does damage equal to 1/6 of the caster's added Spell Mastery and Spell Damage. Half if resisted</Description>
+        <FormattedDescription>Does %d damage to all units in a line 5 tiles long, half if resisted.</FormattedDescription>
+        <Image>T_Pandemonium_Painting.png</Image>
+        <IconFG>BMB_Ability_MindBlast.png</IconFG>
+		<Cooldown>5</Cooldown>	
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+        <IsResistable>1</IsResistable>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsSpecialAbility>1</IsSpecialAbility>
+        <Radius>5</Radius>
+        <RadiusType>LINE_BACKWARD</RadiusType>
+        <Range>5</Range>       
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>            
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_MagicPower] + [UnitStat_SpellDamage]]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] / 6]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * -1]]></Expression>
+            </Calculate>
+           <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>            
+            <IsForSpellResist>1</IsForSpellResist>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_MagicPower] + [UnitStat_SpellDamage]]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] / 12]]></Expression>
+            </Calculate>
+			<Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * -1]]></Expression>
+            </Calculate>
+           <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>TacticalUnit</ModType>
+            <Attribute>TargetKnockedProne</Attribute>
+            <Duration>1</Duration>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>75</AIPriority>
+            <AIMinSpellTargets>2</AIMinSpellTargets>        
+        </AIData>
+        <HitSoundFX>Spell_ManaBlastImpact_01</HitSoundFX>
+        <SpellCastSoundFX>Spell_ManaBlastTravel_01</SpellCastSoundFX>
+        <SpellCastEffectName>BMB_MindBlast_Projectile</SpellCastEffectName>
+        <SpellCastEffectScale>0.7</SpellCastEffectScale>
+        <SpellCastProjectile>1</SpellCastProjectile>
+        <SpellCastProjectileSpeed>500</SpellCastProjectileSpeed>
+        <SpellDefEffect>
+            <EffectName>BMB_MindBlast_Impact</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>2</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

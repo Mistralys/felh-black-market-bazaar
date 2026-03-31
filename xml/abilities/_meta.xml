@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+    <DataChecksum NoParse="1">
+        <Ignore>DispName</Ignore>
+        <Translate>DisplayName,Description</Translate>
+    </DataChecksum>
+</Fragment>

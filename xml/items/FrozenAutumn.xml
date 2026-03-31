@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="FrozenAutumn">
+        <DisplayName>Frozen Autumn</DisplayName>
+        <Description>The transition from fall into winter is usually gradual and goes unnoticed. And sometimes it can be so sudden and violent as to become a devastating glacial onslaught which turns the world into a frozen wasteland in the blink of an eye. In these rare moments, autumn's symbols can freeze to the core and be encased in permanent ice, their fragile shells turning into improbable recipients for tremendous wintry powers.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>300</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustArmyStat</Attribute>
+            <StrVal>UnitStat_Attack_Cold</StrVal>
+            <Value>1</Value>
+            <Provides>+1 Cold to the Army's Attack</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustArmyStat</Attribute>
+            <StrVal>UnitStat_ResistCold</StrVal>
+            <Value>15</Value>
+            <Provides>+15% to the Army's Cold resistance</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>70</AIPriority>
+            </AIData>
+        <ArtDef>FrozenAutumn_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="FrozenAutumn_ArtDef">
+            <GameItemTypeModelPack InternalName="FrozenAutumn_Default">
+                <IconFile>BMB_FrozenAutumn.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

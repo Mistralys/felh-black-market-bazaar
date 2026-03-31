@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="LeatherVambraces_ArcherHands">
+        <DisplayName>Archer Hands</DisplayName>
+        <Description>According to local folktales, these gloves were universally banned from archery tournaments after a squire aptly named Lester the Maladroit outplayed the undefeated champion Sharpeye Sharidon at the annual Harvest Fair. When the subterfuge was discovered, Lester, now designated as the Cheater, became the target of a cartload of rotten tomatoes.</Description>
+        <Type>Forearms</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>110</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>1</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Accuracy</StrVal>
+            <Value>10</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockCombatAbility</Attribute>
+            <StrVal>BMB_BullsEye</StrVal>
+            <Provides>Bull's Eye- +300% Attack when using a Bow, but you lose your next turn.</Provides>
+        </GameModifier>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>BattleAutoCastSpell</Attribute>
+			<StrVal>BMB_HeartOfTheTarget</StrVal>
+			<Value>100</Value>
+			<Provides>Heart of the Target - Ignores 20% of the victim's defense when using a Bow</Provides>
+		</GameModifier>		
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>22</AIPriority>
+            </AIData>
+        <ArtDef>Art_LeatherVambraces_ArcherHands</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_LeatherVambraces_ArcherHands">
+			<GameItemTypeModelPack InternalName="Art_LeatherVambraces_ArcherHands_1">
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_ArcherHands.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Male_Gloves_Soldiers_Mesh_01.hkb</ModelFile>
+					<Texture_All>K_SoldiersGloves.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>0,70,48</Color_Clothing1>
+					<Color_Clothing2>248,200,14</Color_Clothing2>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_LeatherVambraces_ArcherHands_2">
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<IconFile>BMB_ArcherHands.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\F_Male_Gloves_Soldiers_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Clothes\Fallen_Male_Leather_Gloves_01.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>0,70,48</Color_Clothing1>
+					<Color_Clothing2>248,200,14</Color_Clothing2>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_LeatherVambraces_ArcherHands_3">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<IconFile>BMB_ArcherHands.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Female_Gloves_Soldiers_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Clothes\MaleLeatherGloves_Kingdom_Recolorable.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>0,70,48</Color_Clothing1>
+					<Color_Clothing2>248,200,14</Color_Clothing2>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+    </GameItemType>	
+</Fragment>

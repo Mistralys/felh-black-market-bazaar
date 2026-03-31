@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="JadeRing">
+        <DisplayName>Jade Ring</DisplayName>
+        <Description>Cut from the purest jade, this magical ring isn't just a pricey bit of jewelry. It can also serve as either a toxin receptacle or an antidote. Or both.</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>75</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>MeleeAppliesSpell</Attribute>
+            <StrVal>Poisoned</StrVal>
+            <Provides>Melee attacks also do 2 Poison damage per round to the victim</Provides>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_ResistPoison</StrVal>
+            <Value>20</Value>
+            <Provides>+20% Poison Resistance</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>40</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>21</AIPriority>
+            </AIData>
+        <ArtDef>JadeRing_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="JadeRing_ArtDef">
+            <GameItemTypeModelPack InternalName="JadeRing_Default">
+                <IconFile>BMB_JadeRing.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

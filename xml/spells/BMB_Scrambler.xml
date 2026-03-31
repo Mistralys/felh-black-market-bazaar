@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_Scrambler">
+        <DisplayName>Scrambler Effect</DisplayName>
+        <Description>Disrupts a spell an enemy unit is casting and causes them to lose their next turn unless they resist.</Description>                
+        <IconFG>BMB_Ability_Scrambler.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyCaster</SpellTargetType>
+        <IsResistable>1</IsResistable>
+		<HideInHiergamenon>1</HideInHiergamenon>		
+		<IsSpecialAbility>1</IsSpecialAbility>	
+        <GameModifier>
+            <ModType>TacticalUnit</ModType>
+            <Attribute>DisruptSpellCharge</Attribute>
+        </GameModifier>
+		<GameModifier>
+            <ModType>TacticalUnit</ModType>
+            <Attribute>ChanceToLoseNextTurn</Attribute>
+            <DisplayName>Dazed</DisplayName>
+            <Duration>1</Duration>
+            <Value>100</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Feedback_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_Corruption_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>2</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { success, error, info, step } from './lib/output.mjs';
+import { mergeXmlFragments } from './lib/merge-xml.mjs';
 
 // Resolve project root (__dirname equivalent for ESM)
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -54,6 +55,13 @@ async function countFiles(dir) {
  * @returns {Promise<void>}
  */
 export async function build() {
+  // -- 0. Merge XML fragments (if xml/ directory exists)
+  const mergeResult = await mergeXmlFragments();
+  if (mergeResult) {
+    info(`Merged ${mergeResult.totalFragments} fragment(s) into ${mergeResult.perFile.length} XML file(s).`);
+    console.log('');
+  }
+
   // -- 1. Config file presence
   if (!existsSync(CONFIG_FILE)) {
     error('build.config.json not found. Copy ' + CONFIG_EXAMPLE_FILE + ' to build.config.json and set your deployPath.');

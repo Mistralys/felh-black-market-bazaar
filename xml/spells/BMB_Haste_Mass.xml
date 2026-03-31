@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_Haste_Mass">
+        <DisplayName>Mass Haste</DisplayName>
+        <Description>Target army is +5 to Initiative (+1 per air shard).</Description>
+        <FormattedDescription>Target army is +%d to Initiative.</FormattedDescription>
+        <Image>T_Haste_Painting.png</Image>
+        <IconFG>T_Celerity_Icon.png</IconFG>
+		<CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<PreventStackingWith>Haste</PreventStackingWith>
+        <PreventStackingWith>Haste_Adept</PreventStackingWith>
+        <SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>30</Amount>
+        </SpellResourceCost>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>Hasted</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Celerity_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumAirShards]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] + 5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] + 5]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>40</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Haste_01</HitSoundFX>
+        <HitSoundFX>Spell_Haste_02</HitSoundFX>
+    </SpellDef>
+</Fragment>

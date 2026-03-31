@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_AlchemicalSurprise">
+        <DisplayName>Alchemical Surprise</DisplayName>
+        <Description>Random alchemical formula.</Description>        
+        <IconFG>BMB_MortarAndPestle.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>World</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Other</SpellClass>
+        <SpellSubClass>Other</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>        
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>HealingNectar</Attribute>
+			<DisplayName>Healing Nectar!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>HealingNectar</Attribute>
+			<DisplayName>Healing Nectar!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>HealingNectar</Attribute>
+			<DisplayName>Healing Nectar!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>PoisonVial</Attribute>
+			<DisplayName>Vial of Poison!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>PoisonVial</Attribute>
+			<DisplayName>Vial of Poison!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_DarkConcoction</Attribute>
+			<DisplayName>Dark Concoction!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_DarkConcoction</Attribute>
+			<DisplayName>Dark Concoction!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_FireResistance</Attribute>
+			<DisplayName>Fire Resistance Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_FireResistance</Attribute>
+			<DisplayName>Fire Resistance Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Growth</Attribute>
+			<DisplayName>Growth Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Growth</Attribute>
+			<DisplayName>Growth Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Growth</Attribute>
+			<DisplayName>Growth Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Healing</Attribute>
+			<DisplayName>Healing Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Healing</Attribute>
+			<DisplayName>Healing Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Healing</Attribute>
+			<DisplayName>Healing Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_HealingStrong</Attribute>
+			<DisplayName>Iru Elixir!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_HealingStrong</Attribute>
+			<DisplayName>Iru Elixir!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_HealingStrong</Attribute>
+			<DisplayName>Iru Elixir!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_IroneerAle</Attribute>
+			<DisplayName>Ironeer Ale!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_IroneerAle</Attribute>
+			<DisplayName>Ironeer Ale!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_IroneerAle</Attribute>
+			<DisplayName>Ironeer Ale!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_ParidenWine</Attribute>
+			<DisplayName>Pariden Wine!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_ParidenWine</Attribute>
+			<DisplayName>Pariden Wine!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_ParidenWine</Attribute>
+			<DisplayName>Pariden Wine!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Prismatic</Attribute>
+			<DisplayName>Prismatic Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Prismatic</Attribute>
+			<DisplayName>Prismatic Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Prismatic</Attribute>
+			<DisplayName>Prismatic Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_Restoration</Attribute>
+			<DisplayName>Restoration Potion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+        <GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_TrogBlood</Attribute>
+			<DisplayName>Trog Blood!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_TrogBlood</Attribute>
+			<DisplayName>Trog Blood!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_TrogBlood</Attribute>
+			<DisplayName>Trog Blood!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>BloomingTonic</Attribute>
+			<DisplayName>Blooming Tonic!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>BloomingTonic</Attribute>
+			<DisplayName>Blooming Tonic!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>DexterousElixir</Attribute>
+			<DisplayName>Dexterous Elixir!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>DexterousElixir</Attribute>
+			<DisplayName>Dexterous Elixir!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>FragranceOfSophistication</Attribute>
+			<DisplayName>Fragrance of Sophistication!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>IceBomb</Attribute>
+			<DisplayName>Ice Bomb!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>IceBomb</Attribute>
+			<DisplayName>Ice Bomb!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>IceBomb</Attribute>
+			<DisplayName>Ice Bomb!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Liquid Vigor</Attribute>
+			<DisplayName>Liquid Vigor!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Liquid Vigor</Attribute>
+			<DisplayName>Liquid Vigor!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>LostBarrowhillWine</Attribute>
+			<DisplayName>Lost Barrowhill Wine!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>MagnifyingStimulant</Attribute>
+			<DisplayName>Magnifying Stimulant!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>PhilosophersStone</Attribute>
+			<DisplayName>Philosopher's Stone!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_TempestuousWrath</Attribute>
+			<DisplayName>Tempestuous Wrath!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_TempestuousWrath</Attribute>
+			<DisplayName>Tempestuous Wrath!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>Potion_TempestuousWrath</Attribute>
+			<DisplayName>Tempestuous Wrath!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>RejuvenatingFusion</Attribute>
+			<DisplayName>Rejuvenating Fusion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>RejuvenatingFusion</Attribute>
+			<DisplayName>Rejuvenating Fusion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+		<GameModifier>
+			<ModType>GiveItem</ModType>
+			<Attribute>RejuvenatingFusion</Attribute>
+			<DisplayName>Rejuvenating Fusion!</DisplayName>
+			<Value>100</Value>
+		</GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>100</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Alchemy_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_Alchemy_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.75</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

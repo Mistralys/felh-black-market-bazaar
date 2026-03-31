@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Mushroom_Hallucinogenic">
+        <DisplayName>Magic Mushroom</DisplayName>
+        <Description>It's quite known that eating one of these mushrooms is akin to a toss of the proverbial dice. Dare you to eat it?</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>60</ShopValue>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockUnitAbility</Attribute>
+            <StrVal>Hallucinations</StrVal>
+			<Provides>Mysterious properties</Provides>	
+		</GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>25</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <IsUsable>1</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>Mushroom_Hallucinogenic_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Mushroom_Hallucinogenic_ArtDef">
+            <GameItemTypeModelPack InternalName="Mushroom_Hallucinogenic_Default">
+                <IconFile>BMB_MushroomHallucinogenic.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>98</TintG>
+                <TintB>0</TintB>
+                <SFX>Eating</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>
