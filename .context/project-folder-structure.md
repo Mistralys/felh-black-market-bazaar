@@ -12,6 +12,27 @@ _SOURCE: BMB mod project layout_
     │   └── BlackMarketBazaar.elemd
     │   └── Data/
     │       ├── BMB.str
+    │       ├── GameCore/
+    │       │   ├── BMB_Abilities.xml
+    │       │   ├── BMB_Armor.xml
+    │       │   ├── BMB_Clothes.xml
+    │       │   ├── BMB_CoreItemsModifications.xml
+    │       │   ├── BMB_Effects.xml
+    │       │   ├── BMB_Items.xml
+    │       │   ├── BMB_Spells.xml
+    │       │   ├── BMB_UnitStats.xml
+    │       │   ├── BMB_Units.xml
+    │       │   ├── BMB_Weapons.xml
+    │       ├── Localization/
+    │       │   └── English/
+    │       │       └── BMB_Strings_Abilities.xml
+    │       │       └── BMB_Strings_Armor.xml
+    │       │       └── BMB_Strings_Clothes.xml
+    │       │       └── BMB_Strings_Items.xml
+    │       │       └── BMB_Strings_Spells.xml
+    │       │       └── BMB_Strings_UnitStats.xml
+    │       │       └── BMB_Strings_Units.xml
+    │       │       └── BMB_Strings_Weapons.xml
     │   └── Gfx/
     │       └── Black Market Bazaar Icons/
     │           └── BMB_Ability_BullsEye.png
@@ -305,19 +326,37 @@ _SOURCE: BMB mod project layout_
     │   │   ├── 2026-03-31-infernal-companion/
     │   │   │   ├── plan.md
     │   │   │   ├── synthesis.md
+    │   │   ├── 2026-03-31-replace-regex-with-parser/
+    │   │   │   ├── plan.md
+    │   │   │   ├── synthesis.md
+    │   │   ├── 2026-03-31-translation-support/
+    │   │   │   ├── plan.md
+    │   │   │   ├── synthesis.md
     │   │   ├── 2026-03-31-xml-fragment-build/
     │   │   │   ├── plan.md
     │   │   │   ├── synthesis.md
+    │   │   ├── 2026-04-01-fix-generate-reference-effects/
+    │   │   │   ├── synthesis.md
+    │   │   ├── 2026-04-01-lang-config-extraction/
+    │   │   │   ├── synthesis.md
+    │   │   ├── 2026-04-01-rename-flatfiles-to-translatable/
+    │   │   │   ├── synthesis.md
+    │   │   ├── 2026-04-01-verify-translation-keys/
+    │   │   │   ├── synthesis.md
     │   │   ├── README.md
+    │   ├── project-manifest/
+    │   │   ├── README.md
+    │   │   ├── build-pipeline.md
+    │   │   ├── constraints.md
+    │   │   ├── file-tree.md
+    │   │   ├── game-data-reference.md
+    │   │   ├── localization.md
+    │   │   ├── module-context.yaml
+    │   │   ├── tech-stack.md
+    │   │   ├── xml-patterns.md
     │   ├── research/
     │   │   └── 2026-03-28-full-xml-compatibility.md
     │   │   └── 2026-03-28-item-xml-compatibility.md
-    ├── game-data/
-    │   ├── README.md
-    │   ├── module-context.yaml
-    ├── modding-guide/
-    │   ├── README.md
-    │   ├── module-context.yaml
     ├── references/
     │   └── items.md
     │   └── original-felh-readme.txt
@@ -328,15 +367,21 @@ _SOURCE: BMB mod project layout_
     └── build.mjs
     └── generate-reference.mjs
     └── lib/
+        ├── lang-config.mjs
+        ├── merge-translations.mjs
         ├── merge-xml.mjs
         ├── output.mjs
+        ├── verify-translation-keys.mjs
+        ├── xml-parser.mjs
     └── menu.mjs
+    └── migrate-to-dirs.mjs
     └── prepare.mjs
     └── split-xml.mjs
+    └── verify-translation-keys.mjs
 
 ```
 ---
 **File Statistics**
-- **Size**: 16.57 KB
-- **Lines**: 343
+- **Size**: 18.76 KB
+- **Lines**: 388
 File: `project-folder-structure.md`

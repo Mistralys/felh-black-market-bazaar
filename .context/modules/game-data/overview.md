@@ -358,15 +358,63 @@ The `<GameModifier>` element is the universal mechanism for applying stat change
 
 ### Localization
 
-Base game XML uses localization keys for display text:
+> **Detailed reference:** See [`localization.md`](localization.md) for the full localization system reference, including multi-line text handling, `<Translate>` directives, and the complete English localization file inventory.
+
+The base game uses an XML-based localization system. Game data XML references localization keys instead of plain text:
+
 ```xml
 <DisplayName>TXT_ITEMS_AMULETOFFLAMES_DISPLAYNAME</DisplayName>
 ```
 
-Mods can use plain text directly or add keys to `.str` string table files:
+The corresponding text is defined in `data/Localization/<Language>/Strings_*.xml`:
+
 ```xml
-<DisplayName>Amulet of Contamination</DisplayName>
+<?xml version='1.0' encoding='utf-8'?>
+<GameText>
+  <Locale ID="en_US">
+    <Line Key="TXT_ITEMS_AMULETOFFLAMES_DISPLAYNAME" Note="DisplayName for AmuletOfFlames">
+      <Text>Amulet of Flames</Text>
+    </Line>
+  </Locale>
+</GameText>
 ```
+
+#### Localization folder structure
+
+```
+data/Localization/
+├── English/        ← Locale ID: en_US
+├── German/         ← Locale ID: de_DE
+├── French/         ← Locale ID: fr_FR
+├── Spanish/        ← Locale ID: es_ES
+├── Chinese/        ← Locale ID: zh_CN
+├── Japanese/       ← Locale ID: ja_JP
+├── Korean/         ← Locale ID: ko_KR
+└── Russian/        ← Locale ID: ru_RU
+```
+
+#### Locale ID mapping
+
+| Language folder | Locale ID |
+|---|---|
+| `English` | `en_US` |
+| `German` | `de_DE` |
+| `French` | `fr_FR` |
+| `Spanish` | `es_ES` |
+| `Chinese` | `zh_CN` |
+| `Japanese` | `ja_JP` |
+| `Korean` | `ko_KR` |
+| `Russian` | `ru_RU` |
+
+#### Mod localization
+
+Mods can provide their own localization files in `Data/Localization/<Language>/` within the mod directory. The game engine merges mod localization files with the base game's. The Champion Bonanza mod (by Hellions) demonstrates this pattern with `Data/Localization/English/ChampionBonanza_Strings.xml` using `TXT_CB_*` key prefixes.
+
+**BMB localization files** follow the same pattern, using `TXT_BMB_*` key prefixes and files named `BMB_Strings_<Category>.xml` (e.g., `BMB_Strings_Items.xml`, `BMB_Strings_Weapons.xml`).
+
+#### `.str` file format (legacy)
+
+The `.str` file format is a separate, older system used for UI table aliases (e.g., weapon upgrade type labels). It coexists with the XML localization system and serves a different purpose. BMB uses `BMB.str` for weapon type names only.
 
 ### Prerequisite System
 

@@ -8,12 +8,10 @@ _SOURCE: Project README_
 └── README.md
 └── docs/
     ├── agents/
-    │   ├── implementation-history/
-    │   │   └── README.md
-    ├── game-data/
-    │   ├── README.md
-    ├── modding-guide/
-    │   └── README.md
+    │   └── implementation-history/
+    │       ├── README.md
+    │   └── project-manifest/
+    │       └── README.md
 └── node_modules/
     └── fast-xml-builder/
         ├── README.md
@@ -40,11 +38,13 @@ All mod XML files use the BMB_ prefix for InternalName values to avoid collision
 
 The XML files in `Mods/src/Data/GameCore/` are **generated** from individual fragment files in the `/xml` directory. The `/xml` directory is the source of truth — do not edit the monolithic XML files directly.
 
-- **To edit an item**: modify its fragment file in `xml/<subfolder>/<InternalName>.xml`.
-- **To add an item**: create a new fragment file in the appropriate `xml/` subfolder.
-- **To build**: run `npm run build` — the merge step assembles fragments into monolithic files, then deploys.
+- **To edit an item**: modify its `fragment.xml` in `xml/<subfolder>/<InternalName>/fragment.xml`.
+- **To edit English text**: modify `xml/<subfolder>/<InternalName>/en.xml`.
+- **To add an item**: create a new directory `xml/<subfolder>/<InternalName>/` with `fragment.xml` and `en.xml`.
+- **To add a translation**: copy `en.xml` to `<lang>.xml` (e.g., `de.xml`) and translate the text.
+- **To build**: run `npm run build` — merges fragments and translations into monolithic files, then deploys.
 
-The generated monolithic files are listed in `.gitignore` and are not tracked in version control.
+The generated monolithic files (GameCore XML and Localization XML) are listed in `.gitignore` and are not tracked in version control.
 
 ---
   
@@ -65,13 +65,23 @@ The generated monolithic files are listed in `.gitignore` and are not tracked in
 | BMB_UnitStats.xml | PlayerAbilityTypes | Custom unit stat type definitions | `xml/unit-stats/` |
 | BMB_CoreItemsModifications.xml | GameItemTypes | Modifications/overrides to base game items | `xml/core-items-mods/` |
   
-## Supporting Files  
+## Supporting Files
   
-| File | Location | Purpose |  
-|---|---|---|  
-| BMB.str | Mods/src/Data/ | String table for UI labels (weapon type names, etc.) |  
-| *.png | Mods/src/Gfx/Black Market Bazaar Icons/ | Item icons (227 PNG files) |  
-| *.dds | Mods/src/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (16 DDS files) | 
+| File | Location | Purpose |
+|---|---|---|
+| BMB.str | Mods/src/Data/ | String table for UI labels (weapon type names, etc.) |
+| BMB_Strings_Items.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for items |
+| BMB_Strings_Weapons.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for weapons |
+| BMB_Strings_Armor.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for armor |
+| BMB_Strings_Clothes.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for clothes |
+| BMB_Strings_Spells.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for spells |
+| BMB_Strings_Abilities.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for abilities |
+| BMB_Strings_Units.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for units |
+| BMB_Strings_UnitStats.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for unit stats |
+| *.png | Mods/src/Gfx/Black Market Bazaar Icons/ | Item icons (227 PNG files) |
+| *.dds | Mods/src/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (16 DDS files) |
+
+> **Note:** Localization XML files are generated from per-entry `en.xml` (and other `<lang>.xml`) files in `xml/<category>/<Name>/` during `npm run build`. They are git-ignored. To add a translation, add `<lang>.xml` files to the entry directories and rebuild.
   
 ## Naming Conventions  
   
@@ -291,11 +301,12 @@ node scripts/build.mjs
 What it does:
 
 1. **Merges XML fragments** from `xml/` into monolithic XML files in `Mods/src/Data/GameCore/` (skipped if `xml/` doesn't exist).
-2. Reads `build.config.json` and validates `deployPath` and `modID`.
-3. Confirms `Mods/src/` exists in the project.
-4. Deletes `<deployPath>/<modID>/` if it already exists (clean slate).
-5. Copies `Mods/src/` to `<deployPath>/<modID>/`.
-6. Prints a summary: `Build complete. N file(s) deployed to: <path>`.
+2. **Merges translations** from per-entry `en.xml` (and other language files) into `Mods/src/Data/Localization/<Language>/` (skipped if no per-entry directories exist).
+3. Reads `build.config.json` and validates `deployPath` and `modID`.
+4. Confirms `Mods/src/` exists in the project.
+5. Deletes `<deployPath>/<modID>/` if it already exists (clean slate).
+6. Copies `Mods/src/` to `<deployPath>/<modID>/`.
+7. Prints a summary: `Build complete. N file(s) deployed to: <path>`.
 
 The operation is idempotent — running it again produces the same result.
 
@@ -338,6 +349,8 @@ Must be run in an interactive terminal (TTY). Press **q** or **Ctrl+C** to quit.
 | `a` | Generate context documentation (`ctx generate`) |
 | `b` | Build mod (deploy to game folder) |
 | `c` | Generate item reference (`docs/references/`) |
+| `d` | Migrate fragments to translation directories |
+| `e` | Verify translation key integrity (`npm run verify-keys`) |
 | `q` | Quit |
 
 Keys are assigned alphabetically in declaration order. Adding a new item appends the next letter automatically. The menu supports up to 26 items (a–z).
@@ -346,42 +359,74 @@ Keys are assigned alphabetically in declaration order. Adding a new item appends
 
 ## XML Fragment Workflow
 
-The mod's XML data is authored as individual fragment files in the `xml/` directory, one file per game entity. During build, these fragments are merged into the monolithic XML files that the game engine expects.
+The mod's XML data is authored as individual fragment files in the `xml/` directory, one per game entity. During build, these fragments are merged into the monolithic XML files that the game engine expects.
 
 ### Fragment structure
 
+Each translatable category uses **per-entry directories**:
+
 ```
 xml/
-├── items/                  → BMB_Items.xml
-├── weapons/                → BMB_Weapons.xml
-├── armor/                  → BMB_Armor.xml
-├── clothes/                → BMB_Clothes.xml
-├── spells/                 → BMB_Spells.xml
-├── abilities/              → BMB_Abilities.xml
-├── effects/                → BMB_Effects.xml
-├── units/                  → BMB_Units.xml
-├── unit-stats/             → BMB_UnitStats.xml
-└── core-items-mods/        → BMB_CoreItemsModifications.xml
+├── items/
+│   ├── AmuletOfContamination/
+│   │   ├── fragment.xml    ← game data (with TXT_BMB_* keys)
+│   │   └── en.xml          ← English translation
+│   └── BirdOfCelerity/
+│       ├── fragment.xml
+│       └── en.xml
+├── weapons/                (same per-entry structure)
+├── armor/                  (same per-entry structure)
+├── clothes/                (same per-entry structure)
+├── spells/                 (same per-entry structure)
+├── abilities/              (same per-entry structure)
+├── units/                  (same per-entry structure)
+├── unit-stats/             (same per-entry structure)
+├── effects/                ← flat files (no translatable text)
+└── core-items-mods/        ← flat files (base game overrides)
 ```
 
-Each fragment is a complete XML document with a `<Fragment>` wrapper:
+Each `fragment.xml` is a complete XML document with a `<Fragment>` wrapper and `TXT_BMB_*` keys for all player-facing text:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Fragment>
-    <GameItemType InternalName="AmuletOfContamination">
-        <!-- ... full entry content ... -->
+    <GameItemType InternalName="BirdOfCelerity">
+        <DisplayName>TXT_BMB_ITEMS_BIRDOFCELERITY_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_BIRDOFCELERITY_DESCRIPTION</Description>
+        <!-- ... -->
     </GameItemType>
 </Fragment>
 ```
 
-The `xml/` directory is the **source of truth**. The monolithic XML files in `Mods/src/Data/GameCore/` are generated and git-ignored.
+The co-located `en.xml` holds the English text in a simple `<Translation>` format:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bird of Celerity</DisplayName>
+    <Description>This beautiful statuette allows its owner to distort the space and time continuum...</Description>
+    <Provides index="1">Allows the wielder to cast Mass Haste</Provides>
+</Translation>
+```
+
+The `xml/` directory is the **source of truth**. The monolithic XML files in `Mods/src/Data/GameCore/` and the localization files in `Mods/src/Data/Localization/` are generated and git-ignored.
 
 ### Adding a new item
 
-1. Create a new `.xml` file in the appropriate `xml/` subfolder (e.g., `xml/items/BMB_NewItem.xml`).
-2. Use the `<Fragment>` wrapper format shown above.
-3. Run `npm run build` — the merge step assembles all fragments into the monolithic files, then deploys.
+1. Create a new directory `xml/items/BMB_NewItem/`.
+2. Add `fragment.xml` using the `<Fragment>` wrapper with `TXT_BMB_*` keys for all player-facing text.
+3. Add `en.xml` with the English translations in `<Translation>` format.
+4. Run `npm run build` — the merge step assembles all fragments and translations, then deploys.
+
+### Adding a translation
+
+To add a new language translation for an existing entry:
+
+1. Copy `xml/<category>/<Name>/en.xml` to `xml/<category>/<Name>/<lang>.xml` (e.g., `de.xml` for German).
+2. Translate the text content of each element.
+3. Run `npm run build` — the translation merge step generates `Mods/src/Data/Localization/<Language>/` files automatically.
+
+Supported language codes: `en`, `de`, `fr`, `es`, `zh`, `ja`, `ko`, `ru`, `it`, `pl`, `pt`.
 
 ---
 
@@ -389,15 +434,16 @@ The `xml/` directory is the **source of truth**. The monolithic XML files in `Mo
 
 | Path | Purpose |
 |---|---|
-| ``xml/`` | XML fragment source files (one per game entity) — **source of truth** |
-| ``scripts/build.mjs`` | Build/deploy script — merges fragments, then copies mod to game folder |
+| ``xml/`` | XML fragment source files (per-entry directories) — **source of truth** |
+| ``scripts/build.mjs`` | Build/deploy script — merges fragments + translations, then copies mod to game folder |
+| ``scripts/migrate-to-dirs.mjs`` | One-time migration script (flat files → per-entry directories + English translation extraction) |
 | ``scripts/split-xml.mjs`` | One-time migration script (splits monolithic XML into fragments) |
 | ``scripts/lib/merge-xml.mjs`` | XML fragment merge module (used by build.mjs) |
+| ``scripts/lib/merge-translations.mjs`` | Translation merge module (used by build.mjs) |
 | ``scripts/menu.mjs`` | Interactive terminal menu |
 | ``scripts/prepare.mjs`` | Config-reminder hook (runs after `npm install`) |
 | ``scripts/lib/output.mjs`` | Shared console output helpers (colours, symbols) |
-| ``scripts/`` | Node.js build and tooling scripts |
-| ``Mods/`` | Mod source files (GameCore XML files are generated from ``xml/``) |
+| ``Mods/`` | Mod source files (GameCore XML and Localization files are generated from ``xml/``) |
 | ``docs/`` | Project documentation |
 | ``.build.config.example.json`` | Committed template for local build config |
 | ``build.config.json`` | Your local build config (git-ignored) |
@@ -414,701 +460,49 @@ This folder contains an archive of implementation plans for the project.
 do not reflect the current state of the application.
 
 ```
-###  Path: `\docs\game-data/README.md`
+###  Path: `\docs\agents\project-manifest/README.md`
 
 ```md
-# Elemental: Reforged — Game Data Reference
+# Black Market Bazaar — Project Manifest
 
-> **Location on disk:** `C:\Steam\steamapps\common\Elemental Reforged\data\`
-
-This document provides AI agents and modders with a comprehensive overview of the base game's data folder. All moddable game content originates from the XML files described below.
-
----
-
-## Top-Level Layout
-
-```
-data/
-├── Default.ini                  # Default game settings
-├── ExtraFactionData.xml         # Supplemental faction definitions
-├── LocalizationDefs.xml         # Localization system configuration
-├── Animations/                  # Animation pack definitions
-├── Core/                        # Core engine type definitions
-├── CutScenes/                   # Cutscene pack definitions
-├── English/                     # English-specific tile/improvement data
-├── GameCore/                    # ★ Primary game data — items, units, spells, etc.
-├── Localization/                # Translations (Chinese, French, German, etc.)
-└── Maps/                        # Pre-built maps and tactical maps
-```
-
-**The `GameCore/` folder is the most important for modding.** It contains all definitions for items, weapons, armor, spells, units, abilities, effects, quests, recipes, and more.
+> **Canonical source of truth for AI agents and contributors.**
+> Read these documents before working on any part of the codebase.
 
 ---
 
-## Encoding Standard
+## Section Index
 
-All modern Elemental: Reforged game data files use **UTF-8 encoding** (no BOM). Mod XML files must also declare and use UTF-8.
-
-**Required XML declaration:**
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-```
-
-ISO-8859-1 (`encoding="iso-8859-1"`) was used by older Elemental editions and is **no longer supported** by Reforged. Any mod files still using ISO-8859-1 must be re-encoded to UTF-8 before loading with Reforged.
-
----
-
-## GameCore/ — Detailed File Reference
-
-### Items & Equipment
-
-| File | Root Element | Entry Element | Purpose |
-|---|---|---|---|
-| `CoreItems.xml` | `<GameItemTypes>` | `<GameItemType>` | Accessories, consumables, misc items |
-| `CoreWeapons.xml` | `<GameItemTypes>` | `<GameItemType>` | Weapons (swords, axes, bows, staves) |
-| `CoreArmor.xml` | `<GameItemTypes>` | `<GameItemType>` | Armor pieces (helmets, chest, shields) |
-| `CoreClothes.xml` | `<GameItemTypes>` | `<GameItemType>` | Clothing items (robes, cloaks, boots) |
-| `CoreItemArt.xml` | — | — | Item art/icon definitions |
-| `CoreArtifactProps.xml` | — | — | Artifact visual properties |
-| `ReforgedItems.xml` | `<GameItemTypes>` | `<GameItemType>` | Items added by Reforged edition |
-
-Every item entry uses `InternalName` as its unique identifier and follows this general structure:
-
-```xml
-<GameItemType InternalName="UniqueID">
-    <DisplayName>Human-Readable Name</DisplayName>
-    <Description>Flavor text</Description>
-    <Type>Weapon|Accessory|Armor|...</Type>
-    <CanBeEquipped>1</CanBeEquipped>
-    <ShopValue>180</ShopValue>
-    <GameModifier>...</GameModifier>
-    <Likelihood>25</Likelihood>
-    <RarityDisplay>Common|Uncommon|Rare|Epic|Legendary</RarityDisplay>
-    <Prereq>...</Prereq>
-    <ArtDef>ArtDefReference</ArtDef>
-    <GameItemTypeArtDef InternalName="...">...</GameItemTypeArtDef>
-</GameItemType>
-```
-
-#### Schema details (Items)
-
-- `<HideInHiergamenon>1</HideInHiergamenon>` — Add to consumable items to hide them from the Hiergamenon codex. Required on items with `<IsUsable>1</IsUsable>` that lack `<CanBeEquipped>`.
-- `<ManaValue></ManaValue>` — Mana cost for craftable items; not applicable to most mod items.
-- `<Type>Consumable</Type>` — Marks an item as a single-use battle consumable; not required for standard non-battle items.
-- `<WeaponUpgradeType></WeaponUpgradeType>` — Categorises a weapon into an upgrade pool for AI equipment selection and player upgrade UI. Known values: `Sword`, `Axe`, `Mace`, `Bow`, `Staff`, `FireStaff`, `LightningStaff`. **Reforged change:** `Staff_Leht` was moved from `LightningStaff` to `FireStaff` in Reforged — mod overrides that reference the old value must be updated.
-
-> **Deprecation:** `Skeleton` is no longer valid as a `SupportedUnitModelType` for armor, clothes, or items. It remains valid for weapons only.
-
-#### Schema details (Armor)
-
-Armor definitions use the same `<GameItemType InternalName="...">` structure as items. Art definition blocks contain `<SupportedUnitModelType>` entries listing which unit models can display the armor.
-
-> **Deprecation (Reforged):** `Skeleton` has been removed as a valid `SupportedUnitModelType` for armor. Valid types include: `HumanMale`, `HumanFemale`, `ElfMale`, `ElfFemale`, `DwarfMale`, `DwarfFemale`, `HenchmanMale`, `IronGolem`, `JuggernautMale`, and others. Do **not** include `Skeleton` in `<SupportedUnitModelType>` for armor items.
-
-#### Schema details (Clothes)
-
-Clothing definitions use `<GameItemType InternalName="...">` with art definitions containing `<SupportedUnitModelType>` entries.
-
-> **Deprecation (Reforged):** `Skeleton` has been removed as a valid `SupportedUnitModelType` for clothes (same as armor). Do **not** include `Skeleton` in clothing art definitions.
-
-New optional Reforged additions:
-- `<RandomPeasantUnitLiklihood></RandomPeasantUnitLiklihood>` — Likelihood weight for random peasant unit appearance.
-- `<RandomMerchantUnitLiklihood></RandomMerchantUnitLiklihood>` — Likelihood weight for random merchant unit appearance.
-- `<RandomHeroUnitLiklihood></RandomHeroUnitLiklihood>` — Likelihood weight for random hero unit appearance.
-
-> **Note:** Mod clothing items with `<Likelihood>0</Likelihood>` (never randomly assigned) do not need the random likelihood properties.
-
-
-### Spells & Abilities
-
-| File | Root Element | Entry Element | Purpose |
-|---|---|---|---|
-| `CoreSpells.xml` | `<Spells>` | `<SpellDef>` | Spell definitions (tactical + strategic) |
-| `CoreAbilities.xml` | `<AbilityBonuses>` | `<AbilityBonus>` | Hero/unit ability definitions |
-| `CorePlayerAbilities.xml` | — | — | Sovereign-specific abilities |
-| `ReforgedAbilities.xml` | `<AbilityBonuses>` | `<AbilityBonus>` | Abilities added by Reforged |
-| `ReforgedSpells.xml` | `<Spells>` | `<SpellDef>` | Spells added by Reforged |
-| `GodSpells.xml` | `<Spells>` | `<SpellDef>` | God-tier spells |
-
-#### Schema details (Spells)
-
-Base spell structure is `<SpellDef InternalName="...">` with `<DisplayName>`, `<Description>`, `<GameModifier>` children. Key elements:
-- `<HideInHiergamenon>1</HideInHiergamenon>` — Hides the spell from the Hiergamenon codex.
-- `<IsSpecialAbility>1</IsSpecialAbility>` — Marks the spell as a special combat ability.
-- `<ValidTerrainCategory></ValidTerrainCategory>` — Restricts spell use to specific terrain.
-
-New optional Reforged additions:
-- `<FormattedDescription></FormattedDescription>` — Rich-text description with dynamic value substitution.
-- `<Calculate></Calculate>` — Dynamic damage/effect calculation block (replaces fixed `<Value>` in advanced spells).
-- `<Cooldown></Cooldown>` — Turns before the spell can be cast again.
-- `<PlayOnCaster>1</PlayOnCaster>` — Forces the spell effect to play on the caster instead of the target.
-- `<Radius></Radius>` and `<RadiusType></RadiusType>` — Area-of-effect radius and shape.
-- `<SpellTargetTileOccupied>`, `<IgnoreInvalidTargetsInRadius>` — Targeting constraint flags.
-
-#### Schema details (Abilities)
-
-- `<AbilityBonusType></AbilityBonusType>` — Categorises the ability for the engine. Must be the **first child** of `<AbilityBonus>`. Known values: `Unit_Design` (unit-level / item-granted), `Unit_Level` (gained on level-up), `Player` (sovereign), `Champion_Spellbook`, `Champion_Talent`.
-
-### Units & Creatures
-
-| File | Root Element | Entry Element | Purpose |
-|---|---|---|---|
-| `CoreUnits.xml` | — | `<UnitType>` | Base unit type definitions |
-| `CoreUnitStats.xml` | `<PlayerAbilityTypes>` | `<UnitStatType>` | Unit stat type definitions (STR, DEX, etc.) |
-| `CoreMonsters.xml` | — | — | Monster definitions |
-| `CoreMonsterUnitTypes.xml` | — | — | Monster unit type mappings |
-| `CoreMounts.xml` | — | — | Mount definitions |
-| `ReforgedUnits.xml` | — | — | Units added by Reforged |
-| `ReforgedMonsters.xml` | — | — | Monsters added by Reforged |
-| `ReforgedChampions.xml` | — | — | Champion definitions |
-| `ReforgedChampions2.xml` | — | — | Additional champion definitions |
-
-#### Schema details (Units)
-
-New optional tags available on `<UnitType>` entries in Reforged:
-- `<Class></Class>`, `<Allegiance></Allegiance>`, `<CreatureType></CreatureType>`, `<Unique></Unique>` — Champion classification tags (optional for AI army designs).
-- `<UnitDisplayName></UnitDisplayName>` — Secondary display name field.
-- `<LevelMilestone></LevelMilestone>` — Supports multi-level progressions for champions.
-
-> **Breaking change — Race types:** `Race_Type_Dead` and `Blood_Undead` have been removed. Units using these values must be migrated to valid Reforged race types (see Races & Factions section).
-
-#### Schema details (UnitStats)
-
-Unit stat definitions use `<UnitStatType InternalName="...">` with `<DisplayName>`, `<Description>`, `<Icon>`, `<Hidden>`, `<DefaultValue>`.
-
-New optional Reforged additions:
-- `<DisplayNameShort></DisplayNameShort>` — Short abbreviation for the stat (used in compact UI views).
-- `<BaseSovereignAttribute></BaseSovereignAttribute>` — Links the stat to a sovereign attribute.
-- `<UnitStatGrouping></UnitStatGrouping>` — Display category grouping. Known values: `AbilityStat`, `CalculatedStat`, `CombatStat`, `ResourceStat`, `AttributeStat`.
-
-> **Note:** For hidden tracking stats (`<Hidden>1</Hidden>`), the display tags (`DisplayNameShort`, `UnitStatGrouping`) are not required as they have no UI presence.
-
-
-### Effects & Modifiers
-
-| File | Root Element | Entry Element | Purpose |
-|---|---|---|---|
-| `CoreEffects.xml` | — | — | Visual/gameplay effect definitions |
-| `Effects/` (directory) | — | — | 400+ individual particle effect XML files |
-
-#### Schema details (Effects)
-
-New optional emitter tags available on effect definitions:
-- `<AnimatedStrip></AnimatedStrip>` — Reference to an animated sprite strip texture.
-- `<AnimatedStripFPS></AnimatedStripFPS>` — Frame rate of the animated strip.
-- `<AnimatedStripStartRandom></AnimatedStripStartRandom>` — Randomise the starting frame of the strip.
-- `<LocalParticles></LocalParticles>` — Use local-space particle simulation.
-
-These tags enhance visual fidelity but are not required for effects to function.
-
-### World & Environment
-
-| File | Purpose |
-|---|---|
-| `CoreEnvironments.xml` | Environment/biome definitions |
-| `CoreForests.xml` | Forest type definitions |
-| `CoreForestProps.xml` | Forest visual properties |
-| `CoreMountains.xml` | Mountain type definitions |
-| `CoreRivers.xml` | River definitions |
-| `CoreResources.xml` | Resource type definitions (iron, crystal, etc.) |
-| `CoreWorldResources.xml` | World resource placement |
-| `CoreShards.xml` | Elemental shard definitions |
-| `TerrainTypes.xml` | Terrain type definitions |
-
-### Technology & Research
-
-| File | Purpose |
-|---|---|
-| `CoreTechs.xml` | Technology tree definitions |
-| `TechTree_Amarian.xml` | Amarian faction tech tree |
-| `Techs_Amarian.xml` | Amarian-specific technologies |
-
-### AI
-
-| File | Purpose |
-|---|---|
-| `AIAbilities.xml` | AI ability usage priorities |
-| `AIMilitaryStrategyTypes.xml` | AI military strategies |
-| `AIPlayers.xml` | AI player personality definitions |
-| `AITraitTypes.xml` | AI trait type definitions |
-| `CoreAIDefs.xml` | Core AI behavior definitions |
-| `CoreAIUnits.xml` | AI unit training preferences |
-
-### Quests & Events
-
-| File | Purpose |
-|---|---|
-| `CoreQuests.xml` | Quest definitions |
-| `CoreQuestLocations.xml` | Quest location data |
-| `CoreRandomEvents.xml` | Random event definitions |
-| `CoreGameEvents.xml` | Game event definitions |
-| `CoreGoodieHuts.xml` | Goodie hut reward tables |
-| `Quests_v2_Reforged.xml` | Reforged quest system definitions |
-| `ReforgedQuests_*.xml` | Individual quest location types (Camps, Ruins, Huts, Inn, etc.) |
-| `ReforgedGoodieHuts.xml` | Reforged goodie hut rewards |
-| `ReforgedQuestLocations.xml` | Reforged quest locations |
-
-### Races & Factions
-
-| File | Purpose |
-|---|---|
-| `CoreRaceTypes.xml` | Race type definitions |
-| `CoreRaceConfigs.xml` | Race configuration data |
-| `HistoricalFigures.xml` | Historical/notable figure definitions |
-| `CoreMarriageCandidates.xml` | Marriage candidate definitions |
-| `CoreNamePools.xml` | Name pool definitions |
-| `CoreNameRuleset.xml` | Name generation rulesets |
-
-#### Reforged race types
-
-Reforged defines exactly **10 playable race types**. The following were removed and must not appear in mod files:
-
-| Removed | Reason |
-|---|---|
-| `Race_Type_Dead` | Removed in Reforged; use `Race_Type_Wraiths` for undead/spectral units |
-| `Blood_Undead` | Associated blood type removed; use `Blood_Wraith` |
-
-**Valid Reforged race types:** `Race_Type_Altarians`, `Race_Type_Mancers`, `Race_Type_Ironeers`, `Race_Type_Amarians`, `Race_Type_Tarthans`, `Race_Type_Krax`, `Race_Type_Wraiths`, `Race_Type_Trogs`, `Race_Type_Urxen`, `Race_Type_Quendar`.
-
-### City & Improvements
-
-| File | Purpose |
-|---|---|
-| `CoreImprovements.xml` | City improvement definitions |
-| `CityCitizenTypes.xml` | Citizen type definitions |
-| `CityResourceEffectDefs.xml` | Resource effects on cities |
-| `CoreRecipes.xml` | Crafting recipe definitions |
-| `ReforgedRecipes.xml` | Reforged crafting recipes |
-
-### Visual & Audio
-
-| File | Purpose |
-|---|---|
-| `CoreUnitProps.xml` | Unit visual property definitions |
-| `CoreSkins.xml` | Unit skin definitions |
-| `CoreEyes.xml` | Eye style definitions |
-| `CoreHairReforged.xml` | Hair style definitions |
-| `ArtGameItem.xml` | Art-to-item mappings |
-| `ArtImprovements.xml` | Improvement art definitions |
-| `CoreLayeredMusic.xml` | Music layer definitions |
-| `UnitSoundPacks.xml` | Unit sound pack definitions |
-
-### Miscellaneous
-
-| File | Purpose |
-|---|---|
-| `CoreDifficultyLevels.xml` | Difficulty level definitions |
-| `CoreLetters.xml` | In-game letter/message templates |
-| `CoreLogos.xml` | Faction logo definitions |
-| `CoreMaps.xml` | Map configuration definitions |
-| `ElementalDefs.xml` | Core game constants (starting money, population, etc.) |
-| `RoadLevelDefs.xml` | Road level definitions |
-| `TaxRateDefs.xml` | Tax rate definitions |
-| `Treaties.xml` | Diplomacy treaty definitions |
-| `Tutorials.xml` | Tutorial definitions |
-| `Wildlands.xml` | Wildlands/neutral territory data |
-
----
-
-## GameCore/ Subdirectories
-
-| Directory | Contents |
-|---|---|
-| `Core Stamps/` | Map stamp definitions (terrain patterns, seeds, worlds) — ~160 XML files |
-| `Core Tiles/` | Tile designs for buildings, terrain, creatures, resources — ~750+ XML files |
-| `Core World/` | World conversation/formation data |
-| `Effects/` | Particle effect XML definitions — ~400+ files |
-| `Scenarios/` | Campaign scenario definitions and tutorial data |
-| `Schemas/` | XSD schema files (e.g., `QuestV2.xsd`) |
-
----
-
-## Key XML Patterns
-
-### InternalName Convention
-
-Every entity uses `InternalName` as its unique identifier attribute:
-```xml
-<GameItemType InternalName="AmuletOfFlames">
-```
-
-Mods should use a prefix to avoid collisions (e.g., `BMB_` for Black Market Bazaar).
-
-### GameModifier Structure
-
-The `<GameModifier>` element is the universal mechanism for applying stat changes:
-
-```xml
-<GameModifier>
-    <ModType>Unit|Player|GiveItem|...</ModType>
-    <Attribute>AdjustUnitStat|UnlockCombatAbility|ProduceResource|...</Attribute>
-    <StrVal>UnitStat_Attack_Fire</StrVal>
-    <Value>2</Value>
-    <Provides>Human-readable description of effect</Provides>
-</GameModifier>
-```
-
-### Common ModType Values
-
-- `Unit` — Modifies the equipped/affected unit
-- `Player` — Modifies the owning player
-- `GiveItem` — Grants an item to the unit
-
-### Common Attribute Values (for ModType=Unit)
-
-- `AdjustUnitStat` — Change a unit stat (paired with `StrVal` for stat name)
-- `UnlockCombatAbility` — Grant a combat ability
-- `UnlockRangedAction` — Grant a ranged attack
-- `MeleeDefenseAppliesSpell` — Apply spell on melee defense
-- `ProduceResource` — Generate a resource per turn
-
-### Localization
-
-Base game XML uses localization keys for display text:
-```xml
-<DisplayName>TXT_ITEMS_AMULETOFFLAMES_DISPLAYNAME</DisplayName>
-```
-
-Mods can use plain text directly or add keys to `.str` string table files:
-```xml
-<DisplayName>Amulet of Contamination</DisplayName>
-```
-
-### Prerequisite System
-
-Items and abilities use `<Prereq>` elements for unlock conditions:
-```xml
-<Prereq>
-    <Type>Tech|AbilityBonusOption|RestrictedAbilityBonusOption</Type>
-    <Attribute>TechOrAbilityInternalName</Attribute>
-    <Target>Player</Target>
-</Prereq>
-```
-
-### Rarity System
-
-```xml
-<Likelihood>25</Likelihood>          <!-- Drop chance weight -->
-<RarityDisplay>Uncommon</RarityDisplay>  <!-- Visual rarity tier -->
-```
-
-Values: `Common`, `Uncommon`, `Rare`, `Epic`, `Legendary`
-
-### Art Definition Pattern
-
-Art definitions support two patterns:
-
-**1. Inline (embedded within the item definition):**
-```xml
-<ArtDef>ItemName_ArtDef</ArtDef>
-<GameItemTypeArtDef InternalName="ItemName_ArtDef">
-    <GameItemTypeModelPack InternalName="ItemName_Default">
-        <IconFile>ItemIcon.png</IconFile>
-        <TintR>240</TintR>
-        <SFX>Equip_Sound_01</SFX>
-    </GameItemTypeModelPack>
-</GameItemTypeArtDef>
-```
-
-**2. External reference (referencing a definition in `CoreItemArt.xml` or `ArtGameItem.xml`):**
-```xml
-<ArtDef>ExistingArtDefInternalName</ArtDef>
-```
-
-**PNG/DDS auto-resolution:** The engine automatically tries both `.png` and `.dds` extensions when loading `<IconFile>` values. You can use either format in mod files; the engine will find the file regardless of which extension you specify in the XML.
-
-
----
-
-## Unit Stats Reference
-
-Key unit stats used in `<StrVal>` for `AdjustUnitStat`:
-
-| Stat | Description |
-|---|---|
-| `UnitStat_Strength` | Base strength attribute |
-| `UnitStat_Dexterity` | Base dexterity attribute |
-| `UnitStat_Charisma` | Base charisma attribute |
-| `UnitStat_Essence` | Magic essence |
-| `UnitStat_Attack_Pierce` | Physical piercing damage |
-| `UnitStat_Attack_Fire` | Fire elemental damage |
-| `UnitStat_Attack_Cold` | Cold elemental damage |
-| `UnitStat_Attack_Lightning` | Lightning elemental damage |
-| `UnitStat_Attack_Poison` | Poison damage |
-| `UnitStat_MagicPower` | Spell power |
-| `UnitStat_CombatSpeed` | Combat initiative/speed |
-| `UnitStat_HP` | Hit points |
-| `UnitStat_Dodge` | Dodge chance |
-| `UnitStat_ExpBonus` | Experience gain multiplier |
-| `UnitStat_BackswingChance` | Chance to attack again on miss |
-
----
-
-## Mod File Locations
-
-When creating a mod, files are deployed to the user's "My Documents" game folder:
-
-| Mod Content | Deployment Path |
-|---|---|
-| XML data files | `My Games/ElementalReforged/Mods/<ModName>/` |
-| Icon/texture files | `My Games/ElementalReforged/Mods/Gfx/` |
-| String tables | `My Games/ElementalReforged/Mods/Data/` |
-
-```
-###  Path: `\docs\modding-guide/README.md`
-
-```md
-# Modding Guide — Elemental: Reforged Compatibility
-
-This guide documents the XML patterns, naming conventions, and Reforged-specific constraints
-that must be followed when creating or maintaining content for the Black Market Bazaar mod.
-It focuses on the breaking changes introduced in Elemental: Reforged (formerly Fallen Enchantress:
-Legendary Heroes) that affect how mod XML files are parsed and loaded.
-
----
-
-## Table of Contents
-
-1. [File Encoding](#file-encoding)
-2. [SupportedUnitModelType - Skeleton Deprecation](#supportedunitmodeltype--skeleton-deprecation)
-3. [HideInHiergamenon - Consumable Items](#hideinhiergamenon--consumable-items)
-4. [AbilityBonusType](#abilitybonustype)
-5. [Unit Race Types](#unit-race-types)
-
----
-
-## File Encoding
-
-**Recommendation: use UTF-8 for all mod XML files.**
-
-Elemental: Reforged requires XML files to be encoded in UTF-8. The legacy encoding ISO-8859-1
-(Latin-1) is no longer supported and will cause parse errors or silent data loss when the
-engine loads the mod.
-
-All BMB XML files already declare UTF-8 in their XML prolog:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-```
-
-### Checklist
-
-When creating or editing a mod XML file:
-
-- Ensure your text editor saves the file as **UTF-8** (without BOM is preferred; BOM is tolerated
-  but can cause issues in some XML parsers).
-- Do **not** save as UTF-16, UTF-32, or any single-byte code page (including ISO-8859-1 / Windows-1252).
-- If you copy content from another source (e.g., a forum post or older mod), re-check the encoding
-  after pasting - editors can silently switch encoding when pasting non-ASCII characters.
-- Special characters (accented letters, typographic quotes, em-dashes) must be stored as their
-  UTF-8 byte sequences. XML character references (e.g., `&#233;` for e-acute) are also valid.
-
-> **ISO-8859-1 is deprecated.** Files encoded in ISO-8859-1 were accepted by the original
-> Fallen Enchantress: Legendary Heroes engine but will not load correctly under Elemental:
-> Reforged. Resave any legacy files as UTF-8 before releasing a Reforged-compatible build.
-
----
-
-## SupportedUnitModelType - Skeleton Deprecation
-
-`SupportedUnitModelType` elements inside a `GameItemTypeModelPack` declare which unit model
-rigs the item artwork is compatible with. Elemental: Reforged removed the `Skeleton` model
-type from all non-weapon equipment slots. Retaining `<SupportedUnitModelType>Skeleton</SupportedUnitModelType>`
-on armor, clothing, or accessory items will produce a load-time warning and may cause the
-item to render incorrectly on affected units.
-
-### Rule
-
-| Slot / File | `Skeleton` allowed? |
-|---|---|
-| `BMB_Weapons.xml` (Weapon slot) | **Yes** - Skeleton units can still equip weapons |
-| `BMB_Armor.xml` (Head, Torso, Defense, Forearms, Boots) | **No** - remove |
-| `BMB_Clothes.xml` (LowerBody, Surcoat, Cloak, ...) | **No** - remove |
-| `BMB_Items.xml` (Accessory slot) | **No** - remove |
-
-Weapons are the **only** slot type that retains `Skeleton` as a valid `SupportedUnitModelType`.
-
-### Correct example (weapon - Skeleton retained)
-
-```xml
-<GameItemTypeModelPack InternalName="Axe_FireAndIce_Trog_Default">
-    <!-- ... other model pack children ... -->
-    <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
-    <SupportedUnitModelType>Skeleton</SupportedUnitModelType>
-    <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
-    <SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
-    <!-- ... -->
-</GameItemTypeModelPack>
-```
-
-### Incorrect example (armor - Skeleton must be removed)
-
-```xml
-<!-- BEFORE (Reforged-incompatible) -->
-<GameItemTypeModelPack InternalName="Art_ChainHelmet_BlackCrow_1">
-    <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
-    <SupportedUnitModelType>Skeleton</SupportedUnitModelType>  <!-- REMOVE THIS -->
-    <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
-</GameItemTypeModelPack>
-
-<!-- AFTER (Reforged-compatible) -->
-<GameItemTypeModelPack InternalName="Art_ChainHelmet_BlackCrow_1">
-    <SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
-    <SupportedUnitModelType>WraithMale</SupportedUnitModelType>
-</GameItemTypeModelPack>
-```
-
-> **Rule for future maintainers:** When adding a new non-weapon item, do not include
-> `Skeleton` in any `SupportedUnitModelType` list. For new weapons, `Skeleton` remains valid
-> and should be included alongside the other model types.
-
----
-
-## HideInHiergamenon - Consumable Items
-
-The Hiergamenon is the in-game codex/encyclopedia. In Elemental: Reforged, single-use
-consumable items (potions, scrolls, tokens, etc.) must be tagged with `HideInHiergamenon=1`
-to prevent them from appearing as permanent catalogue entries. Without this tag, consumables
-clutter the Hiergamenon alongside equippable items, degrading the player experience.
-
-### Definition: qualifying consumable
-
-An item qualifies as a consumable (and therefore requires `HideInHiergamenon=1`) if it meets
-**both** of the following conditions:
-
-- It has `<IsUsable>1</IsUsable>`
-- It does **not** have a `<CanBeEquipped>` element (or has `<CanBeEquipped>0</CanBeEquipped>`)
-
-Equippable items (accessories, armor, weapons, clothing) that also set `IsUsable=1` are
-intentionally excluded - they are permanent items that belong in the Hiergamenon.
-
-### Example
-
-```xml
-<GameItemType InternalName="BloomingTonic">
-    <DisplayName>Blooming Tonic</DisplayName>
-    <HideInHiergamenon>1</HideInHiergamenon>
-    <ShopValue>450</ShopValue>
-    <GameModifier>
-        <ModType>Unit</ModType>
-        <Attribute>CurHealth</Attribute>
-        <Value>50</Value>
-        <Provides>Heals 50 Hit Points</Provides>
-    </GameModifier>
-    <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
-    <Likelihood>20</Likelihood>
-    <IsUsable>1</IsUsable>
-    <!-- No <CanBeEquipped> element - this is a consumable -->
-</GameItemType>
-```
-
-Note that `HideInHiergamenon=1` is placed near the top of the element, before `ShopValue`,
-for readability. Placement within the element does not affect parsing.
-
-### Current scope in BMB
-
-All 31 qualifying consumable items in `BMB_Items.xml` have been tagged with
-`HideInHiergamenon=1` as part of the Reforged compatibility update.
-
-> **Rule for future maintainers:** Any new item in `BMB_Items.xml` with `IsUsable=1` and no
-> `CanBeEquipped` element must also include `<HideInHiergamenon>1</HideInHiergamenon>`. Add
-> this tag immediately after the `<DisplayName>` element.
-
----
-
-## AbilityBonusType
-
-`AbilityBonusType` is a child element of `AbilityBonus` that categorises the ability for
-Elemental: Reforged's ability-management system. It determines where the ability appears
-in the game UI (unit designer, level-up screen, etc.).
-
-### When to use AbilityBonusType
-
-`AbilityBonusType` is required **only** when the ability legitimately appears in the unit
-designer or level-up screen, and must always be paired with a valid `<Cost>` element.
-
-Known values: `Unit_Design` (unit-level / item-granted), `Unit_Level` (gained on level-up),
-`Player` (sovereign), `Champion_Spellbook`, `Champion_Talent`.
-
-### Item-granted abilities — do NOT use AbilityBonusType
-
-BMB abilities are item-granted only (`HeroOnly=1`, `IsAvailableForUnitDesign=0`). These
-abilities must **not** include `AbilityBonusType`. In the core game, every ability using
-`AbilityBonusType=Unit_Design` also carries a `<Cost>` element defining its unit-designer
-purchase price. Without `<Cost>`, the abilities would appear as free 0-cost options in the
-unit designer, bypassing the item-selling mechanic.
-
-The correct pattern — matching the 127-entry item-only model used by the core game — omits
-`AbilityBonusType` entirely. Items reference abilities via `UnlockUnitAbility`/`StrVal`
-using the option InternalName, which is unaffected by the absence of `AbilityBonusType`.
-
-### Example (BMB_EruditeAbility — no AbilityBonusType)
-
-```xml
-<AbilityBonus InternalName="BMB_EruditeAbility">
-    <AbilityBonusOption InternalName="BMB_Erudite">
-        <DisplayName>Erudite</DisplayName>
-        <Description>+30% Experience and 10% Research</Description>
-        <Icon>BMB_Ability_Erudite.png</Icon>
-        <GameModifier>
-            <ModType>Unit</ModType>
-            <Attribute>AdjustUnitStat</Attribute>
-            <StrVal>UnitStat_ExpBonus</StrVal>
-            <Value>30</Value>
-            <Provides>+30% Experience</Provides>
-        </GameModifier>
-        <Type>Army</Type>
-    </AbilityBonusOption>
-</AbilityBonus>
-```
-
-> **Rule for future maintainers:** Do **not** add `AbilityBonusType` to any item-granted-only
-> ability. Only use `AbilityBonusType` for abilities that legitimately appear in the unit
-> designer or level-up screen, and only when paired with a valid `<Cost>` element.
-
----
-
-## Unit Race Types
-
-Elemental: Reforged renamed several race type and blood type identifiers. Using the old
-identifiers causes units to be assigned to an unrecognised race, which breaks race-gated
-prerequisites, AI logic, and unit display.
-
-### Replacement table
-
-| Old value (FELH) | New value (Reforged) | Scope |
+| Section | File | Contents |
 |---|---|---|
-| `Race_Type_Dead` | `Race_Type_Wraiths` | `<RaceType>` and `<Prereq><Attribute>` elements |
-| `Blood_Undead` | `Blood_Wraith` | `<SelectedAbilityBonusOption>` elements |
+| **Tech Stack & Patterns** | [`tech-stack.md`](tech-stack.md) | Runtime, game target, frameworks, build tools, package manager, architecture overview |
+| **File Tree** | [`file-tree.md`](file-tree.md) | Annotated project directory structure with descriptions of non-obvious folders |
+| **Game Data Reference** | [`game-data-reference.md`](game-data-reference.md) | Base game XML schemas, GameCore file inventory, entry element structures, Reforged additions |
+| **Localization** | [`localization.md`](localization.md) | Full localization system: base game format, BMB per-entry translation files, TXT_BMB_* key conventions, multi-line text, `.str` files |
+| **XML Patterns** | [`xml-patterns.md`](xml-patterns.md) | Modding XML patterns: GameModifier, prerequisites, rarity, art definitions, unit stats reference |
+| **Build Pipeline** | [`build-pipeline.md`](build-pipeline.md) | Build script architecture, data flows (fragment → merge → translate → verify → deploy), module API surface |
+| **Constraints & Conventions** | [`constraints.md`](constraints.md) | All mandatory rules: naming conventions, encoding, Reforged breaking changes, deprecations, failure protocol |
 
-### Rationale
+---
 
-In Elemental: Reforged, the undead/wraith faction was consolidated under the Wraith identity.
-The race type `Race_Type_Dead` and the blood option `Blood_Undead` no longer exist as valid
-identifiers in the Reforged data tables. Units that reference these old values will either
-fail to load or be silently assigned to no race, removing their faction bonuses.
+## How to Use This Manifest
 
-### Before / after example
+1. **New to the project?** Read [`tech-stack.md`](tech-stack.md) and [`file-tree.md`](file-tree.md) first for orientation.
+2. **Adding new content?** Read [`constraints.md`](constraints.md) for naming rules and mandatory tags, then [`xml-patterns.md`](xml-patterns.md) for GameModifier and art definition patterns.
+3. **Working on localization?** Read [`localization.md`](localization.md) for the full translation workflow.
+4. **Modifying build scripts?** Read [`build-pipeline.md`](build-pipeline.md) for the pipeline architecture and module API.
+5. **Researching base game schemas?** Read [`game-data-reference.md`](game-data-reference.md) for GameCore file inventory and element schemas.
 
-```xml
-<!-- BEFORE (FELH - incompatible with Reforged) -->
-<UnitType InternalName="BMB_Unit_Resoln_Mage_AI">
-    <RaceType>Race_Type_Dead</RaceType>
-    <SelectedAbilityBonusOption>Blood_Undead</SelectedAbilityBonusOption>
-    <!-- ... -->
-</UnitType>
+---
 
-<!-- AFTER (Reforged-compatible) -->
-<UnitType InternalName="BMB_Unit_Resoln_Mage_AI">
-    <RaceType>Race_Type_Wraiths</RaceType>
-    <SelectedAbilityBonusOption>Blood_Wraith</SelectedAbilityBonusOption>
-    <!-- ... -->
-</UnitType>
-```
+## Consolidation Notes
 
-> **Rule for future maintainers:** Never use `Race_Type_Dead` or `Blood_Undead` in any BMB
-> unit XML. All units intended for the wraith/undead faction must use `Race_Type_Wraiths`
-> and `Blood_Wraith` respectively.
+This manifest consolidates content previously spread across:
+
+- `docs/game-data/README.md` → [`game-data-reference.md`](game-data-reference.md)
+- `docs/game-data/localization.md` → [`localization.md`](localization.md)
+- `docs/modding-guide/README.md` → [`constraints.md`](constraints.md), [`localization.md`](localization.md), [`xml-patterns.md`](xml-patterns.md)
+- `AGENTS.md` (§ Failure Protocol, § Key Conventions) → [`constraints.md`](constraints.md)
+- `Mods/README.md` → [`file-tree.md`](file-tree.md), [`tech-stack.md`](tech-stack.md)
 
 ```
 ###  Path: `\node_modules\fast-xml-builder/README.md`
@@ -2204,6 +1598,6 @@ WishIn - You need it if negative thoughts take over all the time <br>
 ```
 ---
 **File Statistics**
-- **Size**: 79.86 KB
-- **Lines**: 2151
+- **Size**: 59.48 KB
+- **Lines**: 1604
 File: `project-overview.md`

@@ -27,6 +27,7 @@ Legendary Heroes) that affect how mod XML files are parsed and loaded.
 3. [HideInHiergamenon - Consumable Items](#hideinhiergamenon--consumable-items)
 4. [AbilityBonusType](#abilitybonustype)
 5. [Unit Race Types](#unit-race-types)
+6. [Localization](#localization)
 
 ---
 
@@ -262,6 +263,151 @@ fail to load or be silently assigned to no race, removing their faction bonuses.
 > **Rule for future maintainers:** Never use `Race_Type_Dead` or `Blood_Undead` in any BMB
 > unit XML. All units intended for the wraith/undead faction must use `Race_Type_Wraiths`
 > and `Blood_Wraith` respectively.
+
+---
+
+## Localization
+
+BMB uses the game's XML-based localization system. All player-facing text is stored in
+per-entry translation files (`en.xml`, `de.xml`, etc.) co-located with the game data
+fragment. The build pipeline merges these into monolithic localization XML files that the
+game engine loads.
+
+### Per-entry directory structure
+
+Each translatable entry lives in its own directory:
+
+```
+xml/<category>/<InternalName>/
+├── fragment.xml    ← game data with TXT_BMB_* keys
+└── en.xml          ← English translation (add de.xml, fr.xml, etc. for other languages)
+```
+
+Categories that use per-entry directories: `items/`, `weapons/`, `armor/`, `clothes/`,
+`spells/`, `abilities/`, `units/`, `unit-stats/`.
+
+Categories that remain as flat files (no translatable text): `effects/`, `core-items-mods/`.
+
+### Translation file format
+
+Each `en.xml` (or `<lang>.xml`) uses a simple `<Translation>` wrapper:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bird of Celerity</DisplayName>
+    <Description>This beautiful statuette allows its owner to distort the space and time continuum...</Description>
+    <Provides index="1">Allows the wielder to cast Mass Haste</Provides>
+</Translation>
+```
+
+Supported elements:
+
+| Element | Usage |
+|---|---|
+| `<DisplayName>` | Item/unit/ability display name |
+| `<Description>` | Flavor text / description |
+| `<Provides index="N">` | Nth `<Provides>` text inside `<GameModifier>` blocks |
+| `<Backstory>` | Unit backstory text (units only) |
+| `<ModifierDisplayName index="N">` | Nth `<GameModifier><DisplayName>` (spells only) |
+
+For abilities, the `<Translation>` uses the `AbilityBonusOption` InternalName as the key
+base (not the file/directory name). The `en.xml` format is the same.
+
+### TXT_BMB_* key naming convention
+
+Keys follow the pattern:
+
+```
+TXT_BMB_{CATEGORY}_{INTERNALNAME}_{FIELD}
+```
+
+Where:
+- `{CATEGORY}` = `ITEMS`, `WEAPONS`, `ARMOR`, `CLOTHES`, `SPELLS`, `ABILITIES`, `UNITS`, `UNITSTATS`
+- `{INTERNALNAME}` = The `InternalName` attribute, uppercased
+- `{FIELD}` = `DISPLAYNAME`, `DESCRIPTION`, `PROVIDES_1`, `PROVIDES_2`, `BACKSTORY`, `MODIFIER_1_DISPLAYNAME`, etc.
+
+Examples:
+```
+TXT_BMB_ITEMS_BIRDOFCELERITY_DISPLAYNAME
+TXT_BMB_ITEMS_BIRDOFCELERITY_DESCRIPTION
+TXT_BMB_ITEMS_BIRDOFCELERITY_PROVIDES_1
+TXT_BMB_WEAPONS_AXE_FREEZING_DISPLAYNAME
+TXT_BMB_SPELLS_BMB_ALCHEMICALSURPRISE_MODIFIER_1_DISPLAYNAME
+TXT_BMB_UNITS_BMB_UNIT_ALTARIAN_MAGE_LIGHTNING_AI_BACKSTORY
+TXT_BMB_ABILITIES_BMB_ERUDITE_DISPLAYNAME
+```
+
+### Adding a new translatable entry
+
+When creating a new item, weapon, spell, unit, or ability:
+
+1. Create the entry directory: `xml/<category>/<InternalName>/`
+2. Create `fragment.xml` with `TXT_BMB_*` keys for all player-facing text:
+   ```xml
+   <DisplayName>TXT_BMB_ITEMS_MYNEWITEM_DISPLAYNAME</DisplayName>
+   <Description>TXT_BMB_ITEMS_MYNEWITEM_DESCRIPTION</Description>
+   ```
+3. Create `en.xml` with the English text:
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <Translation>
+       <DisplayName>My New Item</DisplayName>
+       <Description>A wonderful new item.</Description>
+   </Translation>
+   ```
+4. Run `npm run build` — the build pipeline generates the localization XML files automatically.
+
+### Adding a new language translation
+
+To add a German translation for an existing entry:
+
+1. Copy `xml/<category>/<InternalName>/en.xml` to `xml/<category>/<InternalName>/de.xml`.
+2. Translate the text content of each element (keep the XML structure identical).
+3. Run `npm run build` — the build pipeline generates `Mods/src/Data/Localization/German/BMB_Strings_<Category>.xml` automatically.
+
+Supported language codes and their game folder names:
+
+| File suffix | Game folder | Locale ID |
+|---|---|---|
+| `en.xml` | `English` | `en_US` |
+| `de.xml` | `German` | `de_DE` |
+| `fr.xml` | `French` | `fr_FR` |
+| `es.xml` | `Spanish` | `es_ES` |
+| `zh.xml` | `Chinese` | `zh_CN` |
+| `ja.xml` | `Japanese` | `ja_JP` |
+| `ko.xml` | `Korean` | `ko_KR` |
+| `ru.xml` | `Russian` | `ru_RU` |
+| `it.xml` | `Italian` | `it_IT` |
+| `pl.xml` | `Polish` | `pl_PL` |
+| `pt.xml` | `Portuguese` | `pt_BR` |
+
+### Relationship between .str files and XML localization
+
+The `BMB.str` file is a **separate, older system** used exclusively for UI table aliases
+(weapon upgrade type labels: `LightningStaff`, `PoisonStaff`, `Wand`). It coexists with
+the XML localization system and does **not** need to be migrated. Do not add item names,
+descriptions, or provides text to `BMB.str`.
+
+### What is NOT localized
+
+The following fields are engine identifiers or asset references and must never be replaced
+with `TXT_BMB_*` keys:
+
+- `InternalName` attributes
+- `StrVal` values (references to game stat/ability InternalNames)
+- `AIPrefType`, `AIPriority` (AI configuration)
+- `IconFile`, `ModelFile`, `Texture_*` (asset file references)
+- `SFX`, `AttackSFX`, `EquipSFX` (sound references)
+- `BMB.str` entries (separate system)
+- `effects/` fragments (no player-facing text)
+- `core-items-mods/` fragments (base game overrides with their own localization)
+- `abilities/_meta.xml` (metadata, not a content entry)
+
+> **Rule for future maintainers:** Every new item/weapon/armor/clothing/spell/ability/unit/unit-stat
+> entry must have both `fragment.xml` (with `TXT_BMB_*` keys) and `en.xml` (with English text)
+> in its entry directory. Running `npm run build` without `en.xml` will produce a localization
+> file with missing entries, causing the game to display raw `TXT_BMB_*` key strings in-game.
 
 ```
 ---
