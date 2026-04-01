@@ -64,13 +64,13 @@
 | Fulminating Axe | Common | 150 | +9 Attack; +2 Lightning Attack; -2 Combat Speed; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
 | Fulminating Battle Axe | Uncommon | 620 | +14 Attack; +2 Lightning Attack; -2 Combat Speed; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
 | Ghoul Touch | Rare | 350 | +26 Attack; Freezing Blood - Target takes 5 Cold damage per round; +2 Combat Speed; +1 Counterattack per round |
-| Heaven's Dichotomizer | Rare | 900 | +18 Attack; +18 Lightning Attack; +2 Combat Speed; +1 Counterattack per round; Lightning strikes a random enemy group for 20 Lightning damage(+4 per air shard). |
+| Heaven's Dichotomizer | Rare | 900 | +18 Attack; +18 Lightning Attack; +2 Combat Speed; +1 Counterattack per round; Lightning strikes a random enemy group for 20 Lightning damage (+4 per air shard). |
 | Highborn Beheader | Rare | 310 | +24 Attack; -2 Combat Speed; +5 Attack vs Champions; Chop- Strike twice; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
 | Icebreaker | Uncommon | 240 | +12 Attack; +4 Cold Attack; -4 Combat Speed; Icebreaker Effect - Has a 50% chance of breaking the surface it has just frozen for an additional 4-10 points of damage; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina |
 | Impudent Shortbow | Common | 60 | +7 Attack; -8 Combat Speed; +15 Accuracy vs. higher level enemies; Enables abilities that require Bows; Ranged attack |
 | Knockback Hammer | Uncommon | 210 | +18 Attack; -4 Combat Speed; Melee attacks knock the unit back 2 tiles unless they resist; Unit never gets Counterattacked; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina |
 | Little Revenger | Common | 90 | +8 Attack; +3 Combat Speed; +3 Chance To Crit; Little Revenger effect - Enemies that strike the wielder suffer two retaliating strikes |
-| Mastersmith's Hammer | Rare | 350 | +16 Attack; +1 Fire Attack per Level; -4 Combat Speed; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina; +1 Mastersmith; Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage |
+| Mastersmith's Hammer | Rare | 350 | +16 Attack; +1 Fire Attack per Level; -4 Combat Speed; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina; +1 Mastersmith; Collect all three Tools of the Mastersmith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage |
 | Miasmatic Stake | Rare | 280 | +12 Attack; +18 Poison Attack; Plague Touch - Halves the Poison Resistance of Targets, Poisons them and spreads Infection |
 | Nimble Crusher | Common | 50 | +9 Attack; +1 Combat Speed; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina |
 | Noxious Spear | Uncommon | 90 | +8 Attack; +3 Poison Attack; Melee attacks also do 2 Poison damage per round to the victim; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
@@ -132,7 +132,7 @@
 | Insectoid Exoskeleton | Rare | 450 | +8 Defense; Spit Acid - Target enemy takes 2-6 damage a round for 15 rounds.; Allows the unit to cast Insect Plague |
 | Leopard Vest | Uncommon | 110 | +3 Defense; +2 Attack; +1 Starting Stamina; +4 Initiative for the first turn of combat |
 | Magi Skin | Uncommon | 450 | +6 Defense; +20 Spell Resistance; +1 Spell Power for each point of Stamina; +2 Spell Mastery for each point of Stamina |
-| Master smith's Forging Leathers | Uncommon | 200 | +5 Defense; +3% Fire Resistance per Level; +1 Mastersmith; Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage |
+| Mastersmith's Forging Leathers | Uncommon | 200 | +5 Defense; +3% Fire Resistance per Level; +1 Mastersmith; Collect all three Tools of the Mastersmith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage |
 | Oiled Leather Armor | Common | 90 | +3 Defense; +15% Lightning resistance |
 | Poisonous Robe | Uncommon | 200 | +4 Defense; +50% Poison Resistance; Melee attacks do 6 Poison damage per round to the victim; Enemies that strike the wearer become infected with poison |
 | Raiment of the Nihilist | Rare | 250 | +8 Defense; +10 Spell Power; +10 Spell Resistance; Allows the wearer to cast Death Circle |
@@ -210,7 +210,7 @@
 
 | Name | Rarity | Value | Effects |
 |---|---|---|---|
-| Cloak Of Eyes | Uncommon | 100 | +1 Defense; +2 Sight |
+| Cloak of Eyes | Uncommon | 100 | +1 Defense; +2 Sight |
 | Leopard Cloak | Uncommon | 220 | +2 Defense; +2 Combat Speed; +5 Dodge; +1 Starting Stamina |
 | Lupus Cloak | Uncommon | 90 | +2 Defense; +10% Cold resistance; Summon Lupus - Summons a random level 8 Canine Friend |
 | Mantle of the Hedgewitch | Common | 100 | +3 Healing per Season; Mending Hands- Allows the wearer to heal a friendly unit by touch |
@@ -281,7 +281,7 @@
 | Name | Rarity | Value | Effects |
 |---|---|---|---|
 | Arcane Monolith Scroll | Common | 180 | Creates an Arcane Monolith on the map which extends your Zone of Control. |
-| Black Widow Egg | Uncommon | 100 | Summons a BlackWidow |
+| Black Widow Egg | Uncommon | 100 | Summons a Black Widow |
 | Blooming Tonic | Uncommon | 450 | Heals 50 Hit Points; A repairing remedy of the highest order; Removes two random injuries |
 | Blue Wine | Rare | 490 | All units gain one level |
 | Book of Arcane Equations | Uncommon | 180 | Grants the unit the Spell Resistance ability |
@@ -290,7 +290,7 @@
 | Elemental's Fairy Tales | Uncommon | 180 | Grants the unit the Loremaster ability |
 | Fragrance of Sophistication | Uncommon | 350 | +1 Level |
 | Infernal Companion | Uncommon | 120 | Summons a Shadow Warg |
-| Infinite Diary | Rare | 450 | Grants the unit the Erudite Ability - +30 Experience and +10% Research |
+| Infinite Diary | Rare | 450 | Grants the unit the Erudite Ability - +30% Experience and +10% Research |
 | Letter of Self-Aggrandizement | Common | 80 | +10 Fame |
 | Liquid Vigor | Uncommon | 225 | +1 Starting Stamina |
 | Lost Barrowhill Wine | Uncommon | 150 | +10 Mana; Lost Barrowhill Wine Effect - Random effect on the Caster; +1 Gold |

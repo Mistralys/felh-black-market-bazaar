@@ -9,6 +9,12 @@
     "menu": "node scripts/menu.mjs",
     "build": "node scripts/build.mjs",
     "reference": "node scripts/generate-reference.mjs",
+    "reference:all": "node scripts/generate-all-references.mjs",
+    "reference:spells": "node scripts/generate-reference-spells.mjs",
+    "reference:abilities": "node scripts/generate-reference-abilities.mjs",
+    "reference:units": "node scripts/generate-reference-units.mjs",
+    "reference:unit-stats": "node scripts/generate-reference-unit-stats.mjs",
+    "reference:effects": "node scripts/generate-reference-effects.mjs",
     "migrate-to-dirs": "node scripts/migrate-to-dirs.mjs",
     "verify-keys": "node scripts/verify-translation-keys.mjs"
   },

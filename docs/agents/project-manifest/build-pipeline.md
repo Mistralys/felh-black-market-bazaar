@@ -214,7 +214,57 @@ Colour detection: respects `FORCE_COLOR`, `NO_COLOR`, and TTY detection.
 
 **npm script:** `npm run reference`
 
-Reads monolithic GameCore XML + English localization, resolves `TXT_BMB_*` keys, and generates `docs/references/items.md`. Triggers a fresh merge before generating.
+Reads monolithic GameCore XML + English localization, resolves `TXT_BMB_*` keys, and generates `docs/references/items.md`. Triggers a fresh merge before generating (standalone mode) or accepts a pre-loaded `keyMap` from the umbrella script.
+
+**Export:** `generateReference(keyMap = null)`
+
+### `generate-reference-spells.mjs`
+
+**npm script:** `npm run reference:spells`
+
+Generates `docs/references/spells.md` from `BMB_Spells.xml`. Categorises by `SpellType` (Tactical / Strategic).
+
+**Export:** `generateSpellsReference(keyMap = null)`
+
+### `generate-reference-abilities.mjs`
+
+**npm script:** `npm run reference:abilities`
+
+Generates `docs/references/abilities.md` from `BMB_Abilities.xml`. Flattens `AbilityBonus → AbilityBonusOption` entries.
+
+**Export:** `generateAbilitiesReference(keyMap = null)`
+
+### `generate-reference-units.mjs`
+
+**npm script:** `npm run reference:units`
+
+Generates `docs/references/units.md` from `BMB_Units.xml`. Categorises by race type.
+
+**Export:** `generateUnitsReference(keyMap = null)`
+
+### `generate-reference-unit-stats.mjs`
+
+**npm script:** `npm run reference:unit-stats`
+
+Generates `docs/references/unit-stats.md` from `BMB_UnitStats.xml`. Simple flat table.
+
+**Export:** `generateUnitStatsReference(keyMap = null)`
+
+### `generate-reference-effects.mjs`
+
+**npm script:** `npm run reference:effects`
+
+Generates `docs/references/effects.md` from `BMB_Effects.xml`. No localization — plain InternalName listing with emitter counts.
+
+**Export:** `generateEffectsReference(keyMap = null)`
+
+### `generate-all-references.mjs`
+
+**npm script:** `npm run reference:all`
+
+Umbrella script. Runs the merge steps once, loads localization keys once, then calls all six individual generators with the pre-loaded `keyMap`. Reports a combined summary.
+
+**Export:** `generateAllReferences()`
 
 ### `menu.mjs`
 
@@ -223,7 +273,7 @@ Reads monolithic GameCore XML + English localization, resolves `TXT_BMB_*` keys,
 Interactive terminal menu with alphabetical shortcut keys for all available scripts:
 - `[a]` Generate context documentation
 - `[b]` Build mod
-- `[c]` Generate item reference
+- `[c]` Generate all references
 - `[d]` Migrate fragments to directories
 - `[e]` Verify translation keys
 

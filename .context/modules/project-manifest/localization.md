@@ -296,6 +296,6 @@ The following fields are engine identifiers or asset references and must never b
 ```
 ---
 **File Statistics**
-- **Size**: 10.77 KB
-- **Lines**: 296
+- **Size**: 10.88 KB
+- **Lines**: 302
 File: `modules/project-manifest/localization.md`

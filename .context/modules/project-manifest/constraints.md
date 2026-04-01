@@ -243,6 +243,6 @@ Changes applied to make the mod compatible with Elemental: Reforged (2026-03-28)
 ```
 ---
 **File Statistics**
-- **Size**: 11.54 KB
-- **Lines**: 243
+- **Size**: 11.65 KB
+- **Lines**: 249
 File: `modules/project-manifest/constraints.md`

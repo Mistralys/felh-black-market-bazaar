@@ -138,6 +138,6 @@ The following are output artifacts — never edit directly:
 ```
 ---
 **File Statistics**
-- **Size**: 7.58 KB
-- **Lines**: 138
+- **Size**: 7.68 KB
+- **Lines**: 144
 File: `modules/project-manifest/file-tree.md`

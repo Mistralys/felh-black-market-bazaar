@@ -25,6 +25,15 @@ _SOURCE: BMB mod project layout_
     │       │   ├── BMB_Weapons.xml
     │       ├── Localization/
     │       │   └── English/
+    │       │       ├── BMB_Strings_Abilities.xml
+    │       │       ├── BMB_Strings_Armor.xml
+    │       │       ├── BMB_Strings_Clothes.xml
+    │       │       ├── BMB_Strings_Items.xml
+    │       │       ├── BMB_Strings_Spells.xml
+    │       │       ├── BMB_Strings_UnitStats.xml
+    │       │       ├── BMB_Strings_Units.xml
+    │       │       ├── BMB_Strings_Weapons.xml
+    │       │   └── French/
     │       │       └── BMB_Strings_Abilities.xml
     │       │       └── BMB_Strings_Armor.xml
     │       │       └── BMB_Strings_Clothes.xml
@@ -335,9 +344,19 @@ _SOURCE: BMB mod project layout_
     │   │   ├── 2026-03-31-xml-fragment-build/
     │   │   │   ├── plan.md
     │   │   │   ├── synthesis.md
+    │   │   ├── 2026-04-01-content-description-audit/
+    │   │   │   ├── audit-report.md
+    │   │   │   ├── plan.md
+    │   │   │   ├── synthesis.md
     │   │   ├── 2026-04-01-fix-generate-reference-effects/
     │   │   │   ├── synthesis.md
+    │   │   ├── 2026-04-01-french-translation/
+    │   │   │   ├── plan.md
+    │   │   │   ├── synthesis.md
     │   │   ├── 2026-04-01-lang-config-extraction/
+    │   │   │   ├── synthesis.md
+    │   │   ├── 2026-04-01-reference-generators/
+    │   │   │   ├── plan.md
     │   │   │   ├── synthesis.md
     │   │   ├── 2026-04-01-rename-flatfiles-to-translatable/
     │   │   │   ├── synthesis.md
@@ -358,19 +377,31 @@ _SOURCE: BMB mod project layout_
     │   │   └── 2026-03-28-full-xml-compatibility.md
     │   │   └── 2026-03-28-item-xml-compatibility.md
     ├── references/
+    │   └── abilities.md
+    │   └── effects.md
     │   └── items.md
     │   └── original-felh-readme.txt
+    │   └── spells.md
+    │   └── unit-stats.md
+    │   └── units.md
 └── local-workspace.md
 └── package-lock.json
 └── package.json
 └── scripts/
     └── build.mjs
+    └── generate-all-references.mjs
+    └── generate-reference-abilities.mjs
+    └── generate-reference-effects.mjs
+    └── generate-reference-spells.mjs
+    └── generate-reference-unit-stats.mjs
+    └── generate-reference-units.mjs
     └── generate-reference.mjs
     └── lib/
         ├── lang-config.mjs
         ├── merge-translations.mjs
         ├── merge-xml.mjs
         ├── output.mjs
+        ├── reference-helpers.mjs
         ├── verify-translation-keys.mjs
         ├── xml-parser.mjs
     └── menu.mjs

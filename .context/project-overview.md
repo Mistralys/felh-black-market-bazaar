@@ -78,10 +78,31 @@ The generated monolithic files (GameCore XML and Localization XML) are listed in
 | BMB_Strings_Abilities.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for abilities |
 | BMB_Strings_Units.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for units |
 | BMB_Strings_UnitStats.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for unit stats |
+| BMB_Strings_Items.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for items |
+| BMB_Strings_Weapons.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for weapons |
+| BMB_Strings_Armor.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for armor |
+| BMB_Strings_Clothes.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for clothes |
+| BMB_Strings_Spells.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for spells |
+| BMB_Strings_Abilities.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for abilities |
+| BMB_Strings_Units.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for units |
+| BMB_Strings_UnitStats.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for unit stats |
 | *.png | Mods/src/Gfx/Black Market Bazaar Icons/ | Item icons (227 PNG files) |
 | *.dds | Mods/src/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (16 DDS files) |
 
 > **Note:** Localization XML files are generated from per-entry `en.xml` (and other `<lang>.xml`) files in `xml/<category>/<Name>/` during `npm run build`. They are git-ignored. To add a translation, add `<lang>.xml` files to the entry directories and rebuild.
+
+## Localization
+
+BMB ships with full translations for the following languages:
+
+| Language | Code | Status | String count |
+|---|---|---|---|
+| English | `en` | Complete | 1290 strings |
+| French | `fr` | Complete (2026-04-01) | 1290 strings |
+
+Translation files are co-located with their content fragments: `xml/<category>/<InternalName>/fr.xml` (etc.). The build pipeline auto-discovers all `<lang>.xml` files and generates the corresponding `Mods/src/Data/Localization/<Language>/` output files.
+
+To add a new language, create `<lang>.xml` files alongside the existing `en.xml` files in each entry directory and run `npm run build`. The language code must be registered in `scripts/lib/lang-config.mjs`.
   
 ## Naming Conventions  
   
@@ -213,9 +234,20 @@ Reboot of the "Black Market Bazaar" mod for Fallen Enchantress: Legendary Heroes
 
 ---
 
-## Full item reference
+## Reference Documents
 
-See [items.md](docs/references/items.md).
+Auto-generated reference documents for all mod data types:
+
+| Document | Contents |
+|---|---|
+| [items.md](docs/references/items.md) | Weapons, armor, accessories, consumables, clothing |
+| [spells.md](docs/references/spells.md) | Spell definitions (tactical & strategic) |
+| [abilities.md](docs/references/abilities.md) | Hero and unit ability bonuses |
+| [units.md](docs/references/units.md) | Custom unit types |
+| [unit-stats.md](docs/references/unit-stats.md) | Custom unit stat type definitions |
+| [effects.md](docs/references/effects.md) | Visual particle effect definitions |
+
+Run `npm run reference:all` to regenerate all documents at once.
 
 ---
 
@@ -348,7 +380,7 @@ Must be run in an interactive terminal (TTY). Press **q** or **Ctrl+C** to quit.
 |---|---|
 | `a` | Generate context documentation (`ctx generate`) |
 | `b` | Build mod (deploy to game folder) |
-| `c` | Generate item reference (`docs/references/`) |
+| `c` | Generate all references (`docs/references/`) |
 | `d` | Migrate fragments to translation directories |
 | `e` | Verify translation key integrity (`npm run verify-keys`) |
 | `q` | Quit |
@@ -436,6 +468,14 @@ Supported language codes: `en`, `de`, `fr`, `es`, `zh`, `ja`, `ko`, `ru`, `it`, 
 |---|---|
 | ``xml/`` | XML fragment source files (per-entry directories) — **source of truth** |
 | ``scripts/build.mjs`` | Build/deploy script — merges fragments + translations, then copies mod to game folder |
+| ``scripts/generate-reference.mjs`` | Items reference generator (`npm run reference`) |
+| ``scripts/generate-reference-spells.mjs`` | Spells reference generator (`npm run reference:spells`) |
+| ``scripts/generate-reference-abilities.mjs`` | Abilities reference generator (`npm run reference:abilities`) |
+| ``scripts/generate-reference-units.mjs`` | Units reference generator (`npm run reference:units`) |
+| ``scripts/generate-reference-unit-stats.mjs`` | Unit stats reference generator (`npm run reference:unit-stats`) |
+| ``scripts/generate-reference-effects.mjs`` | Effects reference generator (`npm run reference:effects`) |
+| ``scripts/generate-all-references.mjs`` | Umbrella script — generates all references at once (`npm run reference:all`) |
+| ``scripts/lib/reference-helpers.mjs`` | Shared reference generation utilities (merge, localization, formatting) |
 | ``scripts/migrate-to-dirs.mjs`` | One-time migration script (flat files → per-entry directories + English translation extraction) |
 | ``scripts/split-xml.mjs`` | One-time migration script (splits monolithic XML into fragments) |
 | ``scripts/lib/merge-xml.mjs`` | XML fragment merge module (used by build.mjs) |
@@ -444,6 +484,7 @@ Supported language codes: `en`, `de`, `fr`, `es`, `zh`, `ja`, `ko`, `ru`, `it`, 
 | ``scripts/prepare.mjs`` | Config-reminder hook (runs after `npm install`) |
 | ``scripts/lib/output.mjs`` | Shared console output helpers (colours, symbols) |
 | ``Mods/`` | Mod source files (GameCore XML and Localization files are generated from ``xml/``) |
+| ``docs/references/`` | Auto-generated reference documents (items, spells, abilities, units, unit-stats, effects) |
 | ``docs/`` | Project documentation |
 | ``.build.config.example.json`` | Committed template for local build config |
 | ``build.config.json`` | Your local build config (git-ignored) |

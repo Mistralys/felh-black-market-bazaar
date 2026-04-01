@@ -135,6 +135,10 @@ Reforged additions (optional):
 
 #### Schema details — Units
 
+Translatable elements on `<UnitType>` (used in per-entry `en.xml` / `<lang>.xml` files):
+- `<DisplayName>` — Unit name shown in-game
+- `<Backstory>` — Lore/flavour text for the unit (note: units use `<Backstory>`, **not** `<Description>`)
+
 Reforged optional tags on `<UnitType>`:
 - `<Class>`, `<Allegiance>`, `<CreatureType>`, `<Unique>` — Champion classification
 - `<UnitDisplayName>` — Secondary display name

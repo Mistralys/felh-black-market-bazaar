@@ -4,9 +4,20 @@ Reboot of the "Black Market Bazaar" mod for Fallen Enchantress: Legendary Heroes
 
 ---
 
-## Full item reference
+## Reference Documents
 
-See [items.md](docs/references/items.md).
+Auto-generated reference documents for all mod data types:
+
+| Document | Contents |
+|---|---|
+| [items.md](docs/references/items.md) | Weapons, armor, accessories, consumables, clothing |
+| [spells.md](docs/references/spells.md) | Spell definitions (tactical & strategic) |
+| [abilities.md](docs/references/abilities.md) | Hero and unit ability bonuses |
+| [units.md](docs/references/units.md) | Custom unit types |
+| [unit-stats.md](docs/references/unit-stats.md) | Custom unit stat type definitions |
+| [effects.md](docs/references/effects.md) | Visual particle effect definitions |
+
+Run `npm run reference:all` to regenerate all documents at once.
 
 ---
 
@@ -139,7 +150,7 @@ Must be run in an interactive terminal (TTY). Press **q** or **Ctrl+C** to quit.
 |---|---|
 | `a` | Generate context documentation (`ctx generate`) |
 | `b` | Build mod (deploy to game folder) |
-| `c` | Generate item reference (`docs/references/`) |
+| `c` | Generate all references (`docs/references/`) |
 | `d` | Migrate fragments to translation directories |
 | `e` | Verify translation key integrity (`npm run verify-keys`) |
 | `q` | Quit |
@@ -227,6 +238,14 @@ Supported language codes: `en`, `de`, `fr`, `es`, `zh`, `ja`, `ko`, `ru`, `it`, 
 |---|---|
 | ``xml/`` | XML fragment source files (per-entry directories) — **source of truth** |
 | ``scripts/build.mjs`` | Build/deploy script — merges fragments + translations, then copies mod to game folder |
+| ``scripts/generate-reference.mjs`` | Items reference generator (`npm run reference`) |
+| ``scripts/generate-reference-spells.mjs`` | Spells reference generator (`npm run reference:spells`) |
+| ``scripts/generate-reference-abilities.mjs`` | Abilities reference generator (`npm run reference:abilities`) |
+| ``scripts/generate-reference-units.mjs`` | Units reference generator (`npm run reference:units`) |
+| ``scripts/generate-reference-unit-stats.mjs`` | Unit stats reference generator (`npm run reference:unit-stats`) |
+| ``scripts/generate-reference-effects.mjs`` | Effects reference generator (`npm run reference:effects`) |
+| ``scripts/generate-all-references.mjs`` | Umbrella script — generates all references at once (`npm run reference:all`) |
+| ``scripts/lib/reference-helpers.mjs`` | Shared reference generation utilities (merge, localization, formatting) |
 | ``scripts/migrate-to-dirs.mjs`` | One-time migration script (flat files → per-entry directories + English translation extraction) |
 | ``scripts/split-xml.mjs`` | One-time migration script (splits monolithic XML into fragments) |
 | ``scripts/lib/merge-xml.mjs`` | XML fragment merge module (used by build.mjs) |
@@ -235,6 +254,7 @@ Supported language codes: `en`, `de`, `fr`, `es`, `zh`, `ja`, `ko`, `ru`, `it`, 
 | ``scripts/prepare.mjs`` | Config-reminder hook (runs after `npm install`) |
 | ``scripts/lib/output.mjs`` | Shared console output helpers (colours, symbols) |
 | ``Mods/`` | Mod source files (GameCore XML and Localization files are generated from ``xml/``) |
+| ``docs/references/`` | Auto-generated reference documents (items, spells, abilities, units, unit-stats, effects) |
 | ``docs/`` | Project documentation |
 | ``.build.config.example.json`` | Committed template for local build config |
 | ``build.config.json`` | Your local build config (git-ignored) |

@@ -62,10 +62,31 @@ The generated monolithic files (GameCore XML and Localization XML) are listed in
 | BMB_Strings_Abilities.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for abilities |
 | BMB_Strings_Units.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for units |
 | BMB_Strings_UnitStats.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for unit stats |
+| BMB_Strings_Items.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for items |
+| BMB_Strings_Weapons.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for weapons |
+| BMB_Strings_Armor.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for armor |
+| BMB_Strings_Clothes.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for clothes |
+| BMB_Strings_Spells.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for spells |
+| BMB_Strings_Abilities.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for abilities |
+| BMB_Strings_Units.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for units |
+| BMB_Strings_UnitStats.xml | Mods/src/Data/Localization/French/ | **Generated** French localization for unit stats |
 | *.png | Mods/src/Gfx/Black Market Bazaar Icons/ | Item icons (227 PNG files) |
 | *.dds | Mods/src/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (16 DDS files) |
 
 > **Note:** Localization XML files are generated from per-entry `en.xml` (and other `<lang>.xml`) files in `xml/<category>/<Name>/` during `npm run build`. They are git-ignored. To add a translation, add `<lang>.xml` files to the entry directories and rebuild.
+
+## Localization
+
+BMB ships with full translations for the following languages:
+
+| Language | Code | Status | String count |
+|---|---|---|---|
+| English | `en` | Complete | 1290 strings |
+| French | `fr` | Complete (2026-04-01) | 1290 strings |
+
+Translation files are co-located with their content fragments: `xml/<category>/<InternalName>/fr.xml` (etc.). The build pipeline auto-discovers all `<lang>.xml` files and generates the corresponding `Mods/src/Data/Localization/<Language>/` output files.
+
+To add a new language, create `<lang>.xml` files alongside the existing `en.xml` files in each entry directory and run `npm run build`. The language code must be registered in `scripts/lib/lang-config.mjs`.
   
 ## Naming Conventions  
   

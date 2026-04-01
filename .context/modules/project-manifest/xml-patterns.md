@@ -195,6 +195,6 @@ When deployed, mod files are placed in the user's "My Documents" game folder:
 ```
 ---
 **File Statistics**
-- **Size**: 5.81 KB
-- **Lines**: 195
+- **Size**: 5.92 KB
+- **Lines**: 201
 File: `modules/project-manifest/xml-patterns.md`

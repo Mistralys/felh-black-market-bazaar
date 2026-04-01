@@ -56,6 +56,6 @@ This manifest consolidates content previously spread across:
 ```
 ---
 **File Statistics**
-- **Size**: 3 KB
-- **Lines**: 56
+- **Size**: 3.1 KB
+- **Lines**: 62
 File: `modules/project-manifest/overview.md`
