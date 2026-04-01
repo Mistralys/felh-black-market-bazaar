@@ -28,6 +28,14 @@ const menuItems = [
     label: "Generate item reference (docs/references/)",
     action: () => runCommand("node scripts/generate-reference.mjs"),
   },
+  {
+    label: "Migrate fragments to translation directories",
+    action: () => runCommand("node scripts/migrate-to-dirs.mjs"),
+  },
+  {
+    label: "Verify translation key integrity",
+    action: () => runCommand("node scripts/verify-translation-keys.mjs"),
+  },
 ];
 
 // Assign alphabetical shortcut keys (a, b, c, …)

@@ -4,6 +4,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { success, error, info, step } from './lib/output.mjs';
 import { mergeXmlFragments } from './lib/merge-xml.mjs';
+import { mergeTranslations } from './lib/merge-translations.mjs';
+import { verifyTranslationKeys } from './lib/verify-translation-keys.mjs';
 
 // Resolve project root (__dirname equivalent for ESM)
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -62,7 +64,25 @@ export async function build() {
     console.log('');
   }
 
-  // -- 1. Config file presence
+  // -- 1. Merge translations (if per-entry directories exist)
+  const translationResult = await mergeTranslations();
+  if (translationResult) {
+    const langList = translationResult.languages.join(', ');
+    info(`Merged ${translationResult.totalStrings} string(s) across ${translationResult.languages.length} language(s) [${langList}] into ${translationResult.filesWritten} localization file(s).`);
+    console.log('');
+  }
+
+  // -- 1.5. Verify translation key integrity (fail build on missing English keys)
+  const verifyResult = await verifyTranslationKeys();
+  if (!verifyResult.passed) {
+    error('Build aborted: missing translation keys detected (see above).');
+    process.exit(1);
+  }
+  if (verifyResult.totalFragmentKeys > 0) {
+    console.log('');
+  }
+
+  // -- 2. Config file presence
   if (!existsSync(CONFIG_FILE)) {
     error('build.config.json not found. Copy ' + CONFIG_EXAMPLE_FILE + ' to build.config.json and set your deployPath.');
     process.exit(1);
