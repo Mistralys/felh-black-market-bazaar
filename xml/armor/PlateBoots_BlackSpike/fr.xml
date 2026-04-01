@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Sabots de Pointe Noire</DisplayName>
+    <Description>Le légendaire gladiateur Pointe Noire était dit invincible dans l&apos;arène, accumulant victoires et cadavres, tuant champions et monstres avec une détermination infatigable et implacable. Ses bottes auraient écrasé de nombreux adversaires, surtout ceux qu&apos;il méprisait trop pour mériter un second coup de son arme.</Description>
+    <Provides index="1">+5 Attaque pour le premier tour de combat</Provides>
+    <Provides index="2">+5 Initiative pour le premier tour de combat</Provides>
+    <Provides index="3">Rassemblez trois objets Pointe Noire pour infliger Coup Démantelant - +400% d&apos;Attaque Coup Écrasant</Provides>
+</Translation>

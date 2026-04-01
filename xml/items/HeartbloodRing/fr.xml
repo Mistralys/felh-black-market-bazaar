@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Anneau du Sang du Cœur</DisplayName>
+    <Description>Quand il coule directement du cœur, il est vital, il est pur, et il est suprêmement fort.</Description>
+    <Provides index="1">+1 Point de Vie par Niveau</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Robe de l&apos;Ardeur</DisplayName>
+    <Description>Vous cherchez encore ce coup de pouce supplémentaire ? Ne cherchez pas plus loin que ces robes enchantées qui confèrent des niveaux d&apos;énergie impressionnants sans le poids supplémentaire d&apos;une armure.</Description>
+    <Provides index="1">+5 Endurance de Départ</Provides>
+</Translation>

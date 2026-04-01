@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ralentissement de Masse</DisplayName>
+    <Description>L&apos;armée ciblée subit -5 en Initiative (-1 par éclat d&apos;eau) sauf si ses membres résistent.</Description>
+    <ModifierDisplayName index="1">Ralenti</ModifierDisplayName>
+</Translation>

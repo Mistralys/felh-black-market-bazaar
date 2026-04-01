@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Dague Corrosive</DisplayName>
+    <Description>Cette dague suinte un acide puissant qui ronge les armures et brûle la chair, laissant des blessures qui continuent de se consumer longtemps après l&apos;impact.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">Dégâts Acides de 2 à 4 par round à la victime</Provides>
+</Translation>

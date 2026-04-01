@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Dague de la Corruption</DisplayName>
+    <Description>Cette dague maudite répand une corruption insidieuse à chaque blessure, affaiblissant progressivement la capacité de combat de ses victimes.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">Réduit l&apos;Attaque de la victime de 2</Provides>
+</Translation>

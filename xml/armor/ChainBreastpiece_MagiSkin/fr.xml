@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Peau de Mage</DisplayName>
+    <Description>L&apos;armure de combat des Sorciers d&apos;antan, chargée de tous les enchantements pour maintenir ces sorts en plein combat. Les maillons de chaîne incassables sont si souples et confortables que vous pourriez utiliser cette peau métallique comme vêtement de nuit.</Description>
+    <Provides index="1">+20 Résistance aux Sorts</Provides>
+    <Provides index="2">+1 Puissance de Sort pour chaque point d&apos;Endurance</Provides>
+    <Provides index="3">+2 Maîtrise des Sorts pour chaque point d&apos;Endurance</Provides>
+</Translation>

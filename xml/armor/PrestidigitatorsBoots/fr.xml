@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bottes du Prestidigitateur</DisplayName>
+    <Description>On dit que les tours de scène et le faire-semblant sont des composantes essentielles de tout sort magique. Bien que tout Mage qui se respecte s&apos;opposerait véhémentement à une telle déclaration insultante, avec ces bottes vous pourrez passer de la prestidigitation manuelle à la prestidigitation pédestre.</Description>
+    <Provides index="1">+5 Maîtrise des Sorts</Provides>
+</Translation>

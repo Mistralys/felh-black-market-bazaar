@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bâton du Fléau</DisplayName>
+    <Description>L&apos;empoisonneur ordinaire est généralement un traître discret qui attend dans l&apos;ombre le moment parfait pour ajouter ses ingrédients mortels à la nourriture ou à la boisson. Il n&apos;y a rien de discret à utiliser ce bâton cependant, vous déclarerez vos penchants toxiques pour tous à voir... et juger.</Description>
+    <Provides index="1">Attaque à distance</Provides>
+</Translation>

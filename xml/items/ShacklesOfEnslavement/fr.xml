@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Chaînes de l&apos;Asservissement</DisplayName>
+    <Description>Ces chaînes magiques peuvent briser l&apos;esprit des Hommes et des Déchus en imposant le joug de l&apos;asservissement sur leurs épaules. Votre volonté est votre commandement.</Description>
+    <Provides index="1">Chaînes de l&apos;Asservissement - Asservit une Unité Entraînée à moins qu&apos;elle ne résiste. Le lanceur doit être adjacent à la cible.</Provides>
+</Translation>

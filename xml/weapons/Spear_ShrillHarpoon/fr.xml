@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Harpon Strident</DisplayName>
+    <Description>Ce harpon doré était l&apos;outil de travail des Exterminateurs Stridents chargés de la tâche désagréable de nettoyer les zones envahies par ces petites créatures élémentaires. En ces temps post-Cataclysme avec un manque total de contrôle des nuisibles, il sera certainement utile.</Description>
+    <Provides index="1">+5 Attaque contre les Élémentaux</Provides>
+    <Provides index="2">+10 Précision contre les Élémentaux</Provides>
+    <Provides index="3">Ignore 33% de la Défense de la victime</Provides>
+    <Provides index="4">Immunisé contre la Contre-attaque</Provides>
+    <Provides index="5">Empalage - Frappe un adversaire et celui qui se trouve derrière lui</Provides>
+</Translation>

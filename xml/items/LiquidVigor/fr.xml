@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Vigueur Liquide</DisplayName>
+    <Description>La solution bleue capturée dans cette fiole ondule d&apos;énergie et se débat activement contre sa prison de verre. C&apos;est presque comme si elle allait s&apos;échapper et fonder son propre royaume liquide.</Description>
+    <Provides index="1">+1 Endurance de Départ</Provides>
+</Translation>

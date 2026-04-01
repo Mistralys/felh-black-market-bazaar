@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Complices du Coupe-Gorge</DisplayName>
+    <Description>Ces deux dagues sont les fidèles compagnes des assassins des ruelles sombres. Ensemble, elles percent les défenses les plus solides et frappent aux points vitaux avec une précision mortelle.
+
+&quot;Deux lames valent mieux qu&apos;une,
+Surtout quand elles cherchent la fortune.&quot;</Description>
+    <Provides index="1">+2 Contre-attaques par round</Provides>
+    <Provides index="2">Ignore 66% de la Défense de la victime</Provides>
+    <Provides index="3">+50% Chance de Coup Critique</Provides>
+</Translation>

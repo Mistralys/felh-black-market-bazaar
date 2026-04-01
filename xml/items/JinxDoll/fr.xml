@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Poupée Maléfique</DisplayName>
+    <Description>Maudissez vos adversaires en transperçant cette poupée de quelques clous et aiguilles bien choisis et constatez par vous-même les effets horrifiques de votre travail.</Description>
+    <Provides index="1">Inflige une malédiction horrible aléatoire à une unité ennemie</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Parchemin de Violence</DisplayName>
+    <Description>Les lignes contenues dans ce parchemin parlent aux tempéraments agressifs.</Description>
+    <Provides index="1">Accorde à l&apos;unité la capacité Létale</Provides>
+</Translation>

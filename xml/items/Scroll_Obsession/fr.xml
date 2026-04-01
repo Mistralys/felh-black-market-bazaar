@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Parchemin de l&apos;Obsession</DisplayName>
+    <Description>La différence entre être concentré et obsédé est effectivement mince comme du papier.</Description>
+    <Provides index="1">Accorde à l&apos;unité le sort Obsession</Provides>
+</Translation>

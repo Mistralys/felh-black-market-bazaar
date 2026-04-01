@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Stalactite</DisplayName>
+    <Description>Le revêtement de givre scintillant à l&apos;extérieur est un signe révélateur du glaçon magiquement caché à l&apos;intérieur, attendant impatiemment d&apos;exhaler son souffle glacial et d&apos;exprimer son courroux hivernal.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+</Translation>

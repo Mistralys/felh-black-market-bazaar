@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Jambières Ophidiennes</DisplayName>
+    <Description>Un collant serpentin pour hypnotiser ceux enclins au serpentin, pour se faufiler autour de ceux portés à la violence et pour dévier ces effets vicieux et mal avisés.</Description>
+    <Provides index="1">+5 à l&apos;Esquive</Provides>
+    <Provides index="2">Danseur Naja - +2 Esquive pour chaque point d&apos;Endurance</Provides>
+</Translation>

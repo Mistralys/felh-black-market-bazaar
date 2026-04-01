@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Toucher du Goule</DisplayName>
+    <Description>Cette épée longue maudite répand le froid glacial des morts-vivants à chaque coup, drainant la chaleur vitale de ses victimes et les condamnant à une mort lente et froide.</Description>
+    <Provides index="1">Sang Glacé - Inflige un froid paralysant à la victime</Provides>
+    <Provides index="2">+1 Contre-attaque par round</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Pattes Viriles</DisplayName>
+    <Description>L&apos;enchantement conféré à ces gants ne permettra l&apos;accès qu&apos;aux mains les plus viriles. On croirait qu&apos;ils ont été conçus par un Mage macho, macho (il doit être un Mage macho).</Description>
+    <Provides index="1">Coup Handicapant - +100% d&apos;Attaque, mais vous perdez votre prochaine action</Provides>
+</Translation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Siphon Mystique</DisplayName>
+    <Description>Cet étrange dispositif est fait d&apos;un matériau dur mais malléable et il est difficile de dire s&apos;il est d&apos;origine organique ou minérale. Se gorgeant de l&apos;énergie libérée quand une âme est séparée de son hôte physique, la corolle se contracte et pulse en émettant des bruits de succion et de slurp nauséabonds. Incompatible avec toute forme d&apos;élégance.</Description>
+    <Provides index="1">+3 Points de Vie chaque fois qu&apos;un ennemi est tué</Provides>
+    <Provides index="2">+3 Points de Mana chaque fois qu&apos;un ennemi est tué</Provides>
+    <Provides index="3">+3 Endurance chaque fois qu&apos;un ennemi est tué</Provides>
+</Translation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bouclier de la Chaleur du Combat</DisplayName>
+    <Description>Ce bouclier vit chaque bataille avec son propriétaire de manière intime ; plus le combat dure, plus le bouclier devient puissant. Un objet inanimé avec un intérêt personnel à prolonger les choses pour atteindre son propre nirvana privé d&apos;invulnérabilité.</Description>
+    <Provides index="1">+1 Défense pour chaque point d&apos;Endurance</Provides>
+    <Provides index="2">+15 Défense en Défense</Provides>
+    <Provides index="3">Coup de Bouclier - Repousse la victime d&apos;une case</Provides>
+    <Provides index="4">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

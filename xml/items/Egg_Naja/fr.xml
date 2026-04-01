@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Œuf de Naja</DisplayName>
+    <Description>Souvenez-vous de ce qu&apos;on dit sur le fait de nourrir un serpent.</Description>
+    <Provides index="1">Invoque un Naja</Provides>
+</Translation>

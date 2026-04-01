@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Menottes d&apos;Effort</DisplayName>
+    <Description>Ces instruments de torture ont sans doute été inventés par les Quendar pour améliorer l&apos;efficacité de ces esclaves paresseux et inutiles. Bien que l&apos;idée de les mettre soit révoltante et dégradante, elles peuvent être très utiles pour augmenter la production de vos frappes réussies. Qui a besoin de dignité en ces temps de toute façon ?</Description>
+    <Provides index="1">+2 Précision pour chaque point d&apos;Endurance</Provides>
+</Translation>

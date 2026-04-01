@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Poings de Pointe Noire</DisplayName>
+    <Description>Le légendaire gladiateur Pointe Noire était dit invincible dans l&apos;arène, accumulant victoires et cadavres, tuant champions et monstres avec une détermination infatigable et implacable. Ces vambraces épineux peuvent encore porter un sacré coup.</Description>
+    <Provides index="1">Coup de Poing de Pointe Noire - +50% d&apos;Attaque et la victime est repoussée de 2 cases</Provides>
+    <Provides index="2">Rassemblez trois objets Pointe Noire pour infliger Coup Démantelant - +400% d&apos;Attaque Coup Écrasant</Provides>
+</Translation>

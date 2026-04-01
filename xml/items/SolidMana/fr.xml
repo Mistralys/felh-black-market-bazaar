@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mana Solide</DisplayName>
+    <Description>Ce lingot de Mana solide pur vibre de forces intérieures qui n&apos;attendent que d&apos;être libérées. En attendant, il agira comme une éponge magique pour les âmes expédiées et les convertira en précieuse essence raffinée.</Description>
+    <Provides index="1">+3 Points de Mana chaque fois qu&apos;un ennemi est tué</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bâton Fumant</DisplayName>
+    <Description>Des jets de feu jaillissent de ce bâton chaque fois qu&apos;il frappe quelque chose de solide, ce qui souligne toute l&apos;importance d&apos;une visée sélective et d&apos;une manipulation prudente. Avez-vous déjà entendu l&apos;histoire de l&apos;homme à la jambe de bois qui a accidentellement laissé tomber son Bâton Fumant dans les latrines ? Apparemment, l&apos;expression &quot;feu dans le trou&quot; est née de l&apos;explosion qui s&apos;en est suivie.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+</Translation>

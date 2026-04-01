@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Cor de Ralliement</DisplayName>
+    <Description>Quand tout espoir est perdu et que des fins tragiques attendent, sonner ce cor renforcera le cœur de vos alliés et les poussera à accomplir l&apos;impossible.</Description>
+    <Provides index="1">+1 à l&apos;Attaque de l&apos;armée</Provides>
+</Translation>

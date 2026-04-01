@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bottes de Léopard</DisplayName>
+    <Description>Enfilez ces bottes souples et regardez les lieues fondre. Profitez de capacités de bond améliorées, vivez dans la voie rapide et bondissez jusqu&apos;au sommet.</Description>
+    <Provides index="1">Effet Ruée du Léopard - +3 Initiative la première fois que l&apos;unité est touchée</Provides>
+</Translation>

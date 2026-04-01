@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bâton des Chocs Électrisants</DisplayName>
+    <Description>Ce bâton de haute qualité est fabriqué d&apos;une Pierre de Foudre fixée à la pointe d&apos;un solide manche. Chaque coup laissera vos ennemis hébétés et confus au milieu de chocs électriques assourdissants.</Description>
+    <Provides index="1">Les attaques de mêlée ont 25% de chance d&apos;Étourdir la victime et de lui faire rater sa prochaine action</Provides>
+    <Provides index="2">Les ennemis Choqués ont 50% de chance de frapper une unité aléatoire en mêlée au lieu de leur cible</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Amulette Arachnide</DisplayName>
+    <Description>Seuls les Spectres peuvent porter cette amulette directement contre leur peau nue sans être secoués de violents frissons de dégoût. Phobies irrationnelles mises à part, vous pourrez régner sur les créatures à huit pattes et augmenter la puissance de vos venins maléfiques. Il est important de se souvenir de ces avantages lors du prochain accès de nausée.</Description>
+    <Provides index="1">+100% d&apos;Attaque de Poison</Provides>
+    <Provides index="2">Invoquer Arachnide - Invoque une Araignée aléatoire de niveau 6</Provides>
+</Translation>

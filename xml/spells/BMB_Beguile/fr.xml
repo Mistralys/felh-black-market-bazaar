@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Envoûtement</DisplayName>
+    <Description>La victime a 50 % de chances de frapper une unité aléatoire au corps à corps au lieu de sa cible.</Description>
+    <ModifierDisplayName index="1">Envoûté</ModifierDisplayName>
+</Translation>

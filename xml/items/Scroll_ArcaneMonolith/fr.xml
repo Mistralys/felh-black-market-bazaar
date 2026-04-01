@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Parchemin du Monolithe Arcanique</DisplayName>
+    <Description>Avez-vous envisagé de vous retirer dans votre propre tour privée pour un repos bien mérité ? N&apos;attendez plus ! Invoquez votre propre Monolithe Arcanique dès aujourd&apos;hui !</Description>
+    <Provides index="1">Crée un Monolithe Arcanique sur la carte qui étend votre Zone de Contrôle.</Provides>
+</Translation>

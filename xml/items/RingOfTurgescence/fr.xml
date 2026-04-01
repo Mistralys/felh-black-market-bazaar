@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Anneau de Turgescence</DisplayName>
+    <Description>Si cet anneau n&apos;est pas porté au doigt, devinez où vous le mettez ? Pour mâles équipés seulement.</Description>
+    <Provides index="1">+1 Endurance de Départ</Provides>
+</Translation>

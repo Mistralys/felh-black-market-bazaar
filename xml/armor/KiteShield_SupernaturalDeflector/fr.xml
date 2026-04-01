@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Déflecteur Surnaturel</DisplayName>
+    <Description>Ce bouclier poli offrira un minimum d&apos;abri lors des tempêtes magiques.</Description>
+    <Provides index="1">+15 à la Résistance aux Sorts de l&apos;Armée</Provides>
+    <Provides index="2">+15 Défense en Défense</Provides>
+    <Provides index="3">Coup de Bouclier - Repousse la victime d&apos;une case</Provides>
+    <Provides index="4">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

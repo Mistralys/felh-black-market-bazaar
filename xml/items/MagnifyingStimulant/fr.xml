@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Stimulant Amplificateur</DisplayName>
+    <Description>Cette merveille alchimique est notoirement difficile à préparer, nécessitant des ingrédients coûteux hors du commun, un équipement de pointe et les compétences expertes qui vont avec. L&apos;ingérer développera ce potentiel physique et mental latent et le fera remonter à la surface. Buvez sans modération et amplifiez tout.</Description>
+    <Provides index="1">+1 Attaque</Provides>
+    <Provides index="2">+1 Défense</Provides>
+    <Provides index="3">+1 Précision</Provides>
+    <Provides index="4">+1 Esquive</Provides>
+    <Provides index="5">+1 Points de Vie</Provides>
+    <Provides index="6">+1 Chance de Critique</Provides>
+    <Provides index="7">+1 Maîtrise des Sorts</Provides>
+    <Provides index="8">+1 Puissance de Sort</Provides>
+    <Provides index="9">+1 Résistance aux Sorts</Provides>
+</Translation>

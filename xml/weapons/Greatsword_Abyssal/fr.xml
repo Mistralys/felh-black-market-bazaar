@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Grande Épée Abyssale</DisplayName>
+    <Description>Forgée dans les profondeurs des abysses, cette épée colossale canalise des forces obscures qui brisent les défenses ennemies et dévastent tout ce qui se trouve à portée de sa lame.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">Domination - Attaque puissante qui renverse l&apos;ennemi</Provides>
+    <Provides index="3">Onde de Choc - Frappe tous les ennemis dans un rayon</Provides>
+</Translation>

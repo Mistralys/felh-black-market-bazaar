@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Glace Dentelée</DisplayName>
+    <Description>Ces deux épées longues aux lames dentelées comme des cristaux de glace boréale infligent des blessures déchirantes dont les dégâts critiques sont amplifiés de façon dévastatrice.</Description>
+    <Provides index="1">+2 Contre-attaques par round</Provides>
+    <Provides index="2">+150% Dégâts de Coup Critique</Provides>
+</Translation>

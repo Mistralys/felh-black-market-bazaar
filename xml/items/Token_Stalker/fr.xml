@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Jeton du Prédateur</DisplayName>
+    <Description>Ce jeton invoquera un formidable chasseur.</Description>
+    <Provides index="1">Invoque un Traqueur</Provides>
+</Translation>

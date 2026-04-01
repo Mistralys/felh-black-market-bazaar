@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Pieu Miasmatique</DisplayName>
+    <Description>Secrètement fabriqué dans les recoins les plus profonds des marécages suffocants par des âmes perdues, ce bâton maléfique porte de nombreux noms maudits tels que la Branche de l&apos;Horreur de l&apos;Asag, le Sceptre du Fléau ou le Cure-Dents de Morian. Réceptacle de maladies hautement contagieuses, il peut briser les immunités les plus solides d&apos;un simple toucher et répandre une putréfaction infime à des communautés entières, les anéantissant efficacement sans effusion de sang.</Description>
+    <Provides index="1">Toucher de Peste - Réduit de moitié la Résistance au Poison des Cibles, les Empoisonne et répand l&apos;Infection</Provides>
+</Translation>

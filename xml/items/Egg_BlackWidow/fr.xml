@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Œuf de Veuve Noire</DisplayName>
+    <Description>Qu&apos;ont dit vos parents à propos d&apos;avoir une araignée comme animal de compagnie à la maison ?</Description>
+    <Provides index="1">Invoque une Veuve Noire</Provides>
+</Translation>

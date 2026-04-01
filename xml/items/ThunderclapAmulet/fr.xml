@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Amulette du Coup de Tonnerre</DisplayName>
+    <Description>Quand les armées de Morts-Vivants de Mardoban avaient brisé les dernières défenses du Château Everlond et étaient sur le point de massacrer ses habitants, la jeune Dame Virgeanne, dans sa panique totale, déchaîna involontairement les pouvoirs de l&apos;Amulette du Coup de Tonnerre qu&apos;elle portait. La fureur des cieux s&apos;abattit soudainement sur les Revenants, les faisant frire sur place. Et dire que personne n&apos;avait accordé foi à ses affirmations farfelues que le collier lui avait été offert par un prétendant ailé insaisissable...</Description>
+    <Provides index="1">+20% de résistance à la Foudre</Provides>
+    <Provides index="2">Permet à l&apos;unité de lancer Orage</Provides>
+</Translation>

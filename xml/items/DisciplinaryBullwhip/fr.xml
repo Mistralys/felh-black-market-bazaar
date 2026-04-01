@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Fouet Disciplinaire</DisplayName>
+    <Description>Ce fouet finement ouvragé devrait motiver les traînards de votre armée à accélérer le pas.</Description>
+    <Provides index="1">+1 à l&apos;Initiative de l&apos;armée</Provides>
+</Translation>

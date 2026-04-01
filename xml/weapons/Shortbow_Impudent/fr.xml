@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Arc Court Impudent</DisplayName>
+    <Description>Ce petit arc effronté vous libérera avant tout de votre complexe d&apos;infériorité. Il apprendra aussi aux arrogants que certaines formes d&apos;insolence peuvent avoir des conséquences fatales.</Description>
+    <Provides index="1">+15 Précision contre les ennemis de niveau supérieur</Provides>
+    <Provides index="2">Active les capacités nécessitant des Arcs</Provides>
+    <Provides index="3">Attaque à distance</Provides>
+</Translation>

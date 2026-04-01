@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Stalagmite</DisplayName>
+    <Description>&quot;Également connu sous le nom de Béquille de l&apos;Hiver, ce bâton de guerre concentre la puissance de mille blizzards et le pouvoir glacial du vide absolu. Il fait aussi de merveilleux bonhommes de neige en cas de besoin.&quot; - Le Catalogue de l&apos;Arcanum.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">Jet Glacial - Tire un Jet Glacial à travers 3 unités en ligne</Provides>
+</Translation>

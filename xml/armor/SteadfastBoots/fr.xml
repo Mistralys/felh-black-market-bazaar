@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bottes Inébranlables</DisplayName>
+    <Description>Si vous devez tenir ferme et maintenir la ligne, ces bottes vous ancreront sur place.</Description>
+    <Provides index="1">+5 Défense en Défense</Provides>
+</Translation>

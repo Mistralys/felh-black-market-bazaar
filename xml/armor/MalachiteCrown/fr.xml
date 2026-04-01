@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Couronne de Malachite</DisplayName>
+    <Description>Une couronne pour les gouverner tous, ou du moins un ornement astucieux qui vous permettra de devenir ce souverain hautain et arrogant se tenant bien au-dessus de la populace. Un conseil au sage souverain : de temps en temps, essayez de perdre ces airs supérieurs et efforcez-vous de vous souvenir qui sont vos amis.</Description>
+    <Provides index="1">Cette unité reçoit le double du bonus d&apos;Essaim normal</Provides>
+    <Provides index="2">L&apos;unité n&apos;est jamais Contre-attaquée</Provides>
+    <Provides index="3">Immunisé contre l&apos;Essaim</Provides>
+    <Provides index="4">Permet au propriétaire de lancer Éliminer les Faibles</Provides>
+</Translation>

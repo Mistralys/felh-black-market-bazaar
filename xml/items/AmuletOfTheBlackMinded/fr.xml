@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Amulette des Esprits Noirs</DisplayName>
+    <Description>La prochaine fois que quelqu&apos;un osera porter la main (ou une épée) sur vous, ce collier réprouvé vous permettra de canaliser votre haine et de la convertir en la plus mortelle des malédictions.</Description>
+    <Provides index="1">Les ennemis qui frappent le porteur ont 33% de chance d&apos;être maudits par Sceau du Tombeau</Provides>
+</Translation>

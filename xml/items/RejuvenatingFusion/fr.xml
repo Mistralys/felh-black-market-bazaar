@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Fusion Rajeunissante</DisplayName>
+    <Description>Sang de vieux Troll, trempé dans la fontaine de jouvence.
+Une infusion sans péage, pour soigner cette dent qui se balance.</Description>
+    <Provides index="1">Effet Fusion Rajeunissante - Soigner une blessure s&apos;accompagne de l&apos;avantage supplémentaire d&apos;une augmentation permanente aléatoire des Points de Vie</Provides>
+    <Provides index="2">Supprime une blessure aléatoire</Provides>
+</Translation>

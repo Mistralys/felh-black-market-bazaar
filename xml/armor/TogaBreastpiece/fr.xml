@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Toge Bénie</DisplayName>
+    <Description>L&apos;uniforme obligatoire du désormais défunt Couvent de la Clarté Bénie, ce vêtement a été imprégné de puissants enchantements.</Description>
+    <Provides index="1">+10% d&apos;Expérience</Provides>
+    <Provides index="2">Permet au porteur de lancer Lumière Guérisseuse</Provides>
+</Translation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Onzième Doigt de l&apos;Archimage</DisplayName>
+    <Description>L&apos;apogée des Baguettes de sorcellerie, elle brisera les barrières limitantes de la connaissance arcanique, vous enverra dans un état mystique exalté et vous mènera à l&apos;apothéose occulte.</Description>
+    <Provides index="1">5 Attaque Physique + 10 Attaque Magique (+1 par Niveau du Lanceur)</Provides>
+    <Provides index="2">+25 Maîtrise des Sorts</Provides>
+    <Provides index="3">+25% Dégâts de Sort</Provides>
+    <Provides index="4">Attaque à distance</Provides>
+</Translation>

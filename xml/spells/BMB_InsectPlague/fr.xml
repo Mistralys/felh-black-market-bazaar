@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Fléau d&apos;Insectes</DisplayName>
+    <Description>Une nuée d&apos;insectes harcelants ciblant tous les ennemis, réduisant la Précision et l&apos;Esquive de 40 % et abaissant l&apos;initiative de 3 pendant 5 tours sauf si résisté.</Description>
+    <ModifierDisplayName index="1">Nuée d&apos;Insectes</ModifierDisplayName>
+</Translation>

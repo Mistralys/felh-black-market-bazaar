@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ceinture de Lassitude</DisplayName>
+    <Description>Une ceinture de maillons tintants qui donne un nouveau sens à l&apos;expression &quot;fatigant à côtoyer&quot;, transformant la rhétorique figurative en application physique concrète.</Description>
+    <Provides index="1">Effet Ceinture de Lassitude - Les unités subissent -1 à l&apos;Endurance quand elles sont frappées et la croissance est stoppée pendant 3 tours</Provides>
+</Translation>

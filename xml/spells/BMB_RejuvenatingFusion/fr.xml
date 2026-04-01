@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Effet de Fusion Régénératrice</DisplayName>
+    <Description>Effet de Fusion Régénératrice — Guérir une blessure s&apos;accompagne d&apos;une augmentation permanente aléatoire des Points de Vie.</Description>
+    <ModifierDisplayName index="1">+1 Point de Vie</ModifierDisplayName>
+    <ModifierDisplayName index="2">+2 Points de Vie</ModifierDisplayName>
+    <ModifierDisplayName index="3">+3 Points de Vie</ModifierDisplayName>
+</Translation>

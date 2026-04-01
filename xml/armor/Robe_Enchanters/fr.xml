@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Robe de l&apos;Enchanteur</DisplayName>
+    <Description>Servant de conduit au puits sans fond d&apos;énergies de l&apos;univers, cet artefact peut transformer un modeste apprenti en maître invincible.</Description>
+    <Provides index="1">+25% de Dégâts de Sort</Provides>
+</Translation>

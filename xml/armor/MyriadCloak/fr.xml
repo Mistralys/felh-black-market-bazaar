@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Cape Myriade</DisplayName>
+    <Description>La matière myriade est l&apos;étoffe des légendes et le consensus général parmi les érudits est que si aucun matériau ne peut lier de telles propriétés contradictoires, ergo elle n&apos;existe pas. La protection incroyable que cette cape offre deviendra bientôt secondaire au plaisir d&apos;invalider un dogme arcanique erroné et d&apos;humilier de nombreux universitaires pompeux.</Description>
+    <Provides index="1">+20% de résistance au Froid</Provides>
+    <Provides index="2">+20% de résistance au Feu</Provides>
+    <Provides index="3">+20% de résistance à la Foudre</Provides>
+    <Provides index="4">+20% de résistance au Poison</Provides>
+    <Provides index="5">+20 Résistance aux Sorts</Provides>
+</Translation>

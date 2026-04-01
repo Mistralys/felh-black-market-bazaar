@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Pièces Éparpillées</DisplayName>
+    <Description>Quelqu&apos;un doit avoir un trou dans sa poche. Faites tinter ces quelques pièces et voyez qui accourt.</Description>
+    <Provides index="1">Invoque un Bandit</Provides>
+</Translation>

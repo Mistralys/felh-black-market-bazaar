@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Conducteur Aérien</DisplayName>
+    <Description>La virtuosité est fondamentale pour diriger un orchestre aérien, mais avec cette baguette, le néophyte peut devenir le maestro, harmonisant rafales et ouragans en une symphonie hurlante.</Description>
+    <Provides index="1">+25% Résistance à la Foudre</Provides>
+    <Provides index="2">Invoquer un Allié Aérien - Permet au porteur d&apos;invoquer un allié ailé en combat</Provides>
+    <Provides index="3">Coup de Vent - Une rafale de vent repousse 3 ennemis adjacents d&apos;une case et, à moins qu&apos;ils ne résistent, les renverse</Provides>
+    <Provides index="4">Attaque à distance</Provides>
+</Translation>

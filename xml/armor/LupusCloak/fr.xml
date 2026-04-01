@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Cape du Lupus</DisplayName>
+    <Description>L&apos;heure du Loup est venue, et l&apos;envie de hurler à la lune ne peut être niée.</Description>
+    <Provides index="1">+10% de résistance au Froid</Provides>
+    <Provides index="2">Invoquer Lupus - Invoque un Ami Canin aléatoire de niveau 8</Provides>
+</Translation>

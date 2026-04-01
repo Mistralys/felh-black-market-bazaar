@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bougies de Sang</DisplayName>
+    <Description>Ces cierges maléfiques semblent être des restes d&apos;une cérémonie sacrificielle tordue et dépravée. Ils sont conçus pour donner aux cultistes une puissante montée d&apos;adrénaline lorsque la vie de la victime est finalement éteinte.</Description>
+    <Provides index="1">+2 Points de Vie aux alliés chaque fois qu&apos;un ennemi est tué</Provides>
+</Translation>

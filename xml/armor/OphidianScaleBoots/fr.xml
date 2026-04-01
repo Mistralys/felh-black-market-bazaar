@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bottes d&apos;Écailles Ophidiennes</DisplayName>
+    <Description>Très luxueuses mais moralement discutables, ces bottes haut de gamme susciteront des sifflements envieux des spectateurs et provoqueront immanquablement la consternation des Ophidiens de compagnie.</Description>
+    <Provides index="1">+5 à l&apos;Esquive</Provides>
+    <Provides index="2">Danseur Ophidien - +5 Esquive en Défense</Provides>
+    <Provides index="3">Danseur Naja - +2 Esquive pour chaque point d&apos;Endurance</Provides>
+</Translation>

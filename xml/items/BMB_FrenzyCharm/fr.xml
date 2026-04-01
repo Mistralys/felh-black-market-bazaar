@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Charme de Frénésie</DisplayName>
+    <Description>Un ancien charme en os gravé de runes oubliées. Lorsqu&apos;il est porté, il plonge son porteur dans une rage aveugle de berserker — il massacre tout sur son passage.</Description>
+    <Provides index="1">Accorde la capacité Mutilation</Provides>
+</Translation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Surprise Alchimique</DisplayName>
+    <Description>Combine des réactifs en une concoction aléatoire — élixir de soin, stimulant de combat, bombe élémentaire, ou quelque chose de plus rare encore.</Description>
+    <ModifierDisplayName index="1">Nectar Curatif !</ModifierDisplayName>
+    <ModifierDisplayName index="2">Nectar Curatif !</ModifierDisplayName>
+    <ModifierDisplayName index="3">Nectar Curatif !</ModifierDisplayName>
+    <ModifierDisplayName index="4">Fiole de Poison !</ModifierDisplayName>
+    <ModifierDisplayName index="5">Fiole de Poison !</ModifierDisplayName>
+    <ModifierDisplayName index="6">Sombre Concoction !</ModifierDisplayName>
+    <ModifierDisplayName index="7">Sombre Concoction !</ModifierDisplayName>
+    <ModifierDisplayName index="8">Potion de Résistance au Feu !</ModifierDisplayName>
+    <ModifierDisplayName index="9">Potion de Résistance au Feu !</ModifierDisplayName>
+    <ModifierDisplayName index="10">Potion de Croissance !</ModifierDisplayName>
+    <ModifierDisplayName index="11">Potion de Croissance !</ModifierDisplayName>
+    <ModifierDisplayName index="12">Potion de Croissance !</ModifierDisplayName>
+    <ModifierDisplayName index="13">Potion de Soin !</ModifierDisplayName>
+    <ModifierDisplayName index="14">Potion de Soin !</ModifierDisplayName>
+    <ModifierDisplayName index="15">Potion de Soin !</ModifierDisplayName>
+    <ModifierDisplayName index="16">Élixir d&apos;Iru !</ModifierDisplayName>
+    <ModifierDisplayName index="17">Élixir d&apos;Iru !</ModifierDisplayName>
+    <ModifierDisplayName index="18">Élixir d&apos;Iru !</ModifierDisplayName>
+    <ModifierDisplayName index="19">Ale d&apos;Ironeer !</ModifierDisplayName>
+    <ModifierDisplayName index="20">Ale d&apos;Ironeer !</ModifierDisplayName>
+    <ModifierDisplayName index="21">Ale d&apos;Ironeer !</ModifierDisplayName>
+    <ModifierDisplayName index="22">Vin de Pariden !</ModifierDisplayName>
+    <ModifierDisplayName index="23">Vin de Pariden !</ModifierDisplayName>
+    <ModifierDisplayName index="24">Vin de Pariden !</ModifierDisplayName>
+    <ModifierDisplayName index="25">Potion Prismatique !</ModifierDisplayName>
+    <ModifierDisplayName index="26">Potion Prismatique !</ModifierDisplayName>
+    <ModifierDisplayName index="27">Potion Prismatique !</ModifierDisplayName>
+    <ModifierDisplayName index="28">Potion de Restauration !</ModifierDisplayName>
+    <ModifierDisplayName index="29">Sang de Trog !</ModifierDisplayName>
+    <ModifierDisplayName index="30">Sang de Trog !</ModifierDisplayName>
+    <ModifierDisplayName index="31">Sang de Trog !</ModifierDisplayName>
+    <ModifierDisplayName index="32">Tonique Florissant !</ModifierDisplayName>
+    <ModifierDisplayName index="33">Tonique Florissant !</ModifierDisplayName>
+    <ModifierDisplayName index="34">Élixir de Dextérité !</ModifierDisplayName>
+    <ModifierDisplayName index="35">Élixir de Dextérité !</ModifierDisplayName>
+    <ModifierDisplayName index="36">Fragrance de Sophistication !</ModifierDisplayName>
+    <ModifierDisplayName index="37">Bombe de Glace !</ModifierDisplayName>
+    <ModifierDisplayName index="38">Bombe de Glace !</ModifierDisplayName>
+    <ModifierDisplayName index="39">Bombe de Glace !</ModifierDisplayName>
+    <ModifierDisplayName index="40">Vigueur Liquide !</ModifierDisplayName>
+    <ModifierDisplayName index="41">Vigueur Liquide !</ModifierDisplayName>
+    <ModifierDisplayName index="42">Vin Perdu de Barrowhill !</ModifierDisplayName>
+    <ModifierDisplayName index="43">Stimulant Amplifiant !</ModifierDisplayName>
+    <ModifierDisplayName index="44">Pierre Philosophale !</ModifierDisplayName>
+    <ModifierDisplayName index="45">Courroux Tempétueux !</ModifierDisplayName>
+    <ModifierDisplayName index="46">Courroux Tempétueux !</ModifierDisplayName>
+    <ModifierDisplayName index="47">Courroux Tempétueux !</ModifierDisplayName>
+    <ModifierDisplayName index="48">Fusion Régénératrice !</ModifierDisplayName>
+    <ModifierDisplayName index="49">Fusion Régénératrice !</ModifierDisplayName>
+    <ModifierDisplayName index="50">Fusion Régénératrice !</ModifierDisplayName>
+</Translation>

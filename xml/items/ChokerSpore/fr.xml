@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Spore Étrangleuse</DisplayName>
+    <Description>Apporter des Spores Étrangleuses sur le champ de bataille viole clairement les règles d&apos;un combat équitable. Quelles règles encore ? C&apos;est vrai. Quoi qu&apos;il en soit, assurez-vous d&apos;être au vent si vous avez l&apos;intention de bombarder vos adversaires avec l&apos;un de ces sacs de gaz létaux.</Description>
+    <Provides index="1">Sélectionnez une zone cible et étouffez vos adversaires pour 3 dégâts de Poison par round.</Provides>
+</Translation>

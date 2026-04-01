@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bombe de Glace</DisplayName>
+    <Description>Les instructions suivantes peuvent être déchiffrées sur cette bouteille glacée : &quot;Particules de congélation concentrées de type explosif magiquement scellées dans une bouteille. Nécessite de sélectionner une cible malheureuse avant utilisation.&quot;</Description>
+    <Provides index="1">Sélectionnez votre cible et déchaînez 18 dégâts de Froid.</Provides>
+</Translation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Pacificateur Grossier</DisplayName>
+    <Description>Cet instrument de persuasion rudimentaire est particulièrement efficace pour calmer les ardeurs des adversaires présomptueux qui se croient supérieurs à leur porteur.</Description>
+    <Provides index="1">+4 Attaque contre les ennemis de niveau inférieur</Provides>
+    <Provides index="2">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="3">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+</Translation>

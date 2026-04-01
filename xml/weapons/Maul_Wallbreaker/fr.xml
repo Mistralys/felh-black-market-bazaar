@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Brise-Murailles</DisplayName>
+    <Description>Aucune forteresse n&apos;est imprenable quand un Brise-Murailles pointe sa tête hérissée.</Description>
+    <Provides index="1">Effet Brise-Murailles - La Défense de la cible est réduite de 30% par frappe</Provides>
+    <Provides index="2">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="3">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+</Translation>

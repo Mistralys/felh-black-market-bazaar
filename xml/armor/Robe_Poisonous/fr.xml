@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Robe Venimeuse</DisplayName>
+    <Description>Un vêtement des plus vénéneux dont les fibres ont été magiquement liées au poison de naja.</Description>
+    <Provides index="1">+50% de Résistance au Poison</Provides>
+    <Provides index="2">Les attaques de mêlée infligent 6 dégâts de Poison par round à la victime</Provides>
+    <Provides index="3">Les ennemis qui frappent le porteur sont infectés par le poison</Provides>
+</Translation>

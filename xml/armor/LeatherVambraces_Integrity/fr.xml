@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Brassards d&apos;Intégrité</DisplayName>
+    <Description>Ces vambraces solides mais malléables offriront une protection complète pour vos bras et dévieront tout coup critique qui leur serait destiné.</Description>
+    <Provides index="1">L&apos;unité a 20% de chance de résister à une attaque Critique</Provides>
+</Translation>

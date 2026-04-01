@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Vêtement Béni</DisplayName>
+    <Description>La partie inférieure de l&apos;uniforme porté par le Couvent de la Clarté Bénie, ce vêtement préserve l&apos;intégrité physique de son porteur, allant jusqu&apos;à régénérer les tissus manquants et transformer les blessures les plus graves en un simple mauvais souvenir.</Description>
+    <Provides index="1">Source de Vie - Tous les alliés récupèrent 24 points de vie (+4 par fragment de vie)</Provides>
+    <Provides index="2">+3 Guérison par Saison</Provides>
+</Translation>

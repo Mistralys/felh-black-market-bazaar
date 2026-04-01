@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Gants Vampiriques</DisplayName>
+    <Description>Ces gants infâmes ont la texture d&apos;une peau froide et humide. Quiconque les porte ressentira de vives envies de sang.</Description>
+    <Provides index="1">Permet au porteur de lancer Drain de Vie</Provides>
+    <Provides index="2">Permet au porteur de lancer Siphon de Force</Provides>
+</Translation>

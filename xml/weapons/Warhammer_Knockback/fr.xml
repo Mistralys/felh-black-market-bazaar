@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Marteau de Guerre Repoussant</DisplayName>
+    <Description>Si ce marteau ne peut pas faire entrer un peu de bon sens dans la tête de vos adversaires, les propriétés caoutchouteuses de son métal leur apprendront invariablement à reculer.</Description>
+    <Provides index="1">Les attaques de mêlée repoussent l&apos;unité de 2 cases à moins qu&apos;elle ne résiste</Provides>
+    <Provides index="2">L&apos;unité n&apos;est jamais Contre-attaquée</Provides>
+    <Provides index="3">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="4">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+</Translation>

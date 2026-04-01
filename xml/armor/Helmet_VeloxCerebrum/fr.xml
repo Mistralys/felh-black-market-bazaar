@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Velox Cerebrum</DisplayName>
+    <Description>Un étrange dispositif qui accélère considérablement les facultés de l&apos;esprit, cette coiffe métallique est particulièrement prisée des Mages qui peuvent transformer leur talent magique en puissance cérébrale létale. Et exhiber leur intelligence supérieure comme bonus supplémentaire.</Description>
+    <Provides index="1">Explosion Mentale - Inflige des dégâts mentaux à 5 unités en ligne et les renverse.</Provides>
+</Translation>

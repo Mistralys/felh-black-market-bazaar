@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Robe des Richesses</DisplayName>
+    <Description>Ces robes vous permettront de jouer à &quot;chercheur, trouveur, gardeur&quot; avec un avantage décisif sur les autres concurrents.</Description>
+    <Provides index="1">20% de chance de trouver de meilleurs objets dans les huttes au trésor</Provides>
+</Translation>

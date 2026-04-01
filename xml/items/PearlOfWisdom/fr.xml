@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Perle de Sagesse</DisplayName>
+    <Description>Si une huître a craché cette perle, ce devait être un sacré archimage parmi les siens.</Description>
+    <Provides index="1">-10% de coût en mana pour les sorts tactiques</Provides>
+</Translation>

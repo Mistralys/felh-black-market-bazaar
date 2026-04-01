@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Malédiction de la Poupée Vaudou</DisplayName>
+    <Description>Inflige une malédiction horrible aléatoire à une unité ennemie.</Description>
+    <ModifierDisplayName index="1">Maudit</ModifierDisplayName>
+    <ModifierDisplayName index="2">Empoisonné</ModifierDisplayName>
+    <ModifierDisplayName index="3">Sang Glacé</ModifierDisplayName>
+</Translation>

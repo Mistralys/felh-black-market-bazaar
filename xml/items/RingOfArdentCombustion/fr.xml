@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Anneau de Combustion Ardente</DisplayName>
+    <Description>Le contact physique vous fait immédiatement réaliser que ce n&apos;est pas un anneau ordinaire. Des images de villes en flammes et de cadavres carbonisés envahissent votre esprit et vous remplissent d&apos;un désir de tout mettre à la torche.</Description>
+    <Provides index="1">+2 Feu à l&apos;Attaque de l&apos;Armée</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Lame de la Négation</DisplayName>
+    <Description>Enflammée d&apos;une énergie obscure, cette lame existe simultanément dans deux dimensions conflictuelles. Son côté négatif déchire les molécules, dissout les résistances et sépare la vie de la matière.</Description>
+    <Provides index="1">La cible perd 4 Défense et 8 points de Résistance aux Sorts par frappe</Provides>
+    <Provides index="2">+1 Contre-attaque par round</Provides>
+</Translation>

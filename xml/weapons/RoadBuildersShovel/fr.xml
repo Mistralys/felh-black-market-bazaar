@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Pelle du Constructeur de Routes</DisplayName>
+    <Description>Il y a toujours du travail à faire sur le front intérieur et bien que cette vieille pelle ne puisse pas prévenir la corvée monotone et les maux de dos, elle accélérera la construction de votre réseau routier.</Description>
+    <Provides index="1">Permet à l&apos;unité de construire des routes</Provides>
+</Translation>

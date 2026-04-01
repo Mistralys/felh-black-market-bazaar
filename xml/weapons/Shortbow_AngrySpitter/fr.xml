@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Cracheur Furieux</DisplayName>
+    <Description>L&apos;enfant de l&apos;amour d&apos;un armurier et d&apos;un artisan du bois, ce petit arc émaillé est équipé d&apos;une corde d&apos;une agilité inhabituelle. Il a tellement de caractère qu&apos;il peut presque tirer des flèches tout seul.</Description>
+    <Provides index="1">Double Hampe - Frappe deux fois</Provides>
+    <Provides index="2">Active les capacités nécessitant des Arcs</Provides>
+    <Provides index="3">Attaque à distance</Provides>
+</Translation>

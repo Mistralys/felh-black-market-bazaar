@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bâton Tonnant</DisplayName>
+    <Description>Choquant et électrisant. Et non, ce n&apos;est pas une observation sur votre personnalité.</Description>
+    <Provides index="1">Attaque à distance</Provides>
+</Translation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Membrane Visqueuse</DisplayName>
+    <Description>La surface spongieuse de cette chose répugnante suinte des fluides digestifs corrosifs, et la première chose que vous remarquerez est la disparition soudaine des insectes volants de votre voisinage. C&apos;est en réalité un organisme vivant en forme de cape qui accorde à son hôte consentant une relation symbiotique trempée dans l&apos;acide. Êtes-vous vraiment prêt à mettre cette chose dans votre dos ?</Description>
+    <Provides index="1">-3 Points de Vie - La Membrane dévore lentement l&apos;hôte.</Provides>
+    <Provides index="2">Acide Paralysant - L&apos;ennemi ciblé subit -10 Esquive et prend 3-6 dégâts par tour.</Provides>
+    <Provides index="3">Frapper cette unité expose l&apos;attaquant à l&apos;Acide Paralysant.</Provides>
+    <Provides index="4">+10% de résistance au Feu</Provides>
+    <Provides index="5">+10% de résistance à la Foudre</Provides>
+</Translation>

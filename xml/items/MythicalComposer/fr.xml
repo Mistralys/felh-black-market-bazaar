@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Compositeur Mythique</DisplayName>
+    <Description>Même l&apos;individu le plus dépourvu de sens musical peut jouer des chansons divines avec cette lyre légendaire. Ses mélodies surnaturelles peuvent guérir le désespoir fatal et remonter le moral d&apos;une nation entière.</Description>
+    <Provides index="1">+2 à l&apos;Initiative de l&apos;Armée</Provides>
+    <Provides index="2">+3 à l&apos;Endurance de Départ de l&apos;Armée</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Parchemin de la Peur</DisplayName>
+    <Description>Des Runes d&apos;Horreur ont été gravées sur ce parchemin et n&apos;attendent que votre ordre pour semer une terreur dévastatrice dans le cœur de vos ennemis.</Description>
+    <Provides index="1">Tous les ennemis sont étourdis pendant 3 actions à moins qu&apos;ils ne résistent.</Provides>
+</Translation>

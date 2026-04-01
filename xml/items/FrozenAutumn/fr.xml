@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Automne Gelé</DisplayName>
+    <Description>La transition de l&apos;automne vers l&apos;hiver est généralement graduelle et passe inaperçue. Et parfois elle peut être si soudaine et violente qu&apos;elle devient une dévastatrice offensive glaciale qui transforme le monde en désert gelé en un clin d&apos;œil. Dans ces rares moments, les symboles de l&apos;automne peuvent se congeler jusqu&apos;au cœur et être enfermés dans une glace permanente, leurs fragiles enveloppes devenant d&apos;improbables réceptacles de formidables pouvoirs hivernaux.</Description>
+    <Provides index="1">+1 Froid à l&apos;Attaque de l&apos;Armée</Provides>
+    <Provides index="2">+15% à la résistance au Froid de l&apos;Armée</Provides>
+</Translation>

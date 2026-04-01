@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Sac de Provisions</DisplayName>
+    <Description>Le contenu de ce lourd sac de toile devrait empêcher les estomacs de votre armée de gargouiller pendant un bon moment. Pas de haute cuisine, mais au bout d&apos;une journée épuisante, qui s&apos;en soucie vraiment ? Maintenant, qui va le porter ?</Description>
+    <Provides index="1">+1 aux Points de Vie de l&apos;Armée</Provides>
+</Translation>

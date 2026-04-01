@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Coucher de Soleil Arcanique</DisplayName>
+    <Description>Réputé avoir été façonné à partir du métal d&apos;une étoile tombée par les forgerons démoniaques de Tegghan-Turak, ces boucliers furent utilisés avec un effet dévastateur pendant les Guerres Arcaniques. De simples soldats pouvaient facilement perturber l&apos;assaut des Archimages, les laissant dans un état de stupeur assez long pour succomber à l&apos;assaut d&apos;armes ordinaires.</Description>
+    <Provides index="1">Effet Brouilleur - Perturbe un sort qu&apos;une unité ennemie est en train de lancer et lui fait perdre son prochain tour à moins qu&apos;elle ne résiste</Provides>
+    <Provides index="2">+20 Défense en Défense</Provides>
+    <Provides index="3">Coup de Bouclier - Repousse la victime d&apos;une case</Provides>
+    <Provides index="4">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

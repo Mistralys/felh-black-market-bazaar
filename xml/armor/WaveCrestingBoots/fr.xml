@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bottes Déferlantes</DisplayName>
+    <Description>Ces bottes sont un équipement indispensable si vous avez l&apos;intention de traverser des zones humides ou de chevaucher les vagues.</Description>
+    <Provides index="1">+15% de résistance au Feu</Provides>
+    <Provides index="2">Aucune pénalité de mouvement sur les Rivières</Provides>
+    <Provides index="3">Aucune pénalité de mouvement dans les Marais</Provides>
+    <Provides index="4">Permet au porteur de lancer Raz-de-Marée</Provides>
+</Translation>

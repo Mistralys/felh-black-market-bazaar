@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Petit Vengeur</DisplayName>
+    <Description>Cette petite dague ne pardonne pas les attaques imprudentes. Chaque coup reçu déclenche une riposte fulgurante, punissant sévèrement quiconque ose s&apos;approcher de son porteur.</Description>
+    <Provides index="1">Deux frappes de représailles par round</Provides>
+</Translation>

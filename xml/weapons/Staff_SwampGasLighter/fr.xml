@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Allume-Gaz des Marais</DisplayName>
+    <Description>Inventé et utilisé par les Mages des Marécages, c&apos;est un Bâton de Feu de l&apos;Enfer modifié alimenté par du gaz de marais nauséabond. Ses propriétés explosives mêlent la nature volatile du méthane et l&apos;odeur vile de la putréfaction des marais.</Description>
+    <Provides index="1">Attaque à distance</Provides>
+    <Provides index="2">Permet au porteur de provoquer une Explosion de Gaz des Marais</Provides>
+</Translation>

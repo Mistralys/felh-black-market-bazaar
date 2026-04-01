@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Broyeur Agile</DisplayName>
+    <Description>Ce marteau ne réduira clairement pas les Élémentaux de Terre en poussière d&apos;un seul coup dévastateur, mais il est étonnamment facile à manier, le rendant bien plus rapide que ses frères à la tête dure.</Description>
+    <Provides index="1">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="2">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+</Translation>

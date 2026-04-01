@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Embrocheur Dément</DisplayName>
+    <Description>Il semblerait que l&apos;enthousiasme de quelqu&apos;un à aiguiser cette pointe de lance soit allé bien au-delà du devoir. Vous pouvez probablement vous couper rien qu&apos;en la regardant.</Description>
+    <Provides index="1">+50% Dégâts de Coup Critique</Provides>
+    <Provides index="2">Ignore 33% de la Défense de la victime</Provides>
+    <Provides index="3">Immunisé contre la Contre-attaque</Provides>
+    <Provides index="4">Empalage - Frappe un adversaire et celui qui se trouve derrière lui</Provides>
+</Translation>

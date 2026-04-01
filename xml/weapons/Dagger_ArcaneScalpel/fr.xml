@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Scalpel Arcanique</DisplayName>
+    <Description>Cet instrument de précision chirurgicale a été détourné de son usage médical pour devenir une arme redoutable entre les mains d&apos;un mage guerrier, amplifiant les pouvoirs magiques tout en réduisant le coût en mana.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">+20% Dégâts de Sort</Provides>
+    <Provides index="3">-20% Coût en Mana</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mortier et Pilon</DisplayName>
+    <Description>Quelqu&apos;un a laissé son mortier et pilon en hâte et manifestement au milieu d&apos;une recette alchimique complexe. Peut-être pourriez-vous tenter de terminer le travail ? C&apos;est une formule très délicate alors ne la gâchez pas !</Description>
+    <Provides index="1">Surprise Alchimique - Formule alchimique aléatoire.</Provides>
+</Translation>

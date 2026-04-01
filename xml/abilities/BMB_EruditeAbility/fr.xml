@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Érudit</DisplayName>
+    <Description>+30% d&apos;Expérience et +10% de Recherche</Description>
+    <Provides index="1">+30% d&apos;Expérience</Provides>
+    <Provides index="2">+10% de Recherche</Provides>
+</Translation>

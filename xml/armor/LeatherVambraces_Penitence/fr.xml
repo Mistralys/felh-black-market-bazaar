@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Entraves du Pénitent</DisplayName>
+    <Description>Une fois la pénitence accomplie et l&apos;absolution trouvée, la restitution se trouve au bout du chemin.</Description>
+    <Provides index="1">Restitution du Pénitent - Soigne tous les alliés et le lanceur gagne 3 points de vie en permanence (Nécessite 40 charges de Souffrance du Pénitent)</Provides>
+    <Provides index="2">Souffrance du Pénitent - La pénitence est accomplie chaque fois que le porteur est frappé au combat (+1 charge)</Provides>
+</Translation>

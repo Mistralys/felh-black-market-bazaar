@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Sac à Dos d&apos;Éclaireur</DisplayName>
+    <Description>Rempli de tout l&apos;attirail et des accessoires de tout Maître Éclaireur qui se respecte, ce sac à dos permettra à son porteur de couvrir n&apos;importe quelle distance à travers n&apos;importe quel terrain.</Description>
+    <Provides index="1">Aucune pénalité de Mouvement en Forêt</Provides>
+    <Provides index="2">Aucune pénalité de Mouvement dans les Marais</Provides>
+    <Provides index="3">Aucune pénalité de Mouvement sur les Collines</Provides>
+</Translation>

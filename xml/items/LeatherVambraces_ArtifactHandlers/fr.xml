@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Gants de Manipulation d&apos;Artefacts</DisplayName>
+    <Description>Les outils du métier des anciens conservateurs hantant les musées d&apos;antan, ces gants étaient également utilisés par des pilleurs de tombes sans scrupules pour trouver des chambres au trésor secrètes.</Description>
+    <Provides index="1">20% de chance de trouver de meilleurs objets dans les huttes au trésor</Provides>
+</Translation>

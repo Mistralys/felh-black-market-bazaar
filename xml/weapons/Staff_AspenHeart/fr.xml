@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bâton Cœur de Tremble</DisplayName>
+    <Description>Autrefois utilisé par un ordre de moines gardiens, seule une poignée de ces bâtons incassables subsistent dans le monde. Le bois spécialement traité confère à son porteur une force et une vitesse surnaturelles.</Description>
+    <Provides index="1">+2 Contre-attaques par round</Provides>
+    <Provides index="2">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+</Translation>

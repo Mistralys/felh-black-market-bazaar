@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Brise-Résistance</DisplayName>
+    <Description>La cible perd 3 points de Défense et 6 points de Résistance aux Sorts par frappe.</Description>
+    <ModifierDisplayName index="1">Perte de Résistance</ModifierDisplayName>
+    <ModifierDisplayName index="2">Perte de Défense</ModifierDisplayName>
+</Translation>

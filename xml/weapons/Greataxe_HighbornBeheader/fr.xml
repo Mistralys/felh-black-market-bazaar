@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Décapiteur des Nobles</DisplayName>
+    <Description>Cette grande hache cérémonielle a été forgée pour exécuter les champions déchus et les seigneurs vaincus. Sa lame tranchante ne fait aucune distinction entre les couronnes et les casques ordinaires.</Description>
+    <Provides index="1">+5 Attaque contre les Champions</Provides>
+    <Provides index="2">Coup de Hache - Attaque puissante à la hache</Provides>
+    <Provides index="3">Contre-attaque de Rattrapage - Attaque supplémentaire si l&apos;ennemi rate son attaque</Provides>
+    <Provides index="4">Balayage - Attaque tous les ennemis adjacents</Provides>
+</Translation>

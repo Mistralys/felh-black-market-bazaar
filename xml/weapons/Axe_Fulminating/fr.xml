@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Hache Fulminante</DisplayName>
+    <Description>Cette hache crépite d&apos;énergie électrique, frappant les ennemis avec la force d&apos;un éclair déchaîné.</Description>
+    <Provides index="1">Contre-attaque de Rattrapage - Attaque supplémentaire si l&apos;ennemi rate son attaque</Provides>
+    <Provides index="2">Balayage - Attaque tous les ennemis adjacents</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Tailladeur Brise-Cou</DisplayName>
+    <Description>Cette épée longue d&apos;une rapidité stupéfiante frappe avec une précision croissante à mesure que son porteur gagne en expérience, transformant chaque combat en une démonstration de virtuosité mortelle.</Description>
+    <Provides index="1">+3 Contre-attaques par round</Provides>
+    <Provides index="2">+1 Précision par Niveau</Provides>
+</Translation>

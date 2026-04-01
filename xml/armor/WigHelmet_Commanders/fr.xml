@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Perruque du Commandant</DisplayName>
+    <Description>Cette perruque enchantée améliore considérablement les pouvoirs de persuasion. Bien que ce soit une pièce vestimentaire plutôt grotesque, ses composants magiques protègent le porteur du regard du monde.</Description>
+    <Provides index="1">+5 à la Précision de l&apos;Armée</Provides>
+    <Provides index="2">+10% à l&apos;Expérience de l&apos;Armée</Provides>
+</Translation>

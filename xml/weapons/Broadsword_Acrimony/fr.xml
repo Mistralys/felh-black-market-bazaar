@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Lame de l&apos;Âcreté</DisplayName>
+    <Description>Cette lame forgée dans la rancœur et l&apos;amertume s&apos;abreuve de la souffrance de ses victimes, devenant plus redoutable à mesure que le combat s&apos;intensifie.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">Frénésie d&apos;Attaque - Attaques supplémentaires en rafale</Provides>
+    <Provides index="3">+20% Attaque contre les ennemis blessés</Provides>
+</Translation>

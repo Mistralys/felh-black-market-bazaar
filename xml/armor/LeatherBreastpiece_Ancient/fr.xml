@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Armure des Ancêtres</DisplayName>
+    <Description>Cette relique usée par les batailles irradie une intimité avec les conflits légendaires du passé, comme en témoignent les taches de sang permanentes qui parsèment sa surface.</Description>
+    <Provides index="1">+25% d&apos;Expérience</Provides>
+</Translation>

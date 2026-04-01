@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Veste de Léopard</DisplayName>
+    <Description>Le véritable vêtement des Seigneurs de Guerre des tribus barbares, dit-on animé par la férocité et la bravoure.</Description>
+    <Provides index="1">+1 Endurance de Départ</Provides>
+    <Provides index="2">+4 Initiative pour le premier tour de combat</Provides>
+</Translation>

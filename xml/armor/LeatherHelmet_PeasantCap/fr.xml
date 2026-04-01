@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bonnet de Paysan</DisplayName>
+    <Description>C&apos;est le bonnet de cuir traditionnel utilisé par les Paysans dans tout Elemental. Qu&apos;ils soient des serfs opprimés ou des ploutocrates locaux, c&apos;est le symbole qui les unit tous dans leurs aspects les plus nobles et les plus dégradés. Mieux vaut le vérifier pour les poux avant de l&apos;utiliser.</Description>
+    <Provides index="1">Sécurité dans le nombre - +6 Esquive dans une armée de 5 unités ou plus</Provides>
+</Translation>

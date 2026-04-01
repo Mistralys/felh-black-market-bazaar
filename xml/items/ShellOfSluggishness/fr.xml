@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Coquille de Lenteur</DisplayName>
+    <Description>Diriger la magie stockée dans cette coquille vers les armées ennemies les maudira avec le ralenti.</Description>
+    <Provides index="1">Permet au porteur de lancer Lenteur de Masse</Provides>
+</Translation>

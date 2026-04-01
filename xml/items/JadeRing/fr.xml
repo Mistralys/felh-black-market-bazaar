@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Anneau de Jade</DisplayName>
+    <Description>Taillé dans le jade le plus pur, cet anneau magique n&apos;est pas qu&apos;un bijou coûteux. Il peut également servir de réceptacle à toxines ou d&apos;antidote. Ou les deux.</Description>
+    <Provides index="1">Les attaques de mêlée infligent également 2 dégâts de Poison par round à la victime</Provides>
+    <Provides index="2">+20% de Résistance au Poison</Provides>
+</Translation>

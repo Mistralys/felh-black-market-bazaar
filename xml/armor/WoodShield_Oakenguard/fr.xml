@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bouclier Garde-Chêne</DisplayName>
+    <Description>Fabriqués à partir du bois de vénérables chênes, ces précieux boucliers confèrent fermeté et fortitude au porteur et étendent également un dais de solidité aux alliés.</Description>
+    <Provides index="1">+1 à la Défense de l&apos;armée</Provides>
+    <Provides index="2">+15% de résistance au Poison</Provides>
+    <Provides index="3">+15 Défense en Défense</Provides>
+    <Provides index="4">Immunisé contre le renversement</Provides>
+    <Provides index="5">Coup de Bouclier - Repousse la victime d&apos;une case</Provides>
+    <Provides index="6">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

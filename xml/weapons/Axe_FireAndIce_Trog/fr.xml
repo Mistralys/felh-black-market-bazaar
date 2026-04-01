@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Feu et Glace</DisplayName>
+    <Description>Ces deux haches jumelles incarnent des forces opposées mais complémentaires. Ensemble, elles brûlent et gèlent simultanément, laissant les ennemis dans un état de confusion douloureuse.</Description>
+    <Provides index="1">Contre-attaque de Rattrapage - Attaque supplémentaire si l&apos;ennemi rate son attaque</Provides>
+    <Provides index="2">Balayage - Attaque tous les ennemis adjacents</Provides>
+</Translation>

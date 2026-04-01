@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bouclier Buveur de Foudre</DisplayName>
+    <Description>Ces boucliers ont été conçus pour traquer les Cris d&apos;Air et les Élémentaux d&apos;Air, protégeant partiellement leurs porteurs des attaques électriques.</Description>
+    <Provides index="1">+20% de résistance à la Foudre</Provides>
+    <Provides index="2">+10 Défense en Défense</Provides>
+    <Provides index="3">Coup de Bouclier - Repousse la victime d&apos;une case</Provides>
+    <Provides index="4">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Branche Frappée par la Foudre</DisplayName>
+    <Description>Être généreux est facile quand on a beaucoup à redonner. Cette maxime est peut-être absurde appliquée à une branche frappée par la foudre, mais ne rejetez pas les tentatives sincères d&apos;élever le débat.</Description>
+    <Provides index="1">+1 Foudre à l&apos;Attaque de l&apos;Armée</Provides>
+    <Provides index="2">+15% à la résistance à la Foudre de l&apos;Armée</Provides>
+</Translation>

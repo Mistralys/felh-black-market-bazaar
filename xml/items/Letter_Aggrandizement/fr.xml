@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Lettre d&apos;Auto-Glorification</DisplayName>
+    <Description>Le contenu de cette lettre décrit dans de grands détails vivants le succès d&apos;une quête héroïque complexe. C&apos;est si captivant que vous avez l&apos;impression d&apos;avoir pu y participer. Et la chose la plus étrange est que tous les noms des protagonistes ont été mystérieusement effacés. Il vous suffit de remplir les blancs et de revendiquer pour vous-même la gloire de ces champions anonymes.</Description>
+    <Provides index="1">+10 Renommée</Provides>
+</Translation>

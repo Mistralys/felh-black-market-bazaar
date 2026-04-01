@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Frénésie d&apos;Attaque</DisplayName>
+    <Description>L&apos;unité ciblée gagne +1 en Attaque à chaque frappe réussie pour la durée du combat.</Description>
+    <ModifierDisplayName index="1">Attaque +1</ModifierDisplayName>
+</Translation>

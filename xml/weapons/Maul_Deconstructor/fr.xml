@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Déconstructeur</DisplayName>
+    <Description>L&apos;outil de prédilection pour démonter les Constructs et découvrir ce qui les fait fonctionner. Appliquez un peu de rétro-ingénierie ici, martelez comme un sauvage primitif là, et construisez une théorie solide pour votre thèse sur les &quot;Machines Pensantes&quot;.</Description>
+    <Provides index="1">+15 Attaque contre les Constructs</Provides>
+    <Provides index="2">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="3">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+    <Provides index="4">Coup Estropiant - +100% Attaque, mais vous perdez votre prochaine action</Provides>
+</Translation>

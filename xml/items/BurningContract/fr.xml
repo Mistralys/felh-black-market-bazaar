@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Contrat Brûlant</DisplayName>
+    <Description>Par sa nature même, il s&apos;agit évidemment d&apos;un accord temporaire. Vous avez bien lu les petits caractères avant qu&apos;ils ne noircissent, n&apos;est-ce pas ?</Description>
+    <Provides index="1">+1 Feu à l&apos;Attaque de l&apos;Armée</Provides>
+    <Provides index="2">+15% à la résistance au Feu de l&apos;Armée</Provides>
+</Translation>

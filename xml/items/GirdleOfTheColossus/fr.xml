@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ceinture du Colosse</DisplayName>
+    <Description>Une ceinture faite pour les Géants et pourtant elle s&apos;adapte parfaitement à votre taille ? Des forces magiques doivent être à l&apos;œuvre ici, alors ne commencez pas le régime tout de suite.</Description>
+    <Provides index="1">+3 Endurance de Départ</Provides>
+    <Provides index="2">Balayage Puissant - Attaque tous les ennemis dans un rayon de 1 case, les repousse et les renverse</Provides>
+</Translation>

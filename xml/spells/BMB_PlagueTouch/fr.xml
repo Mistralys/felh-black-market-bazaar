@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Toucher de Peste</DisplayName>
+    <Description>Réduit de moitié la Résistance au Poison des cibles, les empoisonne et propage l&apos;Infection.</Description>
+    <ModifierDisplayName index="3">Contagion</ModifierDisplayName>
+</Translation>

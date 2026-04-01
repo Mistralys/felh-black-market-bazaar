@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Vêtement du Nihiliste</DisplayName>
+    <Description>Ces robes néfastes étaient autrefois portées par les convertis inadaptés du Cercle Perdu. Quiconque serait tenté d&apos;en porter une devrait savoir que cela sera interprété comme une déclaration de guerre à la Vie.</Description>
+    <Provides index="1">+10 Résistance aux Sorts</Provides>
+    <Provides index="2">Permet au porteur de lancer Cercle de Mort</Provides>
+</Translation>

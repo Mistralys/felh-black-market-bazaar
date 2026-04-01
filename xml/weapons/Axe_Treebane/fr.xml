@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Hache Fléau des Arbres</DisplayName>
+    <Description>Forgée pour abattre les forêts enchantées et les créatures sylvestres, cette hache redoutable fait trembler les esprits de la nature à sa seule vue.</Description>
+    <Provides index="1">Coup de Hache - Attaque puissante à la hache</Provides>
+    <Provides index="2">Contre-attaque de Rattrapage - Attaque supplémentaire si l&apos;ennemi rate son attaque</Provides>
+    <Provides index="3">Balayage - Attaque tous les ennemis adjacents</Provides>
+</Translation>

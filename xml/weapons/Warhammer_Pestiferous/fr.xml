@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Marteau de Guerre Pestilentiel</DisplayName>
+    <Description>Hautement toxique, ce marteau de guerre dégage une odeur vile qui peut être préjudiciable dans la plupart des cercles sociaux.</Description>
+    <Provides index="1">Les victimes subissent 6 dégâts de Poison par tour</Provides>
+    <Provides index="2">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="3">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+</Translation>

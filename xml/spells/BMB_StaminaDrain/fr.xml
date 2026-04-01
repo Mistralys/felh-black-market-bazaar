@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Drain d&apos;Endurance</DisplayName>
+    <Description>Attaque qui réduit l&apos;Endurance de la victime à 0 si elle touche.</Description>
+    <ModifierDisplayName index="2">Drain d&apos;Endurance</ModifierDisplayName>
+</Translation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Hache de Bataille Pleurante</DisplayName>
+    <Description>Cette hache de bataille suinte un venin corrosif qui empoisonne lentement ses victimes, les condamnant à une agonie prolongée.</Description>
+    <Provides index="1">Poison 6 dégâts par tour</Provides>
+    <Provides index="2">Contre-attaque de Rattrapage - Attaque supplémentaire si l&apos;ennemi rate son attaque</Provides>
+    <Provides index="3">Balayage - Attaque tous les ennemis adjacents</Provides>
+</Translation>

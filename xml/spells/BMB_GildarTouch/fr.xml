@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Toucher de Gildar</DisplayName>
+    <Description>Le porteur gagne +1 Or chaque fois qu&apos;il frappe un ennemi.</Description>
+    <ModifierDisplayName index="1">+1 Or</ModifierDisplayName>
+</Translation>

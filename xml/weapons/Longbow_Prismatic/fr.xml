@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Arc Long Prismatique</DisplayName>
+    <Description>Cet arc long enchanté tire des flèches qui scintillent de toutes les couleurs de l&apos;arc-en-ciel, chacune portant un élément différent pour surprendre et dérouter les ennemis.</Description>
+    <Provides index="1">Active les capacités nécessitant des Arcs</Provides>
+    <Provides index="2">Attaque à distance</Provides>
+</Translation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Rempart du Brute</DisplayName>
+    <Description>Bien que ce lourd bouclier reste fondamentalement un outil défensif, il a également été spécifiquement conçu pour fracasser les crânes et briser les os. La brute enfermée à l&apos;intérieur peut enfin s&apos;exprimer.</Description>
+    <Provides index="1">+20 Défense en Défense</Provides>
+    <Provides index="2">Effet Rempart du Brute - Double les dégâts du Coup de Bouclier et repousse la victime d&apos;une case</Provides>
+    <Provides index="3">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

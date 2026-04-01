@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Cristal Bleu</DisplayName>
+    <Description>Réputé être un éclat directement brisé du cœur de Vetrar, ce cristal peut déchaîner la fureur de l&apos;hiver.</Description>
+    <Provides index="1">Permet au porteur de lancer Rayon Glacial</Provides>
+</Translation>

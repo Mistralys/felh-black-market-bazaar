@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Capuche du Maraudeur</DisplayName>
+    <Description>Vous planifiez un vol en embuscade ? Ou peut-être trahir et tendre un piège à vos voisins ? N&apos;oubliez pas de porter votre Capuche du Maraudeur à la fête.</Description>
+    <Provides index="1">+3 Déplacements pour le premier tour de combat</Provides>
+    <Provides index="2">+10 à la chance de Coup Critique pour le premier tour de combat</Provides>
+    <Provides index="3">+40% aux dégâts de Coup Critique pour le premier tour de combat</Provides>
+</Translation>

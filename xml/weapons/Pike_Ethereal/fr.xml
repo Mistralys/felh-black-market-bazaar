@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Pique Éthérée</DisplayName>
+    <Description>La pointe fantomatique de cette lance glisse à travers les constituants inanimés et ne se durcit que lorsqu&apos;elle touche la matière vivante. Elle ravagera aussi les mécanismes internes des Constructs et dissipera les forces animant les Morts-Vivants. Idéale pour empaler des adversaires gênants à travers des murs encombrants.</Description>
+    <Provides index="1">Ignore 100% de la Défense de la victime</Provides>
+    <Provides index="2">Immunisé contre la Contre-attaque</Provides>
+    <Provides index="3">Empalage - Frappe un adversaire et celui qui se trouve derrière lui</Provides>
+</Translation>

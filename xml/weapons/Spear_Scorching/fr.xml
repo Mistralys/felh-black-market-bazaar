@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Javelot Brûlant</DisplayName>
+    <Description>Cette lance perpétuellement fumante peut être utilisée pour faire bouillir de l&apos;eau, allumer un feu de camp ou infliger des blessures cuisantes à quiconque est assez fou pour se mettre en travers du chemin de son porteur. À manier avec précaution.</Description>
+    <Provides index="1">Ignore 33% de la Défense de la victime</Provides>
+    <Provides index="2">Immunisé contre la Contre-attaque</Provides>
+    <Provides index="3">Empalage - Frappe un adversaire et celui qui se trouve derrière lui</Provides>
+</Translation>

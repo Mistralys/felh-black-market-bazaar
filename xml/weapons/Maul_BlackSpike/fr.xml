@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Attendrisseur de Pointe Noire</DisplayName>
+    <Description>Le légendaire gladiateur Pointe Noire était dit invincible dans l&apos;arène, accumulant victoires et cadavres, abattant champions et monstres avec une détermination infatigable et implacable. Son maul fut affectueusement surnommé l&apos;Attendrisseur. Des idées sur la raison ?</Description>
+    <Provides index="1">L&apos;unité n&apos;est jamais Contre-attaquée</Provides>
+    <Provides index="2">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="3">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+    <Provides index="4">Rassemblez trois objets Pointe Noire pour infliger Frappe Démantelante - +400% Attaque de Coup Écrasant</Provides>
+</Translation>

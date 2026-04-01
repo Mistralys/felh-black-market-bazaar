@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Effet de la Ceinture d&apos;Épuisement</DisplayName>
+    <Description>Les unités frappées subissent -1 en Endurance et leur croissance est stoppée pendant 3 tours.</Description>
+    <ModifierDisplayName index="1">Perte d&apos;Endurance</ModifierDisplayName>
+    <ModifierDisplayName index="2">Épuisement</ModifierDisplayName>
+</Translation>

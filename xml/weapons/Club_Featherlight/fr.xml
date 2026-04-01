@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Massue Légère comme une Plume</DisplayName>
+    <Description>Malgré son apparence trompeuse, cette massue étonnamment légère frappe avec une force surprenante, déjouant les attentes de quiconque la sous-estime.</Description>
+    <Provides index="1">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="2">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+</Translation>

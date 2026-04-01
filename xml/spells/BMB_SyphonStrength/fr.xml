@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Siphon de Force</DisplayName>
+    <Description>L&apos;Attaque de la victime est réduite de 25 %, et l&apos;Attaque du lanceur est augmentée de 25 % sauf si la victime résiste.</Description>
+    <ModifierDisplayName index="1">Affaibli</ModifierDisplayName>
+    <ModifierDisplayName index="2">Renforcé</ModifierDisplayName>
+</Translation>

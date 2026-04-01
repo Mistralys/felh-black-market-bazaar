@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Hache de Bataille Civilisée Jumelle</DisplayName>
+    <Description>Ces deux haches de bataille forgées par des artisans raffinés prouvent que la civilisation peut être aussi tranchante que la barbarie.</Description>
+    <Provides index="1">+5 Attaque contre les Bêtes, Dragons, Élémentaux, Corrompus et Morts-Vivants</Provides>
+    <Provides index="2">Contre-attaque de Rattrapage - Attaque supplémentaire si l&apos;ennemi rate son attaque</Provides>
+    <Provides index="3">Balayage - Attaque tous les ennemis adjacents</Provides>
+</Translation>

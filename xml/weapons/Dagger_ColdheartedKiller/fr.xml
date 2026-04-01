@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Tueur au Cœur Froid</DisplayName>
+    <Description>Cette dague glaciale est l&apos;arme d&apos;un assassin sans pitié, dont le toucher paralyse les victimes dans une torpeur glacée avant de les achever.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">Froid Paralysant - Paralyse la cible avec un froid intense</Provides>
+</Translation>

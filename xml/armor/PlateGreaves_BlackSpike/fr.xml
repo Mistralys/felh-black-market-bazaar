@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Reins de Pointe Noire</DisplayName>
+    <Description>Le légendaire gladiateur Pointe Noire était dit invincible dans l&apos;arène, accumulant victoires et cadavres, tuant champions et monstres avec une détermination infatigable et implacable. Ces articulations protectrices étaient réputées être le siège de son pouvoir. Serait-ce son entrejambe ? Allez savoir.</Description>
+    <Provides index="1">+1 Chance de Critique par Niveau</Provides>
+    <Provides index="2">Rassemblez trois objets Pointe Noire pour infliger Coup Démantelant - +400% d&apos;Attaque Coup Écrasant</Provides>
+</Translation>

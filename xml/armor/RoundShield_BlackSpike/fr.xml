@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Rayons de Pointe Noire</DisplayName>
+    <Description>Le légendaire gladiateur Pointe Noire était dit invincible dans l&apos;arène, accumulant victoires et cadavres, tuant champions et monstres avec une détermination infatigable et implacable. Son bouclier fut forgé par un maître forgeron renommé qui était l&apos;un de ses plus grands admirateurs. Ses rayons sont si tranchants qu&apos;un simple contact pourrait entraîner une blessure invalidante.</Description>
+    <Provides index="1">+20 Défense en Défense</Provides>
+    <Provides index="2">Rayons Lacérants - Les ennemis qui frappent le porteur subissent 2-5 dégâts</Provides>
+    <Provides index="3">Coup de Bouclier - Repousse les victimes d&apos;une case et les renverse</Provides>
+    <Provides index="4">Rassemblez trois objets Pointe Noire pour infliger Coup Démantelant - +400% d&apos;Attaque Coup Écrasant</Provides>
+    <Provides index="5">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Anneau des Humeurs Nocives</DisplayName>
+    <Description>Glisser cet anneau luxueux à votre doigt libérera la magie toxique tourbillonnant dans la pierre et enchantera les armes de votre armée avec du poison, la transformant en un véritable nid de serpents.</Description>
+    <Provides index="1">+2 Poison à l&apos;Attaque de l&apos;Armée</Provides>
+</Translation>

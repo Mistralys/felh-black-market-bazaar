@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Cuissardes Visqueuses</DisplayName>
+    <Description>Texture spongieuse et couleur visqueuse à contempler,
+Une démarche molle et gluante aux pieds toujours froids,
+Un essaim bourdonnant qui tourbillonne et virevolte alentour,
+Une foulée bien collante pour rester ferme sur le sol.</Description>
+    <Provides index="1">Permet à l&apos;unité de lancer Nuée d&apos;Insectes</Provides>
+    <Provides index="2">Glu Collante - Les ennemis qui frappent le porteur sont immobilisés pendant 3 rounds à moins qu&apos;ils ne résistent</Provides>
+</Translation>

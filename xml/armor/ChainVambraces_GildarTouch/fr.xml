@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Gants du Toucher Gildar</DisplayName>
+    <Description>Avez-vous entendu l&apos;histoire de l&apos;Empereur Scintillant qui avait le Toucher Gildar ? Eh bien, peut-être que, pour une fois, on peut affirmer que les contes de fées ont une base dans la réalité.</Description>
+    <Provides index="1">Effet Toucher Gildar - L&apos;unité gagne +1 Or chaque fois qu&apos;elle frappe un ennemi</Provides>
+</Translation>

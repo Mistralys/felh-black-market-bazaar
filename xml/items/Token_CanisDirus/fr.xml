@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Jeton du Canis Dirus</DisplayName>
+    <Description>Ce jeton invoquera un compagnon poilu de la meute, le fléau des bergers.</Description>
+    <Provides index="1">Invoque un Warg des Forêts</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Calice Corrupteur</DisplayName>
+    <Description>Tout liquide versé dans ce calice se transformera instantanément en poison le plus mortel. Un délicieux accessoire de boisson à apporter aussi bien aux festins plébéiens qu&apos;aux soirées mondaines.</Description>
+    <Provides index="1">+1 Poison à l&apos;Attaque de l&apos;Armée</Provides>
+    <Provides index="2">+15% à la résistance au Poison de l&apos;Armée</Provides>
+</Translation>

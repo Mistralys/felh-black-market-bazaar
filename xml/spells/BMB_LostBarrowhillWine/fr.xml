@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Effet du Vin Perdu de Barrowhill</DisplayName>
+    <Description>Accorde un effet bénéfique aléatoire — bien que tous les millésimes ne vieillissent pas avec grâce.</Description>
+    <ModifierDisplayName index="1">Résistance aux Sorts !</ModifierDisplayName>
+    <ModifierDisplayName index="2">Maîtrise des Sorts !</ModifierDisplayName>
+    <ModifierDisplayName index="3">Puissance des Sorts !</ModifierDisplayName>
+    <ModifierDisplayName index="4">Œil d&apos;Aigle !</ModifierDisplayName>
+    <ModifierDisplayName index="5">Toucher de Glace !</ModifierDisplayName>
+    <ModifierDisplayName index="6">Toucher de Flamme !</ModifierDisplayName>
+    <ModifierDisplayName index="7">Toucher de Foudre !</ModifierDisplayName>
+    <ModifierDisplayName index="8">Toucher de Poison !</ModifierDisplayName>
+    <ModifierDisplayName index="9">Oups !</ModifierDisplayName>
+    <ModifierDisplayName index="10">Quelle Maladresse !</ModifierDisplayName>
+    <ModifierDisplayName index="11">Visée Affinée !</ModifierDisplayName>
+    <ModifierDisplayName index="12">Fortitude !</ModifierDisplayName>
+    <ModifierDisplayName index="13">Esquiveur Habile !</ModifierDisplayName>
+    <ModifierDisplayName index="14">Rien qu&apos;un Mal de Tête !</ModifierDisplayName>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Doigts de Gelure</DisplayName>
+    <Description>Mains froides, cœur chaud ?</Description>
+    <Provides index="1">+10 Chance de Critique contre les ennemis avec moins de 50 de Résistance au Froid</Provides>
+</Translation>

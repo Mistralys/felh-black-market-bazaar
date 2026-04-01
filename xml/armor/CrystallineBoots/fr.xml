@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bottes Cristallines</DisplayName>
+    <Description>Un Élémental de Glace finira tôt ou tard par venir les réclamer. La surface est aussi tranchante qu&apos;un rasoir, et vous avez déjà plusieurs coupures à soigner. Et pourtant, malgré ces petits désagréments, tout ce clinquant cristallin vous va à merveille.</Description>
+    <Provides index="1">Surface Tranchante - Les ennemis qui frappent le porteur subissent 2 dégâts</Provides>
+</Translation>

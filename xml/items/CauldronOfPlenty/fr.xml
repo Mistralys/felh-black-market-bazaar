@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Chaudron d&apos;Abondance</DisplayName>
+    <Description>Ce chaudron de ragoût qui se remplit tout seul engraissera vos citoyens et provoquera un léger boom démographique.</Description>
+    <Provides index="1">+15 Population dans votre capitale</Provides>
+</Translation>

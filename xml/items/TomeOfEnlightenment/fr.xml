@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Tome de l&apos;Illumination</DisplayName>
+    <Description>Les philosophies contenues dans cet ouvrage porteront votre esprit vers de plus hauts sommets.</Description>
+    <Provides index="1">Accorde à l&apos;unité la capacité Connaissance</Provides>
+</Translation>

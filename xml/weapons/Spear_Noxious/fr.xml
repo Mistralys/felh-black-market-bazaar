@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Lance Nocive</DisplayName>
+    <Description>Également connue sous le nom de Poignardeur Toxique, cette lance répand des toxines mortelles dans le système sanguin de la victime en un temps record, la rendant impropre à la chasse (à moins que vous n&apos;aimiez votre viande avec un goût venimeux). En d&apos;autres termes, un objet de tueur.</Description>
+    <Provides index="1">Les attaques de mêlée infligent également 2 dégâts de Poison par round à la victime</Provides>
+    <Provides index="2">Ignore 33% de la Défense de la victime</Provides>
+    <Provides index="3">Immunisé contre la Contre-attaque</Provides>
+    <Provides index="4">Empalage - Frappe un adversaire et celui qui se trouve derrière lui</Provides>
+</Translation>

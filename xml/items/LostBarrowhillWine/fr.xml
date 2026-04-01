@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Vin Perdu de Barrowhill</DisplayName>
+    <Description>Ah le légendaire Vin Perdu de Barrowhill ! Ses vignes pousseraient sur les terres funéraires des victimes de la Guerre Arcanique, chargées de la magie sauvage de mille Archimages endormis. Vous pourriez obtenir bien plus qu&apos;une gueule de bois en ingérant cette liqueur enivrante. De plus, il y a toujours une pièce d&apos;or à trouver au fond de la cruche.</Description>
+    <Provides index="1">+10 Mana</Provides>
+    <Provides index="2">Effet Vin Perdu de Barrowhill - Effet aléatoire sur le Lanceur</Provides>
+    <Provides index="3">+1 Or</Provides>
+</Translation>

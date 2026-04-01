@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mains d&apos;Archer</DisplayName>
+    <Description>Selon les légendes locales, ces gants furent universellement bannis des tournois de tir à l&apos;arc après qu&apos;un écuyer nommé à juste titre Lester le Maladroit surpassa le champion invaincu Sharpeye Sharidon à la foire annuelle des Moissons. Quand la supercherie fut découverte, Lester, désormais désigné comme le Tricheur, devint la cible d&apos;une charrette de tomates pourries.</Description>
+    <Provides index="1">Œil de Taureau - +300% d&apos;Attaque avec un Arc, mais vous perdez votre prochain tour.</Provides>
+    <Provides index="2">Cœur de la Cible - Ignore 20% de la défense de la victime avec un Arc</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Coup Handicapant</DisplayName>
+    <Description>Doublez votre Attaque, mais vous perdez votre prochaine action.</Description>
+    <ModifierDisplayName index="2">Étourdi</ModifierDisplayName>
+</Translation>

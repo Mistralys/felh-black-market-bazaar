@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Enclume du Maître Forgeron</DisplayName>
+    <Description>Cette enclume est restée inactive bien trop longtemps et attend ces marteaux battants avec une anticipation métallique fiévreuse.</Description>
+    <Provides index="1">+3 à la Chance de Critique de l&apos;Armée</Provides>
+    <Provides index="2">Rassemblez les trois Outils du Maître Forgeron pour lancer Excellence de Forge - L&apos;Armée gagne +6 Attaque, +6 Chance de Critique et +100% de Dégâts Critiques</Provides>
+</Translation>

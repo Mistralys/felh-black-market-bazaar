@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Fléau de la Mort Errant</DisplayName>
+    <Description>Fruit d&apos;une collaboration de premier ordre entre un maître forgeron et un archimage de la vie, cet artefact prolongera la vie de son propriétaire bien au-delà des limites naturelles et fournira même quelques soins dans le feu du combat, bien qu&apos;occasionnellement et arbitrairement.</Description>
+    <Provides index="1">+1 Point de Vie par Niveau</Provides>
+    <Provides index="2">Effet Fléau de la Mort Errant - A 25% de chance de soigner 8 points de vie quand le porteur frappe un ennemi</Provides>
+    <Provides index="3">+20 Défense en Défense</Provides>
+    <Provides index="4">Coup de Bouclier - Repousse la victime d&apos;une case</Provides>
+    <Provides index="5">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Croc du Berger</DisplayName>
+    <Description>Un bâton pour ramener les brebis égarées dans les rangs ou juste pour le plaisir de les faire tomber sur leurs fesses.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">Crochet - Attaque qui a également une chance de renverser l&apos;ennemi à moins qu&apos;il ne résiste</Provides>
+</Translation>

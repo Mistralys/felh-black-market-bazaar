@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bâton de Marche du Druide</DisplayName>
+    <Description>C&apos;est le bâton des prêtres de la nature, en parfaite synergie avec les lignes de ley et les esprits de la terre. Si tout le reste échoue, il peut aussi être utilisé pour frapper des têtes.</Description>
+    <Provides index="1">Invoque un Ours au même niveau que le lanceur</Provides>
+    <Provides index="2">+1 niveau pour les Invocations</Provides>
+    <Provides index="3">Permet au porteur de lancer Peau de Pierre</Provides>
+    <Provides index="4">+20% Résistance au Poison</Provides>
+</Translation>

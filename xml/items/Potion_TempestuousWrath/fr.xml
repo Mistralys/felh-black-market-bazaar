@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Courroux Tempétueux</DisplayName>
+    <Description>Buvez cette infusion orageuse et laissez les éclairs devenir les instruments de votre colère déchaînée.</Description>
+    <Provides index="1">+4 Attaque de Foudre pour la durée du combat</Provides>
+</Translation>

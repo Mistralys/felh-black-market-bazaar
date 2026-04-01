@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Titre de Noblesse</DisplayName>
+    <Description>Ce parchemin d&apos;apparence très officielle accorde un titre noble et les terres qui vont avec. Château, vassaux et serfs non inclus.</Description>
+    <Provides index="1">Accorde à l&apos;unité la Capacité Célèbre - +1 Renommée par Saison</Provides>
+</Translation>

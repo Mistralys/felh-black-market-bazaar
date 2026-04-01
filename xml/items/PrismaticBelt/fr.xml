@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ceinture Prismatique</DisplayName>
+    <Description>Cette ceinture colorée peut sembler un accessoire vestimentaire anodin et fantaisiste, mais cela prouve simplement combien les apparences peuvent être trompeuses. Chaque maillon a été imprégné de Froid, Feu, Foudre ou Poison et une dévastation élémentale sera libérée chaque fois que vous frapperez un ennemi.</Description>
+    <Provides index="1">Effet Ceinture Prismatique - +4-8 d&apos;Attaque Élémentale par coup</Provides>
+</Translation>

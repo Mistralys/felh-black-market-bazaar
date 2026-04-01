@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Rondache d&apos;Entraînement</DisplayName>
+    <Description>Vous avez donc trouvé votre bouclier d&apos;entraînement. Maintenant vous devez localiser votre épée en bois et votre mannequin en bois et travailler encore ces mouvements de base. Les plaintes ne sont pas les bienvenues.</Description>
+    <Provides index="1">+10% d&apos;Expérience</Provides>
+    <Provides index="2">+5 Défense en Défense</Provides>
+    <Provides index="3">Coup de Bouclier - Repousse la victime d&apos;une case</Provides>
+    <Provides index="4">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

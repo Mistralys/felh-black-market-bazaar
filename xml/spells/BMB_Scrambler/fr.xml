@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Effet du Brouilleur</DisplayName>
+    <Description>Perturbe un sort qu&apos;une unité ennemie est en train de lancer et lui fait perdre son prochain tour sauf si elle résiste.</Description>
+    <ModifierDisplayName index="2">Étourdi</ModifierDisplayName>
+</Translation>

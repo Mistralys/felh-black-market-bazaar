@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bottes en Peau de Démon</DisplayName>
+    <Description>Taillées dans la peau écorchée de plusieurs Démons, ces bottes résonnent des cris télépathiques de leurs fournisseurs involontaires. Oui, il est vrai que la chair crue peut encore avoir des spasmes occasionnels, mais ne laissez pas cela vous dissuader de glisser vos pieds dans ces deux matrices tièdes de corruption confortable.</Description>
+    <Provides index="1">+10 Attaque contre les Élémentaux</Provides>
+    <Provides index="2">Allié Démoniaque - Invoque un Démon Assassin du même niveau que le lanceur</Provides>
+</Translation>

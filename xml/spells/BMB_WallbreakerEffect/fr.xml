@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Effet du Brise-Muraille</DisplayName>
+    <Description>La défense de la cible est réduite de 30 % par frappe.</Description>
+    <ModifierDisplayName index="1">Fracturé</ModifierDisplayName>
+</Translation>

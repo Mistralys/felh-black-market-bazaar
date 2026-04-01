@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Brise-Glace</DisplayName>
+    <Description>Cette charmante sucette métallique offrira une nouvelle façon de briser la glace proverbiale.</Description>
+    <Provides index="1">Effet Brise-Glace - 50% de chance de briser la surface qu&apos;il vient de geler pour 4 à 10 points de dégâts supplémentaires</Provides>
+    <Provides index="2">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="3">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+</Translation>

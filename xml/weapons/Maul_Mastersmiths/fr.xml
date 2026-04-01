@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Marteau du Maître Forgeron</DisplayName>
+    <Description>Même un apprenti forgeron pourrait forger des armes dignes des dieux avec cette relique encombrante. Elle fournira commodément la température ardente nécessaire pour ramollir le métal et l&apos;équilibre parfait pour atteindre l&apos;excellence. Une excellence qui équivaut à la victoire.</Description>
+    <Provides index="1">+1 Attaque de Feu par Niveau</Provides>
+    <Provides index="2">Coup Assommant - Chance d&apos;étourdir la victime proportionnelle aux dégâts infligés</Provides>
+    <Provides index="3">Coup Écrasant - Attaque à +1 par point d&apos;Endurance</Provides>
+    <Provides index="4">Rassemblez les trois Outils du Maître Forgeron pour lancer Excellence de Forge - L&apos;armée gagne +6 Attaque, +6 Chance de Coup Critique et +100% Dégâts Critiques</Provides>
+</Translation>

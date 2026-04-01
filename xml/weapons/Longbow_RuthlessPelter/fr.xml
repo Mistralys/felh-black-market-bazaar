@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bombardeur Impitoyable</DisplayName>
+    <Description>Cet arc long tire des flèches avec une force brutale qui projette les ennemis en arrière, les laissant désorientés et vulnérables aux attaques suivantes.</Description>
+    <Provides index="1">Active les capacités nécessitant des Arcs</Provides>
+    <Provides index="2">Repousse les ennemis en arrière</Provides>
+    <Provides index="3">Attaque à distance</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Livre des Équations Arcaniques</DisplayName>
+    <Description>Un traité sur la décomposition du concept de magie. Lecture laborieuse mais enrichissante car elle enseigne comment se concentrer pour résister aux effets de sorts néfastes.</Description>
+    <Provides index="1">Accorde à l&apos;unité la capacité Résistance aux Sorts</Provides>
+</Translation>

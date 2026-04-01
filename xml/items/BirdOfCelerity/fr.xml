@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Oiseau de Célérité</DisplayName>
+    <Description>Cette belle statuette permet à son propriétaire de distordre le continuum espace-temps et de lancer la hâte à l&apos;échelle globale.</Description>
+    <Provides index="1">Permet au porteur de lancer Hâte de Masse</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Vin Bleu</DisplayName>
+    <Description>Une fois dans une lune bleue, le vin deviendra effectivement bleu. Et après une nuit de festivités, la nation ne se réveillera pas avec la gueule de bois attendue. Elle accueillera plutôt le jour avec une confiance revigorée et un espoir renouvelé.</Description>
+    <Provides index="1">Toutes les unités gagnent un niveau</Provides>
+</Translation>

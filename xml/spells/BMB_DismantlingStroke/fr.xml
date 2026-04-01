@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Coup Démontant de Black Spike</DisplayName>
+    <Description>Lance une Attaque à 400 %, mais vous perdez votre prochaine action.</Description>
+    <ModifierDisplayName index="2">Étourdi</ModifierDisplayName>
+</Translation>

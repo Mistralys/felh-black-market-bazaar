@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Stalactite Éternelle</DisplayName>
+    <Description>Un morceau de glace primordiale brisé de la chevelure hivernale du toit du monde, le cœur de cette stalactite est auto-régénératif et refusera obstinément de fondre même dans la fournaise rugissante d&apos;un forgeron.</Description>
+    <Provides index="1">Permet au porteur de lancer Anneau de Glace</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Compagnon Infernal</DisplayName>
+    <Description>Ce sombre jeton pulse d&apos;énergie d&apos;ombre. Utilisez-le pour déchaîner un féroce Warg des Ombres.</Description>
+    <Provides index="1">Invoque un Warg des Ombres</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Grimoire de Murteas</DisplayName>
+    <Description>Ce grimoire usé par le temps crépite de savoir arcanique et ses pages bruissent des mystères qui s&apos;y cachent. Oui, les anciens maîtres ont encore tant à nous apprendre.</Description>
+    <Provides index="1">+15% de Dégâts de Sort</Provides>
+    <Provides index="2">Myriade Élémentale - Accorde à votre armée des dégâts Élémentaux aléatoires pour la durée du combat</Provides>
+</Translation>

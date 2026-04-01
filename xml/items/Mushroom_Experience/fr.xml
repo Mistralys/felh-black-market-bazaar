@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Champignon Magique</DisplayName>
+    <Description>Il est bien connu que manger l&apos;un de ces champignons revient à lancer les dés proverbials. Osez-vous le manger ?</Description>
+    <Provides index="1">Propriétés mystérieuses</Provides>
+</Translation>

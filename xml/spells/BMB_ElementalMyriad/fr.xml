@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Myriade Élémentaire</DisplayName>
+    <Description>Accorde à votre armée des dégâts élémentaires aléatoires pour la durée de la bataille.</Description>
+    <ModifierDisplayName index="1">Puissance de Givre</ModifierDisplayName>
+    <ModifierDisplayName index="2">Puissance de Feu</ModifierDisplayName>
+    <ModifierDisplayName index="3">Puissance de Foudre</ModifierDisplayName>
+    <ModifierDisplayName index="4">Puissance de Poison</ModifierDisplayName>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Carapace Sainte</DisplayName>
+    <Description>En êtes-vous seulement digne ?</Description>
+    <Provides index="1">+5 Guérison par Saison</Provides>
+    <Provides index="2">Aura Sainte - Les unités amies adjacentes régénèrent 4 points de vie par tour</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ralentissement</DisplayName>
+    <Description>L&apos;unité ennemie ciblée subit -5 en Initiative (-1 par éclat d&apos;eau) sauf si elle résiste.</Description>
+    <ModifierDisplayName index="1">Ralenti</ModifierDisplayName>
+</Translation>

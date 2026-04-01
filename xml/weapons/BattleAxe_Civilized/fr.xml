@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Hache de Bataille Civilisée</DisplayName>
+    <Description>Forgée par des artisans raffinés pour des guerriers cultivés, cette hache de bataille prouve que la civilisation peut être aussi tranchante que la barbarie.</Description>
+    <Provides index="1">+5 Attaque contre les Bêtes, Dragons, Élémentaux, Corrompus et Morts-Vivants</Provides>
+    <Provides index="2">Contre-attaque de Rattrapage - Attaque supplémentaire si l&apos;ennemi rate son attaque</Provides>
+    <Provides index="3">Balayage - Attaque tous les ennemis adjacents</Provides>
+</Translation>

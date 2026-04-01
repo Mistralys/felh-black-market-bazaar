@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Tonique Florissant</DisplayName>
+    <Description>Si vous croyez les lettres délavées inscrites sur l&apos;étiquette sale, avaler cette solution bleutée peut transformer un vieux cheval de guerre en jeune étalon. Cela signifie-t-il que vous ne pourrez plus exhiber fièrement vos cicatrices autour du feu de camp ce soir ?</Description>
+    <Provides index="1">Soigne 50 Points de Vie</Provides>
+    <Provides index="2">Un remède réparateur du plus haut ordre</Provides>
+    <Provides index="3">Supprime deux blessures aléatoires</Provides>
+</Translation>

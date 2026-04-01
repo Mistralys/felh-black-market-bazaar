@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Baguette Élémentale</DisplayName>
+    <Description>Oubliez ces bâtons encombrants limités à une seule manifestation élémentale. Cette baguette lancera les quatre éléments à la fois et à une vitesse bien supérieure. Oui, parfois plus petit c&apos;est mieux.</Description>
+    <Provides index="1">Attaque à distance</Provides>
+</Translation>

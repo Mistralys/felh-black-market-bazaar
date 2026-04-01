@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Tueur de Bandits</DisplayName>
+    <Description>L&apos;enchantement de cet arc vous permettra de distinguer facilement les bandits des citoyens respectueux des lois. Ses flèches mortelles rechercheront les cœurs corrompus des brigands, voleurs et scélérats avec une intention vengeresse.</Description>
+    <Provides index="1">+40 Précision contre les Bandits</Provides>
+    <Provides index="2">+10 Attaque contre les Bandits</Provides>
+    <Provides index="3">Active les capacités nécessitant des Arcs</Provides>
+    <Provides index="4">Attaque à distance</Provides>
+</Translation>

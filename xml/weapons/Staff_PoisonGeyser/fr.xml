@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Geyser de Poison</DisplayName>
+    <Description>Une véritable fontaine de venin, ce bâton crache continuellement des jets de poison. Vous feriez mieux d&apos;apprendre à maîtriser son débit avant qu&apos;une fâcheuse tragédie ne survienne.</Description>
+    <Provides index="1">Attaque à distance</Provides>
+</Translation>

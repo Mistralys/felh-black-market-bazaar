@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Casque à Cornes</DisplayName>
+    <Description>Apparemment, il suffit d&apos;une paire de cornes pour booster sa confiance en soi et la propulser vers des hauteurs insoupçonnées. En avant les cornes !</Description>
+    <Provides index="1">+10% de dégâts cumulatifs à chaque attaque réussie</Provides>
+</Translation>

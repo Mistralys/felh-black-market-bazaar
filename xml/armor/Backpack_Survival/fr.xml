@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Sac à Dos de Survie</DisplayName>
+    <Description>Voici un sac plein de rations militaires et d&apos;équipement essentiel pour survivre dans les conditions les plus extrêmes. Vous pourrez rire au nez des contrées hostiles et des environnements inhospitaliers. Même si cela ressemble à un discours de vendeur, vous SURVIVREZ. Eh eh.</Description>
+    <Provides index="1">+3 aux Points de Vie de l&apos;Armée</Provides>
+    <Provides index="2">+1 à l&apos;Endurance de Départ de l&apos;Armée</Provides>
+    <Provides index="3">+2 à la Régénération de Santé de l&apos;Armée par saison</Provides>
+</Translation>

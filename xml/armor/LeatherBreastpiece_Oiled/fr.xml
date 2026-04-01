@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Armure de Cuir Huilée</DisplayName>
+    <Description>Copieusement enduite d&apos;huile, le manque de conductivité de cette armure de cuir offre à son porteur une certaine protection contre les attaques électriques.</Description>
+    <Provides index="1">+15% de résistance à la Foudre</Provides>
+</Translation>

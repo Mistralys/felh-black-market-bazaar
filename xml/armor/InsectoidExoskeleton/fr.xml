@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Exosquelette Insectoïde</DisplayName>
+    <Description>Cet ancien exosquelette chitineux appartenait au soldat d&apos;une race humanoïde insectoïde aujourd&apos;hui éteinte. Antennes frémissantes, mandibules claquantes et ailes vibrantes, vous êtes désormais initié au chœur de vos frères insectes, et ils ont bien des récriminations à exprimer. Bzz bzz.</Description>
+    <Provides index="1">Cracher de l&apos;Acide - L&apos;ennemi ciblé subit 2-6 dégâts par round pendant 15 rounds.</Provides>
+    <Provides index="2">Permet à l&apos;unité de lancer Fléau des Insectes</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Manteau de la Sorcière des Haies</DisplayName>
+    <Description>Cette cape peut ressembler à un chiffon effiloché à peine digne d&apos;un mendiant, mais elle a été faite par des mains aimant la vie qui ont cousu dans chaque point une générosité sans bornes, une pure bonté et une tendre affection.</Description>
+    <Provides index="1">+3 Guérison par Saison</Provides>
+    <Provides index="2">Mains Guérisseuses - Permet au porteur de soigner une unité amie par le toucher</Provides>
+</Translation>

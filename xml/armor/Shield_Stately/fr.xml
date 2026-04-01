@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bouclier Majestueux</DisplayName>
+    <Description>Finement ouvragé et tout pour le spectacle, ce bouclier est clairement un outil diplomatique et n&apos;est guère adapté au combat. Voulez-vous vraiment abîmer une si belle œuvre d&apos;art ?</Description>
+    <Provides index="1">Accorde la capacité de fuir (avec les alliés restants) du combat</Provides>
+    <Provides index="2">+10 Défense en Défense</Provides>
+    <Provides index="3">Coup de Bouclier - Repousse la victime d&apos;une case</Provides>
+    <Provides index="4">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

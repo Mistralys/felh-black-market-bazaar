@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Hache de Bataille Givrante</DisplayName>
+    <Description>Cette hache de bataille enchantée répand un froid mordant à chaque coup, transformant les blessures en plaies glacées qui ralentissent et paralysent les ennemis.</Description>
+    <Provides index="1">Contre-attaque de Rattrapage - Attaque supplémentaire si l&apos;ennemi rate son attaque</Provides>
+    <Provides index="2">Balayage - Attaque tous les ennemis adjacents</Provides>
+</Translation>

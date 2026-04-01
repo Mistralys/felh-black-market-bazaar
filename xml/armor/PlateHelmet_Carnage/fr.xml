@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Heaume du Carnage</DisplayName>
+    <Description>Le champion assez courageux pour porter ce heaume deviendra inévitablement un instrument de chaos et de destruction.</Description>
+    <Provides index="1">+5 à la chance de Coup Critique</Provides>
+    <Provides index="2">+3 Déplacements pour le premier tour de combat</Provides>
+    <Provides index="3">+50% d&apos;Attaque contre les Adversaires Blessés</Provides>
+    <Provides index="4">-25% à l&apos;Esquive</Provides>
+</Translation>

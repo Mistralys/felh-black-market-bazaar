@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Morsure du Prédateur</DisplayName>
+    <Description>Bien que combiner ces deux épées courtes enlève un peu de sport à la joyeuse chasse, vous devrez quand même porter la première entaille avant que le venin mortel ne fasse le reste. Alors faites-la profonde.</Description>
+    <Provides index="1">+2 Contre-attaques par round</Provides>
+    <Provides index="2">+10 Attaque contre les Bêtes</Provides>
+    <Provides index="3">Les victimes subissent 3 dégâts de Poison par tour</Provides>
+</Translation>

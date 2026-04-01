@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bâton du Surperformant</DisplayName>
+    <Description>Prenez un bon élan, portez vos coups encore plus loin et assommez quelques têtes supplémentaires.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">Balayage - Attaque tous les ennemis dans un rayon de 1 case</Provides>
+</Translation>

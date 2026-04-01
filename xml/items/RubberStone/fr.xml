@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Pierre Rebondissante</DisplayName>
+    <Description>Cette pierre rebondissante affirme magiquement que chaque attaque devrait être suivie d&apos;une frappe de représailles. Un accessoire &quot;en pleine face&quot;, pour ainsi dire.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+</Translation>

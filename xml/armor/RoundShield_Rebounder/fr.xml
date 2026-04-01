@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bouclier Rebondissant</DisplayName>
+    <Description>Si vous êtes du genre inapprochable, ce bouclier ne va certainement pas améliorer vos compétences sociales. Il faut laisser les gens entrer !</Description>
+    <Provides index="1">+10 Défense en Défense</Provides>
+    <Provides index="2">Effet Rebondissant - Frapper cette unité fait reculer l&apos;attaquant d&apos;une case</Provides>
+    <Provides index="3">Coup de Bouclier - Repousse la victime d&apos;une case</Provides>
+    <Provides index="4">Active les capacités nécessitant des Boucliers</Provides>
+</Translation>

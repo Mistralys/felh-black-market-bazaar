@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Harpon Glacé</DisplayName>
+    <Description>Cette lance hyperboréenne a été conçue pour éteindre les Élémentaux de Feu d&apos;un seul coup extrêmement frigide.</Description>
+    <Provides index="1">+1 Attaque de Froid par Niveau</Provides>
+    <Provides index="2">+50% Résistance au Froid</Provides>
+    <Provides index="3">Ignore 33% de la Défense de la victime</Provides>
+    <Provides index="4">Immunisé contre la Contre-attaque</Provides>
+    <Provides index="5">Empalage - Frappe un adversaire et celui qui se trouve derrière lui</Provides>
+</Translation>

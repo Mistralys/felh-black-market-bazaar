@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Fer à Cheval</DisplayName>
+    <Description>Jusqu&apos;à ce que vous trouviez le propriétaire légitime de ce fer perdu, vous pourrez faire une analyse approfondie pour savoir si Dame Chance marque vraiment sa trace sur les chaussures équines.</Description>
+    <Provides index="1">10% de dégâts en moins des attaques Physiques</Provides>
+</Translation>

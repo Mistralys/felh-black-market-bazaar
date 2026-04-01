@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Dichotomiseur Céleste</DisplayName>
+    <Description>Un instrument céleste capable de fendre les cieux. Accessoirement, il divise aussi les corps en morceaux électrisés beaucoup plus petits.</Description>
+    <Provides index="1">+1 Contre-attaque par round</Provides>
+    <Provides index="2">La foudre frappe un groupe ennemi aléatoire pour 20 dégâts de Foudre (+4 par éclat d&apos;air).</Provides>
+</Translation>

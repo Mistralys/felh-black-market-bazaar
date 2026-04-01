@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Chaînes d&apos;Asservissement</DisplayName>
+    <Description>Asservit une unité entraînée sauf si elle résiste. Le lanceur doit être adjacent à la cible.</Description>
+</Translation>

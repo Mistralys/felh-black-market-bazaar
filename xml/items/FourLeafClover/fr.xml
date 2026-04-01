@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Trèfle à Quatre Feuilles</DisplayName>
+    <Description>Inutile de dire à quiconque que vous croyez aux porte-bonheur, vous savez au fond de vous que ce trèfle vous portera chance.</Description>
+    <Provides index="1">+6 à l&apos;Esquive</Provides>
+    <Provides index="2">+3 à la chance de Coup Critique</Provides>
+</Translation>

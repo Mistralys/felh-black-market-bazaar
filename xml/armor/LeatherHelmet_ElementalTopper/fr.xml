@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Coiffe Élémentale</DisplayName>
+    <Description>Ce casque de sécurité devait appartenir à un ingénieur pré-Cataclysme qui travaillait dans des environnements dangereux remplis de risques élémentaux. Il semble être en assez bon état. Vous voilà prêt pour une fouille dans une mine volcanique brûlante.</Description>
+    <Provides index="1">+8% de Résistance au Froid</Provides>
+    <Provides index="2">+8% de Résistance au Feu</Provides>
+    <Provides index="3">+8% de Résistance à la Foudre</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Parchemin des Points Vitaux</DisplayName>
+    <Description>Cet ancien parchemin enseigne au lecteur où frapper pour un effet mortel.</Description>
+    <Provides index="1">Accorde à l&apos;unité la capacité Frappe Vitale</Provides>
+</Translation>

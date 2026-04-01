@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Effet de la Dague de Corruption</DisplayName>
+    <Description>Réduit l&apos;Attaque de la cible de 2 (+1 par éclat de mort) sauf si elle résiste.</Description>
+    <ModifierDisplayName index="1">Flétri</ModifierDisplayName>
+</Translation>

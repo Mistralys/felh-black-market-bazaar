@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Diadème Dimensionnel</DisplayName>
+    <Description>Serait-ce la coiffe de l&apos;un des mythiques Voyageurs des Plans ? Chance des Saints, c&apos;est bien le cas ! Parce que la théorie générale du déplacement dimensionnel requiert un état d&apos;esprit très spécifique et très alambiqué, vous devrez vous contenter d&apos;activer uniquement ses pouvoirs les plus basiques. Ne faites pas la moue, se déplacer dans un état semi-tangible n&apos;est pas rien.</Description>
+    <Provides index="1">20% de dégâts en moins des attaques Physiques</Provides>
+    <Provides index="2">Permet à l&apos;unité de lancer Translocation Dimensionnelle</Provides>
+</Translation>
