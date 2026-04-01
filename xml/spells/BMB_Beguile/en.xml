@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Translation>
     <DisplayName>Beguile</DisplayName>
-    <Description>Victim has a 50% chance to swing at a random unit in melee instead of his target.</Description>
+    <Description>Victim has a 50% chance to swing at a random unit in melee instead of their target.</Description>
     <ModifierDisplayName index="1">Beguiled</ModifierDisplayName>
 </Translation>

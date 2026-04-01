@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Translation>
     <DisplayName>Scroll of Vital Points</DisplayName>
-    <Description>This ancient scroll teaches the reader where to hit to deadly effects.</Description>
+    <Description>This ancient scroll teaches the reader where to hit to deadly effect.</Description>
     <Provides index="1">Grants the unit the Vital Strike ability</Provides>
 </Translation>

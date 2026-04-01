@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Translation>
     <DisplayName>Horned Helmet</DisplayName>
-    <Description>Apparently it only takes a set a horns to boost one&apos;s self-confidence and send it soaring to unsuspected heights. Hook&apos;em horns!</Description>
+    <Description>Apparently it only takes a set of horns to boost one&apos;s self-confidence and send it soaring to unsuspected heights. Hook&apos;em horns!</Description>
     <Provides index="1">+10% cumulative damage with each successful attack</Provides>
 </Translation>

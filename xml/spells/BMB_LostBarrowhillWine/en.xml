@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Translation>
     <DisplayName>Lost Barrowhill Wine Effect</DisplayName>
-    <Description>Lost Barrowhill Wine Effect - Random properties.</Description>
+    <Description>Grants a random beneficial effect — though not every vintage ages gracefully.</Description>
     <ModifierDisplayName index="1">Spell Resistance!</ModifierDisplayName>
     <ModifierDisplayName index="2">Spell Mastery!</ModifierDisplayName>
     <ModifierDisplayName index="3">Spell Power!</ModifierDisplayName>

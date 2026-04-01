@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Translation>
     <DisplayName>Alchemical Surprise</DisplayName>
-    <Description>Random alchemical formula.</Description>
+    <Description>Combines reagents into a random concoction — healing draught, combat stimulant, elemental bomb, or something rarer still.</Description>
     <ModifierDisplayName index="1">Healing Nectar!</ModifierDisplayName>
     <ModifierDisplayName index="2">Healing Nectar!</ModifierDisplayName>
     <ModifierDisplayName index="3">Healing Nectar!</ModifierDisplayName>

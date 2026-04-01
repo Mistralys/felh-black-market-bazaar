@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Translation>
     <DisplayName>Mastersmith&apos;s Anvil</DisplayName>
-    <Description>This anvil has been idle for far too long and awaits those beatings hammers with feverish metallic anticipation.</Description>
+    <Description>This anvil has been idle for far too long and awaits those beating hammers with feverish metallic anticipation.</Description>
     <Provides index="1">+3 to the Army&apos;s Critical Chance</Provides>
     <Provides index="2">Collect all three Tools of the Mastersmith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
 </Translation>
