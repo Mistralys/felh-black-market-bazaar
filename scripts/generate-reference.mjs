@@ -13,21 +13,30 @@
  * stored as TXT_BMB_* keys in the GameCore XML files. This script loads the
  * English localization files from Mods/src/Data/Localization/English/ and
  * resolves those keys to their English text before generating the reference.
+ *
+ * Accepts an optional pre-loaded keyMap for use by the umbrella generator
+ * (generate-all-references.mjs) to avoid redundant merge/load cycles.
  */
 
-import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { success, error, warn, info, step } from './lib/output.mjs';
-import { mergeXmlFragments } from './lib/merge-xml.mjs';
-import { mergeTranslations } from './lib/merge-translations.mjs';
-import { parseGameCoreXml, parseLocalizationXml } from './lib/xml-parser.mjs';
+import {
+  PROJECT_ROOT,
+  GAMECORE_DIR,
+  ensureFreshBuild,
+  loadLocalizationKeys,
+  resolveKey,
+  escapeCell,
+  formatInternalName,
+  formatStatName,
+  formatEffects,
+} from './lib/reference-helpers.mjs';
+import { parseGameCoreXml } from './lib/xml-parser.mjs';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PROJECT_ROOT = path.resolve(__dirname, '..');
-const GAMECORE_DIR = path.join(PROJECT_ROOT, 'Mods', 'src', 'Data', 'GameCore');
-const LOCALIZATION_EN_DIR = path.join(PROJECT_ROOT, 'Mods', 'src', 'Data', 'Localization', 'English');
+const __filename = fileURLToPath(import.meta.url);
 const OUTPUT_FILE = path.join(PROJECT_ROOT, 'docs', 'references', 'items.md');
 
 // ─── XML source files (order determines section order) ──────
@@ -37,197 +46,6 @@ const SOURCE_FILES = [
   { file: 'BMB_Items.xml', id: 'items' },
   { file: 'BMB_Clothes.xml', id: 'clothes' },
 ];
-
-// ─── Localization key resolution ─────────────────────────────
-
-/**
- * Loads all English localization XML files from Mods/src/Data/Localization/English/
- * and builds a key→text lookup map.
- *
- * The localization XML format:
- *   <GameText>
- *     <Locale ID="en_US">
- *       <Line Key="TXT_BMB_..." Note="...">
- *         <Text>Bird of Celerity</Text>
- *       </Line>
- *     </Locale>
- *   </GameText>
- *
- * @returns {Promise<Map<string, string>>} Map from TXT_BMB_* key to English text.
- */
-async function loadLocalizationKeys() {
-  const keyMap = new Map();
-
-  if (!existsSync(LOCALIZATION_EN_DIR)) {
-    return keyMap;
-  }
-
-  let files;
-  try {
-    files = await readdir(LOCALIZATION_EN_DIR);
-  } catch {
-    return keyMap;
-  }
-
-  const xmlFiles = files.filter(f => f.endsWith('.xml'));
-
-  for (const file of xmlFiles) {
-    const filePath = path.join(LOCALIZATION_EN_DIR, file);
-    try {
-      const content = await readFile(filePath, 'utf-8');
-      const fileKeys = parseLocalizationXml(content);
-      for (const [key, text] of fileKeys) {
-        keyMap.set(key, text);
-      }
-    } catch (err) {
-      warn(`Could not load localization file ${file}: ${err.message}`);
-    }
-  }
-
-  return keyMap;
-}
-
-/**
- * Resolves a value that may be a TXT_BMB_* key or plain text.
- *
- * @param {string | undefined} value - The raw value from the XML.
- * @param {Map<string, string>} keyMap - The localization key lookup map.
- * @returns {string} The resolved text, or the original value if not a key.
- */
-function resolveKey(value, keyMap) {
-  if (!value) return value;
-  const str = String(value);
-  if (str.startsWith('TXT_BMB_') && keyMap.has(str)) {
-    return keyMap.get(str);
-  }
-  return str;
-}
-
-// ─── Stat name formatting ────────────────────────────────────
-const STAT_LABELS = {
-  UnitStat_Attack_Pierce: 'Attack',
-  UnitStat_Attack_Fire: 'Fire Attack',
-  UnitStat_Attack_Cold: 'Cold Attack',
-  UnitStat_Attack_Lightning: 'Lightning Attack',
-  UnitStat_Attack_Poison: 'Poison Attack',
-  UnitStat_Attack_Death: 'Death Attack',
-  UnitStat_Attack_Spirit: 'Spirit Attack',
-  UnitStat_Attack_Boost: 'Attack Bonus',
-  UnitStat_Defense_Pierce: 'Defense',
-  UnitStat_Defense_Fire: 'Fire Defense',
-  UnitStat_Defense_Cold: 'Cold Defense',
-  UnitStat_Defense_Lightning: 'Lightning Defense',
-  UnitStat_Defense_Poison: 'Poison Defense',
-  UnitStat_Defense_Death: 'Death Defense',
-  UnitStat_Defense_Spirit: 'Spirit Defense',
-  UnitStat_HP: 'Hit Points',
-  UnitStat_Mana: 'Mana',
-  UnitStat_MagicPower: 'Spell Power',
-  UnitStat_CombatSpeed: 'Combat Speed',
-  UnitStat_Initiative: 'Initiative',
-  UnitStat_Accuracy: 'Accuracy',
-  UnitStat_Dodge: 'Dodge',
-  UnitStat_Sight: 'Sight',
-  UnitStat_Moves: 'Movement',
-  UnitStat_Spell_Mastery: 'Spell Mastery',
-  UnitStat_SpellResistance: 'Spell Resistance',
-  UnitStat_CriticalChance: 'Critical Chance',
-  UnitStat_CriticalDamage: 'Critical Damage',
-  UnitStat_BackswingChance: 'Backswing Chance',
-  UnitStat_BashChance: 'Bash Chance',
-  UnitStat_CounterattackChance: 'Counterattack Chance',
-  UnitStat_Swashbuckle: 'Swashbuckle',
-  UnitStat_Level: 'Level',
-};
-
-function formatStatName(raw) {
-  if (STAT_LABELS[raw]) return STAT_LABELS[raw];
-  // Fallback: strip prefix and insert spaces before capitals
-  return raw
-    .replace(/^UnitStat_/, '')
-    .replace(/([a-z])([A-Z])/g, '$1 $2');
-}
-
-// ─── Effect formatting ───────────────────────────────────────
-
-/**
- * Converts a BMB_ or game InternalName into a readable label.
- * Strips the BMB_ prefix and inserts spaces before capital letters.
- * e.g. "BMB_OvumPhilosophorum" → "Ovum Philosophorum"
- *      "BMB_Haste_Mass"        → "Haste Mass"
- *      "Loremaster1"           → "Loremaster 1"
- */
-function formatInternalName(raw) {
-  return String(raw)
-    .replace(/^BMB_/, '')
-    .replace(/_/g, ' ')
-    .replace(/([a-z])([A-Z])/g, '$1 $2')
-    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
-    .trim();
-}
-
-function formatEffects(modifiers, keyMap) {
-  if (!modifiers || modifiers.length === 0) return '—';
-
-  const parts = [];
-  for (const mod of modifiers) {
-    const attr = mod.Attribute;
-    const rawProvides = mod.Provides;
-    const provides = rawProvides ? resolveKey(String(rawProvides), keyMap) : undefined;
-
-    // Always prefer an explicit Provides label when present
-    if (provides) {
-      parts.push(provides);
-      continue;
-    }
-
-    if (attr === 'AdjustUnitStat' && mod.StrVal && mod.Value !== undefined) {
-      const sign = mod.Value >= 0 ? '+' : '';
-      parts.push(`${sign}${mod.Value} ${formatStatName(mod.StrVal)}`);
-    } else if (attr === 'AdjustArmyStat' && mod.StrVal && mod.Value !== undefined) {
-      const sign = mod.Value >= 0 ? '+' : '';
-      parts.push(`${sign}${mod.Value} ${formatStatName(mod.StrVal)} (army)`);
-    } else if (attr === 'UnlockSpell' && mod.StrVal) {
-      parts.push(`Unlocks spell: ${formatInternalName(mod.StrVal)}`);
-    } else if (attr === 'UnlockCombatAbility' && mod.StrVal) {
-      parts.push(`Unlocks ability: ${formatInternalName(mod.StrVal)}`);
-    } else if (attr === 'UnlockUnitAbility' && mod.StrVal) {
-      parts.push(`Unlocks ability: ${formatInternalName(mod.StrVal)}`);
-    } else if (attr === 'BattleAutoCastSpell' && mod.StrVal) {
-      parts.push(`Auto-casts: ${formatInternalName(mod.StrVal)}`);
-    } else if (attr === 'MeleeAppliesSpell' && mod.StrVal) {
-      parts.push(`Melee applies: ${formatInternalName(mod.StrVal)}`);
-    } else if (attr === 'MeleeDefenseAppliesSpell' && mod.StrVal) {
-      parts.push(`On hit applies: ${formatInternalName(mod.StrVal)}`);
-    } else if (attr === 'UseSpell' && mod.StrVal) {
-      parts.push(`Uses spell: ${formatInternalName(mod.StrVal)}`);
-    } else if (attr === 'SummonUnit' && mod.StrVal) {
-      parts.push(`Summons: ${mod.StrVal}`);
-    } else if (attr === 'AllUnitsGainLevel' && mod.Value !== undefined) {
-      const v = mod.Value;
-      parts.push(`All units gain ${v} level${v !== 1 ? 's' : ''}`);
-    } else if (attr === 'GiveExperience' && mod.Value !== undefined) {
-      parts.push(`+${mod.Value} XP`);
-    } else if (attr === 'CurHealth' && mod.Value !== undefined) {
-      parts.push(`+${mod.Value} HP (immediate)`);
-    } else if (attr === 'TargetUnitLevelUp' && mod.Value !== undefined) {
-      parts.push(`Target unit gains ${mod.Value ?? 1} level(s)`);
-    } else if (attr === 'Gold' && mod.Value !== undefined) {
-      parts.push(`+${mod.Value} Gold`);
-    } else if (attr === 'Mana' && mod.Value !== undefined) {
-      parts.push(`+${mod.Value} Mana`);
-    } else if (attr === 'Research' && mod.Value !== undefined) {
-      parts.push(`+${mod.Value} Research`);
-    } else if (attr === 'Fame' && mod.Value !== undefined) {
-      parts.push(`+${mod.Value} Fame`);
-    } else if (attr === 'Population' && mod.Value !== undefined) {
-      parts.push(`+${mod.Value} Population`);
-    }
-    // Modifiers with no recognisable pattern (e.g. prereq Attribute nodes) are silently skipped
-  }
-
-  return parts.length > 0 ? parts.join('; ') : '—';
-}
 
 // ─── Parse a single XML file ─────────────────────────────────
 async function parseItemFile(filePath, keyMap) {
@@ -379,10 +197,6 @@ function categorise(allSources) {
 }
 
 // ─── Markdown helpers ────────────────────────────────────────
-function escapeCell(text) {
-  return String(text).replace(/\|/g, '\\|').replace(/\n/g, ' ');
-}
-
 function buildItemTable(items) {
   const lines = [];
   lines.push('| Name | Rarity | Value | Effects |');
@@ -459,26 +273,27 @@ function generateMarkdown(categories) {
 }
 
 // ─── Main entry point ────────────────────────────────────────
-export async function generateReference() {
-  // Ensure generated XML files are up-to-date by running the merge step first
-  const mergeResult = await mergeXmlFragments();
-  if (mergeResult) {
-    info(`Merged ${mergeResult.totalFragments} fragment(s) before generating reference.`);
-  }
 
-  // Ensure localization files are up-to-date
-  const translationResult = await mergeTranslations();
-  if (translationResult) {
-    info(`Merged ${translationResult.totalStrings} string(s) into localization files.`);
-  }
+/**
+ * Generates the items reference document.
+ *
+ * @param {Map<string, string> | null} keyMap - Pre-loaded localization key map.
+ *   If null (standalone mode), the function runs merge + loads keys itself.
+ *   If provided (umbrella mode), skips the merge/load step.
+ * @returns {Promise<{ outputFile: string, totalItems: number }>}
+ */
+export async function generateReference(keyMap = null) {
+  // Standalone mode: run merge + load keys
+  if (keyMap === null) {
+    await ensureFreshBuild();
 
-  // Load English localization keys for resolving TXT_BMB_* references
-  step('Loading English localization keys...');
-  const keyMap = await loadLocalizationKeys();
-  if (keyMap.size > 0) {
-    step(`  Loaded ${keyMap.size} localization key(s).`);
-  } else {
-    step('  No localization keys found — TXT_BMB_* keys will appear as-is.');
+    step('Loading English localization keys...');
+    keyMap = await loadLocalizationKeys();
+    if (keyMap.size > 0) {
+      step(`  Loaded ${keyMap.size} localization key(s).`);
+    } else {
+      step('  No localization keys found — TXT_BMB_* keys will appear as-is.');
+    }
   }
 
   // Warn if any expected source file is missing
@@ -514,12 +329,14 @@ export async function generateReference() {
 
   console.log('');
   success(`Reference written to: ${path.relative(PROJECT_ROOT, OUTPUT_FILE)}`);
+
+  return { outputFile: OUTPUT_FILE, totalItems: totalParsed };
 }
 
 // ─── Direct invocation guard ─────────────────────────────────
 const isMain =
   process.argv[1] &&
-  path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
+  path.resolve(process.argv[1]) === path.resolve(__filename);
 
 if (isMain) {
   generateReference().catch((err) => {

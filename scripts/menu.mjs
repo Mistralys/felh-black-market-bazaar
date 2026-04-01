@@ -25,8 +25,8 @@ const menuItems = [
     action: () => runCommand("node scripts/build.mjs"),
   },
   {
-    label: "Generate item reference (docs/references/)",
-    action: () => runCommand("node scripts/generate-reference.mjs"),
+    label: "Generate all references (docs/references/)",
+    action: () => runCommand("node scripts/generate-all-references.mjs"),
   },
   {
     label: "Migrate fragments to translation directories",

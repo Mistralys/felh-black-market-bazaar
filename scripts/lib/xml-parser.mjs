@@ -177,9 +177,24 @@ export function parseLocalizationXml(xmlString) {
 // single `<GameItemType>` and must be treated as arrays.
 
 const GAMECORE_ARRAY_TAGS = new Set([
+  // Item / weapon / armor tags (existing)
   'Type', 'GameModifier', 'Prereq', 'GameItemTypeModelPack',
   'SupportedUnitModelType', 'GameItemTypeModel', 'AttackSFX',
   'EquipSFX', 'SFX',
+  // Spell tags
+  'SpellDef', 'SpellDefEffect', 'HitSoundFX', 'PreventStackingWith',
+  'SpellResourceCost',
+  // Ability tags
+  'AbilityBonus', 'AbilityBonusOption',
+  // Unit tags
+  'UnitType', 'SelectedAbilityBonusOption', 'Equipment',
+  'EquipmentUpgradeDef', 'LevelMilestone',
+  // Unit stat tags
+  'UnitStatType',
+  // Effect tags
+  'EffectSequencer', 'EmitterBlueprint', 'SequenceFrame',
+  // Shared / misc
+  'AIData', 'Calculate',
 ]);
 
 const gameCoreParser = new XMLParser({

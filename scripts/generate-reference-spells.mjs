@@ -1,0 +1,230 @@
+/**
+ * Spells reference generator for the Black Market Bazaar mod.
+ *
+ * Reads BMB_Spells.xml from Mods/src/Data/GameCore/ and generates
+ * a Markdown reference document at docs/references/spells.md.
+ *
+ * Spells are categorised by SpellType (Tactical / Strategic) and sorted
+ * alphabetically within each category. TXT_BMB_* localization keys are
+ * resolved to English text.
+ *
+ * Accepts an optional pre-loaded keyMap for use by the umbrella generator
+ * (generate-all-references.mjs) to avoid redundant merge/load cycles.
+ */
+
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { success, error, warn, info, step } from './lib/output.mjs';
+import {
+  PROJECT_ROOT,
+  GAMECORE_DIR,
+  ensureFreshBuild,
+  loadLocalizationKeys,
+  resolveKey,
+  escapeCell,
+} from './lib/reference-helpers.mjs';
+import { parseGameCoreXml } from './lib/xml-parser.mjs';
+
+const __filename = fileURLToPath(import.meta.url);
+const SOURCE_FILE = 'BMB_Spells.xml';
+const OUTPUT_FILE = path.join(PROJECT_ROOT, 'docs', 'references', 'spells.md');
+
+// ─── Parse spells XML ─────────────────────────────────────────
+
+/**
+ * Parses BMB_Spells.xml and returns a flat array of spell objects.
+ *
+ * @param {Map<string, string>} keyMap
+ * @returns {Promise<Array<object>>}
+ */
+async function parseSpellsFile(keyMap) {
+  const filePath = path.join(GAMECORE_DIR, SOURCE_FILE);
+  if (!existsSync(filePath)) {
+    warn(`Source file missing: ${SOURCE_FILE}. Run 'npm run build' to generate it.`);
+    return [];
+  }
+
+  const xml = await readFile(filePath, 'utf-8');
+  const doc = parseGameCoreXml(xml);
+  const rawSpells = doc?.Spells?.SpellDef;
+  if (!rawSpells) return [];
+
+  const spells = Array.isArray(rawSpells) ? rawSpells : [rawSpells];
+
+  return spells.map((spell) => {
+    const internalName = spell['@_InternalName'] ?? '';
+    const rawDisplayName = spell.DisplayName ?? internalName;
+    const rawDescription = spell.Description ?? '';
+
+    // Resolve stamina cost or resource costs
+    let cost = '—';
+    if (spell.StaminaCost != null) {
+      cost = String(spell.StaminaCost);
+    } else if (spell.SpellResourceCost) {
+      const costs = Array.isArray(spell.SpellResourceCost)
+        ? spell.SpellResourceCost
+        : [spell.SpellResourceCost];
+      const parts = costs
+        .map((c) => (c.Amount != null ? `${c.Amount} ${c.ResourceType ?? ''}`.trim() : null))
+        .filter(Boolean);
+      if (parts.length > 0) cost = parts.join(', ');
+    }
+
+    return {
+      internalName,
+      displayName: resolveKey(String(rawDisplayName), keyMap),
+      description: resolveKey(String(rawDescription), keyMap),
+      spellType: spell.SpellType ?? '—',
+      spellClass: spell.SpellClass ?? '—',
+      spellSubClass: spell.SpellSubClass ?? null,
+      targetType: spell.SpellTargetType ?? '—',
+      cost,
+      cooldown: spell.Cooldown != null ? String(spell.Cooldown) : null,
+      isSpecialAbility: spell.IsSpecialAbility === 1 || spell.IsSpecialAbility === '1',
+      hideInHiergamenon: spell.HideInHiergamenon === 1 || spell.HideInHiergamenon === '1',
+    };
+  });
+}
+
+// ─── Categorisation ───────────────────────────────────────────
+
+/**
+ * Groups spells by SpellType (Tactical / Strategic / Other).
+ * Sorts alphabetically within each group.
+ *
+ * @param {Array<object>} spells
+ * @returns {Array<{ title: string, anchor: string, spells: Array<object> }>}
+ */
+function categoriseSpells(spells) {
+  const groups = new Map();
+
+  for (const spell of spells) {
+    const type = spell.spellType ?? 'Other';
+    if (!groups.has(type)) groups.set(type, []);
+    groups.get(type).push(spell);
+  }
+
+  // Preferred order: Tactical first, then Strategic, then anything else
+  const ORDER = ['Tactical', 'Strategic'];
+  const sorted = [
+    ...ORDER.filter((t) => groups.has(t)),
+    ...[...groups.keys()].filter((t) => !ORDER.includes(t)).sort(),
+  ];
+
+  return sorted.map((type) => {
+    const items = groups.get(type).slice().sort((a, b) =>
+      a.displayName.localeCompare(b.displayName)
+    );
+    return {
+      title: type,
+      anchor: type.toLowerCase(),
+      spells: items,
+    };
+  });
+}
+
+// ─── Markdown generation ──────────────────────────────────────
+
+function buildSpellTable(spells) {
+  const lines = [];
+  lines.push('| Name | Class | Target | Cost | Description |');
+  lines.push('|---|---|---|---|---|');
+  for (const spell of spells) {
+    const name = escapeCell(spell.displayName);
+    const cls = escapeCell(spell.spellClass);
+    const target = escapeCell(spell.targetType);
+    const cost = escapeCell(spell.cost);
+    const desc = escapeCell(spell.description || '—');
+    lines.push(`| ${name} | ${cls} | ${target} | ${cost} | ${desc} |`);
+  }
+  return lines.join('\n');
+}
+
+function generateMarkdown(categories, totalSpells) {
+  const lines = [];
+
+  lines.push('# Black Market Bazaar — Spells Reference');
+  lines.push('');
+  lines.push('> Auto-generated by `npm run reference:spells`. Do not edit manually.');
+  lines.push('');
+  lines.push(`**${totalSpells} spells** across ${categories.length} categories.`);
+  lines.push('');
+
+  // Table of Contents
+  lines.push('## Table of Contents');
+  lines.push('');
+  for (const cat of categories) {
+    lines.push(`- [${cat.title} (${cat.spells.length})](#${cat.anchor})`);
+  }
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+
+  // Sections
+  for (const cat of categories) {
+    lines.push(`## ${cat.title}`);
+    lines.push('');
+    lines.push(buildSpellTable(cat.spells));
+    lines.push('');
+  }
+
+  return lines.join('\n');
+}
+
+// ─── Main entry point ─────────────────────────────────────────
+
+/**
+ * Generates the spells reference document.
+ *
+ * @param {Map<string, string> | null} keyMap - Pre-loaded localization key map.
+ *   If null (standalone mode), runs merge + loads keys itself.
+ *   If provided (umbrella mode), skips the merge/load step.
+ * @returns {Promise<{ outputFile: string, totalSpells: number }>}
+ */
+export async function generateSpellsReference(keyMap = null) {
+  if (keyMap === null) {
+    await ensureFreshBuild();
+
+    step('Loading English localization keys...');
+    keyMap = await loadLocalizationKeys();
+    if (keyMap.size > 0) {
+      step(`  Loaded ${keyMap.size} localization key(s).`);
+    } else {
+      step('  No localization keys found — TXT_BMB_* keys will appear as-is.');
+    }
+  }
+
+  info('Parsing spells XML...');
+  step(`  ${SOURCE_FILE}`);
+  const spells = await parseSpellsFile(keyMap);
+  info(`Parsed ${spells.length} spell(s).`);
+
+  step('Categorising spells...');
+  const categories = categoriseSpells(spells);
+
+  step('Generating Markdown...');
+  const markdown = generateMarkdown(categories, spells.length);
+
+  const outputDir = path.dirname(OUTPUT_FILE);
+  await mkdir(outputDir, { recursive: true });
+  await writeFile(OUTPUT_FILE, markdown, 'utf-8');
+
+  console.log('');
+  success(`Reference written to: ${path.relative(PROJECT_ROOT, OUTPUT_FILE)}`);
+
+  return { outputFile: OUTPUT_FILE, totalSpells: spells.length };
+}
+
+// ─── Direct invocation guard ──────────────────────────────────
+const isMain =
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === path.resolve(__filename);
+
+if (isMain) {
+  generateSpellsReference().catch((err) => {
+    error('Unexpected error: ' + err.message);
+    process.exit(1);
+  });
+}
