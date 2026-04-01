@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Druid&apos;s Walking Stick</DisplayName>
+    <Description>This is the staff of the priests of nature, in perfect synergy with ley lines and earthen spirits. If all else fails, it can also be used to bash heads.</Description>
+    <Provides index="1">Summons a Bear at the same level as the caster</Provides>
+    <Provides index="2">+1 level for Summons</Provides>
+    <Provides index="3">Allows the wielder to cast Stoneskin</Provides>
+    <Provides index="4">+20% Poison Resistance</Provides>
+</Translation>

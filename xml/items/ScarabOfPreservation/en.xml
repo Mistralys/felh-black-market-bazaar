@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Scarab of Preservation</DisplayName>
+    <Description>Life Magic has been instilled into this powerful charm, protecting its lucky owner from outward profanations and harmful transgressions.</Description>
+    <Provides index="1">20% less damage from Physical attacks</Provides>
+    <Provides index="2">Unit has a 40% chance of resisting a Critical attack</Provides>
+</Translation>

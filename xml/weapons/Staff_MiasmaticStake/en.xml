@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Miasmatic Stake</DisplayName>
+    <Description>Secretly crafted in the deepest recesses of suffocating swamps by lost souls, this evil staff goes by many reviled names such as the Horror Branch of the Asag, the Scourge Scepter or Morian&apos;s Toothpick. A recipient of highly contagious diseases, it can break the strongest immunities with a bare touch and spread minute putrefaction to entire communities, effectively wiping them out without bloodshed.</Description>
+    <Provides index="1">Plague Touch - Halves the Poison Resistance of Targets, Poisons them and spreads Infection</Provides>
+</Translation>

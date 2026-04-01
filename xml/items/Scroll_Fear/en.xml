@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Scroll of Fear</DisplayName>
+    <Description>Runes of Horror have been etched on this parchment and only await your order to strike soul crushing terror in the hearts of your foes.</Description>
+    <Provides index="1">All enemies are stunned for 3 actions unless they resist.</Provides>
+</Translation>

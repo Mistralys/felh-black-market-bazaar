@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mythical Composer</DisplayName>
+    <Description>Even the most musically challenged individual can play divine songs with this legendary lyre. Its unearthly melodies can cure fatal despair and lift the spirits of an entire nation.</Description>
+    <Provides index="1">+2 to the Army&apos;s Initiative</Provides>
+    <Provides index="2">+3 to the Army&apos;s Starting Stamina</Provides>
+</Translation>

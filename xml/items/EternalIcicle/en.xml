@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Eternal Icicle</DisplayName>
+    <Description>A piece of primeval ice broken off the wintry hair of the world&apos;s rooftop, this icicle&apos;s core is self-regenerative and will stubbornly refuse to melt even in a blacksmith&apos;s raging furnace.</Description>
+    <Provides index="1">Allows the wielder to cast Ice Ring</Provides>
+</Translation>

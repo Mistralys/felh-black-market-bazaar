@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Shifty Depleter</DisplayName>
+    <Description>Breaking down enemy morale is a commendable achievement, and the Shifty Depleter will conveniently kill combat enthusiasm with a single strike.</Description>
+    <Provides index="1">Stamina Drain - Attack that reduces the victim&apos;s Stamina to 0 if it hits</Provides>
+    <Provides index="2">Ignores 33% of the victim&apos;s Defense</Provides>
+    <Provides index="3">Immune to Counterattack</Provides>
+    <Provides index="4">Impale- Strike an opponent and whoever is behind them</Provides>
+</Translation>

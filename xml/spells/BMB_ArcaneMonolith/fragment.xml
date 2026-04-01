@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_ArcaneMonolith">
+        <DisplayName>TXT_BMB_SPELLS_BMB_ARCANEMONOLITH_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_ARCANEMONOLITH_DESCRIPTION</Description>
+        <Image>S_ArcaneMonolith_Painting.png</Image>
+        <IconFG>S_ArcaneMonolith_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>World</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Map</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Terraform</SpellClass>
+        <SpellSubClass>BuildOutpost</SpellSubClass>
+        <SpellTargetType>NeutralGround</SpellTargetType>        
+		<HideInHiergamenon>1</HideInHiergamenon>	
+        <GameModifier>
+            <ModType>Map</ModType>
+            <Attribute>BuildWildImprovement</Attribute>
+            <StrVal>Outpost_ArcaneMonolith</StrVal>
+        </GameModifier>
+        <ValidTerrainCategory>City</ValidTerrainCategory>
+        <ValidTerrainCategory>Forest</ValidTerrainCategory>
+        <ValidTerrainCategory>Land</ValidTerrainCategory>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>100</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_ArcaneMonolith_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_AuraofGrace_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.75</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

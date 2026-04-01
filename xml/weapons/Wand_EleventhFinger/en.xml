@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Archmage&apos;s Eleventh Finger</DisplayName>
+    <Description>The epitome of sorcerous Wands, it will break the limiting barriers of arcane knowledge, send you on a mystical high and lead you to occult apotheosis.</Description>
+    <Provides index="1">5 Physical Attack + 10 Magical Attack (+1 per the Caster&apos;s Level)</Provides>
+    <Provides index="2">+25 Spell Mastery</Provides>
+    <Provides index="3">+25% Spell Damage</Provides>
+    <Provides index="4">Ranged attack</Provides>
+</Translation>

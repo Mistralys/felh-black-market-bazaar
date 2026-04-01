@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Lightning Struck Branch</DisplayName>
+    <Description>Being generous is easy when you have a lot to give back. Maybe this maxim is preposterous when applied to a lightning struck branch but don&apos;t knock down heartfelt attempts to elevate the debate.</Description>
+    <Provides index="1">+1 Lightning to the Army&apos;s Attack</Provides>
+    <Provides index="2">+15% to the Army&apos;s Lightning resistance</Provides>
+</Translation>

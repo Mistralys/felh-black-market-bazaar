@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mass Haste</DisplayName>
+    <Description>Target army is +5 to Initiative (+1 per air shard).</Description>
+    <ModifierDisplayName index="1">Hasted</ModifierDisplayName>
+</Translation>

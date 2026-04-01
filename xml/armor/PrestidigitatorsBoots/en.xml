@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Prestidigitator&apos;s Boots</DisplayName>
+    <Description>They say stage antics and make believe are essential components of any magical spell. While any self-respecting Mage would vehemently disagree with such an insulting statement, with these boots you&apos;ll be able to go from sleight of hand to sleight of foot.</Description>
+    <Provides index="1">+5 Spell Mastery</Provides>
+</Translation>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_ParalyzingAcid">
+        <DisplayName>TXT_BMB_SPELLS_BMB_PARALYZINGACID_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_PARALYZINGACID_DESCRIPTION</Description>
+        <Image>Ability_Assassin_Icon.png</Image>
+        <IconFG>Ability_Assassin_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+		<CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <Duration>-1</Duration>
+            <Effect>BMB_ParalyzingAcid_Particle</Effect>
+            <PerTurn>1</PerTurn>
+            <MinValue>-3</MinValue>
+            <MaxValue>-6</MaxValue>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Value>-10</Value>
+			<Duration>-1</Duration>			
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>30</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SpitAcidHit_01</HitSoundFX>
+        <HitSoundFX>Spell_SpitAcidHit_02</HitSoundFX>
+        <MissSoundFX>Miss_Swing1</MissSoundFX>
+        <MissSoundFX>Miss_Swing2</MissSoundFX>
+        <SpellCastSoundFX>Spell_SpitAcidCast_01</SpellCastSoundFX>
+        <SpellCastEffectName>BMB_ParalyzingAcid_Ranged</SpellCastEffectName>
+        <SpellCastEffectScale>0.50</SpellCastEffectScale>
+        <SpellCastProjectile>1</SpellCastProjectile>
+        <SpellCastProjectileSpeed>400</SpellCastProjectileSpeed>
+    </SpellDef>
+</Fragment>

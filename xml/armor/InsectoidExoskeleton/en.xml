@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Insectoid Exoskeleton</DisplayName>
+    <Description>This ancient chitinous exoskeleton belonged to the soldier of a now extinct insectoid humanoid race. Twitching antennas, clacking mandibles and vibrating wings, you are now privy to the chorus of your insect brethren, and boy do they have some recriminations to voice. Bzz bzz.</Description>
+    <Provides index="1">Spit Acid - Target enemy takes 2-6 damage a round for 15 rounds.</Provides>
+    <Provides index="2">Allows the unit to cast Insect Plague</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bird of Celerity</DisplayName>
+    <Description>This beautiful statuette allows its owner to distort the space and time continuum and cast haste on a global scale.</Description>
+    <Provides index="1">Allows the wielder to cast Mass Haste</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Restraints of the Penitent</DisplayName>
+    <Description>Once penance is served and absolution is found, restitution lies at the end of the journey.</Description>
+    <Provides index="1">Penitent&apos;s Restitution - Heals all allies and caster gains 3 hit points permanently (Requires 40 Penitent&apos;s Suffering charges)</Provides>
+    <Provides index="2">Penitent&apos;s Suffering - Penance is served each time the wearer is struck in combat (+1 charge)</Provides>
+</Translation>

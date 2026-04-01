@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Four-Leaf Clover</DisplayName>
+    <Description>There is no need to tell anyone you believe in lucky charms, you know deep down this clover will bring you good fortune.</Description>
+    <Provides index="1">+6 to Dodge</Provides>
+    <Provides index="2">+3 To Critical Hit chance</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ruthless Pelter</DisplayName>
+    <Description>Missiles launched from this Longbow will whisk away with overwhelming force and send any target flying head over heels. An Archer&apos;s wet dream come true, it will rain desolation on your enemies and humiliate them into the hereafter.</Description>
+    <Provides index="1">Enables abilities that require Bows</Provides>
+    <Provides index="2">Ruthless Pelter Effect - Knocks back enemies and has a chance equal to the damage done of knocking the victim prone</Provides>
+</Translation>

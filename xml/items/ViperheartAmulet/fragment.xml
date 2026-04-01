@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="ViperheartAmulet">
+        <DisplayName>TXT_BMB_ITEMS_VIPERHEARTAMULET_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_VIPERHEARTAMULET_DESCRIPTION</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>180</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Poison</StrVal>
+            <Value>3</Value>
+        </GameModifier>		
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>40</AIPriority>
+            </AIData>
+        <ArtDef>ViperheartAmulet_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="ViperheartAmulet_ArtDef">
+            <GameItemTypeModelPack InternalName="ViperheartAmulet_Default">
+                <IconFile>BMB_ViperheartAmulet.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

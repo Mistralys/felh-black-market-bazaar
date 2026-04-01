@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Attack Frenzy</DisplayName>
+    <Description>Target unit gains +1 Attack with each successful strike for the duration of combat.</Description>
+    <ModifierDisplayName index="1">Attack +1</ModifierDisplayName>
+</Translation>

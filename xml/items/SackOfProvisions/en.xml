@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Sack of Provisions</DisplayName>
+    <Description>The contents of this hefty gunny sack should keep your army&apos;s stomachs from grumbling for quite a while. No fine cuisine, but at the end of the weary day, who really cares? Now who gets to carry it?</Description>
+    <Provides index="1">+1 to the Army&apos;s Hit Points</Provides>
+</Translation>

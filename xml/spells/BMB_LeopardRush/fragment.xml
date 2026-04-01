@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_LeopardRush">
+        <DisplayName>TXT_BMB_SPELLS_BMB_LEOPARDRUSH_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_LEOPARDRUSH_DESCRIPTION</Description>
+        <Image>T_Haste_Painting.png</Image>
+        <IconFG>T_Celerity_Icon.png</IconFG>
+		<CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsResistable>0</IsResistable>
+		<IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+			<DisplayName>TXT_BMB_SPELLS_BMB_LEOPARDRUSH_MODIFIER_1_DISPLAYNAME</DisplayName>
+			<Duration>-1</Duration>
+            <Value>3</Value>
+			<ApplyToCaster>1</ApplyToCaster>
+			<Effect>E_Celerity_Particle</Effect>
+        </GameModifier>                 
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>        
+        </AIData>
+        <HitSoundFX>Stalker_Attack2</HitSoundFX>        
+    </SpellDef>
+</Fragment>

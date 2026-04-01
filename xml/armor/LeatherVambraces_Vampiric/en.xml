@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Vampiric Gloves</DisplayName>
+    <Description>These foul gloves have the texture of cold and moist skin. Anyone wearing them will feel sharp hunger pangs for blood.</Description>
+    <Provides index="1">Allows the wearer to cast Drain Life</Provides>
+    <Provides index="2">Allows the wearer to cast Syphon Strength</Provides>
+</Translation>

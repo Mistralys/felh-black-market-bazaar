@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Amulet of the Black Minded</DisplayName>
+    <Description>The next time someone dares to lay a hand (or a sword) on you, this reprobate necklace will allow you to channel your hatred and convert it into the deadliest of curses.</Description>
+    <Provides index="1">Enemies that strike the wearer have a 33% chance of being cursed with Graveseal</Provides>
+</Translation>

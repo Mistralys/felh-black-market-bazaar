@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="DemonicAnchors">
+        <DisplayName>TXT_BMB_ARMOR_DEMONICANCHORS_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ARMOR_DEMONICANCHORS_DESCRIPTION</Description>
+        <Type>LowerBody</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>400</ShopValue>		
+       <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>6</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_MagicResist</StrVal>
+            <Value>20</Value>            
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+		<HeroOnly>1</HeroOnly>		 
+            <AIData AIPersonality="AI_General">
+                <AIPriority>68</AIPriority>
+            </AIData>
+        <ArtDef>Art_DemonicAnchors</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_DemonicAnchors">
+			<GameItemTypeModelPack InternalName="Art_DemonicAnchors_1">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>				
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>				
+				<IconFile>BMB_DemonicAnchors.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+                 <ModelFile>gfx/hkb/Armor/F_Armor_Plate_Thigh_Guard_01.hkb</ModelFile>
+					<Texture_All>F_Armor_Plate_Texture_01.png</Texture_All>
+					<Attachment>thigh_left_lcf</Attachment>
+					<Color_Metal>182,41,41</Color_Metal>
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>gfx/hkb/Armor/F_Armor_Plate_Thigh_Guard_01.hkb</ModelFile>
+					<Texture_All>F_Armor_Plate_Texture_01.png</Texture_All>
+					<Attachment>thigh_right_lcf</Attachment>
+					<Color_Metal>182,41,41</Color_Metal>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>	
+</Fragment>

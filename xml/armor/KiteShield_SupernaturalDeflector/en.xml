@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Supernatural Deflector</DisplayName>
+    <Description>This polished shield will provide a modicum of shelter during magical storms.</Description>
+    <Provides index="1">+15 to the Army&apos;s Spell Resistance</Provides>
+    <Provides index="2">+15 Defense when Defending</Provides>
+    <Provides index="3">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="4">Enables abilities that require Shields</Provides>
+</Translation>

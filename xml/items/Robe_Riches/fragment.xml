@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Robe_Riches">
+        <DisplayName>TXT_BMB_ITEMS_ROBE_RICHES_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_ROBE_RICHES_DESCRIPTION</Description>
+        <Type>Torso</Type>
+        <Type>Surcoat</Type>
+        <Type>Lowerbody</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>300</ShopValue>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>6</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TreasureHunter</StrVal>
+            <Value>20</Value>
+            <Provides>TXT_BMB_ITEMS_ROBE_RICHES_PROVIDES_1</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>        
+            <AIData AIPersonality="AI_General">
+                <AIPriority>70</AIPriority>
+            </AIData>
+        <ArtDef>Art_Robe_Riches</ArtDef>		
+		<GameItemTypeArtDef InternalName="Art_Robe_Riches">
+			<GameItemTypeModelPack InternalName="Art_Robe_Riches_1">
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>BMB_RobeOfRiches.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Male_Robe_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Clothes\EmpireUnisexRobe.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>210,94,150</Color_Clothing1>
+					<Color_Clothing2>166,134,194</Color_Clothing2>
+				</GameItemTypeModel>            
+			</GameItemTypeModelPack>			
+			<GameItemTypeModelPack InternalName="Art_Robe_Riches_2">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<IconFile>BMB_RobeOfRiches.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Clothes\K_Female_Robe_Mesh_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Clothes\EmpireUnisexRobe.png</Texture_All>
+					<AttachmentType>Skinned</AttachmentType>
+					<Color_Clothing1>210,94,150</Color_Clothing1>
+					<Color_Clothing2>166,134,194</Color_Clothing2>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>
+	</GameItemType>
+</Fragment>

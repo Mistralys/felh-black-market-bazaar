@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Crystalline Boots</DisplayName>
+    <Description>Some Ice Elemental is bound to come looking for these sooner or later. The surface is also razor-sharp, and you already have several cuts to nurse. And yet, despite these minor quibbles, all this crystalline razzle-dazzle fits you to a tee.</Description>
+    <Provides index="1">Cutting Surface - Enemies that strike the wearer take 2 damage</Provides>
+</Translation>

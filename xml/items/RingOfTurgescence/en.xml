@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ring of Turgescence</DisplayName>
+    <Description>If this ring isn&apos;t worn on a finger, take a wild guess where you put it? For equipped males only.</Description>
+    <Provides index="1">+1 Starting Stamina</Provides>
+</Translation>

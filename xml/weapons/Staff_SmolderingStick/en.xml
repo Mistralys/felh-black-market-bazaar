@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Smoldering Stick</DisplayName>
+    <Description>Jets of fire burst from this staff whenever it hits something solid, which stresses the all importance of selective aim and careful handling. Say, ever heard the story of the wooden-legged man who accidentally dropped his Smoldering Stick in the latrines? Apparently the expression &quot;fire in the hole&quot; was born from the resulting explosion.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Peasant Cap</DisplayName>
+    <Description>This is the traditional leather bonnet used by Peasants all over Elemental. Whether they are oppressed serfs or local plutocrats, this is the symbol to unite them all in their most noble and degraded aspects. Best check it for lice before using it.</Description>
+    <Provides index="1">Safety in numbers- +6 Dodge when in an army of 5 or larger</Provides>
+</Translation>

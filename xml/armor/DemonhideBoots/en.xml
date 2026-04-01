@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Demonhide Boots</DisplayName>
+    <Description>Carved from the flayed skin of several Demons, these boots resonate with the telepathic screams of their unwilling providers. Yes, it&apos;s true that the raw flesh may still have the occasional spasm but don&apos;t let that deter you from sliding your feet into those two lukewarm wombs of comfortable corruption.</Description>
+    <Provides index="1">+10 Attack vs Elementals</Provides>
+    <Provides index="2">Demonic Ally - Summons an Assassin Demon at the same level as the caster</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Liquid Vigor</DisplayName>
+    <Description>The blue solution caught inside this vial is rippling with energy and actively sloshing against its glassy prison. It&apos;s almost as if it would break out and found its own liquid kingdom.</Description>
+    <Provides index="1">+1 Starting Stamina</Provides>
+</Translation>

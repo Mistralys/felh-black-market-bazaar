@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Corrosive Dagger</DisplayName>
+    <Description>Handling this dagger requires extra special care as it drips acid by the minute. The thrill which accompanies stabbing will now be followed by the satisfaction of watching your enemies dissolve right before your eyes.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+    <Provides index="2">Target takes 2-4 Acid damage per round</Provides>
+</Translation>

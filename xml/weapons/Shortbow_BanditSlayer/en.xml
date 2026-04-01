@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bandit Slayer</DisplayName>
+    <Description>This bow&apos;s enchantment will allow you to easily separate bandits from the law-abiding citizens. Its deadly arrows will seek the corrupted hearts of rogues, thieves and villains with vengeful intent.</Description>
+    <Provides index="1">+40 Accuracy vs Bandits</Provides>
+    <Provides index="2">+10 Attack vs Bandits</Provides>
+    <Provides index="3">Enables abilities that require Bows</Provides>
+    <Provides index="4">Ranged attack</Provides>
+</Translation>

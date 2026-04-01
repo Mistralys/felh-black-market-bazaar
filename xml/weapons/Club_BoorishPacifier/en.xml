@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Boorish Pacifier</DisplayName>
+    <Description>Refinement is probably the last term that could be assigned to this huge club. You will no longer have to beat around the bush, you&apos;ll be able to flatten it.</Description>
+    <Provides index="1">+4 Attack vs. opponents with a lower Level</Provides>
+    <Provides index="2">Bash- Has a chance equal to the damage done of knocking the victim prone</Provides>
+    <Provides index="3">Crushing Blow - Attack at +1 per Stamina</Provides>
+</Translation>

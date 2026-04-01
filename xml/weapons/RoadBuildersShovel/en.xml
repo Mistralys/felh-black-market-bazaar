@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Road Builder&apos;s Shovel</DisplayName>
+    <Description>There&apos;s always work to do on the home front and while this old shovel can&apos;t prevent monotonous drudgery and aching backs, it will hasten up the construction of your road network.</Description>
+    <Provides index="1">Allows the unit to build roads</Provides>
+</Translation>

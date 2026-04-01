@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Arcane Monolith Scroll</DisplayName>
+    <Description>Have you considered retreating to your own private tower for some well-deserved downtime? Wait no further! Invoke your very own Arcane Monolith today!</Description>
+    <Provides index="1">Creates an Arcane Monolith on the map which extends your Zone of Control.</Provides>
+</Translation>

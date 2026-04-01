@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="AmuletOfContamination">
+        <DisplayName>TXT_BMB_ITEMS_AMULETOFCONTAMINATION_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_AMULETOFCONTAMINATION_DESCRIPTION</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <AdditionalTrainingTurns>16</AdditionalTrainingTurns>
+        <ShopValue>180</ShopValue>
+        <ProductionRequirement>
+            <Type>Resource</Type>
+            <Attribute>RefinedCrystal</Attribute>
+            <Value>4</Value>
+        </ProductionRequirement>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Poison</StrVal>
+            <Value>2</Value>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <IsUsable>0</IsUsable>
+        <Prereq>
+            <Type>Tech</Type>
+            <Attribute>Glyph_Stones</Attribute>
+        </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>40</AIPriority>
+            </AIData>
+        <ArtDef>AmuletOfContamination_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="AmuletOfContamination_ArtDef">
+            <GameItemTypeModelPack InternalName="AmuletOfContamination_Default">
+                <IconFile>BMB_AmuletOfContamination.png</IconFile>                
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

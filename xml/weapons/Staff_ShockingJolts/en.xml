@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Staff of Shocking Jolts</DisplayName>
+    <Description>This high-quality staff is made of a Lightning Stone which has been fastened to the tip of a sturdy shaft. Each blow will leave your enemies dazed and confused amidst deafening electrical shocks.</Description>
+    <Provides index="1">Melee attacks have a 25% chance to Daze the victim and cause them to miss their next action</Provides>
+    <Provides index="2">Shocked enemies have a 50% chance to swing at a random unit in mêlée instead of their target</Provides>
+</Translation>

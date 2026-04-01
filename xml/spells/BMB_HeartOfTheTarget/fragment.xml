@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_HeartOfTheTarget">
+		<DisplayName>TXT_BMB_SPELLS_BMB_HEARTOFTHETARGET_DISPLAYNAME</DisplayName>
+		<Description>TXT_BMB_SPELLS_BMB_HEARTOFTHETARGET_DESCRIPTION</Description>
+		<Image>Ability_MasterArcher_Icon.png</Image>
+		<IconFG>Ability_MasterArcher_Icon.png</IconFG>
+		<CanStack>0</CanStack>
+		<SpellBookSortCategory>Unit</SpellBookSortCategory>
+		<SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+		<SpellType>Tactical</SpellType>
+		<SpellClass>Defensive</SpellClass>
+		<SpellSubClass>Buff</SpellSubClass>
+		<SpellTargetType>Self</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IgnoreCastAnim>1</IgnoreCastAnim>
+		<IsCastable>0</IsCastable>
+		<IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+			<ModType>Unit</ModType>
+			<Attribute>AdjustUnitStat</Attribute>
+			<StrVal>UnitStat_ArmorPierce</StrVal>
+			<Duration>-1</Duration>
+			<Calculate InternalName="Calc" ValueOwner="CastingUnit">
+				<Expression><![CDATA[[UnitStat_IsBow] * 20]]></Expression>
+			</Calculate>
+			<Calculate InternalName="Value">
+				<Expression><![CDATA[[Calc]]]></Expression>
+			</Calculate>
+		</GameModifier>		
+		<AIData AIPersonality="AI_General">
+			<AIPriority>5</AIPriority>
+		</AIData>		
+	</SpellDef>
+</Fragment>

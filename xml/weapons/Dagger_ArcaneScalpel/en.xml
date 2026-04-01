@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Arcane Scalpel</DisplayName>
+    <Description>Crafted and enchanted by Mages and for their exclusive use and benefit, these superlative daggers greatly increase the speed and potency of spellcasting.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+    <Provides index="2">+20% Spell Damage</Provides>
+    <Provides index="3">-20% mana cost for tactical spells</Provides>
+</Translation>

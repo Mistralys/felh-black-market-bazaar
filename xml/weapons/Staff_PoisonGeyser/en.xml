@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Poison Geyser</DisplayName>
+    <Description>A true fountain of venom, this staff continually spurts jets of poison. You&apos;d best learn to master its output before a foul tragedy occurs.</Description>
+    <Provides index="1">Ranged attack</Provides>
+</Translation>

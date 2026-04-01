@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Alchemical Surprise</DisplayName>
+    <Description>Random alchemical formula.</Description>
+    <ModifierDisplayName index="1">Healing Nectar!</ModifierDisplayName>
+    <ModifierDisplayName index="2">Healing Nectar!</ModifierDisplayName>
+    <ModifierDisplayName index="3">Healing Nectar!</ModifierDisplayName>
+    <ModifierDisplayName index="4">Vial of Poison!</ModifierDisplayName>
+    <ModifierDisplayName index="5">Vial of Poison!</ModifierDisplayName>
+    <ModifierDisplayName index="6">Dark Concoction!</ModifierDisplayName>
+    <ModifierDisplayName index="7">Dark Concoction!</ModifierDisplayName>
+    <ModifierDisplayName index="8">Fire Resistance Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="9">Fire Resistance Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="10">Growth Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="11">Growth Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="12">Growth Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="13">Healing Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="14">Healing Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="15">Healing Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="16">Iru Elixir!</ModifierDisplayName>
+    <ModifierDisplayName index="17">Iru Elixir!</ModifierDisplayName>
+    <ModifierDisplayName index="18">Iru Elixir!</ModifierDisplayName>
+    <ModifierDisplayName index="19">Ironeer Ale!</ModifierDisplayName>
+    <ModifierDisplayName index="20">Ironeer Ale!</ModifierDisplayName>
+    <ModifierDisplayName index="21">Ironeer Ale!</ModifierDisplayName>
+    <ModifierDisplayName index="22">Pariden Wine!</ModifierDisplayName>
+    <ModifierDisplayName index="23">Pariden Wine!</ModifierDisplayName>
+    <ModifierDisplayName index="24">Pariden Wine!</ModifierDisplayName>
+    <ModifierDisplayName index="25">Prismatic Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="26">Prismatic Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="27">Prismatic Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="28">Restoration Potion!</ModifierDisplayName>
+    <ModifierDisplayName index="29">Trog Blood!</ModifierDisplayName>
+    <ModifierDisplayName index="30">Trog Blood!</ModifierDisplayName>
+    <ModifierDisplayName index="31">Trog Blood!</ModifierDisplayName>
+    <ModifierDisplayName index="32">Blooming Tonic!</ModifierDisplayName>
+    <ModifierDisplayName index="33">Blooming Tonic!</ModifierDisplayName>
+    <ModifierDisplayName index="34">Dexterous Elixir!</ModifierDisplayName>
+    <ModifierDisplayName index="35">Dexterous Elixir!</ModifierDisplayName>
+    <ModifierDisplayName index="36">Fragrance of Sophistication!</ModifierDisplayName>
+    <ModifierDisplayName index="37">Ice Bomb!</ModifierDisplayName>
+    <ModifierDisplayName index="38">Ice Bomb!</ModifierDisplayName>
+    <ModifierDisplayName index="39">Ice Bomb!</ModifierDisplayName>
+    <ModifierDisplayName index="40">Liquid Vigor!</ModifierDisplayName>
+    <ModifierDisplayName index="41">Liquid Vigor!</ModifierDisplayName>
+    <ModifierDisplayName index="42">Lost Barrowhill Wine!</ModifierDisplayName>
+    <ModifierDisplayName index="43">Magnifying Stimulant!</ModifierDisplayName>
+    <ModifierDisplayName index="44">Philosopher&apos;s Stone!</ModifierDisplayName>
+    <ModifierDisplayName index="45">Tempestuous Wrath!</ModifierDisplayName>
+    <ModifierDisplayName index="46">Tempestuous Wrath!</ModifierDisplayName>
+    <ModifierDisplayName index="47">Tempestuous Wrath!</ModifierDisplayName>
+    <ModifierDisplayName index="48">Rejuvenating Fusion!</ModifierDisplayName>
+    <ModifierDisplayName index="49">Rejuvenating Fusion!</ModifierDisplayName>
+    <ModifierDisplayName index="50">Rejuvenating Fusion!</ModifierDisplayName>
+</Translation>

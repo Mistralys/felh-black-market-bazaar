@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Frostbite Fingers</DisplayName>
+    <Description>Cold hands, warm heart?</Description>
+    <Provides index="1">+10 Critical Chance vs. enemies with less than 50 Cold Resistance</Provides>
+</Translation>

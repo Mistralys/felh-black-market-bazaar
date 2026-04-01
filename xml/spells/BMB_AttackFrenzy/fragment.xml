@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_AttackFrenzy">
+        <DisplayName>TXT_BMB_SPELLS_BMB_ATTACKFRENZY_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_ATTACKFRENZY_DESCRIPTION</Description>
+        <Image>T_Berzerk_Painting.png</Image>
+        <IconFG>S_Sacrifice_Icon.png</IconFG>
+        <CanStack>1</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>Self</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <ApplyToCaster>1</ApplyToCaster>
+            <DisplayName>TXT_BMB_SPELLS_BMB_ATTACKFRENZY_MODIFIER_1_DISPLAYNAME</DisplayName>
+            <Duration>-1</Duration>
+            <Value>1</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+    </SpellDef>
+</Fragment>

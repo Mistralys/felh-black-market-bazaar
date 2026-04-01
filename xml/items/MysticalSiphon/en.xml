@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mystical Siphon</DisplayName>
+    <Description>This strange contraption is made of a hard yet pliable material and it&apos;s hard to say whether it&apos;s organic or mineral based. Gorging on the energy released when a soul is severed from its physical host, the corolla jerks and pulses while emitting nauseating sucking and slurping noises. Not compatible with any form of elegance.</Description>
+    <Provides index="1">+3 Hit Points whenever an enemy is killed</Provides>
+    <Provides index="2">+3 Mana Points whenever an enemy is killed</Provides>
+    <Provides index="3">+3 Stamina whenever an enemy is killed</Provides>
+</Translation>

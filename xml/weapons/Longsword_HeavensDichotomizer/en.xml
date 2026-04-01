@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Heaven&apos;s Dichotomizer</DisplayName>
+    <Description>A heavenly instrument capable of splitting the skies apart. Incidentally, it will also divide bodies into much smaller electrified pieces.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+    <Provides index="2">Lightning strikes a random enemy group for 20 Lightning damage(+4 per air shard).</Provides>
+</Translation>

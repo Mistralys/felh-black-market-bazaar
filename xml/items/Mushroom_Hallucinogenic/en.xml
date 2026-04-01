@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Magic Mushroom</DisplayName>
+    <Description>It&apos;s quite known that eating one of these mushrooms is akin to a toss of the proverbial dice. Dare you to eat it?</Description>
+    <Provides index="1">Mysterious properties</Provides>
+</Translation>

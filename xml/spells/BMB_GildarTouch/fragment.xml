@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_GildarTouch">
+        <DisplayName>TXT_BMB_SPELLS_BMB_GILDARTOUCH_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_GILDARTOUCH_DESCRIPTION</Description>
+        <IconFG>Ability_Wealthy_Icon.png</IconFG>
+        <Cooldown>0</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>        
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Gold</Attribute>
+            <ApplyToCaster>1</ApplyToCaster>
+            <DisplayName>TXT_BMB_SPELLS_BMB_GILDARTOUCH_MODIFIER_1_DISPLAYNAME</DisplayName>
+            <Value>1</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <SFX>SackOfGildar_01</SFX>        
+    </SpellDef>
+</Fragment>

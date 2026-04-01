@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Cauldron of Plenty</DisplayName>
+    <Description>This self-replenishing cauldron of stew will fatten up your citizens and provoke a minor population boom.</Description>
+    <Provides index="1">+15 Population in your capital city</Provides>
+</Translation>

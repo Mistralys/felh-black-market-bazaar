@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Stalagmite</DisplayName>
+    <Description>&quot;Otherwise known as the Winter&apos;s Crutch, this war staff packs the wallop of a thousand concentrated blizzards and the freezing power of absolute emptiness. It also makes marvelous snowmen in a pinch.&quot; - The Arcanum Catalogue.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+    <Provides index="2">Freezing Jet - Fire a Freezing Jet through 3 units in a line</Provides>
+</Translation>

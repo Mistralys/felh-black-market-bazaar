@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+    <AbilityBonus InternalName="BMB_EruditeAbility">
+        <AbilityBonusOption InternalName="BMB_Erudite">
+            <DisplayName>TXT_BMB_ABILITIES_BMB_ERUDITE_DISPLAYNAME</DisplayName>
+            <Description>TXT_BMB_ABILITIES_BMB_ERUDITE_DESCRIPTION</Description>
+            <Icon>BMB_Ability_Erudite.png</Icon> 
+			<GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>AdjustUnitStat</Attribute>
+                <StrVal>UnitStat_ExpBonus</StrVal>
+                <Value>30</Value>
+                <Provides>TXT_BMB_ABILITIES_BMB_ERUDITE_PROVIDES_1</Provides>
+            </GameModifier>
+			<GameModifier>
+                <ModType>Player</ModType>
+                <Attribute>AbilityBonus</Attribute>
+                <StrVal>A_Research</StrVal>
+                <Value>10</Value>
+                <Provides>TXT_BMB_ABILITIES_BMB_ERUDITE_PROVIDES_2</Provides>
+            </GameModifier>	
+            <Type>Army</Type>            
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+</Fragment>

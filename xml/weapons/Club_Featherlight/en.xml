@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Featherlight Club</DisplayName>
+    <Description>Light as a feather and yet as hard as a rock, this club has been whittled from petrified wood that has been struck thrice by lightning. Which could explain why they&apos;re quite rare.</Description>
+    <Provides index="1">Bash- Has a chance equal to the damage done of knocking the victim prone</Provides>
+    <Provides index="2">Crushing Blow - Attack at +1 per Stamina</Provides>
+</Translation>

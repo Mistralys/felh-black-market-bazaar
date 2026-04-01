@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Saintly Carapace</DisplayName>
+    <Description>Are you even worthy?</Description>
+    <Provides index="1">+5 Healing per Season</Provides>
+    <Provides index="2">Saintly Aura - Adjacent friendly units regenerate 4 hit points per turn</Provides>
+</Translation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Lupus Cloak</DisplayName>
+    <Description>The hour of the Wolf is at hand, and the urge to howl at the moon cannot be denied.</Description>
+    <Provides index="1">+10% Cold resistance</Provides>
+    <Provides index="2">Summon Lupus - Summons a random level 8 Canine Friend</Provides>
+</Translation>

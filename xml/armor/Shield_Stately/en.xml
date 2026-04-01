@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Stately Shield</DisplayName>
+    <Description>Finely crafted and all for show, this shield is clearly a diplomatic tool and isn&apos;t much suited for combat. Do you really want to put marks upon such a pretty work of art?</Description>
+    <Provides index="1">Grants the ability to escape (with remaining allies) from battle</Provides>
+    <Provides index="2">+10 Defense when Defending</Provides>
+    <Provides index="3">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="4">Enables abilities that require Shields</Provides>
+</Translation>

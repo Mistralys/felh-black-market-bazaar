@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Commander&apos;s Wig</DisplayName>
+    <Description>This enchanted wig greatly enhances one&apos;s powers of persuasion. While it is a rather grotesque piece of apparel, its magical components shield the wearer from the world&apos;s scrutiny.</Description>
+    <Provides index="1">+5 to the Army&apos;s Accuracy</Provides>
+    <Provides index="2">+10% to the Army&apos;s Experience</Provides>
+</Translation>

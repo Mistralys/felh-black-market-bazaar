@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ring of Noxious Humors</DisplayName>
+    <Description>Slipping this luxurious ring on your finger will release the toxic magic swirling within the stone and enchant your army&apos;s weapons with poison, turning it into a de facto pack of snakes.</Description>
+    <Provides index="1">+2 Poison to the Army&apos;s Attack</Provides>
+</Translation>

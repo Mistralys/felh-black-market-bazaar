@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Oiled Leather Armor</DisplayName>
+    <Description>Copiously lathered with oil, this leather armor&apos;s lack of conductivity offers its wearer a certain protection from electrical attacks.</Description>
+    <Provides index="1">+15% Lightning resistance</Provides>
+</Translation>

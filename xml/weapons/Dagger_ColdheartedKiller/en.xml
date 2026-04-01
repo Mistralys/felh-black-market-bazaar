@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Coldhearted Killer</DisplayName>
+    <Description>Designed for cold fishes with murderous intentions.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+    <Provides index="2">Paralyzing Cold - Victims take 3 Cold damage per turn</Provides>
+</Translation>

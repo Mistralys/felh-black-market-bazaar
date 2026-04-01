@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Blade of Negation</DisplayName>
+    <Description>Inflamed with dark energy, this blade exists simultaneously in two conflicting dimensions. Its negative side will tear molecules apart, dissolve resistances and divide life from matter.</Description>
+    <Provides index="1">Target loses 4 Defense and 8 Spell Resist points per strike</Provides>
+    <Provides index="2">+1 Counterattack per round</Provides>
+</Translation>

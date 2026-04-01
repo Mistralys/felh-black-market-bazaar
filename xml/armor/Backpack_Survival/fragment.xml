@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Backpack_Survival">
+        <DisplayName>TXT_BMB_ARMOR_BACKPACK_SURVIVAL_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ARMOR_BACKPACK_SURVIVAL_DESCRIPTION</Description>
+        <Type>Cloak</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>100</ShopValue>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustArmyStat</Attribute>
+            <StrVal>UnitStat_HitPoints</StrVal>
+            <Value>3</Value>
+            <Provides>TXT_BMB_ARMOR_BACKPACK_SURVIVAL_PROVIDES_1</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustArmyStat</Attribute>
+            <StrVal>UnitStat_Stamina_Starting</StrVal>
+            <Value>1</Value>
+            <Provides>TXT_BMB_ARMOR_BACKPACK_SURVIVAL_PROVIDES_2</Provides>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustArmyStat</Attribute>
+            <StrVal>UnitStat_HealthRegen</StrVal>
+            <Value>2</Value>
+            <Provides>TXT_BMB_ARMOR_BACKPACK_SURVIVAL_PROVIDES_3</Provides>
+        </GameModifier>        
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>25</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>22</AIPriority>
+            </AIData>
+        <ArtDef>Art_Backpack_Survival</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_Backpack_Survival">
+			<GameItemTypeModelPack InternalName="Art_Backpack_Survival_1">
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>				
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>				
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>				
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>				
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<IconFile>RangerPack.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Clothes\K_Backpack_Pioneer_Mesh_01.hkb</ModelFile>
+                    <Texture_All>Gfx\HKB\Clothes\K_Backpack_Texture_01.png</Texture_All>
+					<Color_Clothing1>126,148,128,255</Color_Clothing1>
+					<Color_Clothing2>126,148,128,255</Color_Clothing2>
+                    <AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>            
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_Backpack_Survival_2">				
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>				
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>				
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>				
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>				
+				<IconFile>RangerPack.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+                    <ModelFile>Gfx\HKB\Clothes\K_Backpack_Pioneer_Mesh_01.hkb</ModelFile>
+                    <Texture_All>Gfx\HKB\Clothes\F_Backpack_Texture_01.png</Texture_All>
+					<Color_Clothing1>126,148,128,255</Color_Clothing1>
+					<Color_Clothing2>126,148,128,255</Color_Clothing2>
+                    <AttachmentType>Skinned</AttachmentType>
+				</GameItemTypeModel>            
+			</GameItemTypeModelPack>
+		</GameItemTypeArtDef>	
+    </GameItemType>
+</Fragment>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Rebounder Shield</DisplayName>
+    <Description>If you&apos;re the unapproachable type, this shield certainly isn&apos;t going to improve your social skills. You&apos;ve got to let people in!</Description>
+    <Provides index="1">+10 Defense when Defending</Provides>
+    <Provides index="2">Rebounder Effect - Striking this unit causes the attacker to be knocked back one tile</Provides>
+    <Provides index="3">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="4">Enables abilities that require Shields</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ice Bomb</DisplayName>
+    <Description>The following instructions can be deciphered on this icy bottle: &quot;Concentrated freezing particles of the explosive kind magically sealed in a bottle. Requires selecting a hapless target before using.&quot;</Description>
+    <Provides index="1">Select your target and blast away for 18 Cold damage.</Provides>
+</Translation>

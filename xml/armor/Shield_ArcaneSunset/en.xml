@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Arcane Sunset</DisplayName>
+    <Description>Rumored to be fashioned from the metal of a fallen star by the demonic blacksmiths of Tegghan-Turak, these shields were used to devastating effect during the Arcane Wars. Common soldiers would easily disrupt the onslaught of Archmages, leaving them in a stupor long enough to fall to the assault of ordinary weapons.</Description>
+    <Provides index="1">Scrambler Effect - Disrupts a spell an enemy unit is casting and causes them to lose their next turn unless they resist</Provides>
+    <Provides index="2">+20 Defense when Defending</Provides>
+    <Provides index="3">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="4">Enables abilities that require Shields</Provides>
+</Translation>

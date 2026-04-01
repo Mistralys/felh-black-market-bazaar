@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Dagger Of Corruption Effect</DisplayName>
+    <Description>Reduces the attack of the target by 2 (+1 per death shard) unless they resist.</Description>
+    <ModifierDisplayName index="1">Withered</ModifierDisplayName>
+</Translation>

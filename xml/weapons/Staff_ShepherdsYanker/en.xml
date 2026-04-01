@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Shepherd&apos;s Yanker</DisplayName>
+    <Description>A Staff to pull stray sheep back into the ranks or just for the fun of making them fall on their buttocks.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+    <Provides index="2">Yank- Attack that also has a chance to knock the enemy prone unless they resist</Provides>
+</Translation>

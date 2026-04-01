@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_JinxDoll">
+        <DisplayName>TXT_BMB_SPELLS_BMB_JINXDOLL_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_JINXDOLL_DESCRIPTION</Description>
+        <Image>T_Curse_Painting.png</Image>
+        <IconFG>S_Bloodrage_Icon.png</IconFG>
+		<Cooldown>8</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <AppliesRandomModifier>1</AppliesRandomModifier>
+        <IsResistable>0</IsResistable>
+		<HideInHiergamenon>1</HideInHiergamenon>
+        <IsSpecialAbility>1</IsSpecialAbility>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <DisplayName>TXT_BMB_SPELLS_BMB_JINXDOLL_MODIFIER_1_DISPLAYNAME</DisplayName>
+            <Duration>5</Duration>
+            <Effect>E_Curse_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[UnitStat_Defense_Pierce] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Poison</AttackStat>
+			<DisplayName>TXT_BMB_SPELLS_BMB_JINXDOLL_MODIFIER_2_DISPLAYNAME</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Poison_Particle</Effect>
+            <SoundFX>Spell_Poisoned2_01</SoundFX>
+            <PerTurn>1</PerTurn>
+            <Value>4</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Cold</AttackStat>
+			<DisplayName>TXT_BMB_SPELLS_BMB_JINXDOLL_MODIFIER_3_DISPLAYNAME</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>A_HailstoneStaff_Impact_Particle</Effect>
+            <SoundFX>IceElemental_Death</SoundFX>
+            <PerTurn>1</PerTurn>
+            <Value>5</Value>
+        </GameModifier>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <MinValue>-10</MinValue>
+            <MaxValue>-15</MaxValue>
+        </GameModifier>        
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>FemAdv1_CrazyDeath1</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_DrainLife_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.50</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>0</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

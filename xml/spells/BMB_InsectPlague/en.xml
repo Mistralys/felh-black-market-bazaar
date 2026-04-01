@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Insect Plague</DisplayName>
+    <Description>A harassing plague of insects targeting all enemies which reduces Accuracy and Dodge by 40% and lowers initiative by 3 for 5 turns unless resisted.</Description>
+    <ModifierDisplayName index="1">Insect Swarm</ModifierDisplayName>
+</Translation>

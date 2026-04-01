@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Frenzy Charm</DisplayName>
+    <Description>An ancient bone charm etched with forgotten runes. When worn, it frenzies the bearer into a blind, berserker rage — they maul everything in their path.</Description>
+    <Provides index="1">Grants the Maul ability</Provides>
+</Translation>

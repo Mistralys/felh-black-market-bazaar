@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Weeping Battle Axe</DisplayName>
+    <Description>The axe blade dribbles with poison as if it were weeping venomous tears of inconsolable sadness. Maybe you could try to comfort it?</Description>
+    <Provides index="1">Victims take 6 Poison damage per turn</Provides>
+    <Provides index="2">Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+    <Provides index="3">Cleave- Strike 3 adjacent enemies</Provides>
+</Translation>

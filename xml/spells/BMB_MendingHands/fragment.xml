@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_MendingHands">
+        <DisplayName>TXT_BMB_SPELLS_BMB_MENDINGHANDS_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_MENDINGHANDS_DESCRIPTION</Description>
+        <FormattedDescription>Heals target unit by %d.</FormattedDescription>
+        <Image>T_Heal_Painting.png</Image>
+        <IconFG>T_Heal_Icon.png</IconFG>
+        <Cooldown>5</Cooldown>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Heal</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+		<Range>1</Range>
+		<HideInHiergamenon>1</HideInHiergamenon>
+		<IsSpecialAbility>1</IsSpecialAbility>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 2]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + 12]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * [UnitStat_BonusHealing]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>15</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] < 30]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_Heal_01</HitSoundFX>
+        <HitSoundFX>Spell_Heal_02</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Heal_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>.75</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

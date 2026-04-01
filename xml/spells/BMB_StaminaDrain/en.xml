@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Stamina Drain</DisplayName>
+    <Description>Attack that reduces the victim&apos;s Stamina to 0 if it hits</Description>
+    <ModifierDisplayName index="2">Stamina Drain</ModifierDisplayName>
+</Translation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Malachite Crown</DisplayName>
+    <Description>A crown to rule them all or at least a nifty ornament which will allow you to become that haughty, high and mighty ruler standing way above the rabble. Word to the wise sovereign: every once in a while, try to lose those superior airs and strive to remember who your friends are.</Description>
+    <Provides index="1">This unit receives double the normal Swarm bonus</Provides>
+    <Provides index="2">Unit never gets Counterattacked</Provides>
+    <Provides index="3">Immune to Swarm</Provides>
+    <Provides index="4">Allows the owner to cast Cull the Weak</Provides>
+</Translation>

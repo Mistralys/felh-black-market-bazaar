@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Lightning Drinker Shield</DisplayName>
+    <Description>These shields were designed to hunt down Air Shrills and Air Elementals, partially protecting their wearers from electrical attacks.</Description>
+    <Provides index="1">+20% Lightning resistance</Provides>
+    <Provides index="2">+10 Defense when Defending</Provides>
+    <Provides index="3">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="4">Enables abilities that require Shields</Provides>
+</Translation>

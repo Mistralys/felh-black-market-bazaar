@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_ShacklesOfEnslavement">
+        <DisplayName>TXT_BMB_SPELLS_BMB_SHACKLESOFENSLAVEMENT_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_SHACKLESOFENSLAVEMENT_DESCRIPTION</Description>
+        <Image>S_DestinysGift_Painting.png</Image>
+        <IconFG>T_SilverTongue_Icon.png</IconFG>        
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Charm</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyTrainedUnit</SpellTargetType>
+        <SpellTargetCreatureType>Men</SpellTargetCreatureType>
+		<HideInHiergamenon>1</HideInHiergamenon>
+        <IsResistable>1</IsResistable>
+        <Range>1</Range>        
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CharmTarget</Attribute>
+            <Value>100</Value>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SilverTongue_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>T_Tame_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

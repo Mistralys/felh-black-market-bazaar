@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Famous</DisplayName>
+    <Description>+1 Fame per Season</Description>
+    <Provides index="1">+1 Fame per Season</Provides>
+</Translation>

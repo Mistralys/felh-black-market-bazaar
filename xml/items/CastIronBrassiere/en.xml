@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Cast Iron Brassiere</DisplayName>
+    <Description>These steely protuberances will deflect many blows and drive away the most persistent suitors.</Description>
+    <Provides index="1">+1 Starting Stamina</Provides>
+</Translation>

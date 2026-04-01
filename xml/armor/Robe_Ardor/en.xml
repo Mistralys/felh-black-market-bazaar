@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Robe of Ardor</DisplayName>
+    <Description>Still craving for that extra boost? Well look no further than these enchanted robes which bestow awesome energy levels without the added weight of armor.</Description>
+    <Provides index="1">+5 Starting Stamina</Provides>
+</Translation>

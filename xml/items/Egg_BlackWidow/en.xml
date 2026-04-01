@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Black Widow Egg</DisplayName>
+    <Description>What did your parents say about having a pet spider in the house?</Description>
+    <Provides index="1">Summons a BlackWidow</Provides>
+</Translation>

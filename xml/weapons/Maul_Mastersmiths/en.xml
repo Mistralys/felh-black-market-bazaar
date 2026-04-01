@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mastersmith&apos;s Hammer</DisplayName>
+    <Description>Even a journeyman blacksmith could forge weapons to befit the gods with this cumbersome relic. It will conveniently provide the searing temperature necessary to soften metal and the perfect balance to achieve excellence. Excellence which equates victory.</Description>
+    <Provides index="1">+1 Fire Attack per Level</Provides>
+    <Provides index="2">Bash- Has a chance equal to the damage done of knocking the victim prone</Provides>
+    <Provides index="3">Crushing Blow - Attack at +1 per Stamina</Provides>
+    <Provides index="4">Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
+</Translation>

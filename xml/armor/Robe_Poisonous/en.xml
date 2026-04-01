@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Poisonous Robe</DisplayName>
+    <Description>A most venomous garment whose fibers have been magically bonded with naja poison.</Description>
+    <Provides index="1">+50% Poison Resistance</Provides>
+    <Provides index="2">Melee attacks do 6 Poison damage per round to the victim</Provides>
+    <Provides index="3">Enemies that strike the wearer become infected with poison</Provides>
+</Translation>

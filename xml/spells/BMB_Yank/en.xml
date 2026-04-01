@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Yank</DisplayName>
+    <Description>Attack that also has a chance to knock the enemy prone unless they resist.</Description>
+    <ModifierDisplayName index="2">Yanked</ModifierDisplayName>
+</Translation>

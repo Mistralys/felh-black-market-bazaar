@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Deconstructor</DisplayName>
+    <Description>The tool of choice for taking Constructs apart and discovering what makes them tick. Apply some reverse engineering here, hammer away like a primal savage there, and build up a solid theory for your &quot;Thinking Machines&quot; thesis.</Description>
+    <Provides index="1">+15 Attack vs Constructs</Provides>
+    <Provides index="2">Bash- Has a chance equal to the damage done of knocking the victim prone</Provides>
+    <Provides index="3">Crushing Blow - Attack at +1 per Stamina</Provides>
+    <Provides index="4">Crippling Blow- +100% Attack, but you lose your next action</Provides>
+</Translation>

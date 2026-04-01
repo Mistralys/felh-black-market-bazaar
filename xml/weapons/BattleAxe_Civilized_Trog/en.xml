@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Dual Civilized Battle Axe</DisplayName>
+    <Description>If pacifying your domains is the current order of business, these axes are ideal weapons for weeding out the last bastions of monstrous resistance.</Description>
+    <Provides index="1">+5 Attack vs Beasts</Provides>
+    <Provides index="2">+5 Attack vs Dragons</Provides>
+    <Provides index="3">+5 Attack vs Elementals</Provides>
+    <Provides index="4">+5 Attack vs Twisted</Provides>
+    <Provides index="5">+5 Attack vs Undead</Provides>
+    <Provides index="6">Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+    <Provides index="7">Cleave- Strike 3 adjacent enemies</Provides>
+</Translation>

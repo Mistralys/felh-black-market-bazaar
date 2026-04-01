@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mortar and Pestle</DisplayName>
+    <Description>Someone left their mortar and pestle in a hurry and evidently in the middle of a complex alchemical recipe. Perhaps you could attempt to finish the work? It&apos;s a very delicate formula so don&apos;t bungle it up!</Description>
+    <Provides index="1">Alchemical Surprise- Random alchemical formula.</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Elemental Wand</DisplayName>
+    <Description>Forget about those bulky staves limited to a single elemental manifestation. This wand will hurl all four elements at once and at far greater speed. Yes, sometimes smaller is better.</Description>
+    <Provides index="1">Ranged attack</Provides>
+</Translation>

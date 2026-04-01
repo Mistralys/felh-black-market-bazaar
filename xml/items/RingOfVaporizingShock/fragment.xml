@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="RingOfVaporizingShock">
+        <DisplayName>TXT_BMB_ITEMS_RINGOFVAPORIZINGSHOCK_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_RINGOFVAPORIZINGSHOCK_DESCRIPTION</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>400</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustArmyStat</Attribute>
+            <StrVal>UnitStat_Attack_Lightning</StrVal>
+            <Value>2</Value>
+            <Provides>TXT_BMB_ITEMS_RINGOFVAPORIZINGSHOCK_PROVIDES_1</Provides>
+        </GameModifier>	        
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>80</AIPriority>
+            </AIData>
+        <ArtDef>RingOfVaporizingShock_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="RingOfVaporizingShock_ArtDef">
+            <GameItemTypeModelPack InternalName="RingOfVaporizingShock_Default">
+                <IconFile>BMB_RingOfVaporizingShock.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

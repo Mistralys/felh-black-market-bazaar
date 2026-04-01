@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Blessed Vestment</DisplayName>
+    <Description>The lower half of the uniform worn by the Convent of Blessed Brightness, this vestment preserves the physical integrity of its wearer, going so far as to regenerate missing tissue and turn the most severe injuries into nothing but a bad memory.</Description>
+    <Provides index="1">Wellspring- All allies heal 24 hit points (+4 per life shard)</Provides>
+    <Provides index="2">+3 Healing per Season</Provides>
+</Translation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Elemental Myriad</DisplayName>
+    <Description>Grants your army random Elemental damage for the duration of the battle.</Description>
+    <ModifierDisplayName index="1">Frost Power</ModifierDisplayName>
+    <ModifierDisplayName index="2">Fire Power</ModifierDisplayName>
+    <ModifierDisplayName index="3">Lightning Power</ModifierDisplayName>
+    <ModifierDisplayName index="4">Poison Power</ModifierDisplayName>
+</Translation>

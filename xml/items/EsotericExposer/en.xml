@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Esoteric Exposer</DisplayName>
+    <Description>Can the brain be attuned to arcane energies? This helmet would be the argument to convince the most stubborn naysayer.</Description>
+    <Provides index="1">20% chance to find better items from goodie huts</Provides>
+</Translation>

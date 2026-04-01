@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Swamp Gas Lighter</DisplayName>
+    <Description>Invented and used by the Mire Mages, this is a modified Hellfire Staff fueled by foul swamp gas. Its explosive properties meld the volatile nature of methane and the vile smell of marsh putrescence.</Description>
+    <Provides index="1">Ranged attack</Provides>
+    <Provides index="2">Allows the wielder to provoke a Swamp Gas Explosion</Provides>
+</Translation>

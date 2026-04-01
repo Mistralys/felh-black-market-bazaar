@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Impudent Shortbow</DisplayName>
+    <Description>This sassy little bow will first and foremost release you from your inferiority complex. It will also teach the high and mighty that certain forms of back-talking can have fatal consequences.</Description>
+    <Provides index="1">+15 Accuracy vs. higher level enemies</Provides>
+    <Provides index="2">Enables abilities that require Bows</Provides>
+    <Provides index="3">Ranged attack</Provides>
+</Translation>

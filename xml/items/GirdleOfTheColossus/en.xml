@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Girdle of the Colossus</DisplayName>
+    <Description>A belt made for Giants and yet it fits your waist perfectly? There must be magical forces at work here so don&apos;t start the diet just yet.</Description>
+    <Provides index="1">+3 Starting Stamina</Provides>
+    <Provides index="2">Power Sweep - Attack all enemies within a 1 tile radius, push them back and knock them prone</Provides>
+</Translation>

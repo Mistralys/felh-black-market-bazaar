@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Scout&apos;s Backpack</DisplayName>
+    <Description>Filled with all the paraphernalia and accessories of any self-respecting Master Scout, this backpack will enable its wearer to cover any distance through any terrain.</Description>
+    <Provides index="1">No Movement penalty in Forests</Provides>
+    <Provides index="2">No Movement penalty in Swamps</Provides>
+    <Provides index="3">No Movement penalty on Hills</Provides>
+</Translation>

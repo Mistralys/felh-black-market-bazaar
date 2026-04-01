@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Fulminating Axe</DisplayName>
+    <Description>It&apos;s a given that trees hate lightning even if they aren&apos;t exactly outspoken about it. So using such an axe to chop one down would be adding shocking insult to an already sappy injury.</Description>
+    <Provides index="1">Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+    <Provides index="2">Cleave- Strike 3 adjacent enemies</Provides>
+</Translation>

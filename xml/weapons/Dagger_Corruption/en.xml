@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Dagger of Corruption</DisplayName>
+    <Description>An unyielding mind will be mandatory in order to wield this dagger given the ripples of evil intentions smearing the blade. Probably the lost toy of some Necromancer&apos;s child.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+    <Provides index="2">Dagger Of Corruption Effect - Reduces the attack of the target by 2 (+1 per death shard) unless they resist</Provides>
+</Translation>

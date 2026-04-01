@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Blessed Toga</DisplayName>
+    <Description>The mandatory uniform of the now defunct Convent of Blessed Brightness, this garment has been imbued with powerful enchantments.</Description>
+    <Provides index="1">+10% Experience</Provides>
+    <Provides index="2">Allows the wearer to cast Healing Light</Provides>
+</Translation>

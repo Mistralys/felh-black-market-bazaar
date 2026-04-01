@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Prismatic Longbow</DisplayName>
+    <Description>Simultaneously crackling, freezing, burning and festering, this longbow will enchant your arrows and inflict a myriad of elemental damage upon your targets.</Description>
+    <Provides index="1">Enables abilities that require Bows</Provides>
+    <Provides index="2">Ranged attack</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Blue Crystal</DisplayName>
+    <Description>Believed to be a shard chipped directly from Vetrar&apos;s heart, this crystal can unleash the fury of winter.</Description>
+    <Provides index="1">Allows the wielder to cast Freezing Ray</Provides>
+</Translation>

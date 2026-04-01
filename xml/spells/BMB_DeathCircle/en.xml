@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Death Circle</DisplayName>
+    <Description>A circle of destructive energy hitting adjacent enemies for 4 damage + twice the caster&apos;s level (half if resisted).</Description>
+</Translation>

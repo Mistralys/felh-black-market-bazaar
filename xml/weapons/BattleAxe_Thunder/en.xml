@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Thunder Battle Axe</DisplayName>
+    <Description>A fearsome weapon backed by the powers of the heavens. For thunderous charges and lightning strikes.</Description>
+    <Provides index="1">Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+    <Provides index="2">Cleave- Strike 3 adjacent enemies</Provides>
+</Translation>

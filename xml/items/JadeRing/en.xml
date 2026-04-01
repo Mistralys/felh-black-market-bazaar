@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Jade Ring</DisplayName>
+    <Description>Cut from the purest jade, this magical ring isn&apos;t just a pricey bit of jewelry. It can also serve as either a toxin receptacle or an antidote. Or both.</Description>
+    <Provides index="1">Melee attacks also do 2 Poison damage per round to the victim</Provides>
+    <Provides index="2">+20% Poison Resistance</Provides>
+</Translation>

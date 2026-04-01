@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<UnitStatType InternalName="UnitStat_BlackSpike">
+		<DisplayName>TXT_BMB_UNITSTATS_UNITSTAT_BLACKSPIKE_DISPLAYNAME</DisplayName>
+		<Description>TXT_BMB_UNITSTATS_UNITSTAT_BLACKSPIKE_DESCRIPTION</Description>
+		<Icon>Stat_SpawnRating_Icon.png</Icon>
+		<Hidden>1</Hidden>
+        <DefaultValue>0.0</DefaultValue>
+    </UnitStatType>
+</Fragment>

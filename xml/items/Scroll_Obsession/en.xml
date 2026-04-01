@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Scroll of Obsession</DisplayName>
+    <Description>The difference between being focused and obsessed is paper thin indeed.</Description>
+    <Provides index="1">Grants the unit the Obsession spell</Provides>
+</Translation>

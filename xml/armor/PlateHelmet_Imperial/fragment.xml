@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="PlateHelmet_Imperial">
+        <DisplayName>TXT_BMB_ARMOR_PLATEHELMET_IMPERIAL_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ARMOR_PLATEHELMET_IMPERIAL_DESCRIPTION</Description>
+        <Type>Head</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>300</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <Value>-1</Value>
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>6</Value>
+        </GameModifier>				
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Attack_Pierce</StrVal>
+            <Multiplier>1.20</Multiplier>
+            <Provides>TXT_BMB_ARMOR_PLATEHELMET_IMPERIAL_PROVIDES_1</Provides>
+            <vsOtherAllegiance>1</vsOtherAllegiance>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+            <Type>UnitStat</Type>
+            <Attribute>UnitStat_ArmorProficiency</Attribute>
+            <Value>2</Value>
+        </Prereq>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>56</AIPriority>
+            </AIData>
+        <ArtDef>Art_PlateHelmet_Imperial</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_PlateHelmet_Imperial">
+			<GameItemTypeModelPack InternalName="Art_PlateHelmet_Imperial_1">
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>DarklingMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<IconFile>K_ImperialHelmet_Icon.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>Gfx\HKB\Armor\K_Armor_Wraith_Helm_01.hkb</ModelFile>
+					<Texture_All>Gfx\HKB\Armor\K_Armor_Wraith_Texture_01.png</Texture_All>
+					<Attachment>head_lcf</Attachment>	
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>			        
+		</GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

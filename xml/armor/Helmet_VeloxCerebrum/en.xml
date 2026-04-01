@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Velox Cerebrum</DisplayName>
+    <Description>A strange contraption which greatly accelerates the faculties of the mind, this metallic coif is especially prized by Mages who can turn their magical talent into lethal brain power. And flaunt their superior intelligence as an added bonus.</Description>
+    <Provides index="1">Mind Blast - Does mental damage to 5 units in a line and knocks them prone.</Provides>
+</Translation>

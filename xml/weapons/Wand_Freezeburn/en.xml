@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Freezeburn Wand</DisplayName>
+    <Description>When the burning pain is so intense it becomes excruciating, the brain can no longer make the difference between hot and cold.</Description>
+    <Provides index="1">Ranged attack</Provides>
+</Translation>

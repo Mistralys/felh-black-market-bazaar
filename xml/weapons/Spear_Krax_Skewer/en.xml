@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Demented Skewer</DisplayName>
+    <Description>It would appear that someone&apos;s enthusiasm in sharpening this spearpoint went far beyond the call of duty. You probably can get cuts just by looking at it.</Description>
+    <Provides index="1">+50% Critical Damage</Provides>
+    <Provides index="2">Ignores 33% of the victim&apos;s Defense</Provides>
+    <Provides index="3">Immune to Counterattack</Provides>
+    <Provides index="4">Impale- Strike an opponent and whoever is behind them</Provides>
+</Translation>

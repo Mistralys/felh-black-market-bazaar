@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Leopard Cloak</DisplayName>
+    <Description>Highly prized and sought out, these cloaks lend several abilities of their original owners, namely speed and deftness.</Description>
+    <Provides index="1">+1 Starting Stamina</Provides>
+</Translation>

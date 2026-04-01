@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Forefather&apos;s Armor</DisplayName>
+    <Description>This battle worn relic radiates intimacy with the legendary conflicts of the past as the permanent bloodstains dotting its surface would attest.</Description>
+    <Provides index="1">+25% Experience</Provides>
+</Translation>

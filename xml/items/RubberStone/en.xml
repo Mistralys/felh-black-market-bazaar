@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Rubber Stone</DisplayName>
+    <Description>This bouncy stone magically asserts that every attack should be followed by a retaliative strike. An &quot;in your face&quot; accessory, so to speak.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+</Translation>

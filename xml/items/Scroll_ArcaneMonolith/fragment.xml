@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Scroll_ArcaneMonolith">
+        <DisplayName>TXT_BMB_ITEMS_SCROLL_ARCANEMONOLITH_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_SCROLL_ARCANEMONOLITH_DESCRIPTION</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>180</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UseSpell</Attribute>
+            <StrVal>BMB_ArcaneMonolith</StrVal>
+            <Provides>TXT_BMB_ITEMS_SCROLL_ARCANEMONOLITH_PROVIDES_1</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>35</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>1</IsUsable>
+        <UsableInBattle>0</UsableInBattle>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>100</AIPriority>
+            </AIData>
+        <ArtDef>Scroll_ArcaneMonolith_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Scroll_ArcaneMonolith_ArtDef">
+            <GameItemTypeModelPack InternalName="Scroll_ArcaneMonolith_Default">
+                <IconFile>BMB_ArcaneMonolithScroll.png</IconFile>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

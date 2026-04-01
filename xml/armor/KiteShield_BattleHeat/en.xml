@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Battle Heat Shield</DisplayName>
+    <Description>This shield lives each battle with its owner on an intimate level, the longer the fighting lasts, the stronger the shield becomes. An inanimate object with a personal interest in dragging things out to achieve its own private nirvana of invulnerability.</Description>
+    <Provides index="1">+1 Defense for each point of Stamina</Provides>
+    <Provides index="2">+15 Defense when Defending</Provides>
+    <Provides index="3">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="4">Enables abilities that require Shields</Provides>
+</Translation>

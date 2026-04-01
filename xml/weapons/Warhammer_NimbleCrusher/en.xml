@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Nimble Crusher</DisplayName>
+    <Description>This hammer clearly won&apos;t grind Earth Elementals to dust in a single devastating blow, but it&apos;s surprisingly easy to handle, making it much faster than its hardheaded siblings.</Description>
+    <Provides index="1">Bash- Has a chance equal to the damage done of knocking the victim prone</Provides>
+    <Provides index="2">Crushing Blow - Attack at +1 per Stamina</Provides>
+</Translation>

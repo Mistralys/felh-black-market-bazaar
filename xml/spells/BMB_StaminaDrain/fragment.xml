@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_StaminaDrain">
+        <DisplayName>TXT_BMB_SPELLS_BMB_STAMINADRAIN_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_STAMINADRAIN_DESCRIPTION</Description>
+        <Image>Ability_Slow.png</Image>
+		<IconFG>BMB_ShiftyDepleter.png</IconFG>
+        <CanStack>1</CanStack>
+        <StaminaCost>3</StaminaCost>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <ApproachTargetTile>1</ApproachTargetTile>
+		<HideInHiergamenon>1</HideInHiergamenon>
+        <IsCastable>0</IsCastable>
+        <CanBeDodged>1</CanBeDodged>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <UseWeaponRange>1</UseWeaponRange>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Stamina</StrVal>
+            <DisplayName>TXT_BMB_SPELLS_BMB_STAMINADRAIN_MODIFIER_2_DISPLAYNAME</DisplayName>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[UnitStat_Stamina] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_CrushingBlow_01</HitSoundFX>
+        <MissSoundFX>Miss_Swing1</MissSoundFX>
+        <MissSoundFX>Miss_Swing2</MissSoundFX>
+        <SpellDefEffect>
+            <EffectName>Y_Ability_CrushingBlow</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.6</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

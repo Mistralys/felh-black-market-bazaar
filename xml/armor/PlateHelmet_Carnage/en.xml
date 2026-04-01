@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Carnage Helm</DisplayName>
+    <Description>The champion brave enough to don this helm will unavoidably become an instrument of chaos and destruction.</Description>
+    <Provides index="1">+5 To Critical Hit chance</Provides>
+    <Provides index="2">+3 Moves for the first turn of combat</Provides>
+    <Provides index="3">+50% Attack vs. Damaged Opponents</Provides>
+    <Provides index="4">-25% to Dodge</Provides>
+</Translation>

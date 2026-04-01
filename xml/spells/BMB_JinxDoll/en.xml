@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Curse of the Jinx Doll</DisplayName>
+    <Description>Inflicts a random horrific curse upon an enemy unit.</Description>
+    <ModifierDisplayName index="1">Cursed</ModifierDisplayName>
+    <ModifierDisplayName index="2">Poisoned</ModifierDisplayName>
+    <ModifierDisplayName index="3">Freezing Blood</ModifierDisplayName>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Disciplinary Bullwhip</DisplayName>
+    <Description>This finely crafted whip should motivate the laggards in your army to put some speed into it.</Description>
+    <Provides index="1">+1 to the army&apos;s Initiative</Provides>
+</Translation>

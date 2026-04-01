@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Wave Cresting Boots</DisplayName>
+    <Description>These boots are mandatory gear if you intend to travel through wetlands or ride the waves.</Description>
+    <Provides index="1">+15% Fire resistance</Provides>
+    <Provides index="2">No movement penalty on Rivers</Provides>
+    <Provides index="3">No movement penalty in Swamps</Provides>
+    <Provides index="4">Allows the wearer to cast Riptide</Provides>
+</Translation>

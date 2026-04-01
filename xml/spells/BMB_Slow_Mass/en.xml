@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mass Slow</DisplayName>
+    <Description>Target army suffers -5 to Initiative (-1 per water shard) unless its members resist.</Description>
+    <ModifierDisplayName index="1">Slowed</ModifierDisplayName>
+</Translation>

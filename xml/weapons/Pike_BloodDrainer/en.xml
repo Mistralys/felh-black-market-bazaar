@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Blood Drainer Pike</DisplayName>
+    <Description>While rumors that vampiric entities take residence inside these pikes remain to be ascertained, the constant cloud of sanguine particles surrounding the blade and the weapon&apos;s obvious hunger for blood chillingly speak in their favor.</Description>
+    <Provides index="1">Allows the unit to use the Bleed special ability</Provides>
+    <Provides index="2">Ignores 33% of the victim&apos;s Defense</Provides>
+    <Provides index="3">Immune to Counterattack</Provides>
+    <Provides index="4">Impale- Strike an opponent and whoever is behind them</Provides>
+</Translation>

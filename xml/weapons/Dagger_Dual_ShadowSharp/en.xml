@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Cutthroat&apos;s Sidekicks</DisplayName>
+    <Description>The Cutthroat lying in wait in the street corner
+Won&apos;t care to listen to your pleading rejoinder.
+Formal legalities will make him cuss and curse
+So feed him the jingling money in your purse.</Description>
+    <Provides index="1">+2 Counterattack per round</Provides>
+    <Provides index="2">Ignores 66% of the victim&apos;s Defense</Provides>
+    <Provides index="3">+50% Critical Damage</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Shackles of Enslavement</DisplayName>
+    <Description>These magical chains can break the spirit of Men and Fallen alike by forcing the yoke of enslavement upon their shoulders. Your will is your command.</Description>
+    <Provides index="1">Shackles of Enslavement - Enslaves a Trained Unit unless they resist. Caster must be adjacent to the target.</Provides>
+</Translation>

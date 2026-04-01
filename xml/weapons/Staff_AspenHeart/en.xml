@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Aspen Heart Staff</DisplayName>
+    <Description>Once used by an order of guardian monks, only a handful of these unbreakable staves remain in the world. The specially treated wood lends the wielder uncanny strength and speed.</Description>
+    <Provides index="1">+2 Counterattack per round</Provides>
+    <Provides index="2">Bash- Has a chance equal to the damage done of knocking the victim prone</Provides>
+</Translation>

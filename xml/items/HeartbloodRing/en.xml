@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Heartblood Ring</DisplayName>
+    <Description>When it flows straight from the heart, it&apos;s vital, it&apos;s pure, and it&apos;s supremely strong.</Description>
+    <Provides index="1">+1 Hit Point per Level</Provides>
+</Translation>

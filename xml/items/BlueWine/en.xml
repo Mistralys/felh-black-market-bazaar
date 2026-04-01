@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Blue Wine</DisplayName>
+    <Description>Once in a blue moon the wine will indeed turn blue. And after a night of revelry, the nation shall not awake with the expected headache. It shall instead greet the day with invigorated confidence and renewed hope.</Description>
+    <Provides index="1">All units gain one level</Provides>
+</Translation>

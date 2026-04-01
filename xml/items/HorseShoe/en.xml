@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Horseshoe</DisplayName>
+    <Description>Until you find the rightful owner of this lost shoe, you&apos;ll be able to make an in-depth analysis as to whether Lady Luck truly puts her mark on equine footwear.</Description>
+    <Provides index="1">10% less damage from Physical attacks</Provides>
+</Translation>

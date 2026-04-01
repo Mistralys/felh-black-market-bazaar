@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Mantle of the Hedgewitch</DisplayName>
+    <Description>This cloak may look like a frayed rag barely fit for a beggar, but it was made by life-loving hands which sewed in every stitch unbounded generosity, pure kindness and tender affection.</Description>
+    <Provides index="1">+3 Healing per Season</Provides>
+    <Provides index="2">Mending Hands- Allows the wearer to heal a friendly unit by touch</Provides>
+</Translation>

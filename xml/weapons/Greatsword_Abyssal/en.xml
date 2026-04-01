@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Abyssal Greatsword</DisplayName>
+    <Description>Legends recount that Abyssal Greatswords were forged in the deepest recesses of the world&apos;s core. Their primary purpose was to serve as prisons for unruly Earth Elemental whose spirits were ripped from their physical shells and sealed within the enchanted metal for eternity.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+    <Provides index="2">Overpower- Wielder&apos;s attack damage is multiplied by the members of the defending group</Provides>
+    <Provides index="3">Allows the wielder to cast Shockwave</Provides>
+</Translation>

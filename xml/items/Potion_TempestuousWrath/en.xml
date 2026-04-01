@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Tempestuous Wrath</DisplayName>
+    <Description>Drink this stormy brew and let lightning bolts become the instruments of your raging anger.</Description>
+    <Provides index="1">+4 Lightning Attack for the duration of combat</Provides>
+</Translation>

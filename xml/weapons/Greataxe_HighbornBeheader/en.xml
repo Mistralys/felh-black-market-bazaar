@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Highborn Beheader</DisplayName>
+    <Description>&quot;They&apos;re not even worthy of licking the mud spattered on your boots. Off with their heads, I say!&quot; - Hangman Nebrax.</Description>
+    <Provides index="1">+5 Attack vs Champions</Provides>
+    <Provides index="2">Chop- Strike twice</Provides>
+    <Provides index="3">Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+    <Provides index="4">Cleave- Strike 3 adjacent enemies</Provides>
+</Translation>

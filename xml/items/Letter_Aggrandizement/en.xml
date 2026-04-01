@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Letter of Self-Aggrandizement</DisplayName>
+    <Description>The contents of this letter describe in great lifelike details the success of an intricate heroic quest. It&apos;s so captivating you feel as if you could have been a participant. And the strangest thing is that all protagonist names have been mysteriously erased. You only need to fill in the blanks and claim for yourself the glory of these anonymous champions.</Description>
+    <Provides index="1">+10 Fame</Provides>
+</Translation>

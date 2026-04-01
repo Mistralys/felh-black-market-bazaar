@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Arachnid Amulet</DisplayName>
+    <Description>Only Wraiths can wear this amulet directly against bare skin without being wracked with violent shivers of disgust. Irrational phobias aside, you&apos;ll be able to lord over the eight legged ones and augment the potency of your villainous venoms. It&apos;s important to remember those benefits when the next retching bout occurs.</Description>
+    <Provides index="1">+100% Poison Attack</Provides>
+    <Provides index="2">Summon Arachnid - Summons a random level 6 Spider</Provides>
+</Translation>

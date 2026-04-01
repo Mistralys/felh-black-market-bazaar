@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Stalactite</DisplayName>
+    <Description>The coating of frosty glitter on the outside is a telltale sign of the icicle magically hidden inside, impatiently lying in wait to exhale its glacial breath and express its wintry incensement.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+</Translation>

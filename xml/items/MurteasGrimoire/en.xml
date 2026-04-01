@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Murteas&apos; Grimoire</DisplayName>
+    <Description>This timeworn spellbook crackles with arcane knowledge and its pages rustle with the mysteries hiding within. Yes, there is so much the ancient masters can still teach us.</Description>
+    <Provides index="1">+15% Spell Damage</Provides>
+    <Provides index="2">Elemental Myriad - Grants your army random Elemental damage for the duration of the battle</Provides>
+</Translation>

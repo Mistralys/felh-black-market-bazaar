@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Golden Pavis</DisplayName>
+    <Description>It&apos;s so big you could probably shield a barn with it. Its golden surface captivates the eye and will break most archers&apos; concentration.</Description>
+    <Provides index="1">+20 Defense when Defending</Provides>
+    <Provides index="2">+10 to the Army&apos;s Dodge Against Ranged Attacks</Provides>
+    <Provides index="3">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="4">Enables abilities that require Shields</Provides>
+</Translation>

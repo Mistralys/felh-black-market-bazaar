@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Magnifying Stimulant</DisplayName>
+    <Description>This alchemical marvel is notoriously difficult to brew, requiring costly out-of-this-world ingredients, state-of-the-art equipment and the expert skills to match. Ingesting it will develop that latent physical and mental potential and push it to the surface. Drink without moderation and amplify it all.</Description>
+    <Provides index="1">+1 Attack</Provides>
+    <Provides index="2">+1 Defense</Provides>
+    <Provides index="3">+1 Accuracy</Provides>
+    <Provides index="4">+1 Dodge</Provides>
+    <Provides index="5">+1 Hit Points</Provides>
+    <Provides index="6">+1 Critical Chance</Provides>
+    <Provides index="7">+1 Spell Mastery</Provides>
+    <Provides index="8">+1 Spell Power</Provides>
+    <Provides index="9">+1 Spell Resistance</Provides>
+</Translation>

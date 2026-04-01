@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Myriad Cloak</DisplayName>
+    <Description>Myriad matter is the stuff of legends and the general consensus among scholars is that if no material can possibly bind such contradictory properties, ergo it does not exist. The incredible protection this cloak affords will soon become secondary to the pleasure of invalidating erroneous arcane dogma and humiliating many pompous academics.</Description>
+    <Provides index="1">+20% Cold resistance</Provides>
+    <Provides index="2">+20% Fire resistance</Provides>
+    <Provides index="3">+20% Lightning resistance</Provides>
+    <Provides index="4">+20% Poison resistance</Provides>
+    <Provides index="5">+20 Spell Resistance</Provides>
+</Translation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="Scroll_Violence">
+        <DisplayName>TXT_BMB_ITEMS_SCROLL_VIOLENCE_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_SCROLL_VIOLENCE_DESCRIPTION</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>180</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UnlockUnitAbility</Attribute>
+            <StrVal>Lethal1</StrVal>
+            <Provides>TXT_BMB_ITEMS_SCROLL_VIOLENCE_PROVIDES_1</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>1</IsUsable>
+        <UsableInBattle>0</UsableInBattle>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>Scroll_Violence_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="Scroll_Violence_ArtDef">
+            <GameItemTypeModelPack InternalName="Scroll_Violence_Default">
+                <IconFile>Item_BlightScroll_Icon.png</IconFile>
+                <TintG>255</TintG>
+                <SFX>AirShard_SFX_01</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

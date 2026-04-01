@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ethereal Pike</DisplayName>
+    <Description>This spear&apos;s ghostly point glides through inanimate constituents and only hardens when it touches living matter. It will also wreak havoc on the inner workings of Constructs and dissipate the forces animating the Undead. Great for impaling pesky opponents through nagging walls.</Description>
+    <Provides index="1">Ignores 100% of the victim&apos;s Defense</Provides>
+    <Provides index="2">Immune to Counterattack</Provides>
+    <Provides index="3">Impale- Strike an opponent and whoever is behind them</Provides>
+</Translation>

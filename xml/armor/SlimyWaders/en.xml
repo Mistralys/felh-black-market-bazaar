@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Slimy Waders</DisplayName>
+    <Description>Spongy texture and slimy color to behold,
+A squishy squashy walk with feet ever cold,
+A busy buzzin&apos; swarm to twirl and whirl around, 
+A most sticky stride to stay firm on the ground.</Description>
+    <Provides index="1">Allows the unit to cast Insect Swarm</Provides>
+    <Provides index="2">Sticky Goo - Enemies that strike the wearer are immobilized for 3 rounds unless they resist</Provides>
+</Translation>

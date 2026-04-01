@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Wayward Deathbane</DisplayName>
+    <Description>The result of a first-rate collaboration between a master smith and a life archmage, this artifact will extend the life of its proprietor far beyond natural limits and even provide some healing in the heat of battle, albeit occasionally and arbitrarily.</Description>
+    <Provides index="1">+1 Hit Point per Level</Provides>
+    <Provides index="2">Wayward Deathbane Effect - Has a 25% chance of healing 8 hit points when the wielder hits an enemy</Provides>
+    <Provides index="3">+20 Defense when Defending</Provides>
+    <Provides index="4">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="5">Enables abilities that require Shields</Provides>
+</Translation>

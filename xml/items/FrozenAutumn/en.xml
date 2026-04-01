@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Frozen Autumn</DisplayName>
+    <Description>The transition from fall into winter is usually gradual and goes unnoticed. And sometimes it can be so sudden and violent as to become a devastating glacial onslaught which turns the world into a frozen wasteland in the blink of an eye. In these rare moments, autumn&apos;s symbols can freeze to the core and be encased in permanent ice, their fragile shells turning into improbable recipients for tremendous wintry powers.</Description>
+    <Provides index="1">+1 Cold to the Army&apos;s Attack</Provides>
+    <Provides index="2">+15% to the Army&apos;s Cold resistance</Provides>
+</Translation>

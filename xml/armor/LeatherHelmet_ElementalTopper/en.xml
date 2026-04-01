@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Elemental Topper</DisplayName>
+    <Description>This safety helmet must have belonged to a pre-Cataclysm engineer who worked in dangerous environments filled with elemental hazards. It appears to be in fairly good shape. You&apos;re now all set for a dig in some scalding volcanic mine.</Description>
+    <Provides index="1">+8% Cold Resistance</Provides>
+    <Provides index="2">+8% Fire Resistance</Provides>
+    <Provides index="3">+8% Lightning Resistance</Provides>
+</Translation>

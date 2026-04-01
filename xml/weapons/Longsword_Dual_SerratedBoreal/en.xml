@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Serrated Ice</DisplayName>
+    <Description>On the cutting edge of ice hovers the razor of extreme incisiveness to sever and dissever.</Description>
+    <Provides index="1">+2 Counterattack per round</Provides>
+    <Provides index="2">+150% Critical Damage</Provides>
+</Translation>

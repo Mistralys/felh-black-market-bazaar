@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+    <SpellDef InternalName="Slow_Ability">
+        <DisplayName>TXT_BMB_SPELLS_SLOW_ABILITY_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_SLOW_ABILITY_DESCRIPTION</Description>
+        <FormattedDescription>Target enemy unit suffers -%d to Initiative unless they resist.</FormattedDescription>
+        <Image>T_Slow_Painting.png</Image>
+        <IconFG>T_Slow_Icon.png</IconFG>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitCurse</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Debuff</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsResistable>1</IsResistable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <PreventStackingWith>Slow</PreventStackingWith>
+		<PreventStackingWith>BMB_Slow_Mass</PreventStackingWith>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_CombatSpeed</StrVal>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <DisplayName>TXT_BMB_SPELLS_SLOW_ABILITY_MODIFIER_1_DISPLAYNAME</DisplayName>
+            <Duration>-1</Duration>
+            <Effect>E_Slow_Particle</Effect>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumWaterShards] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] - 5]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc] - 5]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>40</AIPriority>
+        <ValueCalcWrapper>
+            <ValueType>IsTargetWorthy</ValueType>
+            <Calculate InternalName="Calc" ValueOwner="TargetUnit">
+                <Expression><![CDATA[[Unit_GetHPCurrent]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc] > 10]]></Expression>
+            </Calculate>
+        </ValueCalcWrapper>
+        </AIData>
+        <HitSoundFX>Spell_FreezeGroup</HitSoundFX>
+    </SpellDef>
+</Fragment>

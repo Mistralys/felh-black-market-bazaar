@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Infernal Companion</DisplayName>
+    <Description>This dark token pulses with shadow energy. Use it to unleash a ferocious Shadow Warg.</Description>
+    <Provides index="1">Summons a Shadow Warg</Provides>
+</Translation>

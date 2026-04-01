@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Archer Hands</DisplayName>
+    <Description>According to local folktales, these gloves were universally banned from archery tournaments after a squire aptly named Lester the Maladroit outplayed the undefeated champion Sharpeye Sharidon at the annual Harvest Fair. When the subterfuge was discovered, Lester, now designated as the Cheater, became the target of a cartload of rotten tomatoes.</Description>
+    <Provides index="1">Bull&apos;s Eye- +300% Attack when using a Bow, but you lose your next turn.</Provides>
+    <Provides index="2">Heart of the Target - Ignores 20% of the victim&apos;s defense when using a Bow</Provides>
+</Translation>

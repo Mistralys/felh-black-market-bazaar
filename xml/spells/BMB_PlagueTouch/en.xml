@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Plague Touch</DisplayName>
+    <Description>Halves the Poison Resistance of Targets, Poisons them and spreads Infection.</Description>
+    <ModifierDisplayName index="3">Contagion</ModifierDisplayName>
+</Translation>

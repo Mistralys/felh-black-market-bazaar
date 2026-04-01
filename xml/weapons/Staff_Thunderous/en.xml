@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Thunderous Staff</DisplayName>
+    <Description>Shocking and electrifying. And no, this isn&apos;t an observation on your personality.</Description>
+    <Provides index="1">Ranged attack</Provides>
+</Translation>

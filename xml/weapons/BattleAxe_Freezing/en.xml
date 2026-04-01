@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Freezing Battle Axe</DisplayName>
+    <Description>This axe is without a doubt a formidable weapon, but that&apos;s just one of its many practical uses: for example, you can also freeze meat instantly while chopping it, behead an interloper without any bloody spills or even instantly cool tepid water jugs during hot summer days. Clearly, lots of icing to be had on many cakes.</Description>
+    <Provides index="1">Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+    <Provides index="2">Cleave- Strike 3 adjacent enemies</Provides>
+</Translation>

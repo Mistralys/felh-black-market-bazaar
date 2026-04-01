@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Leopard Vest</DisplayName>
+    <Description>The true garment of the Warlords of the barbarian tribes, said to be animated by fierceness and bravery.</Description>
+    <Provides index="1">+1 Starting Stamina</Provides>
+    <Provides index="2">+4 Initiative for the first turn of combat</Provides>
+</Translation>

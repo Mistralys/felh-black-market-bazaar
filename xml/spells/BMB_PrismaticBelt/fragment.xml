@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_PrismaticBelt">
+        <DisplayName>TXT_BMB_SPELLS_BMB_PRISMATICBELT_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_PRISMATICBELT_DESCRIPTION</Description>
+        <IconFG>S_Freeze_Icon.png</IconFG>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitDamage</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Damage</SpellSubClass>
+        <SpellTargetType>EnemyUnit</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+        <IsResistable>0</IsResistable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Cold</AttackStat>
+            <MinValue>4</MinValue>
+            <MaxValue>8</MaxValue>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Fire</AttackStat>
+            <MinValue>4</MinValue>
+            <MaxValue>8</MaxValue>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Lightning</AttackStat>
+            <MinValue>4</MinValue>
+            <MaxValue>8</MaxValue>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>DefendableDamage</Attribute>
+            <AttackStat>UnitStat_Attack_Poison</AttackStat>
+            <MinValue>4</MinValue>
+            <MaxValue>8</MaxValue>
+        </GameModifier>       
+        <AIData AIPersonality="AI_General">
+            <AIPriority>10</AIPriority>        
+        </AIData>
+        <HitSoundFX>Spell_IceArrow_Hit_01</HitSoundFX>
+        <HitSoundFX>Spell_IceArrow_Hit_02</HitSoundFX>
+        <HitSoundFX>Spell_FlamingArrow_Hit_01</HitSoundFX>
+        <HitSoundFX>Spell_FlamingArrow_Hit_02</HitSoundFX>
+		<HitSoundFX>Spell_LightningArrow_Hit_01</HitSoundFX>
+        <HitSoundFX>Spell_LightningArrow_Hit_02</HitSoundFX>
+		<HitSoundFX>Spell_ToxicArrow_Hit_01</HitSoundFX>
+        <HitSoundFX>Spell_ToxicArrow_Hit_02</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>A_ToxicLongbow_Impact_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>1</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

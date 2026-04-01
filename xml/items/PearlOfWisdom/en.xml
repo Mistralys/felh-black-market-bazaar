@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Pearl of Wisdom</DisplayName>
+    <Description>If an oyster spat this pearl out, it must have been one heck of an archmage amongst its kind.</Description>
+    <Provides index="1">-10% mana cost for tactical spells</Provides>
+</Translation>

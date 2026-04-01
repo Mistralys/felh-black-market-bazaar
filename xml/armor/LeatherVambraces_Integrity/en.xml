@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Armbands of Integrity</DisplayName>
+    <Description>These tough yet malleable vambraces will provide complete protection for your arms and deflect any critical strikes aimed against them.</Description>
+    <Provides index="1">Unit has a 20% chance of resisting a Critical attack</Provides>
+</Translation>

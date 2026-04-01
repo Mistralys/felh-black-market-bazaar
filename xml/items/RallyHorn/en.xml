@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Rally Horn</DisplayName>
+    <Description>When all hope is lost and tragic endings await, sounding this horn will strengthen the heart of your allies and push them to accomplish the impossible.</Description>
+    <Provides index="1">+1 to the army&apos;s Attack</Provides>
+</Translation>

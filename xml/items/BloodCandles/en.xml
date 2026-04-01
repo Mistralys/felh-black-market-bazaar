@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Blood Candles</DisplayName>
+    <Description>These evil tapers appear to be leftovers from some twisted and depraved sacrificial ceremony. They&apos;re devised to give cultists a powerful rush when the victim&apos;s life is finally extinguished.</Description>
+    <Provides index="1">+2 Hit Points to allies whenever an enemy is killed</Provides>
+</Translation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Magi Skin</DisplayName>
+    <Description>The battle armor of the Wizards of yonder, packed with all the enchantments to keep those spells flowing in combat situations. The unbreakable chain links are so supple and comfortable, you could use this metallic skin as a sleeping garment.</Description>
+    <Provides index="1">+20 Spell Resistance</Provides>
+    <Provides index="2">+1 Spell Power for each point of Stamina</Provides>
+    <Provides index="3">+2 Spell Mastery for each point of Stamina</Provides>
+</Translation>

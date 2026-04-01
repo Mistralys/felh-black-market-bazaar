@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Marauder&apos;s Hood</DisplayName>
+    <Description>Planning a hit-and-run robbery? Or maybe to double-cross and ambush your neighbors? Remember to wear your Marauder&apos;s Hood to the party.</Description>
+    <Provides index="1">+3 Moves for the first turn of combat</Provides>
+    <Provides index="2">+10 to Critical Hit chance for the first turn of combat</Provides>
+    <Provides index="3">+40% to Critical Hit damage for the first turn of combat</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Choker Spore</DisplayName>
+    <Description>Bringing Choker Spores to the battlefield clearly violates the rules of a fair fight. What rules again? Right. Anyway, be sure to be upwind if you intend to pelt your opponents with one of these lethal gas bags.</Description>
+    <Provides index="1">Select a target area and choke your opponents for 3 Poison damage per round.</Provides>
+</Translation>

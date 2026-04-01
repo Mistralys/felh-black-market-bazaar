@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Scrambler Effect</DisplayName>
+    <Description>Disrupts a spell an enemy unit is casting and causes them to lose their next turn unless they resist.</Description>
+    <ModifierDisplayName index="2">Dazed</ModifierDisplayName>
+</Translation>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_PenitentsRestitution">
+        <DisplayName>TXT_BMB_SPELLS_BMB_PENITENTSRESTITUTION_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_PENITENTSRESTITUTION_DESCRIPTION</Description>
+		<FormattedDescription>Heals all allies %d and caster gains 3 hit points permanently.</FormattedDescription>		
+        <Image>T_Wellspring_Painting.png</Image>
+        <IconFG>BMB_Ability_PenitentsRestitution.png</IconFG>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Heal</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Heal</SpellSubClass>
+        <SpellTargetType>AllFriendlyUnits</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>        
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <Prereq>
+            <Type>UnitStat</Type>
+            <Attribute>UnitStat_PenitentsSuffering</Attribute>
+            <Value>40</Value>
+        </Prereq>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 10]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + 150]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * [UnitStat_BonusHealing]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <ApplyToCaster>1</ApplyToCaster>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitOwner_GetNumLifeShards] * 10]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc2" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc] + 150]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Calc3" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[Calc2] * [UnitStat_BonusHealing]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc3]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_HitPoints</StrVal>
+			<DisplayName>TXT_BMB_SPELLS_BMB_PENITENTSRESTITUTION_MODIFIER_3_DISPLAYNAME</DisplayName>
+			<ApplyToCaster>1</ApplyToCaster>
+            <Value>3</Value>            
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_PenitentsSuffering</StrVal>
+            <ApplyToCaster>1</ApplyToCaster>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_PenitentsSuffering] * -1]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_Heal_01</HitSoundFX>
+        <HitSoundFX>Spell_Heal_02</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>BMB_PenitentsRestitution_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.75</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

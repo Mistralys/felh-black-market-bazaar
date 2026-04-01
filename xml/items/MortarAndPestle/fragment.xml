@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="MortarAndPestle">
+        <DisplayName>TXT_BMB_ITEMS_MORTARANDPESTLE_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_MORTARANDPESTLE_DESCRIPTION</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>180</ShopValue>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>UseSpell</Attribute>
+            <StrVal>BMB_AlchemicalSurprise</StrVal>
+            <Provides>TXT_BMB_ITEMS_MORTARANDPESTLE_PROVIDES_1</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>25</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>1</IsUsable>
+        <UsableInBattle>0</UsableInBattle>
+            <AIData AIPersonality="AI_General">
+                <AIPriority>100</AIPriority>
+            </AIData>
+        <ArtDef>MortarAndPestle_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="MortarAndPestle_ArtDef">
+            <GameItemTypeModelPack InternalName="MortarAndPestle_Default">
+                <IconFile>BMB_MortarAndPestle.png</IconFile>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

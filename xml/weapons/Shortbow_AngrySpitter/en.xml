@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Angry Spitter</DisplayName>
+    <Description>The love child of a bowsmith and a woodcrafter, this enameled shortbow is equipped with an unusually agile string. It has so much character it can almost shoot arrows on its own.</Description>
+    <Provides index="1">Twin Shaft - Strike twice</Provides>
+    <Provides index="2">Enables abilities that require Bows</Provides>
+    <Provides index="3">Ranged attack</Provides>
+</Translation>

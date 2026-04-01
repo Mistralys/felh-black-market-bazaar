@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Imperial Helm</DisplayName>
+    <Description>The symbol of past ruin and desolation, unforgivable sins and bloody massacres. This helmet still permeates hatred and savagery.</Description>
+    <Provides index="1">+20% Attack vs. opponents of the opposite race (Fallen vs. Men)</Provides>
+</Translation>

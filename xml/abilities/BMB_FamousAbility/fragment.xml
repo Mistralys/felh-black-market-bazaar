@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+    <AbilityBonus InternalName="BMB_FamousAbility">        
+        <AbilityBonusOption InternalName="BMB_Famous">
+            <DisplayName>TXT_BMB_ABILITIES_BMB_FAMOUS_DISPLAYNAME</DisplayName>
+            <Description>TXT_BMB_ABILITIES_BMB_FAMOUS_DESCRIPTION</Description>
+            <Icon>BMB_Ability_Famous.png</Icon>            
+            <GameModifier>
+                <ModType>Unit</ModType>
+                <Attribute>ProduceResource</Attribute>
+                <StrVal>Fame</StrVal>
+                <Value>1</Value>
+                <Provides>TXT_BMB_ABILITIES_BMB_FAMOUS_PROVIDES_1</Provides>
+            </GameModifier>
+            <Type>Army</Type>            
+            <AIData AIPersonality="AI_General">
+                <AIPriority>5</AIPriority>
+            </AIData>
+        </AbilityBonusOption>
+    </AbilityBonus>
+</Fragment>

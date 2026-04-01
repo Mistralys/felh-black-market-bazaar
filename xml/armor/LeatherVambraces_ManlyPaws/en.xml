@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Manly Paws</DisplayName>
+    <Description>The enchantment bestowed upon these gloves will only allow access to the most virile of hands. You&apos;d think they were conceived by a macho, macho Mage (he&apos;s got to be a macho Mage).</Description>
+    <Provides index="1">Crippling Blow- +100% Attack, but you lose your next action</Provides>
+</Translation>

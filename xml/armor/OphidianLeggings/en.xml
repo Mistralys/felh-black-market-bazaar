@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ophidian Leggings</DisplayName>
+    <Description>A snaky hose to mesmerize those inclined to the serpentine, to ooze around those prone to violence and to deflect those vicious ill-advised effects.</Description>
+    <Provides index="1">+5 to Dodge</Provides>
+    <Provides index="2">Naja Dancer- +2 Dodge for each point of Stamina</Provides>
+</Translation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ophidian Scale Boots</DisplayName>
+    <Description>Highly luxurious, yet morally questionable, these upscale boots will generate envious hisses from onlookers and unfailingly provoke the consternation of pet Ophidians.</Description>
+    <Provides index="1">+5 to Dodge</Provides>
+    <Provides index="2">Ophidian Dancer- +5 Dodge when Defending</Provides>
+    <Provides index="3">Naja Dancer- +2 Dodge for each point of Stamina</Provides>
+</Translation>

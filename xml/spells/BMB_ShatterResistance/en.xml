@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Shatter Resistance</DisplayName>
+    <Description>Target loses 3 Defense and 6 Spell Resistance points per strike</Description>
+    <ModifierDisplayName index="1">Resist Loss</ModifierDisplayName>
+    <ModifierDisplayName index="2">Defense Loss</ModifierDisplayName>
+</Translation>

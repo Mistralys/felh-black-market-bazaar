@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Leopard Boots</DisplayName>
+    <Description>Put these supple boots on and watch the leagues melt away. Experience enhanced pouncing capabilities, live in the fast lane and bound yourself to the top.</Description>
+    <Provides index="1">Leopard Rush Effect- +3 Initiative the first time the unit takes a hit</Provides>
+</Translation>

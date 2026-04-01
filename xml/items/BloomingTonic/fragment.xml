@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="BloomingTonic">
+        <DisplayName>TXT_BMB_ITEMS_BLOOMINGTONIC_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_BLOOMINGTONIC_DESCRIPTION</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>450</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>CurHealth</Attribute>
+            <Value>50</Value>
+            <Provides>TXT_BMB_ITEMS_BLOOMINGTONIC_PROVIDES_1</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>HealRandomInjury</Attribute>
+			<Provides>TXT_BMB_ITEMS_BLOOMINGTONIC_PROVIDES_2</Provides>	
+        </GameModifier>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>HealRandomInjury</Attribute>
+            <Provides>TXT_BMB_ITEMS_BLOOMINGTONIC_PROVIDES_3</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>1</IsUsable>
+        <UsableInBattle>0</UsableInBattle>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>BloomingTonic_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="BloomingTonic_ArtDef">
+            <GameItemTypeModelPack InternalName="BloomingTonic_Default">
+                <IconFile>Potion2_Item.png</IconFile>
+				<MapParticle>T_Heal_Particle</MapParticle>
+                <TintR>14</TintR>
+                <TintG>156</TintG>
+                <TintB>222</TintB>
+                <SFX>Potion1_1</SFX>
+                <SFX>Potion1_2</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

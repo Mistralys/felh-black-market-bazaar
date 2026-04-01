@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Arctic Boots</DisplayName>
+    <Description>Wearing these bulky boots lets one enjoy the benefits of a prolonged winter.</Description>
+    <Provides index="1">+25% Cold resistance</Provides>
+</Translation>

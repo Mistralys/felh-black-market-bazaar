@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Title of Nobility</DisplayName>
+    <Description>This very official looking parchment grants a noble title and the lands to go along with it. Castle, vassals and serfs not included.</Description>
+    <Provides index="1">Grants the unit the Famous Ability - +1 Fame per Season</Provides>
+</Translation>

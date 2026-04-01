@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="PlateGreaves_Lubricated">
+        <DisplayName>TXT_BMB_ARMOR_PLATEGREAVES_LUBRICATED_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ARMOR_PLATEGREAVES_LUBRICATED_DESCRIPTION</Description>
+        <Type>LowerBody</Type>
+        <CanBeEquipped>1</CanBeEquipped>
+        <ShopValue>250</ShopValue>		
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Defense_Pierce</StrVal>
+            <Value>5</Value>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_Dodge</StrVal>
+            <Value>5</Value>
+        </GameModifier>	
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+		<IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <Likelihood>25</Likelihood>
+        <RarityDisplay>Uncommon</RarityDisplay>
+		<HeroOnly>1</HeroOnly>
+		<Prereq>
+            <Type>UnitStat</Type>
+            <Attribute>UnitStat_ArmorProficiency</Attribute>
+            <Value>2</Value>
+        </Prereq>		
+            <AIData AIPersonality="AI_General">
+                <AIPriority>60</AIPriority>
+            </AIData>
+        <ArtDef>Art_PlateGreaves_Lubricated</ArtDef>
+		<GameItemTypeArtDef InternalName="Art_PlateGreaves_Lubricated">
+			<GameItemTypeModelPack InternalName="Art_PlateGreaves_Lubricated_1">
+				<SupportedUnitModelType>AmarianMale</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireMale</SupportedUnitModelType>
+				<SupportedUnitModelType>HenchmanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomMale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerMale</SupportedUnitModelType>
+				<SupportedUnitModelType>SlaveMale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanMale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithMale</SupportedUnitModelType>
+				<SupportedUnitModelType>AmarianFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>Banshee</SupportedUnitModelType>
+				<SupportedUnitModelType>EmpireFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>FallenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>IroneerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>KingdomFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>MancerFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>TarthanFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenFemale</SupportedUnitModelType>
+				<SupportedUnitModelType>WraithFemale</SupportedUnitModelType>
+				<IconFile>MasterLightPlateMailLegGreaves2.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>kingdom_medium_thigh_guard_B.hkb</ModelFile>
+					<Texture_All>kingdom_medium_armor_B.png</Texture_All>
+					<Attachment>thigh_right_lcf</Attachment>
+					<Color_All>50,50,70</Color_All>
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>kingdom_medium_thigh_guard_B.hkb</ModelFile>
+					<Texture_All>kingdom_medium_armor_B.png</Texture_All>
+					<Attachment>thigh_left_lcf</Attachment>
+					<Color_All>50,50,70</Color_All>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>
+			<GameItemTypeModelPack InternalName="Art_PlateGreaves_Lubricated_2">
+				<SupportedUnitModelType>FallenMale</SupportedUnitModelType>
+				<SupportedUnitModelType>QuendarMale</SupportedUnitModelType>
+				<SupportedUnitModelType>UrxenMale</SupportedUnitModelType>
+				<IconFile>MasterLightPlateMailLegGreaves2.png</IconFile>
+				<TintR>0</TintR>
+				<TintG>0</TintG>
+				<TintB>0</TintB>
+				<GameItemTypeModel>
+					<ModelFile>fallen_medium_right_leg_guard_A.hkb</ModelFile>
+					<Texture_All>basic_armor_texture.png</Texture_All>
+					<Attachment>thigh_right_lcf</Attachment>
+					<Color_All>50,50,70</Color_All>
+				</GameItemTypeModel>
+				<GameItemTypeModel>
+					<ModelFile>fallen_medium_right_leg_guard_A.hkb</ModelFile>
+					<Texture_All>basic_armor_texture.png</Texture_All>
+					<Attachment>thigh_left_lcf</Attachment>
+					<Color_All>50,50,70</Color_All>
+				</GameItemTypeModel>
+			</GameItemTypeModelPack>			
+		</GameItemTypeArtDef>
+	</GameItemType>
+</Fragment>

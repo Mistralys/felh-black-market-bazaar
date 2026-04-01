@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Raiment of the Nihilist</DisplayName>
+    <Description>These nefarious robes were once used by the maladjusted converts of the Lost Circle. Anyone tempted to wear one should know it will be interpreted as a declaration of war on Life.</Description>
+    <Provides index="1">+10 Spell Resistance</Provides>
+    <Provides index="2">Allows the wearer to cast Death Circle</Provides>
+</Translation>

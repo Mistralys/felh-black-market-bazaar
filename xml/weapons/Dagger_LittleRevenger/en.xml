@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Little Revenger</DisplayName>
+    <Description>This nervous little dagger became something of an urban legend when the infamous bandit lord Fuskurt, probably unaware of its properties, walked through the crowded streets of Hope on Market Day. Every shopper innocently bumping into him got automatically stabbed once, and when panic ensued, the death count soared to ridiculous numbers. For stayed hands are antinomic to the Little Revenger, the dagger which strikes back so fast as to be unseen.</Description>
+    <Provides index="1">Little Revenger effect - Enemies that strike the wielder suffer two retaliating strikes</Provides>
+</Translation>

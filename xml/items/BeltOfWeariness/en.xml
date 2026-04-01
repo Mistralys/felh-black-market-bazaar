@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Belt of Weariness</DisplayName>
+    <Description>A belt of clinking links which gives a new meaning to the phrase &quot;tiresome to be around with&quot;, turning the figurative rhetoric into a concrete physical application.</Description>
+    <Provides index="1">Belt of Weariness Effect - Units suffer -1 to Stamina when struck and growth is halted for 3 turns</Provides>
+</Translation>

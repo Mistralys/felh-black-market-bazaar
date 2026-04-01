@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Swamp Gas Explosion</DisplayName>
+    <Description>A violent methane explosion which damages units within a 1-tile radius for twice the caster&apos;s level + 8; half if resisted.</Description>
+</Translation>

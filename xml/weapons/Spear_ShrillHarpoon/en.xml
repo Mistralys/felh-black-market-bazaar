@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Shrill Harpoon</DisplayName>
+    <Description>This golden harpoon was the tool of trade of the Shrill Exterminators who were charged with the unpleasant task of clearing areas overrun with those little elemental critters. In these post-Cataclysm times with complete lack of pest control, it is bound to come in handy.</Description>
+    <Provides index="1">+5 Attack vs Elementals</Provides>
+    <Provides index="2">+10 Accuracy vs Elementals</Provides>
+    <Provides index="3">Ignores 33% of the victim&apos;s Defense</Provides>
+    <Provides index="4">Immune to Counterattack</Provides>
+    <Provides index="5">Impale- Strike an opponent and whoever is behind them</Provides>
+</Translation>

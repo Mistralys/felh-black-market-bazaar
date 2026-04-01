@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Blade of Acrimony</DisplayName>
+    <Description>A blade to turn a sweet lemming into a hungry tiger, it will tap into a lifetime&apos;s rancor and pent-up emotions and convert them into bloody assertiveness.</Description>
+    <Provides index="1">+1 Counterattack per round</Provides>
+    <Provides index="2">Attack Frenzy- +1 Attack with each successful strike</Provides>
+    <Provides index="3">+20% Attack vs. Damaged Opponents</Provides>
+</Translation>

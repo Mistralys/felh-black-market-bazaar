@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Solid Mana</DisplayName>
+    <Description>This nugget of pure solid Mana vibrates with inner forces just awaiting release. In the meantime, it will act as a magical sponge for dispatched souls and convert them into precious refined essence.</Description>
+    <Provides index="1">+3 Mana Points whenever an enemy is killed</Provides>
+</Translation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Supremacy Staff</DisplayName>
+    <Description>Extraordinary balance and phenomenal speed, this is a staff made by exclusive masters for elite adepts.</Description>
+    <Provides index="1">+2 Counterattack per round</Provides>
+    <Provides index="2">+50% to Counterattack damage</Provides>
+    <Provides index="3">Yank- Attack that also has a chance to knock the enemy prone unless they resist</Provides>
+</Translation>

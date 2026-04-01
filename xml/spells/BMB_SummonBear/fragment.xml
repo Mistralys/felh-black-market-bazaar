@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_SummonBear">
+        <DisplayName>TXT_BMB_SPELLS_BMB_SUMMONBEAR_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_SUMMONBEAR_DESCRIPTION</Description>
+        <FormattedDescription>Summons a level %d Bear.</FormattedDescription>
+        <Image>TuskedBear_Medallion.png</Image>
+        <IconFG>T_CallUteran_Icon.png</IconFG>
+        <CanStack>0</CanStack>        
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>EmptyTile</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <IsSpecialAbility>1</IsSpecialAbility>
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <StrVal>Bear</StrVal>
+            <UnitClass>Bear</UnitClass>
+            <IsForFormattedDescription>1</IsForFormattedDescription>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + [Unit_GetLevel]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+            <Calculate InternalName="ValueForFormattedDescription">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+        <AIData AIPersonality="AI_General">
+            <AIPriority>70</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_CallUteran_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_SummonEarthElemental_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.5</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

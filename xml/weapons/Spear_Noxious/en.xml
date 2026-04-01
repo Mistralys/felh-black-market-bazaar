@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Noxious Spear</DisplayName>
+    <Description>Also know as the Toxic Jabber, this spear will spread deadly toxins through the victim&apos;s blood system in record time, making it unsuitable for hunting (unless you&apos;re the type to enjoy your meat with a venomous tang). In other words, a killer&apos;s item.</Description>
+    <Provides index="1">Melee attacks also do 2 Poison damage per round to the victim</Provides>
+    <Provides index="2">Ignores 33% of the victim&apos;s Defense</Provides>
+    <Provides index="3">Immune to Counterattack</Provides>
+    <Provides index="4">Impale- Strike an opponent and whoever is behind them</Provides>
+</Translation>

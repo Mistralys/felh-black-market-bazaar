@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Treebane Axe</DisplayName>
+    <Description>This woodcutter&apos;s axe has seen some better days, but it&apos;s still sturdy enough to fell a few extra forests. Provided you put some muscle into it, of course.</Description>
+    <Provides index="1">Chop- Strike twice</Provides>
+    <Provides index="2">Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+    <Provides index="3">Cleave- Strike 3 adjacent enemies</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Tome of Enlightenment</DisplayName>
+    <Description>The philosophies within will carry your mind to greater heights.</Description>
+    <Provides index="1">Grants the unit the Knowledge ability</Provides>
+</Translation>

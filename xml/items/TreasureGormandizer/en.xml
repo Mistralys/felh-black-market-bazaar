@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Treasure Gormandizer</DisplayName>
+    <Description>A strangely glowing sphere which feeds into the inner greed of its owner and heightens the need to unearth lost treasures.</Description>
+    <Provides index="1">25% chance to find better items from goodie huts</Provides>
+</Translation>

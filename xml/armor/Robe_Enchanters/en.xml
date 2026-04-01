@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Enchanter&apos;s Robe</DisplayName>
+    <Description>Serving as a conduit to the universe&apos;s bottomless well of energies, this artifact can turn a meager apprentice into an invincible master.</Description>
+    <Provides index="1">+25% Spell Damage</Provides>
+</Translation>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="CorruptiveChalice">
+        <DisplayName>TXT_BMB_ITEMS_CORRUPTIVECHALICE_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_CORRUPTIVECHALICE_DESCRIPTION</Description>
+        <Type>Accessory</Type>
+        <CanBeEquipped>1</CanBeEquipped>        
+        <ShopValue>300</ShopValue>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustArmyStat</Attribute>
+            <StrVal>UnitStat_Attack_Poison</StrVal>
+            <Value>1</Value>
+            <Provides>TXT_BMB_ITEMS_CORRUPTIVECHALICE_PROVIDES_1</Provides>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustArmyStat</Attribute>
+            <StrVal>UnitStat_ResistPoison</StrVal>
+            <Value>15</Value>
+            <Provides>TXT_BMB_ITEMS_CORRUPTIVECHALICE_PROVIDES_2</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>20</Likelihood>
+        <RarityDisplay>Rare</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>0</IsUsable>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>70</AIPriority>
+            </AIData>
+        <ArtDef>CorruptiveChalice_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="CorruptiveChalice_ArtDef">
+            <GameItemTypeModelPack InternalName="CorruptiveChalice_Default">
+                <IconFile>BMB_CorruptiveChalice.png</IconFile>
+                <TintR>140</TintR>
+                <TintG>156</TintG>
+                <TintB>28</TintB>
+                <SFX>Equip_MagicRing_01</SFX>
+                <SFX>Equip_MagicRing_02</SFX>
+                <SFX>Equip_MagicRing_03</SFX>
+                <SFX>Equip_MagicRing_04</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

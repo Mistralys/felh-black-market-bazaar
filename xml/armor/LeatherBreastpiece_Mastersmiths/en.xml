@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Master smith&apos;s Forging Leathers</DisplayName>
+    <Description>A blacksmith&apos;s apron which can double as armor, it is so resistant to heat you could take a swim in molten rock with it. Or maybe not.</Description>
+    <Provides index="1">+3% Fire Resistance per Level</Provides>
+    <Provides index="2">Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage</Provides>
+</Translation>

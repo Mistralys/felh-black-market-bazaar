@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Infinite Diary</DisplayName>
+    <Description>Whosoever shall write down their deepest thoughts onto these indefatigable pages will be rewarded with the gift of immeasurable erudition.</Description>
+    <Provides index="1">Grants the unit the Erudite Ability - +30 Experience and +10% Research</Provides>
+</Translation>

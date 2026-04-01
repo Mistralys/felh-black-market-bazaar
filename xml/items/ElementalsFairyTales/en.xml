@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Elemental&apos;s Fairy Tales</DisplayName>
+    <Description>The title of this book is fairly self-explanatory. It contains all the classics ranging from &quot;the Glitter Emperor with the Gildar Touch&quot; to &quot;Pariden&apos;s Shadow Warrior&quot;. There are also a few rather obscure stories that will undoubtedly regal your troops around campfires. A window to better times.</Description>
+    <Provides index="1">Grants the unit the Loremaster ability</Provides>
+</Translation>

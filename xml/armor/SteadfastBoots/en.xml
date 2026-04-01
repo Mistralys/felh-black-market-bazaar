@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Steadfast Boots</DisplayName>
+    <Description>If you need to stand firm and hold the line, these boots will root you to the spot.</Description>
+    <Provides index="1">+5 Defense when Defending</Provides>
+</Translation>

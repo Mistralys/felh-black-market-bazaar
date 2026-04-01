@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Book of Arcane Equations</DisplayName>
+    <Description>A treatise on breaking down the concept of magic. Ponderous but rewarding reading as it teaches how to focus on resisting adverse spell effects.</Description>
+    <Provides index="1">Grants the unit the Spell Resistance ability</Provides>
+</Translation>

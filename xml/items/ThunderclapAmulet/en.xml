@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Thunderclap Amulet</DisplayName>
+    <Description>When the Undead armies of Mardoban had broken down the last remaining defenses of Castle Everlond and were about to massacre its inhabitants, young Lady Virgeanne, in her utter panic, unwittingly unleashed the powers of the Thunderclap Amulet she was wearing. The fury of the heavens suddenly rained down upon the Revenants, frying them on the spot. And to think no one had lent any credence to her farfetched claims that the necklace had been given to her by an elusive winged suitor...</Description>
+    <Provides index="1">+20% Lightning resistance</Provides>
+    <Provides index="2">Allows the unit to cast Thunderstorm</Provides>
+</Translation>

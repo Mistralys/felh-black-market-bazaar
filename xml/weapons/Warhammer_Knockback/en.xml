@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Knockback Hammer</DisplayName>
+    <Description>If this hammer can&apos;t knock some sense into your opponents, the rubbery properties of its metal will invariably teach them to stand back.</Description>
+    <Provides index="1">Melee attacks knock the unit back 2 tiles unless they resist</Provides>
+    <Provides index="2">Unit never gets Counterattacked</Provides>
+    <Provides index="3">Bash- Has a chance equal to the damage done of knocking the victim prone</Provides>
+    <Provides index="4">Crushing Blow - Attack at +1 per Stamina</Provides>
+</Translation>

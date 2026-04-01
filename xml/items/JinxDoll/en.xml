@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Jinx Doll</DisplayName>
+    <Description>Curse your opponents by spearing this doll with a few choice nails and needles and witness for yourself the horrific effects of your handiwork.</Description>
+    <Provides index="1">Inflicts a random horrific curse upon an enemy unit</Provides>
+</Translation>

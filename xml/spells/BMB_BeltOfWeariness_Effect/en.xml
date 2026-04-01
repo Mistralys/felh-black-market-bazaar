@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Belt of Weariness Effect</DisplayName>
+    <Description>Units struck suffer -1 to Stamina and growth is halted for 3 turns.</Description>
+    <ModifierDisplayName index="1">Stamina Loss</ModifierDisplayName>
+    <ModifierDisplayName index="2">Weariness</ModifierDisplayName>
+</Translation>

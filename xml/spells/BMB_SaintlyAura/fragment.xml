@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_SaintlyAura">
+		<DisplayName>TXT_BMB_SPELLS_BMB_SAINTLYAURA_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_SAINTLYAURA_DESCRIPTION</Description>
+        <Image>S_Regeneration_Painting.png</Image>
+        <IconFG>S_Regeneration_Icon.png</IconFG>
+		<Cooldown>88</Cooldown>
+        <CanStack>0</CanStack>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>UnitEnchantment</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>
+        <SpellTargetType>FriendlyUnit</SpellTargetType>
+		<HideInHiergamenon>1</HideInHiergamenon>        
+        <IsCastable>1</IsCastable>
+        <IsSpecialAbility>1</IsSpecialAbility>
+		<AllowFriendlyFireInRadius>0</AllowFriendlyFireInRadius>
+        <IgnoreInvalidTargetsInRadius>1</IgnoreInvalidTargetsInRadius>
+		<Radius>1</Radius>
+        <Range>0</Range>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_TacticalHealthRegen</StrVal>
+			<Effect>BMB_SaintlyAura</Effect>
+            <Duration>-1</Duration>			
+            <Value>4</Value>
+        </GameModifier>		
+		<AIData AIPersonality="AI_General">
+			<AIPriority>40</AIPriority>
+		</AIData>
+		<SpellCastEffectName>BMB_SaintlyAura</SpellCastEffectName>
+		<SpellCastEffectScale>1</SpellCastEffectScale>
+	</SpellDef>
+</Fragment>

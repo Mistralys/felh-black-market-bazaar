@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_SummonAerialAlly">
+        <DisplayName>TXT_BMB_SPELLS_BMB_SUMMONAERIALALLY_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_SUMMONAERIALALLY_DESCRIPTION</Description>
+        <Image>M_AirElemental_Card.png</Image>
+        <IconFG>S_SummonAirElemental_Icon.png</IconFG>
+		<CanStack>0</CanStack>
+        <Cooldown>8</Cooldown>
+        <SpellBookSortCategory>Summon</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Summon</SpellBookSortSubCategory>
+        <SpellType>Tactical</SpellType>
+        <SpellClass>Offensive</SpellClass>
+        <SpellSubClass>Summon</SpellSubClass>
+        <SpellTargetType>EmptyTile</SpellTargetType>
+        <HideInHiergamenon>1</HideInHiergamenon>
+		<AppliesRandomModifier>1</AppliesRandomModifier>
+        <IsSpecialAbility>1</IsSpecialAbility>
+		<SpellResourceCost>
+            <Resource>Mana</Resource>
+            <Amount>20</Amount>
+        </SpellResourceCost>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <UnitClass>AirElemental</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <UnitClass>AirElemental</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <UnitClass>CrowDemon</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <UnitClass>CrowDemon</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <UnitClass>CrowDemon_Ancient</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <UnitClass>CrowDemon_Ancient</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>SummonUnit</Attribute>
+            <UnitClass>CrowDemon_Young</UnitClass>
+            <Duration>-1</Duration>
+            <Calculate InternalName="Calc" ValueOwner="CastingUnit">
+                <Expression><![CDATA[[UnitStat_BonusSummonLevel] + 6]]></Expression>
+            </Calculate>
+            <Calculate InternalName="Value">
+                <Expression><![CDATA[[Calc]]]></Expression>
+            </Calculate>
+        </GameModifier>        
+        <AIData AIPersonality="AI_General">
+            <AIPriority>60</AIPriority>
+        </AIData>
+        <HitSoundFX>Spell_SummonAirElemental_01</HitSoundFX>
+        <SpellDefEffect>
+            <EffectName>S_SummonAirElemental_Particle</EffectName>
+            <LocalPosition>0,0,0</LocalPosition>
+            <EffectScale>0.5</EffectScale>
+            <EffectDelay>0</EffectDelay>
+            <SnapToTerrain>1</SnapToTerrain>
+        </SpellDefEffect>
+    </SpellDef>
+</Fragment>

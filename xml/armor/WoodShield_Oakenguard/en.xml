@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Oakenguard Shield</DisplayName>
+    <Description>Crafted from the wood of venerable oak trees, these valuable shields grant firmness and fortitude to the wielder and also extend a canopy of solidity to allies.</Description>
+    <Provides index="1">+1 to the army&apos;s Defense</Provides>
+    <Provides index="2">+15% Poison resistance</Provides>
+    <Provides index="3">+15 Defense when Defending</Provides>
+    <Provides index="4">Immune to being knocked prone</Provides>
+    <Provides index="5">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="6">Enables abilities that require Shields</Provides>
+</Translation>

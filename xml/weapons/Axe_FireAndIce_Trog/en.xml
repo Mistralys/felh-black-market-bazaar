@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Fire and Ice</DisplayName>
+    <Description>Using this axe set will entail having one hand burning while the other is freezing. Its manipulation will unavoidably be physically taxing, your targets will get the full brunt of the discomfort.</Description>
+    <Provides index="1">Backswing- If the attack misses the unit gets a second attack against the same target</Provides>
+    <Provides index="2">Cleave- Strike 3 adjacent enemies</Provides>
+</Translation>

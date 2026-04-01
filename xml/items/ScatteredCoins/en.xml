@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Scattered Coins</DisplayName>
+    <Description>Someone must have a hole in their pocket. Just jingle these few coins and see who comes a&apos;calling.</Description>
+    <Provides index="1">Summons a Bandit</Provides>
+</Translation>

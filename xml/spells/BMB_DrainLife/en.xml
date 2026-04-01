@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Drain Life</DisplayName>
+    <Description>Transfers 12 hit points (+2 per death shard) from enemy unit to the caster.</Description>
+</Translation>

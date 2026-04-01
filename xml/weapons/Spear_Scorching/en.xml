@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Scorching Javelin</DisplayName>
+    <Description>This ever-smouldering spear can be used to boil water, start a campfire or inflict searing injuries to anyone foolish enough to stand in the wielder&apos;s way. Handle with caution.</Description>
+    <Provides index="1">Ignores 33% of the victim&apos;s Defense</Provides>
+    <Provides index="2">Immune to Counterattack</Provides>
+    <Provides index="3">Impale- Strike an opponent and whoever is behind them</Provides>
+</Translation>

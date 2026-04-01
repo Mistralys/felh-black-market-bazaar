@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Black Spike&apos;s Fists</DisplayName>
+    <Description>Legendary gladiator Black Spike was said to be invincible in the arena, piling up victories and corpses, slaying champions and monsters alike with tireless and relentless determination. These spiny vambraces can still pack quite a punch.</Description>
+    <Provides index="1">BlackSpike&apos;s Power Punch- +50% Attack and the victim gets knocked back 2 tiles</Provides>
+    <Provides index="2">Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack</Provides>
+</Translation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Robe of Riches</DisplayName>
+    <Description>These robes will allow you to play &quot;seeker, finder, keeper&quot; with a definite advantage over the other contestants.</Description>
+    <Provides index="1">20% chance to find better items from goodie huts</Provides>
+</Translation>

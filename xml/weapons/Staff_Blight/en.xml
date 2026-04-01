@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Blight Staff</DisplayName>
+    <Description>The standard poisoner is usually an inconspicuous traitor waiting in the shadows for the perfect moment to add his lethal ingredients to food or beverage. There&apos;s nothing covert about using this staff though, you&apos;ll be declaring your toxic inclinations for all to see... and judge.</Description>
+    <Provides index="1">Ranged attack</Provides>
+</Translation>

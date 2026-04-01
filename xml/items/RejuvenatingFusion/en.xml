@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Rejuvenating Fusion</DisplayName>
+    <Description>Cruor of old Troll, dipped in the fountain of youth.
+A brew with no toll, to cure that aching loose tooth.</Description>
+    <Provides index="1">Rejuvenating Fusion Effect - Healing an injury comes with the added benefit of a random permanent increase in Hit Points</Provides>
+    <Provides index="2">Removes a random injury</Provides>
+</Translation>

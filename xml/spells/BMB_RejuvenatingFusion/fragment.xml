@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<SpellDef InternalName="BMB_RejuvenatingFusion">
+        <DisplayName>TXT_BMB_SPELLS_BMB_REJUVENATINGFUSION_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_SPELLS_BMB_REJUVENATINGFUSION_DESCRIPTION</Description>
+        <Image>T_Wellspring_Painting.png</Image>
+        <IconFG>T_Wellspring_Icon.png</IconFG>
+        <SpellBookSortCategory>Unit</SpellBookSortCategory>
+        <SpellBookSortSubCategory>Other</SpellBookSortSubCategory>
+        <SpellType>Strategic</SpellType>
+        <SpellClass>Defensive</SpellClass>
+        <SpellSubClass>Buff</SpellSubClass>	
+        <SpellTargetType>Self</SpellTargetType>	
+        <AppliesRandomModifier>1</AppliesRandomModifier>
+        <HideInHiergamenon>1</HideInHiergamenon>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_HitPoints</StrVal>
+			<DisplayName>TXT_BMB_SPELLS_BMB_REJUVENATINGFUSION_MODIFIER_1_DISPLAYNAME</DisplayName>
+            <Value>1</Value>            
+        </GameModifier>
+		<GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_HitPoints</StrVal>
+			<DisplayName>TXT_BMB_SPELLS_BMB_REJUVENATINGFUSION_MODIFIER_2_DISPLAYNAME</DisplayName>
+            <Value>2</Value>            
+        </GameModifier>	
+        <GameModifier>
+            <ModType>Unit</ModType>
+            <Attribute>AdjustUnitStat</Attribute>
+            <StrVal>UnitStat_HitPoints</StrVal>
+            <DisplayName>TXT_BMB_SPELLS_BMB_REJUVENATINGFUSION_MODIFIER_3_DISPLAYNAME</DisplayName>
+            <Value>3</Value>
+        </GameModifier>        
+        <AIData AIPersonality="AI_General">
+            <AIPriority>5</AIPriority>
+        </AIData>        
+    </SpellDef>
+</Fragment>

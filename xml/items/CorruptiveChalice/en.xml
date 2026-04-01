@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Corruptive Chalice</DisplayName>
+    <Description>Any liquid poured into this chalice will turn instantly into the deadliest poison. A delightful drinking accessory to bring to either plebeian feasts or highbrow soirées.</Description>
+    <Provides index="1">+1 Poison to the Army&apos;s Attack</Provides>
+    <Provides index="2">+15% to the Army&apos;s Poison resistance</Provides>
+</Translation>

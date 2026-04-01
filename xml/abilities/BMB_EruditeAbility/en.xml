@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Erudite</DisplayName>
+    <Description>+30% Experience and 10% Research</Description>
+    <Provides index="1">+30% Experience</Provides>
+    <Provides index="2">+10% Research</Provides>
+</Translation>

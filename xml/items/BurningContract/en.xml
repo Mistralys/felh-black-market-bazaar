@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Burning Contract</DisplayName>
+    <Description>By its very nature, this is obviously a temporary agreement. You did read the fine print before it blackened, right?</Description>
+    <Provides index="1">+1 Fire to the Army&apos;s Attack</Provides>
+    <Provides index="2">+15% to the Army&apos;s Fire resistance</Provides>
+</Translation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Predator&apos;s Bite</DisplayName>
+    <Description>While combining these two Short Swords will take some sport out of the merry chase, you&apos;ll still have to land the first cut before the lethal venom does the rest. So make it a deep one.</Description>
+    <Provides index="1">+2 Counterattack per round</Provides>
+    <Provides index="2">+10 Attack vs Beasts</Provides>
+    <Provides index="3">Victims take 3 Poison damage per turn</Provides>
+</Translation>

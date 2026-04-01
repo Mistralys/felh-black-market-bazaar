@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Dimensional Diadem</DisplayName>
+    <Description>Could this possibly be the headpiece of one of the mythical Plane Travelers? Luck of the Saints, why it is! Because the general theory of dimensional shifting requires a very specific and very convoluted mindset, you will have to satisfy yourself with activating only its most basic powers. Don&apos;t you pout now, blinking around in a semi-tangible state ain&apos;t exactly chopped liver.</Description>
+    <Provides index="1">20% less damage from Physical attacks</Provides>
+    <Provides index="2">Allows the unit to cast Dimensional Translocation</Provides>
+</Translation>

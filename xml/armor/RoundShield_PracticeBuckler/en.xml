@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Practice Buckler</DisplayName>
+    <Description>So you&apos;ve found your practice shield. Now you need to locate your wooden sword and your wooden dummy and work on those basic moves some more. Complaints are not welcome.</Description>
+    <Provides index="1">+10% Experience</Provides>
+    <Provides index="2">+5 Defense when Defending</Provides>
+    <Provides index="3">Shield Bash - Knocks the victim back a tile</Provides>
+    <Provides index="4">Enables abilities that require Shields</Provides>
+</Translation>

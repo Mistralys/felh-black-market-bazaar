@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Ghoul Touch</DisplayName>
+    <Description>Looks like you&apos;ve unearthed one of the heinous swords which belonged to Astavarpa, the primeval and mythical Ghoul Empress. While it has lost much of its potency, it can still send your enemies through the nine stages of lethal paralysis.</Description>
+    <Provides index="1">Freezing Blood - Target takes 5 Cold damage per round</Provides>
+    <Provides index="2">+1 Counterattack per round</Provides>
+</Translation>

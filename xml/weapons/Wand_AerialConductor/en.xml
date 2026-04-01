@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Aerial Conductor</DisplayName>
+    <Description>Virtuosity is fundamental to lead an aerial orchestra but with this wand, the neophyte can become the maestro, harmonizing gales and hurricanes into a howling symphony.</Description>
+    <Provides index="1">+25% Lightning resistance</Provides>
+    <Provides index="2">Summon Aerial Ally - Allows the wielder to summon a winged ally in battle</Provides>
+    <Provides index="3">Gust of Wind- A gust of wind blows 3 adjacent enemies next to the caster back a tile and, unless they resist, knocks them prone</Provides>
+    <Provides index="4">Ranged attack</Provides>
+</Translation>

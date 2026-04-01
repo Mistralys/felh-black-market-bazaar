@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Fragment>
+	<GameItemType InternalName="CauldronOfPlenty">
+        <DisplayName>TXT_BMB_ITEMS_CAULDRONOFPLENTY_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_CAULDRONOFPLENTY_DESCRIPTION</Description>
+        <HideInHiergamenon>1</HideInHiergamenon>
+        <ShopValue>180</ShopValue>
+        <GameModifier>
+            <ModType>Resource</ModType>
+            <Attribute>Population</Attribute>
+            <Value>15</Value>
+			<Provides>TXT_BMB_ITEMS_CAULDRONOFPLENTY_PROVIDES_1</Provides>
+        </GameModifier>
+        <IsAvailableForSovereignCustomization>0</IsAvailableForSovereignCustomization>
+        <Likelihood>40</Likelihood>
+        <RarityDisplay>Common</RarityDisplay>
+        <HeroOnly>1</HeroOnly>
+        <IsAvailableForUnitDesign>0</IsAvailableForUnitDesign>
+        <IsUsable>1</IsUsable>
+        <UsableInBattle>0</UsableInBattle>
+			<AIData AIPersonality="AI_General">
+                <AIPriority>0</AIPriority>
+            </AIData>
+        <ArtDef>CauldronOfPlenty_ArtDef</ArtDef>
+        <GameItemTypeArtDef InternalName="CauldronOfPlenty_ArtDef">
+            <GameItemTypeModelPack InternalName="CauldronOfPlenty_Default">
+                <IconFile>BMB_CauldronOfPlenty.png</IconFile>
+                <TintR>0</TintR>
+                <TintG>0</TintG>
+                <TintB>0</TintB>
+                <SFX>Eating</SFX>
+                <GameItemTypeModel>
+                </GameItemTypeModel>
+            </GameItemTypeModelPack>
+        </GameItemTypeArtDef>
+    </GameItemType>
+</Fragment>

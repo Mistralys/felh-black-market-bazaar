@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Viscous Membrane</DisplayName>
+    <Description>This revolting thing&apos;s squishy surface oozes corrosive digestive fluids, and the first thing you&apos;ll notice is the sudden disappearance of flying insects from your vicinity. It is in reality a living organism shaped like cloak which awards its willing host a symbiotic relationship drenched in acid. Are you really willing to put that thing on your back?</Description>
+    <Provides index="1">-3 Hit Points - the Membrane is slowly eating the host.</Provides>
+    <Provides index="2">Paralyzing Acid- Target enemy suffers -10 Dodge and takes 3-6 damage per turn.</Provides>
+    <Provides index="3">Striking this unit causes the attacker to be sprayed with Paralyzing Acid.</Provides>
+    <Provides index="4">+10% Fire resistance</Provides>
+    <Provides index="5">+10% Lightning resistance</Provides>
+</Translation>

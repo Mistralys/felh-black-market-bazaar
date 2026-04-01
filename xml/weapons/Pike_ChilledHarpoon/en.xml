@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Chilled Harpoon</DisplayName>
+    <Description>This hyperborean spear was designed to snuff out Fire Elementals with a single, extremely frigid stroke.</Description>
+    <Provides index="1">+1 Cold Attack per Level</Provides>
+    <Provides index="2">+50% Cold resistance</Provides>
+    <Provides index="3">Ignores 33% of the victim&apos;s Defense</Provides>
+    <Provides index="4">Immune to Counterattack</Provides>
+    <Provides index="5">Impale- Strike an opponent and whoever is behind them</Provides>
+</Translation>

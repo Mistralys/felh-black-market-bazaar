@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Wallbreaker Effect</DisplayName>
+    <Description>Target&apos;s defense is reduced by 30% per strike</Description>
+    <ModifierDisplayName index="1">Fractured</ModifierDisplayName>
+</Translation>

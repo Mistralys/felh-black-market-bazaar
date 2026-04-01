@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Shell of Sluggishness</DisplayName>
+    <Description>Aiming the magic stored within this shell at enemy armies will curse them with slow motion.</Description>
+    <Provides index="1">Allows the wielder to cast Mass Slow</Provides>
+</Translation>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Lost Barrowhill Wine Effect</DisplayName>
+    <Description>Lost Barrowhill Wine Effect - Random properties.</Description>
+    <ModifierDisplayName index="1">Spell Resistance!</ModifierDisplayName>
+    <ModifierDisplayName index="2">Spell Mastery!</ModifierDisplayName>
+    <ModifierDisplayName index="3">Spell Power!</ModifierDisplayName>
+    <ModifierDisplayName index="4">Eagle Eye!</ModifierDisplayName>
+    <ModifierDisplayName index="5">Ice Touch!</ModifierDisplayName>
+    <ModifierDisplayName index="6">Flame Touch!</ModifierDisplayName>
+    <ModifierDisplayName index="7">Lightning Touch!</ModifierDisplayName>
+    <ModifierDisplayName index="8">Poison Touch!</ModifierDisplayName>
+    <ModifierDisplayName index="9">Oops!</ModifierDisplayName>
+    <ModifierDisplayName index="10">How Awkward!</ModifierDisplayName>
+    <ModifierDisplayName index="11">Sharper Aim!</ModifierDisplayName>
+    <ModifierDisplayName index="12">Fortitude!</ModifierDisplayName>
+    <ModifierDisplayName index="13">Artful Dodger!</ModifierDisplayName>
+    <ModifierDisplayName index="14">Nothing but a headache!</ModifierDisplayName>
+</Translation>

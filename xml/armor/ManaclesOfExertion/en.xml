@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Manacles of Exertion</DisplayName>
+    <Description>These torture devices were no doubt invented by the Quendar to boost the efficiency of those lazy and useless slaves. Although the idea of putting them on is revolting and degrading, they can be quite useful in increasing the production of your successful strikes. Who needs dignity in these times anyway?</Description>
+    <Provides index="1">+2 Accuracy for each point of Stamina</Provides>
+</Translation>

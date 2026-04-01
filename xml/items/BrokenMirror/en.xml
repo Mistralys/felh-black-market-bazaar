@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Broken Mirror</DisplayName>
+    <Description>Breaking a mirror doesn&apos;t necessarily punish the clumsy culprit. The shattered glass in this banged up frame will distort the reflection of your adversaries and reveal the weaknesses in their armor.</Description>
+    <Provides index="1">Ignores 20% of the victim&apos;s Defense</Provides>
+</Translation>

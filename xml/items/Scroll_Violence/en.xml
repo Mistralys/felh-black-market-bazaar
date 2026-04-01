@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Scroll of Violence</DisplayName>
+    <Description>The lines enclosed in this parchment speak to aggressive temperaments.</Description>
+    <Provides index="1">Grants the unit the Lethal ability</Provides>
+</Translation>

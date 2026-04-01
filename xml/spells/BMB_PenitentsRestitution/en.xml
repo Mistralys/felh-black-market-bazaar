@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Penitent&apos;s Restitution</DisplayName>
+    <Description>Heals all allies and caster gains 3 hit points permanently</Description>
+    <ModifierDisplayName index="3">Penitent&apos;s Restitution</ModifierDisplayName>
+</Translation>

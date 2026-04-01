@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Rejuvenating Fusion Effect</DisplayName>
+    <Description>Rejuvenating Fusion Effect - Healing an injury comes with the added benefit of a random permanent increase in Hit Points.</Description>
+    <ModifierDisplayName index="1">+1 Hit Points</ModifierDisplayName>
+    <ModifierDisplayName index="2">+2 Hit Points</ModifierDisplayName>
+    <ModifierDisplayName index="3">+3 Hit Points</ModifierDisplayName>
+</Translation>
