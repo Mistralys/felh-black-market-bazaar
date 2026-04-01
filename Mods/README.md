@@ -10,11 +10,13 @@ All mod XML files use the BMB_ prefix for InternalName values to avoid collision
 
 The XML files in `Mods/src/Data/GameCore/` are **generated** from individual fragment files in the `/xml` directory. The `/xml` directory is the source of truth — do not edit the monolithic XML files directly.
 
-- **To edit an item**: modify its fragment file in `xml/<subfolder>/<InternalName>.xml`.
-- **To add an item**: create a new fragment file in the appropriate `xml/` subfolder.
-- **To build**: run `npm run build` — the merge step assembles fragments into monolithic files, then deploys.
+- **To edit an item**: modify its `fragment.xml` in `xml/<subfolder>/<InternalName>/fragment.xml`.
+- **To edit English text**: modify `xml/<subfolder>/<InternalName>/en.xml`.
+- **To add an item**: create a new directory `xml/<subfolder>/<InternalName>/` with `fragment.xml` and `en.xml`.
+- **To add a translation**: copy `en.xml` to `<lang>.xml` (e.g., `de.xml`) and translate the text.
+- **To build**: run `npm run build` — merges fragments and translations into monolithic files, then deploys.
 
-The generated monolithic files are listed in `.gitignore` and are not tracked in version control.
+The generated monolithic files (GameCore XML and Localization XML) are listed in `.gitignore` and are not tracked in version control.
 
 ---
   
@@ -35,13 +37,23 @@ The generated monolithic files are listed in `.gitignore` and are not tracked in
 | BMB_UnitStats.xml | PlayerAbilityTypes | Custom unit stat type definitions | `xml/unit-stats/` |
 | BMB_CoreItemsModifications.xml | GameItemTypes | Modifications/overrides to base game items | `xml/core-items-mods/` |
   
-## Supporting Files  
+## Supporting Files
   
-| File | Location | Purpose |  
-|---|---|---|  
-| BMB.str | Mods/src/Data/ | String table for UI labels (weapon type names, etc.) |  
-| *.png | Mods/src/Gfx/Black Market Bazaar Icons/ | Item icons (227 PNG files) |  
-| *.dds | Mods/src/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (16 DDS files) | 
+| File | Location | Purpose |
+|---|---|---|
+| BMB.str | Mods/src/Data/ | String table for UI labels (weapon type names, etc.) |
+| BMB_Strings_Items.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for items |
+| BMB_Strings_Weapons.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for weapons |
+| BMB_Strings_Armor.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for armor |
+| BMB_Strings_Clothes.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for clothes |
+| BMB_Strings_Spells.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for spells |
+| BMB_Strings_Abilities.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for abilities |
+| BMB_Strings_Units.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for units |
+| BMB_Strings_UnitStats.xml | Mods/src/Data/Localization/English/ | **Generated** English localization for unit stats |
+| *.png | Mods/src/Gfx/Black Market Bazaar Icons/ | Item icons (227 PNG files) |
+| *.dds | Mods/src/Gfx/Black Market Bazaar Icons/ | Texture files for 3D models (16 DDS files) |
+
+> **Note:** Localization XML files are generated from per-entry `en.xml` (and other `<lang>.xml`) files in `xml/<category>/<Name>/` during `npm run build`. They are git-ignored. To add a translation, add `<lang>.xml` files to the entry directories and rebuild.
   
 ## Naming Conventions  
   

@@ -92,11 +92,12 @@ node scripts/build.mjs
 What it does:
 
 1. **Merges XML fragments** from `xml/` into monolithic XML files in `Mods/src/Data/GameCore/` (skipped if `xml/` doesn't exist).
-2. Reads `build.config.json` and validates `deployPath` and `modID`.
-3. Confirms `Mods/src/` exists in the project.
-4. Deletes `<deployPath>/<modID>/` if it already exists (clean slate).
-5. Copies `Mods/src/` to `<deployPath>/<modID>/`.
-6. Prints a summary: `Build complete. N file(s) deployed to: <path>`.
+2. **Merges translations** from per-entry `en.xml` (and other language files) into `Mods/src/Data/Localization/<Language>/` (skipped if no per-entry directories exist).
+3. Reads `build.config.json` and validates `deployPath` and `modID`.
+4. Confirms `Mods/src/` exists in the project.
+5. Deletes `<deployPath>/<modID>/` if it already exists (clean slate).
+6. Copies `Mods/src/` to `<deployPath>/<modID>/`.
+7. Prints a summary: `Build complete. N file(s) deployed to: <path>`.
 
 The operation is idempotent — running it again produces the same result.
 
@@ -139,6 +140,8 @@ Must be run in an interactive terminal (TTY). Press **q** or **Ctrl+C** to quit.
 | `a` | Generate context documentation (`ctx generate`) |
 | `b` | Build mod (deploy to game folder) |
 | `c` | Generate item reference (`docs/references/`) |
+| `d` | Migrate fragments to translation directories |
+| `e` | Verify translation key integrity (`npm run verify-keys`) |
 | `q` | Quit |
 
 Keys are assigned alphabetically in declaration order. Adding a new item appends the next letter automatically. The menu supports up to 26 items (a–z).
@@ -147,42 +150,74 @@ Keys are assigned alphabetically in declaration order. Adding a new item appends
 
 ## XML Fragment Workflow
 
-The mod's XML data is authored as individual fragment files in the `xml/` directory, one file per game entity. During build, these fragments are merged into the monolithic XML files that the game engine expects.
+The mod's XML data is authored as individual fragment files in the `xml/` directory, one per game entity. During build, these fragments are merged into the monolithic XML files that the game engine expects.
 
 ### Fragment structure
 
+Each translatable category uses **per-entry directories**:
+
 ```
 xml/
-├── items/                  → BMB_Items.xml
-├── weapons/                → BMB_Weapons.xml
-├── armor/                  → BMB_Armor.xml
-├── clothes/                → BMB_Clothes.xml
-├── spells/                 → BMB_Spells.xml
-├── abilities/              → BMB_Abilities.xml
-├── effects/                → BMB_Effects.xml
-├── units/                  → BMB_Units.xml
-├── unit-stats/             → BMB_UnitStats.xml
-└── core-items-mods/        → BMB_CoreItemsModifications.xml
+├── items/
+│   ├── AmuletOfContamination/
+│   │   ├── fragment.xml    ← game data (with TXT_BMB_* keys)
+│   │   └── en.xml          ← English translation
+│   └── BirdOfCelerity/
+│       ├── fragment.xml
+│       └── en.xml
+├── weapons/                (same per-entry structure)
+├── armor/                  (same per-entry structure)
+├── clothes/                (same per-entry structure)
+├── spells/                 (same per-entry structure)
+├── abilities/              (same per-entry structure)
+├── units/                  (same per-entry structure)
+├── unit-stats/             (same per-entry structure)
+├── effects/                ← flat files (no translatable text)
+└── core-items-mods/        ← flat files (base game overrides)
 ```
 
-Each fragment is a complete XML document with a `<Fragment>` wrapper:
+Each `fragment.xml` is a complete XML document with a `<Fragment>` wrapper and `TXT_BMB_*` keys for all player-facing text:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Fragment>
-    <GameItemType InternalName="AmuletOfContamination">
-        <!-- ... full entry content ... -->
+    <GameItemType InternalName="BirdOfCelerity">
+        <DisplayName>TXT_BMB_ITEMS_BIRDOFCELERITY_DISPLAYNAME</DisplayName>
+        <Description>TXT_BMB_ITEMS_BIRDOFCELERITY_DESCRIPTION</Description>
+        <!-- ... -->
     </GameItemType>
 </Fragment>
 ```
 
-The `xml/` directory is the **source of truth**. The monolithic XML files in `Mods/src/Data/GameCore/` are generated and git-ignored.
+The co-located `en.xml` holds the English text in a simple `<Translation>` format:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Translation>
+    <DisplayName>Bird of Celerity</DisplayName>
+    <Description>This beautiful statuette allows its owner to distort the space and time continuum...</Description>
+    <Provides index="1">Allows the wielder to cast Mass Haste</Provides>
+</Translation>
+```
+
+The `xml/` directory is the **source of truth**. The monolithic XML files in `Mods/src/Data/GameCore/` and the localization files in `Mods/src/Data/Localization/` are generated and git-ignored.
 
 ### Adding a new item
 
-1. Create a new `.xml` file in the appropriate `xml/` subfolder (e.g., `xml/items/BMB_NewItem.xml`).
-2. Use the `<Fragment>` wrapper format shown above.
-3. Run `npm run build` — the merge step assembles all fragments into the monolithic files, then deploys.
+1. Create a new directory `xml/items/BMB_NewItem/`.
+2. Add `fragment.xml` using the `<Fragment>` wrapper with `TXT_BMB_*` keys for all player-facing text.
+3. Add `en.xml` with the English translations in `<Translation>` format.
+4. Run `npm run build` — the merge step assembles all fragments and translations, then deploys.
+
+### Adding a translation
+
+To add a new language translation for an existing entry:
+
+1. Copy `xml/<category>/<Name>/en.xml` to `xml/<category>/<Name>/<lang>.xml` (e.g., `de.xml` for German).
+2. Translate the text content of each element.
+3. Run `npm run build` — the translation merge step generates `Mods/src/Data/Localization/<Language>/` files automatically.
+
+Supported language codes: `en`, `de`, `fr`, `es`, `zh`, `ja`, `ko`, `ru`, `it`, `pl`, `pt`.
 
 ---
 
@@ -190,15 +225,16 @@ The `xml/` directory is the **source of truth**. The monolithic XML files in `Mo
 
 | Path | Purpose |
 |---|---|
-| ``xml/`` | XML fragment source files (one per game entity) — **source of truth** |
-| ``scripts/build.mjs`` | Build/deploy script — merges fragments, then copies mod to game folder |
+| ``xml/`` | XML fragment source files (per-entry directories) — **source of truth** |
+| ``scripts/build.mjs`` | Build/deploy script — merges fragments + translations, then copies mod to game folder |
+| ``scripts/migrate-to-dirs.mjs`` | One-time migration script (flat files → per-entry directories + English translation extraction) |
 | ``scripts/split-xml.mjs`` | One-time migration script (splits monolithic XML into fragments) |
 | ``scripts/lib/merge-xml.mjs`` | XML fragment merge module (used by build.mjs) |
+| ``scripts/lib/merge-translations.mjs`` | Translation merge module (used by build.mjs) |
 | ``scripts/menu.mjs`` | Interactive terminal menu |
 | ``scripts/prepare.mjs`` | Config-reminder hook (runs after `npm install`) |
 | ``scripts/lib/output.mjs`` | Shared console output helpers (colours, symbols) |
-| ``scripts/`` | Node.js build and tooling scripts |
-| ``Mods/`` | Mod source files (GameCore XML files are generated from ``xml/``) |
+| ``Mods/`` | Mod source files (GameCore XML and Localization files are generated from ``xml/``) |
 | ``docs/`` | Project documentation |
 | ``.build.config.example.json`` | Committed template for local build config |
 | ``build.config.json`` | Your local build config (git-ignored) |

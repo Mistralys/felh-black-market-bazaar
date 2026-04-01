@@ -12,8 +12,7 @@ moduleMetaData:
     - Clothes
     - GameModifier
   relatedModules:
-    - game-data
-    - modding-guide
+    - project-manifest
 
 # Note: The XML files referenced below are generated from /xml fragments
 # during `npm run build`. Run the build before generating context docs.

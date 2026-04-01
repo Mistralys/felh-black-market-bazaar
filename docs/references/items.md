@@ -26,29 +26,29 @@
 
 | Name | Rarity | Value | Effects |
 |---|---|---|---|
-| Abyssal Greatsword | Rare | 620 | +34 Attack; +1 Max Counter Attack; Overpower- Wielder's attack damage is multiplied by the members of the defending group; Allows the wielder to cast Shockwave |
-| Aerial Conductor | Rare | 500 | +22 Lightning Attack; +25 Resist Lightning; Summon Aerial Ally - Allows the wielder to summon a winged ally in battle; Gust of Wind- A gust of wind blows 3 adjacent enemies next to the caster back a tile and, unless they resist, knocks them prone; Ranged attack |
+| Abyssal Greatsword | Rare | 620 | +34 Attack; +1 Counterattack per round; Overpower- Wielder's attack damage is multiplied by the members of the defending group; Allows the wielder to cast Shockwave |
+| Aerial Conductor | Rare | 500 | +22 Lightning Attack; +25% Lightning resistance; Summon Aerial Ally - Allows the wielder to summon a winged ally in battle; Gust of Wind- A gust of wind blows 3 adjacent enemies next to the caster back a tile and, unless they resist, knocks them prone; Ranged attack |
 | Angry Spitter | Uncommon | 220 | +10 Attack; -6 Combat Speed; +3 Chance To Crit; Twin Shaft - Strike twice; Enables abilities that require Bows; Ranged attack |
-| Arcane Scalpel | Rare | 480 | +12 Attack; +5 Combat Speed; +1 Max Counter Attack; +15 Spell Power; +20 Spell Damage; -20% mana cost for tactical spells |
-| Archmage's Eleventh Finger | Rare | 800 | 5 Physical Attack + 10 Magical Attack (+1 per the Caster's Level); +25 Spell Power; +25 Spell Damage; Ranged attack |
-| Aspen Heart Staff | Uncommon | 300 | +20 Attack; +3 Chance To Crit; +3 Combat Speed; +2 Max Counter Attack; Bash- Has a chance equal to the damage done of knocking the victim prone |
+| Arcane Scalpel | Rare | 480 | +12 Attack; +5 Combat Speed; +1 Counterattack per round; +15 Spell Power; +20% Spell Damage; -20% mana cost for tactical spells |
+| Archmage's Eleventh Finger | Rare | 800 | 5 Physical Attack + 10 Magical Attack (+1 per the Caster's Level); +25 Spell Mastery; +25% Spell Damage; Ranged attack |
+| Aspen Heart Staff | Uncommon | 300 | +20 Attack; +3 Chance To Crit; +3 Combat Speed; +2 Counterattack per round; Bash- Has a chance equal to the damage done of knocking the victim prone |
 | Bandit Slayer | Common | 80 | -10 Accuracy; +8 Attack; -8 Combat Speed; +40 Accuracy vs Bandits; +10 Attack vs Bandits; Enables abilities that require Bows; Ranged attack |
 | Black Spike's Tenderizer | Rare | 380 | +32 Attack; -2 Combat Speed; Unit never gets Counterattacked; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina; +1 Black Spike; Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack |
-| Blade of Acrimony | Uncommon | 140 | +18 Attack; +2 Combat Speed; +1 Max Counter Attack; Attack Frenzy- +1 Attack with each successful strike; +20% Attack vs. Damaged Opponents |
-| Blade of Negation | Uncommon | 300 | +16 Attack; Target loses 4 Defense and 8 Spell Resist points per strike; +2 Combat Speed; +1 Max Counter Attack |
+| Blade of Acrimony | Uncommon | 140 | +18 Attack; +2 Combat Speed; +1 Counterattack per round; Attack Frenzy- +1 Attack with each successful strike; +20% Attack vs. Damaged Opponents |
+| Blade of Negation | Uncommon | 300 | +16 Attack; Target loses 4 Defense and 8 Spell Resist points per strike; +2 Combat Speed; +1 Counterattack per round |
 | Blight Staff | Uncommon | 140 | +6 Poison Attack; -6 Combat Speed; Ranged attack |
 | Blood Drainer Pike | Rare | 450 | +10 Accuracy; +26 Attack; Allows the unit to use the Bleed special ability; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
 | Boorish Pacifier | Uncommon | 90 | +20 Attack; -4 Combat Speed; +4 Attack vs. opponents with a lower Level; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina |
-| Breakneck Slasher | Uncommon | 140 | +19 Attack; +4 Combat Speed; +3 Max Counter Attack; +1 Accuracy |
-| Chilled Harpoon | Rare | 650 | +18 Attack; +3 Cold Attack; +1 Cold Attack; +50 Resist Cold; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
+| Breakneck Slasher | Uncommon | 140 | +19 Attack; +4 Combat Speed; +3 Counterattack per round; +1 Accuracy per Level |
+| Chilled Harpoon | Rare | 650 | +18 Attack; +3 Cold Attack; +1 Cold Attack per Level; +50% Cold resistance; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
 | Civilized Battle Axe | Uncommon | 160 | +14 Attack; +5 Attack vs Beasts; +5 Attack vs Dragons; +5 Attack vs Elementals; +5 Attack vs Twisted; +5 Attack vs Undead; -2 Combat Speed; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
-| Coldhearted Killer | Common | 180 | +6 Attack; +3 Cold Attack; +3 Combat Speed; +1 Max Counter Attack; Paralyzing Cold - Victims take 3 Cold damage per turn |
-| Corrosive Dagger | Common | 140 | +8 Attack; +3 Combat Speed; +1 Max Counter Attack; Target takes 2-4 Acid damage per round |
-| Cutthroat's Sidekicks | Common | 110 | +10 Attack; +3 Combat Speed; +5 Chance To Crit; +2 Max Counter Attack; Ignores 66% of the victim's Defense; +0.5 Crit Damage Multiplier; +1 Defense |
-| Dagger of Corruption | Common | 140 | +9 Attack; +3 Combat Speed; +1 Max Counter Attack; Dagger Of Corruption Effect - Reduces the attack of the target by 2 (+1 per death shard) unless they resist |
+| Coldhearted Killer | Common | 180 | +6 Attack; +3 Cold Attack; +3 Combat Speed; +1 Counterattack per round; Paralyzing Cold - Victims take 3 Cold damage per turn |
+| Corrosive Dagger | Common | 140 | +8 Attack; +3 Combat Speed; +1 Counterattack per round; Target takes 2-4 Acid damage per round |
+| Cutthroat's Sidekicks | Common | 110 | +10 Attack; +3 Combat Speed; +5 Chance To Crit; +2 Counterattack per round; Ignores 66% of the victim's Defense; +50% Critical Damage; +1 Defense |
+| Dagger of Corruption | Common | 140 | +9 Attack; +3 Combat Speed; +1 Counterattack per round; Dagger Of Corruption Effect - Reduces the attack of the target by 2 (+1 per death shard) unless they resist |
 | Deconstructor | Rare | 350 | +30 Attack; +15 Attack vs Constructs; -4 Combat Speed; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina; Crippling Blow- +100% Attack, but you lose your next action |
-| Demented Skewer | Uncommon | 180 | +12 Attack; +5 Chance To Crit; +0.5 Crit Damage Multiplier; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
-| Druid's Walking Stick | Uncommon | 210 | +10 Attack; Summons a Bear at the same level as the caster; +1 Bonus Summon Level; Allows the wielder to cast Stoneskin; +10 Magic Resist; +20 Resist Poison |
+| Demented Skewer | Uncommon | 180 | +12 Attack; +5 Chance To Crit; +50% Critical Damage; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
+| Druid's Walking Stick | Uncommon | 210 | +10 Attack; Summons a Bear at the same level as the caster; +1 level for Summons; Allows the wielder to cast Stoneskin; +10 Magic Resist; +20% Poison Resistance |
 | Dual Civilized Battle Axe | Uncommon | 170 | +16 Attack; +5 Attack vs Beasts; +5 Attack vs Dragons; +5 Attack vs Elementals; +5 Attack vs Twisted; +5 Attack vs Undead; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
 | Dual Freezing Axe | Uncommon | 150 | +10 Attack; +2 Cold Attack; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
 | Dual Freezing Battle Axe | Uncommon | 620 | +16 Attack; +3 Cold Attack; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
@@ -63,34 +63,34 @@
 | Freezing Battle Axe | Uncommon | 620 | +14 Attack; +2 Cold Attack; -2 Combat Speed; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
 | Fulminating Axe | Common | 150 | +9 Attack; +2 Lightning Attack; -2 Combat Speed; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
 | Fulminating Battle Axe | Uncommon | 620 | +14 Attack; +2 Lightning Attack; -2 Combat Speed; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
-| Ghoul Touch | Rare | 350 | +26 Attack; Freezing Blood - Target takes 5 Cold damage per round; +2 Combat Speed; +1 Max Counter Attack |
-| Heaven's Dichotomizer | Rare | 900 | +18 Attack; +18 Lightning Attack; +2 Combat Speed; +1 Max Counter Attack; Lightning strikes a random enemy group for 20 Lightning damage(+4 per air shard). |
+| Ghoul Touch | Rare | 350 | +26 Attack; Freezing Blood - Target takes 5 Cold damage per round; +2 Combat Speed; +1 Counterattack per round |
+| Heaven's Dichotomizer | Rare | 900 | +18 Attack; +18 Lightning Attack; +2 Combat Speed; +1 Counterattack per round; Lightning strikes a random enemy group for 20 Lightning damage(+4 per air shard). |
 | Highborn Beheader | Rare | 310 | +24 Attack; -2 Combat Speed; +5 Attack vs Champions; Chop- Strike twice; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
 | Icebreaker | Uncommon | 240 | +12 Attack; +4 Cold Attack; -4 Combat Speed; Icebreaker Effect - Has a 50% chance of breaking the surface it has just frozen for an additional 4-10 points of damage; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina |
 | Impudent Shortbow | Common | 60 | +7 Attack; -8 Combat Speed; +15 Accuracy vs. higher level enemies; Enables abilities that require Bows; Ranged attack |
 | Knockback Hammer | Uncommon | 210 | +18 Attack; -4 Combat Speed; Melee attacks knock the unit back 2 tiles unless they resist; Unit never gets Counterattacked; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina |
 | Little Revenger | Common | 90 | +8 Attack; +3 Combat Speed; +3 Chance To Crit; Little Revenger effect - Enemies that strike the wielder suffer two retaliating strikes |
-| Mastersmith's Hammer | Rare | 350 | +16 Attack; +1 Fire Attack; -4 Combat Speed; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina; +1 Mastersmith; Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage |
+| Mastersmith's Hammer | Rare | 350 | +16 Attack; +1 Fire Attack per Level; -4 Combat Speed; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina; +1 Mastersmith; Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage |
 | Miasmatic Stake | Rare | 280 | +12 Attack; +18 Poison Attack; Plague Touch - Halves the Poison Resistance of Targets, Poisons them and spreads Infection |
 | Nimble Crusher | Common | 50 | +9 Attack; +1 Combat Speed; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina |
 | Noxious Spear | Uncommon | 90 | +8 Attack; +3 Poison Attack; Melee attacks also do 2 Poison damage per round to the victim; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
 | Pestiferous Warhammer | Uncommon | 180 | +10 Attack; -4 Combat Speed; Victims take 6 Poison damage per turn; Bash- Has a chance equal to the damage done of knocking the victim prone; Crushing Blow - Attack at +1 per Stamina |
 | Poison Geyser | Rare | 290 | +12 Poison Attack; -6 Combat Speed; Ranged attack |
-| Predator's Bite | Uncommon | 720 | +20 Attack; +3 Defense; +4 Combat Speed; +2 Max Counter Attack; +10 Attack vs Beasts; Victims take 3 Poison damage per turn |
+| Predator's Bite | Uncommon | 720 | +20 Attack; +3 Defense; +4 Combat Speed; +2 Counterattack per round; +10 Attack vs Beasts; Victims take 3 Poison damage per turn |
 | Prismatic Longbow | Rare | 320 | +10 Attack; +2 Cold Attack; +2 Fire Attack; +2 Lightning Attack; +2 Poison Attack; -6 Combat Speed; Enables abilities that require Bows; Ranged attack |
 | Road Builder's Shovel | Uncommon | 40 | +6 Attack; -4 Combat Speed; Allows the unit to build roads |
 | Ruthless Pelter | Rare | 650 | +34 Attack; -6 Combat Speed; +8 Chance To Crit; Enables abilities that require Bows; Ruthless Pelter Effect - Knocks back enemies and has a chance equal to the damage done of knocking the victim prone |
 | Scorching Javelin | Uncommon | 160 | +9 Attack; +4 Fire Attack; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
-| Serrated Ice | Rare | 720 | +25 Attack; +5 Cold Attack; +5 Defense; +10 Chance To Crit; +3 Combat Speed; +2 Max Counter Attack; +1.5 Crit Damage Multiplier |
-| Shepherd's Yanker | Uncommon | 60 | +11 Attack; +1 Combat Speed; +1 Max Counter Attack; Yank- Attack that also has a chance to knock the enemy prone unless they resist |
+| Serrated Ice | Rare | 720 | +25 Attack; +5 Cold Attack; +5 Defense; +10 Chance To Crit; +3 Combat Speed; +2 Counterattack per round; +150% Critical Damage |
+| Shepherd's Yanker | Uncommon | 60 | +11 Attack; +1 Combat Speed; +1 Counterattack per round; Yank- Attack that also has a chance to knock the enemy prone unless they resist |
 | Shifty Depleter | Uncommon | 190 | +13 Attack; Stamina Drain - Attack that reduces the victim's Stamina to 0 if it hits; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
 | Shrill Harpoon | Common | 180 | +7 Attack; +5 Attack vs Elementals; +10 Accuracy vs Elementals; Ignores 33% of the victim's Defense; Immune to Counterattack; Impale- Strike an opponent and whoever is behind them |
-| Smoldering Stick | Common | 90 | +6 Attack; +3 Fire Attack; +1 Combat Speed; +1 Max Counter Attack |
+| Smoldering Stick | Common | 90 | +6 Attack; +3 Fire Attack; +1 Combat Speed; +1 Counterattack per round |
 | Staff of Shocking Jolts | Uncommon | 300 | +8 Attack; +10 Lightning Attack; Melee attacks have a 25% chance to Daze the victim and cause them to miss their next action; Shocked enemies have a 50% chance to swing at a random unit in mêlée instead of their target |
-| Staff of the Overachiever | Common | 120 | +11 Attack; +1 Combat Speed; +1 Max Counter Attack; Sweep- Attack all enemies within a 1 tile radius |
-| Stalactite | Common | 90 | +6 Attack; +3 Cold Attack; +1 Combat Speed; +1 Max Counter Attack |
-| Stalagmite | Rare | 500 | +19 Attack; +3 Cold Attack; +1 Combat Speed; +1 Max Counter Attack; Freezing Jet - Fire a Freezing Jet through 3 units in a line |
-| Supremacy Staff | Uncommon | 60 | +18 Attack; +2 Combat Speed; +2 Max Counter Attack; +0.5 Counterattack Multiplier; Yank- Attack that also has a chance to knock the enemy prone unless they resist |
+| Staff of the Overachiever | Common | 120 | +11 Attack; +1 Combat Speed; +1 Counterattack per round; Sweep- Attack all enemies within a 1 tile radius |
+| Stalactite | Common | 90 | +6 Attack; +3 Cold Attack; +1 Combat Speed; +1 Counterattack per round |
+| Stalagmite | Rare | 500 | +19 Attack; +3 Cold Attack; +1 Combat Speed; +1 Counterattack per round; Freezing Jet - Fire a Freezing Jet through 3 units in a line |
+| Supremacy Staff | Uncommon | 60 | +18 Attack; +2 Combat Speed; +2 Counterattack per round; +50% to Counterattack damage; Yank- Attack that also has a chance to knock the enemy prone unless they resist |
 | Swamp Gas Lighter | Uncommon | 150 | +8 Fire Attack; +8 Poison Attack; -6 Combat Speed; Ranged attack; Allows the wielder to provoke a Swamp Gas Explosion |
 | Thunder Battle Axe | Uncommon | 300 | +14 Attack; +5 Lightning Attack; -2 Combat Speed; Backswing- If the attack misses the unit gets a second attack against the same target; Cleave- Strike 3 adjacent enemies |
 | Thunderous Staff | Uncommon | 150 | +6 Lightning Attack; -6 Combat Speed; Ranged attack |
@@ -106,10 +106,10 @@
 |---|---|---|---|
 | Black Crow's High Brow | Uncommon | 140 | +3 Defense; +3 Sight |
 | Black Spike's Horns | Rare | 500 | +6 Defense; 1.5% less damage from Physical attacks per Level; +1 Black Spike; Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack |
-| Carnage Helm | Rare | 440 | +6 Defense; +5 Chance To Crit; +3 Moves for the first turn of combat; +50% Attack vs. Damaged Opponents; -25% to Dodge |
+| Carnage Helm | Rare | 440 | +6 Defense; +5 To Critical Hit chance; +3 Moves for the first turn of combat; +50% Attack vs. Damaged Opponents; -25% to Dodge |
 | Cobalt Vertex | Common | 140 | +1 Defense; +1 Combat Speed; +6 Accuracy |
 | Commander's Wig | Uncommon | 250 | +1 Defense; +5 to the Army's Accuracy; +10% to the Army's Experience |
-| Elemental Topper | Uncommon | 150 | +2 Defense; +8 Resist Cold; +8 Resist Fire; +8 Resist Lightning |
+| Elemental Topper | Uncommon | 150 | +2 Defense; +8% Cold Resistance; +8% Fire Resistance; +8% Lightning Resistance |
 | Horned Helmet | Uncommon | 120 | +2 Defense; +10% cumulative damage with each successful attack |
 | Imperial Helm | Rare | 300 | -1 Combat Speed; +6 Defense; +20% Attack vs. opponents of the opposite race (Fallen vs. Men) |
 | Malachite Crown | Rare | 600 | +6 Defense; This unit receives double the normal Swarm bonus; Unit never gets Counterattacked; Immune to Swarm; Allows the owner to cast Cull the Weak |
@@ -124,20 +124,20 @@
 |---|---|---|---|
 | Assassin's Robe | Uncommon | 350 | +6 Defense; +6 Dodge; +15 Chance To Crit |
 | Black Spike's Ribcage | Rare | 850 | +12 Defense; +5 Attack Bonus; +2 Combat Speed; +1 Black Spike; Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack |
-| Blessed Toga | Uncommon | 250 | +6 Defense; +8 Dodge; +10 Exp Bonus; Allows the wearer to cast Healing Light |
+| Blessed Toga | Uncommon | 250 | +6 Defense; +8 Dodge; +10% Experience; Allows the wearer to cast Healing Light |
 | Ceremonial Armor | Uncommon | 220 | +6 Defense; +1 Combat Speed |
 | Dexterous Robe | Uncommon | 240 | +6 Defense; +10 Accuracy |
-| Enchanter's Robe | Rare | 400 | +10 Defense; +10 Spell Power; +25 Spell Damage |
-| Forefather's Armor | Rare | 800 | +8 Defense; +25 Exp Bonus |
+| Enchanter's Robe | Rare | 400 | +10 Defense; +10 Spell Power; +25% Spell Damage |
+| Forefather's Armor | Rare | 800 | +8 Defense; +25% Experience |
 | Insectoid Exoskeleton | Rare | 450 | +8 Defense; Spit Acid - Target enemy takes 2-6 damage a round for 15 rounds.; Allows the unit to cast Insect Plague |
-| Leopard Vest | Uncommon | 110 | +3 Defense; +2 Attack; +1 Stamina_Starting; +4 Initiative for the first turn of combat |
-| Magi Skin | Uncommon | 450 | +6 Defense; +20 Magic Resist; +1 Spell Power for each point of Stamina; +2 Spell Mastery for each point of Stamina |
-| Master smith's Forging Leathers | Uncommon | 200 | +5 Defense; +3 Resist Fire; +1 Mastersmith; Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage |
-| Oiled Leather Armor | Common | 90 | +3 Defense; +15 Resist Lightning |
-| Poisonous Robe | Uncommon | 200 | +4 Defense; +50 Resist Poison; Melee attacks do 6 Poison damage per round to the victim; Enemies that strike the wearer become infected with poison |
-| Raiment of the Nihilist | Rare | 250 | +8 Defense; +10 Spell Power; +10 Magic Resist; Allows the wearer to cast Death Circle |
-| Robe of Ardor | Uncommon | 240 | +6 Defense; +5 Stamina_Starting |
-| Saintly Carapace | Rare | 1000 | +16 Defense; -2 Combat Speed; +5 Health Regen; Saintly Aura - Adjacent friendly units regenerate 4 hit points per turn |
+| Leopard Vest | Uncommon | 110 | +3 Defense; +2 Attack; +1 Starting Stamina; +4 Initiative for the first turn of combat |
+| Magi Skin | Uncommon | 450 | +6 Defense; +20 Spell Resistance; +1 Spell Power for each point of Stamina; +2 Spell Mastery for each point of Stamina |
+| Master smith's Forging Leathers | Uncommon | 200 | +5 Defense; +3% Fire Resistance per Level; +1 Mastersmith; Collect all three Tools of the Master smith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage |
+| Oiled Leather Armor | Common | 90 | +3 Defense; +15% Lightning resistance |
+| Poisonous Robe | Uncommon | 200 | +4 Defense; +50% Poison Resistance; Melee attacks do 6 Poison damage per round to the victim; Enemies that strike the wearer become infected with poison |
+| Raiment of the Nihilist | Rare | 250 | +8 Defense; +10 Spell Power; +10 Spell Resistance; Allows the wearer to cast Death Circle |
+| Robe of Ardor | Uncommon | 240 | +6 Defense; +5 Starting Stamina |
+| Saintly Carapace | Rare | 1000 | +16 Defense; -2 Combat Speed; +5 Healing per Season; Saintly Aura - Adjacent friendly units regenerate 4 hit points per turn |
 | Shock Trooper Armor | Rare | 250 | +11 Defense; +2 Lightning Attack |
 
 ### Forearms
@@ -161,64 +161,64 @@
 
 | Name | Rarity | Value | Effects |
 |---|---|---|---|
-| Acrobat's Pantaloons | Common | 65 | +1 Defense; +6 Tactical_Auto_Dodge_Boost |
-| Black Spike's Loins | Rare | 500 | +8 Defense; +1 Chance To Crit; +1 Black Spike; Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack |
-| Blessed Vestment | Uncommon | 250 | +4 Defense; Wellspring- All allies heal 24 hit points (+4 per life shard); +3 Health Regen |
+| Acrobat's Pantaloons | Common | 65 | +1 Defense; +6 Dodge when Defending |
+| Black Spike's Loins | Rare | 500 | +8 Defense; +1 Critical Chance per Level; +1 Black Spike; Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack |
+| Blessed Vestment | Uncommon | 250 | +4 Defense; Wellspring- All allies heal 24 hit points (+4 per life shard); +3 Healing per Season |
 | Demonic Anchors | Rare | 400 | +6 Defense; +20 Magic Resist |
-| Leopard Pants | Uncommon | 150 | +2 Defense; +3 Chance To Crit; +1 Stamina_Starting |
+| Leopard Pants | Uncommon | 150 | +2 Defense; +3 Chance To Crit; +1 Starting Stamina |
 | Lubricated Greaves | Uncommon | 250 | +5 Defense; +5 Dodge |
 | Naja Skin Greaves | Uncommon | 100 | +5 Accuracy; +2 Defense |
 | Old Style Leg Braces | Common | 80 | +1 Defense; +3 Hit Points |
-| Ophidian Leggings | Uncommon | 100 | +3 Defense; +10 Magic Resist; +5 Dodge; Naja Dancer- +2 Dodge for each point of Stamina |
+| Ophidian Leggings | Uncommon | 100 | +3 Defense; +10 Magic Resist; +5 to Dodge; Naja Dancer- +2 Dodge for each point of Stamina |
 
 ### Boots
 
 | Name | Rarity | Value | Effects |
 |---|---|---|---|
-| Arctic Boots | Uncommon | 250 | +2 Defense; +2 Cold Attack; +25 Resist Cold |
+| Arctic Boots | Uncommon | 250 | +2 Defense; +2 Cold Attack; +25% Cold resistance |
 | Black Spike's Hoofs | Rare | 500 | +6 Defense; +5 Attack for the first turn of combat; +5 Initiative for the first turn of combat; +100 Chance To Avoid Prone; +1 Movement; +1 Black Spike; Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack |
 | Crystalline Boots | Uncommon | 160 | +2 Defense; +10 Magic Resist; Cutting Surface - Enemies that strike the wearer take 2 damage |
 | Demonhide Boots | Rare | 540 | +2 Defense; +10 Attack vs Elementals; +4 HPFrom Kills; Demonic Ally - Summons an Assassin Demon at the same level as the caster |
 | Lady Sandekka's Boots | Uncommon | 150 | +1 Defense; +5 Spell Power; Allows the wearer to cast Beguile |
 | Leopard Boots | Uncommon | 260 | +1 Defense; +2 Combat Speed; +1 Movement; Leopard Rush Effect- +3 Initiative the first time the unit takes a hit |
-| Ophidian Scale Boots | Rare | 300 | +3 Defense; +25 Magic Resist; +5 Dodge; Ophidian Dancer- +5 Dodge when Defending; Naja Dancer- +2 Dodge for each point of Stamina |
-| Prestidigitator's Boots | Uncommon | 250 | +1 Defense; +5 Dodge; +5 Spell Power |
+| Ophidian Scale Boots | Rare | 300 | +3 Defense; +25 Magic Resist; +5 to Dodge; Ophidian Dancer- +5 Dodge when Defending; Naja Dancer- +2 Dodge for each point of Stamina |
+| Prestidigitator's Boots | Uncommon | 250 | +1 Defense; +5 Dodge; +5 Spell Mastery |
 | Ruthless Stompers | Rare | 230 | -1 Combat Speed; +5 Defense; +10 Chance To Crit |
 | Slimy Waders | Uncommon | 160 | +2 Defense; Allows the unit to cast Insect Swarm; Sticky Goo - Enemies that strike the wearer are immobilized for 3 rounds unless they resist |
 | Snapping Boots | Uncommon | 180 | +2 Defense; +2 Attack; +4 Dodge |
-| Steadfast Boots | Common | 50 | +1 Defense; +5 Tactical_Auto_Defense_Boost |
-| Wave Cresting Boots | Uncommon | 160 | +1 Defense; +15 Resist Fire; No movement penalty on Rivers; No movement penalty in Swamps; Allows the wearer to cast Riptide |
+| Steadfast Boots | Common | 50 | +1 Defense; +5 Defense when Defending |
+| Wave Cresting Boots | Uncommon | 160 | +1 Defense; +15% Fire resistance; No movement penalty on Rivers; No movement penalty in Swamps; Allows the wearer to cast Riptide |
 
 ### Shields & Defense
 
 | Name | Rarity | Value | Effects |
 |---|---|---|---|
-| Arcane Sunset | Rare | 420 | +10 Defense; +10 Dodge; Scrambler Effect - Disrupts a spell an enemy unit is casting and causes them to lose their next turn unless they resist; +20 Magic Resist; -15 Spell Power; +20 Tactical_Auto_Defense_Boost; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
-| Battle Heat Shield | Uncommon | 260 | +6 Defense; +6 Dodge; +1 Defense for each point of Stamina; +15 Tactical_Auto_Defense_Boost; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
-| Black Spike's Spokes | Rare | 500 | +12 Defense; +12 Dodge; +20 Tactical_Auto_Defense_Boost; Lacerating Spokes - Enemies that strike the wearer take 2-5 damage; Shield Slam - Knocks victims back a tile and knocks them prone; +1 Black Spike; Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack; Enables abilities that require Shields |
-| Bulwark of the Brute | Uncommon | 500 | +10 Defense; +10 Dodge; +20 Tactical_Auto_Defense_Boost; Bulwark of the Brute Effect - Double Shield Bash damage and knocks the victim back a tile; Enables abilities that require Shields |
-| Golden Pavis | Rare | 1500 | +14 Defense; +14 Dodge; +20 Tactical_Auto_Defense_Boost; +10 to the Army's Dodge Against Ranged Attacks; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
-| Lightning Drinker Shield | Uncommon | 120 | +4 Defense; +4 Dodge; +20 Resist Lightning; +10 Tactical_Auto_Defense_Boost; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
-| Oakenguard Shield | Uncommon | 350 | +6 Defense; +6 Dodge; +1 to the army's Defense; +15 Resist Poison; +15 Tactical_Auto_Defense_Boost; +100 Chance To Avoid Prone; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
-| Practice Buckler | Common | 50 | +2 Defense; +2 Dodge; +10 Exp Bonus; +5 Tactical_Auto_Defense_Boost; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
-| Rebounder Shield | Uncommon | 220 | +6 Defense; +6 Dodge; +10 Tactical_Auto_Defense_Boost; Rebounder Effect - Striking this unit causes the attacker to be knocked back one tile; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
-| Stately Shield | Common | 120 | +4 Defense; +4 Dodge; Grants the ability to escape (with remaining allies) from battle; +10 Tactical_Auto_Defense_Boost; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
-| Supernatural Deflector | Uncommon | 120 | +6 Defense; +6 Dodge; +15 to the Army's Spell Resistance; +15 Tactical_Auto_Defense_Boost; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
-| Wayward Deathbane | Rare | 380 | +10 Defense; +10 Dodge; +1 Hit Points; Wayward Deathbane Effect - Has a 25% chance of healing 8 hit points when the wielder hits an enemy; +20 Tactical_Auto_Defense_Boost; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Arcane Sunset | Rare | 420 | +10 Defense; +10 Dodge; Scrambler Effect - Disrupts a spell an enemy unit is casting and causes them to lose their next turn unless they resist; +20 Magic Resist; -15 Spell Power; +20 Defense when Defending; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Battle Heat Shield | Uncommon | 260 | +6 Defense; +6 Dodge; +1 Defense for each point of Stamina; +15 Defense when Defending; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Black Spike's Spokes | Rare | 500 | +12 Defense; +12 Dodge; +20 Defense when Defending; Lacerating Spokes - Enemies that strike the wearer take 2-5 damage; Shield Slam - Knocks victims back a tile and knocks them prone; +1 Black Spike; Collect three Black Spike items to inflict Dismantling Stroke- +400% Crushing Blow Attack; Enables abilities that require Shields |
+| Bulwark of the Brute | Uncommon | 500 | +10 Defense; +10 Dodge; +20 Defense when Defending; Bulwark of the Brute Effect - Double Shield Bash damage and knocks the victim back a tile; Enables abilities that require Shields |
+| Golden Pavis | Rare | 1500 | +14 Defense; +14 Dodge; +20 Defense when Defending; +10 to the Army's Dodge Against Ranged Attacks; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Lightning Drinker Shield | Uncommon | 120 | +4 Defense; +4 Dodge; +20% Lightning resistance; +10 Defense when Defending; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Oakenguard Shield | Uncommon | 350 | +6 Defense; +6 Dodge; +1 to the army's Defense; +15% Poison resistance; +15 Defense when Defending; Immune to being knocked prone; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Practice Buckler | Common | 50 | +2 Defense; +2 Dodge; +10% Experience; +5 Defense when Defending; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Rebounder Shield | Uncommon | 220 | +6 Defense; +6 Dodge; +10 Defense when Defending; Rebounder Effect - Striking this unit causes the attacker to be knocked back one tile; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Stately Shield | Common | 120 | +4 Defense; +4 Dodge; Grants the ability to escape (with remaining allies) from battle; +10 Defense when Defending; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Supernatural Deflector | Uncommon | 120 | +6 Defense; +6 Dodge; +15 to the Army's Spell Resistance; +15 Defense when Defending; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
+| Wayward Deathbane | Rare | 380 | +10 Defense; +10 Dodge; +1 Hit Point per Level; Wayward Deathbane Effect - Has a 25% chance of healing 8 hit points when the wielder hits an enemy; +20 Defense when Defending; Shield Bash - Knocks the victim back a tile; Enables abilities that require Shields |
 
 ### Other Armor
 
 | Name | Rarity | Value | Effects |
 |---|---|---|---|
 | Cloak Of Eyes | Uncommon | 100 | +1 Defense; +2 Sight |
-| Leopard Cloak | Uncommon | 220 | +2 Defense; +2 Combat Speed; +5 Dodge; +1 Stamina_Starting |
-| Lupus Cloak | Uncommon | 90 | +2 Defense; +10 Resist Cold; Summon Lupus - Summons a random level 8 Canine Friend |
-| Mantle of the Hedgewitch | Common | 100 | +3 Health Regen; Mending Hands- Allows the wearer to heal a friendly unit by touch |
-| Myriad Cloak | Rare | 340 | +3 Defense; +20 Resist Cold; +20 Resist Fire; +20 Resist Lightning; +20 Resist Poison; +20 Magic Resist |
+| Leopard Cloak | Uncommon | 220 | +2 Defense; +2 Combat Speed; +5 Dodge; +1 Starting Stamina |
+| Lupus Cloak | Uncommon | 90 | +2 Defense; +10% Cold resistance; Summon Lupus - Summons a random level 8 Canine Friend |
+| Mantle of the Hedgewitch | Common | 100 | +3 Healing per Season; Mending Hands- Allows the wearer to heal a friendly unit by touch |
+| Myriad Cloak | Rare | 340 | +3 Defense; +20% Cold resistance; +20% Fire resistance; +20% Lightning resistance; +20% Poison resistance; +20 Spell Resistance |
 | Scout's Backpack | Uncommon | 100 | No Movement penalty in Forests; No Movement penalty in Swamps; No Movement penalty on Hills; +6 Hit Points |
 | Steelcloth Cloak | Uncommon | 220 | +5 Defense |
 | Survival Backpack | Uncommon | 100 | +3 to the Army's Hit Points; +1 to the Army's Starting Stamina; +2 to the Army's Health Regeneration per season |
-| Viscous Membrane | Uncommon | 60 | +2 Defense; -3 Hit Points - the Membrane is slowly eating the host.; Paralyzing Acid- Target enemy suffers -10 Dodge and takes 3-6 damage per turn.; Striking this unit causes the attacker to be sprayed with Paralyzing Acid.; +10 Resist Fire; +10 Resist Lightning |
+| Viscous Membrane | Uncommon | 60 | +2 Defense; -3 Hit Points - the Membrane is slowly eating the host.; Paralyzing Acid- Target enemy suffers -10 Dodge and takes 3-6 damage per turn.; Striking this unit causes the attacker to be sprayed with Paralyzing Acid.; +10% Fire resistance; +10% Lightning resistance |
 
 ## Accessories
 
@@ -235,24 +235,24 @@
 | Broken Mirror | Uncommon | 120 | Ignores 20% of the victim's Defense |
 | Bronze Arrows | Common | 90 | +6 Accuracy |
 | Burning Contract | Rare | 300 | +1 Fire to the Army's Attack; +15% to the Army's Fire resistance |
-| Cast Iron Brassiere | Uncommon | 250 | +2 Defense; +5 Hit Points; +1 Stamina_Starting |
+| Cast Iron Brassiere | Uncommon | 250 | +2 Defense; +5 Hit Points; +1 Starting Stamina |
 | Corruptive Chalice | Rare | 300 | +1 Poison to the Army's Attack; +15% to the Army's Poison resistance |
 | Dimensional Diadem | Rare | 600 | 20% less damage from Physical attacks; Allows the unit to cast Dimensional Translocation |
 | Disciplinary Bullwhip | Uncommon | 140 | +1 to the army's Initiative |
 | Esoteric Exposer | Uncommon | 300 | +2 Defense; 20% chance to find better items from goodie huts |
 | Eternal Icicle | Uncommon | 60 | +3 Cold Attack; Allows the wielder to cast Ice Ring |
 | Evasive Cincture | Uncommon | 160 | +6 Dodge; +10 Dodge Against Ranged |
-| Four-Leaf Clover | Uncommon | 50 | +6 Dodge; +3 Chance To Crit |
+| Four-Leaf Clover | Uncommon | 50 | +6 to Dodge; +3 To Critical Hit chance |
 | Frenzy Charm | Rare | 400 | Grants the Maul ability |
 | Frozen Autumn | Rare | 300 | +1 Cold to the Army's Attack; +15% to the Army's Cold resistance |
-| Girdle of the Colossus | Uncommon | 90 | +5 Hit Points; +3 Stamina_Starting; Power Sweep - Attack all enemies within a 1 tile radius, push them back and knock them prone |
-| Heartblood Ring | Uncommon | 300 | +1 Hit Points |
+| Girdle of the Colossus | Uncommon | 90 | +5 Hit Points; +3 Starting Stamina; Power Sweep - Attack all enemies within a 1 tile radius, push them back and knock them prone |
+| Heartblood Ring | Uncommon | 300 | +1 Hit Point per Level |
 | Horseshoe | Common | 75 | 10% less damage from Physical attacks; +10 Dodge Against Ranged |
-| Jade Ring | Common | 75 | Melee attacks also do 2 Poison damage per round to the victim; +20 Resist Poison |
+| Jade Ring | Common | 75 | Melee attacks also do 2 Poison damage per round to the victim; +20% Poison Resistance |
 | Jinx Doll | Uncommon | 90 | Inflicts a random horrific curse upon an enemy unit |
 | Lightning Struck Branch | Rare | 300 | +1 Lightning to the Army's Attack; +15% to the Army's Lightning resistance |
 | Mastersmith's Anvil | Uncommon | 80 | +3 to the Army's Critical Chance; +1 Mastersmith; Collect all three Tools of the Mastersmith to cast Forging Excellence - Army gains +6 Attack, +6 Critical Chance and +100% Critical Damage |
-| Murteas' Grimoire | Rare | 600 | +10 Spell Power; +15 Spell Damage; Elemental Myriad - Grants your army random Elemental damage for the duration of the battle |
+| Murteas' Grimoire | Rare | 600 | +10 Spell Power; +15% Spell Damage; Elemental Myriad - Grants your army random Elemental damage for the duration of the battle |
 | Mystical Siphon | Rare | 300 | +3 Hit Points whenever an enemy is killed; +3 Mana Points whenever an enemy is killed; +3 Stamina whenever an enemy is killed |
 | Mythical Composer | Rare | 500 | +2 to the Army's Initiative; +3 to the Army's Starting Stamina |
 | Pearl of Wisdom | Common | 80 | +3 Magic Resist; -10% mana cost for tactical spells |
@@ -263,15 +263,15 @@
 | Ring of Glacial Collision | Rare | 400 | +2 Cold to the Army's Attack |
 | Ring of Noxious Humors | Rare | 400 | +2 Poison to the Army's Attack |
 | Ring of Toxins | Uncommon | 75 | +1 Poison Attack |
-| Ring of Turgescence | Uncommon | 250 | +2 Attack; +5 Hit Points; +1 Stamina_Starting |
+| Ring of Turgescence | Uncommon | 250 | +2 Attack; +5 Hit Points; +1 Starting Stamina |
 | Ring of Vaporizing Shock | Rare | 400 | +2 Lightning to the Army's Attack |
 | Robe of Riches | Uncommon | 300 | +6 Defense; 20% chance to find better items from goodie huts |
-| Rubber Stone | Uncommon | 90 | +1 Max Counter Attack |
+| Rubber Stone | Uncommon | 90 | +1 Counterattack per round |
 | Sack of Provisions | Common | 80 | +1 to the Army's Hit Points |
 | Scarab of Preservation | Uncommon | 250 | 20% less damage from Physical attacks; Unit has a 40% chance of resisting a Critical attack |
 | Shell of Sluggishness | Rare | 400 | Allows the wielder to cast Mass Slow |
 | Solid Mana | Uncommon | 150 | +3 Mana Points whenever an enemy is killed |
-| Thunderclap Amulet | Rare | 400 | +3 Lightning Attack; +20 Resist Lightning; Allows the unit to cast Thunderstorm |
+| Thunderclap Amulet | Rare | 400 | +3 Lightning Attack; +20% Lightning resistance; Allows the unit to cast Thunderstorm |
 | Treasure Gormandizer | Uncommon | 300 | 25% chance to find better items from goodie huts |
 | Triad Amulet | Uncommon | 220 | +1 Cold Attack; +1 Fire Attack; +1 Lightning Attack |
 | Viperheart Amulet | Uncommon | 180 | +3 Poison Attack |
@@ -292,17 +292,17 @@
 | Infernal Companion | Uncommon | 120 | Summons a Shadow Warg |
 | Infinite Diary | Rare | 450 | Grants the unit the Erudite Ability - +30 Experience and +10% Research |
 | Letter of Self-Aggrandizement | Common | 80 | +10 Fame |
-| Liquid Vigor | Uncommon | 225 | +1 Stamina_Starting |
+| Liquid Vigor | Uncommon | 225 | +1 Starting Stamina |
 | Lost Barrowhill Wine | Uncommon | 150 | +10 Mana; Lost Barrowhill Wine Effect - Random effect on the Caster; +1 Gold |
 | Magic Mushroom | Uncommon | 60 | Mysterious properties |
 | Magic Mushroom | Uncommon | 60 | Mysterious properties |
-| Magnifying Stimulant | Rare | 500 | +1 Attack Bonus; +1 Defense; +1 Accuracy; +1 Dodge; +1 Hit Points; +1 Chance To Crit; +1 Spell Power; +1 Spell Damage; +1 Magic Resist |
+| Magnifying Stimulant | Rare | 500 | +1 Attack; +1 Defense; +1 Accuracy; +1 Dodge; +1 Hit Points; +1 Critical Chance; +1 Spell Mastery; +1 Spell Power; +1 Spell Resistance |
 | Manashroom | Common | 80 | +30 Mana |
 | Mortar and Pestle | Uncommon | 180 | Alchemical Surprise- Random alchemical formula. |
 | Naja Egg | Uncommon | 90 | Summons a Naja |
-| Philosopher's Stone | Rare | 150 | — |
+| Philosopher's Stone | Rare | 150 | Unlocks spell: Ovum Philosophorum |
 | Rejuvenating Fusion | Common | 300 | Rejuvenating Fusion Effect - Healing an injury comes with the added benefit of a random permanent increase in Hit Points; Removes a random injury |
-| Rodent Handbook | Uncommon | 150 | — |
+| Rodent Handbook | Uncommon | 150 | Unlocks spell: Rodent Repellent |
 | Scattered Coins | Common | 50 | Summons a Bandit |
 | Scribe's Tablet | Common | 80 | +15 Research |
 | Scroll of Obsession | Uncommon | 180 | Grants the unit the Obsession spell |

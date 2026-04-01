@@ -8,7 +8,9 @@
     "prepare": "node scripts/prepare.mjs",
     "menu": "node scripts/menu.mjs",
     "build": "node scripts/build.mjs",
-    "reference": "node scripts/generate-reference.mjs"
+    "reference": "node scripts/generate-reference.mjs",
+    "migrate-to-dirs": "node scripts/migrate-to-dirs.mjs",
+    "verify-keys": "node scripts/verify-translation-keys.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.5.9"

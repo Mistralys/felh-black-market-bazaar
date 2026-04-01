@@ -9,8 +9,7 @@ project:
   alias: "bmb"
 
 import:
-  - path: "./docs/game-data/module-context.yaml"
-  - path: "./docs/modding-guide/module-context.yaml"
+  - path: "./docs/agents/project-manifest/module-context.yaml"
   - path: "./Mods/module-context.yaml"
 
 documents:

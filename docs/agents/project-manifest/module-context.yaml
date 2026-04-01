@@ -1,0 +1,79 @@
+moduleMetaData:
+  id: "project-manifest"
+  label: "Project Manifest"
+  description: "Canonical project reference for AI agents. Covers tech stack, file structure, base game XML schemas, localization system, XML patterns, build pipeline, and mandatory constraints."
+  keywords:
+    - BMB
+    - Manifest
+    - Constraints
+    - Game Data
+    - Localization
+    - XML Patterns
+    - Build Pipeline
+  relatedModules:
+    - bmb-mod
+
+documents:
+  - description: 'Project Manifest - Overview'
+    outputPath: 'modules/project-manifest/overview.md'
+    sources:
+      - type: file
+        description: 'Manifest section index'
+        sourcePaths: [ ./ ]
+        filePattern: "README.md"
+
+  - description: 'Project Manifest - Tech Stack'
+    outputPath: 'modules/project-manifest/tech-stack.md'
+    sources:
+      - type: file
+        description: 'Runtime, game target, frameworks, build tools, shared modules'
+        sourcePaths: [ ./ ]
+        filePattern: "tech-stack.md"
+
+  - description: 'Project Manifest - File Tree'
+    outputPath: 'modules/project-manifest/file-tree.md'
+    sources:
+      - type: file
+        description: 'Annotated project directory structure'
+        sourcePaths: [ ./ ]
+        filePattern: "file-tree.md"
+
+  - description: 'Project Manifest - Game Data Reference'
+    outputPath: 'modules/project-manifest/game-data-reference.md'
+    sources:
+      - type: file
+        description: 'Base game XML schemas, GameCore file inventory, entry element structures, Reforged additions'
+        sourcePaths: [ ./ ]
+        filePattern: "game-data-reference.md"
+
+  - description: 'Project Manifest - Localization'
+    outputPath: 'modules/project-manifest/localization.md'
+    sources:
+      - type: file
+        description: 'Localization system: base game format, BMB per-entry translation files, TXT_BMB_* key conventions'
+        sourcePaths: [ ./ ]
+        filePattern: "localization.md"
+
+  - description: 'Project Manifest - XML Patterns'
+    outputPath: 'modules/project-manifest/xml-patterns.md'
+    sources:
+      - type: file
+        description: 'Modding XML patterns: GameModifier, prerequisites, rarity, art definitions, unit stats reference'
+        sourcePaths: [ ./ ]
+        filePattern: "xml-patterns.md"
+
+  - description: 'Project Manifest - Build Pipeline'
+    outputPath: 'modules/project-manifest/build-pipeline.md'
+    sources:
+      - type: file
+        description: 'Build script architecture, data flows, and module API surface'
+        sourcePaths: [ ./ ]
+        filePattern: "build-pipeline.md"
+
+  - description: 'Project Manifest - Constraints & Conventions'
+    outputPath: 'modules/project-manifest/constraints.md'
+    sources:
+      - type: file
+        description: 'Mandatory naming conventions, encoding rules, Reforged breaking changes, failure protocol'
+        sourcePaths: [ ./ ]
+        filePattern: "constraints.md"

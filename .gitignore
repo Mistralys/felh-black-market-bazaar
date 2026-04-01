@@ -25,3 +25,6 @@ Mods/src/Data/GameCore/BMB_Effects.xml
 Mods/src/Data/GameCore/BMB_Units.xml
 Mods/src/Data/GameCore/BMB_UnitStats.xml
 Mods/src/Data/GameCore/BMB_CoreItemsModifications.xml
+
+# Generated localization XML files (source of truth is xml/<category>/<Name>/en.xml etc.)
+Mods/src/Data/Localization/
