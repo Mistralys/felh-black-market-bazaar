@@ -19,6 +19,6 @@
     "verify-keys": "node scripts/verify-translation-keys.mjs"
   },
   "dependencies": {
-    "fast-xml-parser": "^5.5.9"
+    "fast-xml-parser": "^5.7.0"
   }
 }
